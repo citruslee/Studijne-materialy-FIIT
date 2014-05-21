@@ -1,4 +1,4 @@
-Fakulta-Informatiky-a-Informacnych-Technologii
+Studijne materialy FIIT
 ==============================================
 
 Repozitar pre INFO a PKSS odbory
