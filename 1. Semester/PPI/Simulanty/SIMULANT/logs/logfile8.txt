@@ -1,0 +1,11 @@
+***Simulation started***
+
+MEMORY:
+Instructions on addresses: 8|
+Operands on addresses: 
+REGISTERS:
+PC: 0
+MAR: 0
+MBR: 0
+ACC: 0
+IR: 0

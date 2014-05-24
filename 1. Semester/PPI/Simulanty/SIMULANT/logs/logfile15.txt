@@ -1,0 +1,2462 @@
+***Simulation started***
+
+MEMORY:
+Instructions on addresses: 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|
+Operands on addresses: 60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 0
+MAR: 0
+MBR: 0
+ACC: 0
+IR: 0
+
+-------------------
+Instruction LOAD fetched from address 0
+REGISTERS:
+PC: 1
+MAR: 0
+MBR: LOAD [61]
+ACC: 0
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 1
+MAR: 61
+MBR: 3
+ACC: 3
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 1
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: ADD 1
+ACC: 3
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: 1
+ACC: 4
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 2
+REGISTERS:
+PC: 3
+MAR: 2
+MBR: STORE [55]
+ACC: 4
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 3
+MAR: 55
+MBR: 4
+ACC: 4
+IR: STORE [55]
+
+-------------------
+Instruction STORE fetched from address 3
+REGISTERS:
+PC: 4
+MAR: 3
+MBR: STORE [56]
+ACC: 4
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(4)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 4
+MAR: 56
+MBR: 4
+ACC: 4
+IR: STORE [56]
+
+-------------------
+Instruction LOAD fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: LOAD [56]
+ACC: 4
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(4)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 5
+MAR: 56
+MBR: 4
+ACC: 4
+IR: LOAD [56]
+
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 4
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(4)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 3
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: STORE [56]
+ACC: 3
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(4)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 7
+MAR: 56
+MBR: 3
+ACC: 3
+IR: STORE [56]
+
+-------------------
+Instruction MUL fetched from address 7
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: MUL [55]
+ACC: 3
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(4)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 8
+MAR: 55
+MBR: 4
+ACC: 12
+IR: MUL [55]
+
+-------------------
+Instruction STORE fetched from address 8
+REGISTERS:
+PC: 9
+MAR: 8
+MBR: STORE [55]
+ACC: 12
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 9
+MAR: 55
+MBR: 12
+ACC: 12
+IR: STORE [55]
+
+-------------------
+Instruction LOAD fetched from address 9
+REGISTERS:
+PC: 10
+MAR: 9
+MBR: LOAD [56]
+ACC: 12
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 10
+MAR: 56
+MBR: 3
+ACC: 3
+IR: LOAD [56]
+
+-------------------
+Instruction CMP fetched from address 10
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: CMP 1
+ACC: 3
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: 1
+ACC: 1
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 11
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 1
+IR: JMPZ [13]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 1
+IR: JMPZ [13]
+ (evaluated FALSE)
+-------------------
+Instruction JMP fetched from address 12
+REGISTERS:
+PC: 13
+MAR: 12
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 4
+MAR: 12
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+-------------------
+Instruction LOAD fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: LOAD [56]
+ACC: 1
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 5
+MAR: 56
+MBR: 3
+ACC: 3
+IR: LOAD [56]
+
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 3
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(3)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 2
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: STORE [56]
+ACC: 2
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 7
+MAR: 56
+MBR: 2
+ACC: 2
+IR: STORE [56]
+
+-------------------
+Instruction MUL fetched from address 7
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: MUL [55]
+ACC: 2
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(12)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 8
+MAR: 55
+MBR: 12
+ACC: 24
+IR: MUL [55]
+
+-------------------
+Instruction STORE fetched from address 8
+REGISTERS:
+PC: 9
+MAR: 8
+MBR: STORE [55]
+ACC: 24
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 9
+MAR: 55
+MBR: 24
+ACC: 24
+IR: STORE [55]
+
+-------------------
+Instruction LOAD fetched from address 9
+REGISTERS:
+PC: 10
+MAR: 9
+MBR: LOAD [56]
+ACC: 24
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 10
+MAR: 56
+MBR: 2
+ACC: 2
+IR: LOAD [56]
+
+-------------------
+Instruction CMP fetched from address 10
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: CMP 1
+ACC: 2
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: 1
+ACC: 1
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 11
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 1
+IR: JMPZ [13]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 1
+IR: JMPZ [13]
+ (evaluated FALSE)
+-------------------
+Instruction JMP fetched from address 12
+REGISTERS:
+PC: 13
+MAR: 12
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 4
+MAR: 12
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+-------------------
+Instruction LOAD fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: LOAD [56]
+ACC: 1
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 5
+MAR: 56
+MBR: 2
+ACC: 2
+IR: LOAD [56]
+
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 2
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(2)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 1
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: STORE [56]
+ACC: 1
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 7
+MAR: 56
+MBR: 1
+ACC: 1
+IR: STORE [56]
+
+-------------------
+Instruction MUL fetched from address 7
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: MUL [55]
+ACC: 1
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 8
+MAR: 55
+MBR: 24
+ACC: 24
+IR: MUL [55]
+
+-------------------
+Instruction STORE fetched from address 8
+REGISTERS:
+PC: 9
+MAR: 8
+MBR: STORE [55]
+ACC: 24
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 9
+MAR: 55
+MBR: 24
+ACC: 24
+IR: STORE [55]
+
+-------------------
+Instruction LOAD fetched from address 9
+REGISTERS:
+PC: 10
+MAR: 9
+MBR: LOAD [56]
+ACC: 24
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 10
+MAR: 56
+MBR: 1
+ACC: 1
+IR: LOAD [56]
+
+-------------------
+Instruction CMP fetched from address 10
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: CMP 1
+ACC: 1
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: 1
+ACC: 0
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 11
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 0
+IR: JMPZ [13]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 13
+MAR: 11
+MBR: JMPZ [13]
+ACC: 0
+IR: JMPZ [13]
+ (evaluated TRUE)
+-------------------
+Instruction LOAD fetched from address 13
+REGISTERS:
+PC: 14
+MAR: 13
+MBR: LOAD [61]
+ACC: 0
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 14
+MAR: 61
+MBR: 3
+ACC: 3
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 14
+REGISTERS:
+PC: 15
+MAR: 14
+MBR: ADD 1
+ACC: 3
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(1)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 15
+MAR: 14
+MBR: 1
+ACC: 4
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 15
+REGISTERS:
+PC: 16
+MAR: 15
+MBR: STORE [56]
+ACC: 4
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 16
+MAR: 56
+MBR: 4
+ACC: 4
+IR: STORE [56]
+
+-------------------
+Instruction LOAD fetched from address 16
+REGISTERS:
+PC: 17
+MAR: 16
+MBR: LOAD [55]
+ACC: 4
+IR: LOAD [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 17
+MAR: 55
+MBR: 24
+ACC: 24
+IR: LOAD [55]
+
+-------------------
+Instruction MUL fetched from address 17
+REGISTERS:
+PC: 18
+MAR: 17
+MBR: MUL [55]
+ACC: 24
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 18
+MAR: 55
+MBR: 24
+ACC: 576
+IR: MUL [55]
+
+-------------------
+Instruction DIV fetched from address 18
+REGISTERS:
+PC: 19
+MAR: 18
+MBR: DIV [56]
+ACC: 576
+IR: DIV [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 19
+MAR: 56
+MBR: 4
+ACC: 144
+IR: DIV [56]
+
+-------------------
+Instruction STORE fetched from address 19
+REGISTERS:
+PC: 20
+MAR: 19
+MBR: STORE [MEM(62)]
+ACC: 144
+IR: STORE [MEM(62)]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 20
+MAR: 50
+MBR: 144
+ACC: 144
+IR: STORE [MEM(62)]
+
+-------------------
+Instruction CMP fetched from address 20
+REGISTERS:
+PC: 21
+MAR: 20
+MBR: CMP 10
+ACC: 144
+IR: CMP 10
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 21
+MAR: 20
+MBR: 10
+ACC: 1
+IR: CMP 10
+
+-------------------
+Instruction CMP fetched from address 21
+REGISTERS:
+PC: 22
+MAR: 21
+MBR: CMP 1
+ACC: 1
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 22
+MAR: 21
+MBR: 1
+ACC: 0
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 22
+REGISTERS:
+PC: 23
+MAR: 22
+MBR: JMPZ [35]
+ACC: 0
+IR: JMPZ [35]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 35
+MAR: 22
+MBR: JMPZ [35]
+ACC: 0
+IR: JMPZ [35]
+ (evaluated TRUE)
+-------------------
+Instruction LOAD fetched from address 35
+REGISTERS:
+PC: 36
+MAR: 35
+MBR: LOAD [60]
+ACC: 0
+IR: LOAD [60]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 36
+MAR: 60
+MBR: 0
+ACC: 0
+IR: LOAD [60]
+
+-------------------
+Instruction ADD fetched from address 36
+REGISTERS:
+PC: 37
+MAR: 36
+MBR: ADD 1
+ACC: 0
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(0)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 37
+MAR: 36
+MBR: 1
+ACC: 1
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 37
+REGISTERS:
+PC: 38
+MAR: 37
+MBR: STORE [60]
+ACC: 1
+IR: STORE [60]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 38
+MAR: 60
+MBR: 1
+ACC: 1
+IR: STORE [60]
+
+-------------------
+Instruction JMP fetched from address 38
+REGISTERS:
+PC: 39
+MAR: 38
+MBR: JMP [23]
+ACC: 1
+IR: JMP [23]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 23
+MAR: 38
+MBR: JMP [23]
+ACC: 1
+IR: JMP [23]
+
+-------------------
+Instruction LOAD fetched from address 23
+REGISTERS:
+PC: 24
+MAR: 23
+MBR: LOAD [62]
+ACC: 1
+IR: LOAD [62]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 24
+MAR: 62
+MBR: 50
+ACC: 50
+IR: LOAD [62]
+
+-------------------
+Instruction ADD fetched from address 24
+REGISTERS:
+PC: 25
+MAR: 24
+MBR: ADD 1
+ACC: 50
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(3)|62(50)|63(1)|
+REGISTERS:
+PC: 25
+MAR: 24
+MBR: 1
+ACC: 51
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 25
+REGISTERS:
+PC: 26
+MAR: 25
+MBR: STORE [62]
+ACC: 51
+IR: STORE [62]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(3)|62(51)|63(1)|
+REGISTERS:
+PC: 26
+MAR: 62
+MBR: 51
+ACC: 51
+IR: STORE [62]
+
+-------------------
+Instruction LOAD fetched from address 26
+REGISTERS:
+PC: 27
+MAR: 26
+MBR: LOAD [61]
+ACC: 51
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(3)|62(51)|63(1)|
+REGISTERS:
+PC: 27
+MAR: 61
+MBR: 3
+ACC: 3
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 27
+REGISTERS:
+PC: 28
+MAR: 27
+MBR: ADD -1
+ACC: 3
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(3)|62(51)|63(1)|
+REGISTERS:
+PC: 28
+MAR: 27
+MBR: -1
+ACC: 2
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 28
+REGISTERS:
+PC: 29
+MAR: 28
+MBR: STORE [61]
+ACC: 2
+IR: STORE [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 29
+MAR: 61
+MBR: 2
+ACC: 2
+IR: STORE [61]
+
+-------------------
+Instruction CMP fetched from address 29
+REGISTERS:
+PC: 30
+MAR: 29
+MBR: CMP 0
+ACC: 2
+IR: CMP 0
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 30
+MAR: 29
+MBR: 0
+ACC: 1
+IR: CMP 0
+
+-------------------
+Instruction JMPZ fetched from address 30
+REGISTERS:
+PC: 31
+MAR: 30
+MBR: JMPZ [32]
+ACC: 1
+IR: JMPZ [32]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 31
+MAR: 30
+MBR: JMPZ [32]
+ACC: 1
+IR: JMPZ [32]
+ (evaluated FALSE)
+-------------------
+Instruction JMP fetched from address 31
+REGISTERS:
+PC: 32
+MAR: 31
+MBR: JMP [0]
+ACC: 1
+IR: JMP [0]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 0
+MAR: 31
+MBR: JMP [0]
+ACC: 1
+IR: JMP [0]
+
+-------------------
+Instruction LOAD fetched from address 0
+REGISTERS:
+PC: 1
+MAR: 0
+MBR: LOAD [61]
+ACC: 1
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 1
+MAR: 61
+MBR: 2
+ACC: 2
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 1
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: ADD 1
+ACC: 2
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(24)|56(4)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: 1
+ACC: 3
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 2
+REGISTERS:
+PC: 3
+MAR: 2
+MBR: STORE [55]
+ACC: 3
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(3)|56(4)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 3
+MAR: 55
+MBR: 3
+ACC: 3
+IR: STORE [55]
+
+-------------------
+Instruction STORE fetched from address 3
+REGISTERS:
+PC: 4
+MAR: 3
+MBR: STORE [56]
+ACC: 3
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(3)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 4
+MAR: 56
+MBR: 3
+ACC: 3
+IR: STORE [56]
+
+-------------------
+Instruction LOAD fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: LOAD [56]
+ACC: 3
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(3)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 5
+MAR: 56
+MBR: 3
+ACC: 3
+IR: LOAD [56]
+
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 3
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(3)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 2
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: STORE [56]
+ACC: 2
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(3)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 7
+MAR: 56
+MBR: 2
+ACC: 2
+IR: STORE [56]
+
+-------------------
+Instruction MUL fetched from address 7
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: MUL [55]
+ACC: 2
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(3)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 8
+MAR: 55
+MBR: 3
+ACC: 6
+IR: MUL [55]
+
+-------------------
+Instruction STORE fetched from address 8
+REGISTERS:
+PC: 9
+MAR: 8
+MBR: STORE [55]
+ACC: 6
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 9
+MAR: 55
+MBR: 6
+ACC: 6
+IR: STORE [55]
+
+-------------------
+Instruction LOAD fetched from address 9
+REGISTERS:
+PC: 10
+MAR: 9
+MBR: LOAD [56]
+ACC: 6
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 10
+MAR: 56
+MBR: 2
+ACC: 2
+IR: LOAD [56]
+
+-------------------
+Instruction CMP fetched from address 10
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: CMP 1
+ACC: 2
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: 1
+ACC: 1
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 11
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 1
+IR: JMPZ [13]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 1
+IR: JMPZ [13]
+ (evaluated FALSE)
+-------------------
+Instruction JMP fetched from address 12
+REGISTERS:
+PC: 13
+MAR: 12
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 4
+MAR: 12
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+-------------------
+Instruction LOAD fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: LOAD [56]
+ACC: 1
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 5
+MAR: 56
+MBR: 2
+ACC: 2
+IR: LOAD [56]
+
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 2
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(2)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 1
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: STORE [56]
+ACC: 1
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 7
+MAR: 56
+MBR: 1
+ACC: 1
+IR: STORE [56]
+
+-------------------
+Instruction MUL fetched from address 7
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: MUL [55]
+ACC: 1
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 8
+MAR: 55
+MBR: 6
+ACC: 6
+IR: MUL [55]
+
+-------------------
+Instruction STORE fetched from address 8
+REGISTERS:
+PC: 9
+MAR: 8
+MBR: STORE [55]
+ACC: 6
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 9
+MAR: 55
+MBR: 6
+ACC: 6
+IR: STORE [55]
+
+-------------------
+Instruction LOAD fetched from address 9
+REGISTERS:
+PC: 10
+MAR: 9
+MBR: LOAD [56]
+ACC: 6
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 10
+MAR: 56
+MBR: 1
+ACC: 1
+IR: LOAD [56]
+
+-------------------
+Instruction CMP fetched from address 10
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: CMP 1
+ACC: 1
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: 1
+ACC: 0
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 11
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 0
+IR: JMPZ [13]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 13
+MAR: 11
+MBR: JMPZ [13]
+ACC: 0
+IR: JMPZ [13]
+ (evaluated TRUE)
+-------------------
+Instruction LOAD fetched from address 13
+REGISTERS:
+PC: 14
+MAR: 13
+MBR: LOAD [61]
+ACC: 0
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 14
+MAR: 61
+MBR: 2
+ACC: 2
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 14
+REGISTERS:
+PC: 15
+MAR: 14
+MBR: ADD 1
+ACC: 2
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(1)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 15
+MAR: 14
+MBR: 1
+ACC: 3
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 15
+REGISTERS:
+PC: 16
+MAR: 15
+MBR: STORE [56]
+ACC: 3
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 16
+MAR: 56
+MBR: 3
+ACC: 3
+IR: STORE [56]
+
+-------------------
+Instruction LOAD fetched from address 16
+REGISTERS:
+PC: 17
+MAR: 16
+MBR: LOAD [55]
+ACC: 3
+IR: LOAD [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 17
+MAR: 55
+MBR: 6
+ACC: 6
+IR: LOAD [55]
+
+-------------------
+Instruction MUL fetched from address 17
+REGISTERS:
+PC: 18
+MAR: 17
+MBR: MUL [55]
+ACC: 6
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 18
+MAR: 55
+MBR: 6
+ACC: 36
+IR: MUL [55]
+
+-------------------
+Instruction DIV fetched from address 18
+REGISTERS:
+PC: 19
+MAR: 18
+MBR: DIV [56]
+ACC: 36
+IR: DIV [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 19
+MAR: 56
+MBR: 3
+ACC: 12
+IR: DIV [56]
+
+-------------------
+Instruction STORE fetched from address 19
+REGISTERS:
+PC: 20
+MAR: 19
+MBR: STORE [MEM(62)]
+ACC: 12
+IR: STORE [MEM(62)]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 20
+MAR: 51
+MBR: 12
+ACC: 12
+IR: STORE [MEM(62)]
+
+-------------------
+Instruction CMP fetched from address 20
+REGISTERS:
+PC: 21
+MAR: 20
+MBR: CMP 10
+ACC: 12
+IR: CMP 10
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 21
+MAR: 20
+MBR: 10
+ACC: 1
+IR: CMP 10
+
+-------------------
+Instruction CMP fetched from address 21
+REGISTERS:
+PC: 22
+MAR: 21
+MBR: CMP 1
+ACC: 1
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 22
+MAR: 21
+MBR: 1
+ACC: 0
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 22
+REGISTERS:
+PC: 23
+MAR: 22
+MBR: JMPZ [35]
+ACC: 0
+IR: JMPZ [35]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 35
+MAR: 22
+MBR: JMPZ [35]
+ACC: 0
+IR: JMPZ [35]
+ (evaluated TRUE)
+-------------------
+Instruction LOAD fetched from address 35
+REGISTERS:
+PC: 36
+MAR: 35
+MBR: LOAD [60]
+ACC: 0
+IR: LOAD [60]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 36
+MAR: 60
+MBR: 1
+ACC: 1
+IR: LOAD [60]
+
+-------------------
+Instruction ADD fetched from address 36
+REGISTERS:
+PC: 37
+MAR: 36
+MBR: ADD 1
+ACC: 1
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(1)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 37
+MAR: 36
+MBR: 1
+ACC: 2
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 37
+REGISTERS:
+PC: 38
+MAR: 37
+MBR: STORE [60]
+ACC: 2
+IR: STORE [60]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 38
+MAR: 60
+MBR: 2
+ACC: 2
+IR: STORE [60]
+
+-------------------
+Instruction JMP fetched from address 38
+REGISTERS:
+PC: 39
+MAR: 38
+MBR: JMP [23]
+ACC: 2
+IR: JMP [23]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 23
+MAR: 38
+MBR: JMP [23]
+ACC: 2
+IR: JMP [23]
+
+-------------------
+Instruction LOAD fetched from address 23
+REGISTERS:
+PC: 24
+MAR: 23
+MBR: LOAD [62]
+ACC: 2
+IR: LOAD [62]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 24
+MAR: 62
+MBR: 51
+ACC: 51
+IR: LOAD [62]
+
+-------------------
+Instruction ADD fetched from address 24
+REGISTERS:
+PC: 25
+MAR: 24
+MBR: ADD 1
+ACC: 51
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(2)|62(51)|63(1)|
+REGISTERS:
+PC: 25
+MAR: 24
+MBR: 1
+ACC: 52
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 25
+REGISTERS:
+PC: 26
+MAR: 25
+MBR: STORE [62]
+ACC: 52
+IR: STORE [62]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(2)|62(52)|63(1)|
+REGISTERS:
+PC: 26
+MAR: 62
+MBR: 52
+ACC: 52
+IR: STORE [62]
+
+-------------------
+Instruction LOAD fetched from address 26
+REGISTERS:
+PC: 27
+MAR: 26
+MBR: LOAD [61]
+ACC: 52
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(2)|62(52)|63(1)|
+REGISTERS:
+PC: 27
+MAR: 61
+MBR: 2
+ACC: 2
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 27
+REGISTERS:
+PC: 28
+MAR: 27
+MBR: ADD -1
+ACC: 2
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(2)|62(52)|63(1)|
+REGISTERS:
+PC: 28
+MAR: 27
+MBR: -1
+ACC: 1
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 28
+REGISTERS:
+PC: 29
+MAR: 28
+MBR: STORE [61]
+ACC: 1
+IR: STORE [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 29
+MAR: 61
+MBR: 1
+ACC: 1
+IR: STORE [61]
+
+-------------------
+Instruction CMP fetched from address 29
+REGISTERS:
+PC: 30
+MAR: 29
+MBR: CMP 0
+ACC: 1
+IR: CMP 0
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 30
+MAR: 29
+MBR: 0
+ACC: 1
+IR: CMP 0
+
+-------------------
+Instruction JMPZ fetched from address 30
+REGISTERS:
+PC: 31
+MAR: 30
+MBR: JMPZ [32]
+ACC: 1
+IR: JMPZ [32]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 31
+MAR: 30
+MBR: JMPZ [32]
+ACC: 1
+IR: JMPZ [32]
+ (evaluated FALSE)
+-------------------
+Instruction JMP fetched from address 31
+REGISTERS:
+PC: 32
+MAR: 31
+MBR: JMP [0]
+ACC: 1
+IR: JMP [0]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 0
+MAR: 31
+MBR: JMP [0]
+ACC: 1
+IR: JMP [0]
+
+-------------------
+Instruction LOAD fetched from address 0
+REGISTERS:
+PC: 1
+MAR: 0
+MBR: LOAD [61]
+ACC: 1
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 1
+MAR: 61
+MBR: 1
+ACC: 1
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 1
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: ADD 1
+ACC: 1
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(6)|56(3)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: 1
+ACC: 2
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 2
+REGISTERS:
+PC: 3
+MAR: 2
+MBR: STORE [55]
+ACC: 2
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(3)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 3
+MAR: 55
+MBR: 2
+ACC: 2
+IR: STORE [55]
+
+-------------------
+Instruction STORE fetched from address 3
+REGISTERS:
+PC: 4
+MAR: 3
+MBR: STORE [56]
+ACC: 2
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 4
+MAR: 56
+MBR: 2
+ACC: 2
+IR: STORE [56]
+
+-------------------
+Instruction LOAD fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: LOAD [56]
+ACC: 2
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 5
+MAR: 56
+MBR: 2
+ACC: 2
+IR: LOAD [56]
+
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 2
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 1
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: STORE [56]
+ACC: 1
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 7
+MAR: 56
+MBR: 1
+ACC: 1
+IR: STORE [56]
+
+-------------------
+Instruction MUL fetched from address 7
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: MUL [55]
+ACC: 1
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 8
+MAR: 55
+MBR: 2
+ACC: 2
+IR: MUL [55]
+
+-------------------
+Instruction STORE fetched from address 8
+REGISTERS:
+PC: 9
+MAR: 8
+MBR: STORE [55]
+ACC: 2
+IR: STORE [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 9
+MAR: 55
+MBR: 2
+ACC: 2
+IR: STORE [55]
+
+-------------------
+Instruction LOAD fetched from address 9
+REGISTERS:
+PC: 10
+MAR: 9
+MBR: LOAD [56]
+ACC: 2
+IR: LOAD [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 10
+MAR: 56
+MBR: 1
+ACC: 1
+IR: LOAD [56]
+
+-------------------
+Instruction CMP fetched from address 10
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: CMP 1
+ACC: 1
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: 1
+ACC: 0
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 11
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: JMPZ [13]
+ACC: 0
+IR: JMPZ [13]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 13
+MAR: 11
+MBR: JMPZ [13]
+ACC: 0
+IR: JMPZ [13]
+ (evaluated TRUE)
+-------------------
+Instruction LOAD fetched from address 13
+REGISTERS:
+PC: 14
+MAR: 13
+MBR: LOAD [61]
+ACC: 0
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 14
+MAR: 61
+MBR: 1
+ACC: 1
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 14
+REGISTERS:
+PC: 15
+MAR: 14
+MBR: ADD 1
+ACC: 1
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(1)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 15
+MAR: 14
+MBR: 1
+ACC: 2
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 15
+REGISTERS:
+PC: 16
+MAR: 15
+MBR: STORE [56]
+ACC: 2
+IR: STORE [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 16
+MAR: 56
+MBR: 2
+ACC: 2
+IR: STORE [56]
+
+-------------------
+Instruction LOAD fetched from address 16
+REGISTERS:
+PC: 17
+MAR: 16
+MBR: LOAD [55]
+ACC: 2
+IR: LOAD [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 17
+MAR: 55
+MBR: 2
+ACC: 2
+IR: LOAD [55]
+
+-------------------
+Instruction MUL fetched from address 17
+REGISTERS:
+PC: 18
+MAR: 17
+MBR: MUL [55]
+ACC: 2
+IR: MUL [55]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 18
+MAR: 55
+MBR: 2
+ACC: 4
+IR: MUL [55]
+
+-------------------
+Instruction DIV fetched from address 18
+REGISTERS:
+PC: 19
+MAR: 18
+MBR: DIV [56]
+ACC: 4
+IR: DIV [56]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 19
+MAR: 56
+MBR: 2
+ACC: 2
+IR: DIV [56]
+
+-------------------
+Instruction STORE fetched from address 19
+REGISTERS:
+PC: 20
+MAR: 19
+MBR: STORE [MEM(62)]
+ACC: 2
+IR: STORE [MEM(62)]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 20
+MAR: 52
+MBR: 2
+ACC: 2
+IR: STORE [MEM(62)]
+
+-------------------
+Instruction CMP fetched from address 20
+REGISTERS:
+PC: 21
+MAR: 20
+MBR: CMP 10
+ACC: 2
+IR: CMP 10
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 21
+MAR: 20
+MBR: 10
+ACC: -1
+IR: CMP 10
+
+-------------------
+Instruction CMP fetched from address 21
+REGISTERS:
+PC: 22
+MAR: 21
+MBR: CMP 1
+ACC: -1
+IR: CMP 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 22
+MAR: 21
+MBR: 1
+ACC: -1
+IR: CMP 1
+
+-------------------
+Instruction JMPZ fetched from address 22
+REGISTERS:
+PC: 23
+MAR: 22
+MBR: JMPZ [35]
+ACC: -1
+IR: JMPZ [35]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 23
+MAR: 22
+MBR: JMPZ [35]
+ACC: -1
+IR: JMPZ [35]
+ (evaluated FALSE)
+-------------------
+Instruction LOAD fetched from address 23
+REGISTERS:
+PC: 24
+MAR: 23
+MBR: LOAD [62]
+ACC: -1
+IR: LOAD [62]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 24
+MAR: 62
+MBR: 52
+ACC: 52
+IR: LOAD [62]
+
+-------------------
+Instruction ADD fetched from address 24
+REGISTERS:
+PC: 25
+MAR: 24
+MBR: ADD 1
+ACC: 52
+IR: ADD 1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(52)|63(1)|
+REGISTERS:
+PC: 25
+MAR: 24
+MBR: 1
+ACC: 53
+IR: ADD 1
+
+-------------------
+Instruction STORE fetched from address 25
+REGISTERS:
+PC: 26
+MAR: 25
+MBR: STORE [62]
+ACC: 53
+IR: STORE [62]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(53)|63(1)|
+REGISTERS:
+PC: 26
+MAR: 62
+MBR: 53
+ACC: 53
+IR: STORE [62]
+
+-------------------
+Instruction LOAD fetched from address 26
+REGISTERS:
+PC: 27
+MAR: 26
+MBR: LOAD [61]
+ACC: 53
+IR: LOAD [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(53)|63(1)|
+REGISTERS:
+PC: 27
+MAR: 61
+MBR: 1
+ACC: 1
+IR: LOAD [61]
+
+-------------------
+Instruction ADD fetched from address 27
+REGISTERS:
+PC: 28
+MAR: 27
+MBR: ADD -1
+ACC: 1
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(1)|62(53)|63(1)|
+REGISTERS:
+PC: 28
+MAR: 27
+MBR: -1
+ACC: 0
+IR: ADD -1
+
+-------------------
+Instruction STORE fetched from address 28
+REGISTERS:
+PC: 29
+MAR: 28
+MBR: STORE [61]
+ACC: 0
+IR: STORE [61]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(0)|62(53)|63(1)|
+REGISTERS:
+PC: 29
+MAR: 61
+MBR: 0
+ACC: 0
+IR: STORE [61]
+
+-------------------
+Instruction CMP fetched from address 29
+REGISTERS:
+PC: 30
+MAR: 29
+MBR: CMP 0
+ACC: 0
+IR: CMP 0
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(0)|62(53)|63(1)|
+REGISTERS:
+PC: 30
+MAR: 29
+MBR: 0
+ACC: 0
+IR: CMP 0
+
+-------------------
+Instruction JMPZ fetched from address 30
+REGISTERS:
+PC: 31
+MAR: 30
+MBR: JMPZ [32]
+ACC: 0
+IR: JMPZ [32]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(0)|62(53)|63(1)|
+REGISTERS:
+PC: 32
+MAR: 30
+MBR: JMPZ [32]
+ACC: 0
+IR: JMPZ [32]
+ (evaluated TRUE)
+-------------------
+Instruction LOAD fetched from address 32
+REGISTERS:
+PC: 33
+MAR: 32
+MBR: LOAD [63]
+ACC: 0
+IR: LOAD [63]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|55(2)|56(2)|60(2)|61(0)|62(53)|63(1)|
+REGISTERS:
+PC: 33
+MAR: 63
+MBR: 1
+ACC: 1
+IR: LOAD [63]
+
+-------------------
+Instruction STORE fetched from address 33
+REGISTERS:
+PC: 34
+MAR: 33
+MBR: STORE [MEM(62)]
+ACC: 1
+IR: STORE [MEM(62)]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 50(144)|51(12)|52(2)|53(1)|55(2)|56(2)|60(2)|61(0)|62(53)|63(1)|
+REGISTERS:
+PC: 34
+MAR: 53
+MBR: 1
+ACC: 1
+IR: STORE [MEM(62)]

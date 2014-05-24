@@ -1,0 +1,248 @@
+***Simulation started***
+
+MEMORY:
+Instructions on addresses: 0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|
+Operands on addresses: 256(8)|1023(18)|
+REGISTERS:
+PC: 0
+MAR: 0
+MBR: 0
+ACC: 0
+IR: 0
+
+-------------------
+Instruction LOAD fetched from address 0
+REGISTERS:
+PC: 1
+MAR: 0
+MBR: LOAD [1023]
+ACC: 0
+IR: LOAD [1023]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1023(18)|
+REGISTERS:
+PC: 1
+MAR: 1023
+MBR: 18
+ACC: 18
+IR: LOAD [1023]
+
+-------------------
+Instruction STORE fetched from address 1
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: STORE [1022]
+ACC: 18
+IR: STORE [1022]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1022(18)|1023(18)|
+REGISTERS:
+PC: 2
+MAR: 1022
+MBR: 18
+ACC: 18
+IR: STORE [1022]
+
+-------------------
+Instruction LOAD fetched from address 2
+REGISTERS:
+PC: 3
+MAR: 2
+MBR: LOAD [1023]
+ACC: 18
+IR: LOAD [1023]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1022(18)|1023(18)|
+REGISTERS:
+PC: 3
+MAR: 1023
+MBR: 18
+ACC: 18
+IR: LOAD [1023]
+
+-------------------
+Instruction ADD fetched from address 3
+REGISTERS:
+PC: 4
+MAR: 3
+MBR: ADD 8
+ACC: 18
+IR: ADD 8
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1022(18)|1023(18)|
+REGISTERS:
+PC: 4
+MAR: 3
+MBR: 8
+ACC: 26
+IR: ADD 8
+
+-------------------
+Instruction STORE fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: STORE [1021]
+ACC: 26
+IR: STORE [1021]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 5
+MAR: 1021
+MBR: 26
+ACC: 26
+IR: STORE [1021]
+
+-------------------
+Instruction LOAD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: LOAD [1023]
+ACC: 26
+IR: LOAD [1023]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 6
+MAR: 1023
+MBR: 18
+ACC: 18
+IR: LOAD [1023]
+
+-------------------
+Instruction MUL fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: MUL 2
+ACC: 18
+IR: MUL 2
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: 2
+ACC: 36
+IR: MUL 2
+
+-------------------
+Instruction ADD fetched from address 7
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: ADD -3
+ACC: 36
+IR: ADD -3
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 8
+MAR: 7
+MBR: -3
+ACC: 33
+IR: ADD -3
+
+-------------------
+Instruction STORE fetched from address 8
+REGISTERS:
+PC: 9
+MAR: 8
+MBR: STORE [1020]
+ACC: 33
+IR: STORE [1020]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1020(33)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 9
+MAR: 1020
+MBR: 33
+ACC: 33
+IR: STORE [1020]
+
+-------------------
+Instruction LOAD fetched from address 9
+REGISTERS:
+PC: 10
+MAR: 9
+MBR: LOAD [256]
+ACC: 33
+IR: LOAD [256]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1020(33)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 10
+MAR: 256
+MBR: 8
+ACC: 8
+IR: LOAD [256]
+
+-------------------
+Instruction STORE fetched from address 10
+REGISTERS:
+PC: 11
+MAR: 10
+MBR: STORE [1019]
+ACC: 8
+IR: STORE [1019]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1019(8)|1020(33)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 11
+MAR: 1019
+MBR: 8
+ACC: 8
+IR: STORE [1019]
+
+-------------------
+Instruction LOAD fetched from address 11
+REGISTERS:
+PC: 12
+MAR: 11
+MBR: LOAD [1021]
+ACC: 8
+IR: LOAD [1021]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(8)|1019(8)|1020(33)|1021(26)|1022(18)|1023(18)|
+REGISTERS:
+PC: 12
+MAR: 1021
+MBR: 26
+ACC: 26
+IR: LOAD [1021]
+
+-------------------
+Instruction CMP fetched from address 12
+REGISTERS:
+PC: 13
+MAR: 12
+MBR: CMP [257]
+ACC: 26
+IR: CMP [257]
