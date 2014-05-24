@@ -1,0 +1,3 @@
+Katedra - http://kf.elf.stuba.sk/
+Predmet - http://kf.elf.stuba.sk/kf_php_s/basic_course_s.php?menu=2
+Labaky  - http://kf.elf.stuba.sk/kf_php_s/prakticke.php?menu=2

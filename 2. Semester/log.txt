@@ -1,0 +1,4 @@
+Sem pisat 
+meno | datum | vymazany subor | dovod  - inak sa hneď všetko automaticky dáva späť a možno zbytočne.
+Ďakujem! 
+

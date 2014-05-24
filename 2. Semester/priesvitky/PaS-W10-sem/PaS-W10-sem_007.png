@@ -1,0 +1,810 @@
+-Robocopy" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-CodePage-10010" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Mup-Mof" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="caspol" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-TextServicesFramework-msctfp" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-IMAPIv2-LegacyShim-MOF" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Microsoft-Data-Access-Components-(MDAC)-RDS-DataControl" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-CodePage-57002-57011" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Clip" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-DFSUI" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-KhmerUI" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-GetMAC" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Winsock-Core-Infrastructure-Upgrade" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft.Windows.Hardware.Devices.ClassInstaller.SDHOST-DriverClass" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-BeepSys" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Audio-AudioCore" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-Keyboard-00000850" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Null" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-ComputerManagerLauncher" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-BootEnvironment-Core-BootManager-PCAT.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="zh-HK" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-EventLog-CommandLine" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-Shruti" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Default-TimeZone-Settings" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-control" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-Keyboard-00000843" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-User32" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-IME-Traditional-Chinese-TIP_Profile" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-ASPNET_WEBADMIN_PROV_RES" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-CompositeBus" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-SHARED_NETFX_20_PERFCOUNTER" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-Andalus" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Storprop" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Microsoft-Data-Access-Components-(MDAC)-RDS-Remote" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-UIRibbon" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-WindowsMobileDevice-Migration" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-ASPNET_WEBADMIN_PROVIDERS" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-TextServicesFramework-msctf" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-SQLLiteOLEDB-Feature" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-FileTraceFilter" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="InstallUtil" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-NdisHelperClass" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-XWizards-Registration" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-cryptsvc-dll" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft.Windows.Hardware.Devices.ClassInstaller.PORTS-DriverClass" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-CordiaUPC" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-LCPhrase" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="System.Management" version="6.1.7601.17514" processorArchitecture="msil" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-cabview" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-TapiService" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-WordbreakerStemmer-Spanish" version="7.0.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Security-SPP-Component-AccountIdentity" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-NetCoInstaller" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Base Technologies-BCD" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Time-Tool" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-EstrangeloEdessa" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-LanguageGroup-Central_Europe" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Comctl32-v5.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="ja-JP" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-SecurityConfigurationManagement-UI" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-MSMincho" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-UXInit" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-SMBServer-v1" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-Gisha" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-CodePage-874" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Wininit" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Wlanutil" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Cdosys.Resources" version="6.1.7601.17514" processorArchitecture="x86" language="sv-SE" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Security-SPP-Client" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-VolumeManagement-Core" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Microsoft-Data-Access-Components-(MDAC)-RDS-Persist" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Time-Help" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-RasCmDial" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-Bitmap-Courier" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft.Windows.Hardware.Devices.ClassInstaller.VOLUMESNAPSHOT-DriverClass" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft.JScript.tlb" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Setup" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-NtfsChkdsk" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-CodePage-Core-Thai" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Network-basic" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Microsoft-Data-Access-Components-(MDAC)-RDS-CE" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-systray" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-mscorsvw" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-L2GPStore" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-Keyboard-KBDSF" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Microsoft-Management-Console-NodeManager" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-PantherEngine" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-TrueType-MalgunGothicBold" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-DiagnosticInfrastructure-Events" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="System.Deployment" version="6.1.7601.17514" processorArchitecture="msil" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Cdosys.Resources" version="6.1.7601.17514" processorArchitecture="x86" language="de-DE" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft.Windows.Common-Controls.Resources" version="6.0.7600.16385" processorArchitecture="x86" language="ru-RU" publicKeyToken="6595b64144ccf1df" type="win32">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-MSCORLD_DLL" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-AT" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-NBSMB" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-Core-SortingVersion-Windows6Compat-Dll" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-DirectX-DirectXDiagnostic" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Font-FMS.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="hr-HR" buildType="release" publicKeyToken="31bf3856ad364e35" type="win32" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Printing-Reach" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="IEHost" version="6.1.7600.16385" processorArchitecture="msil" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-MulanTTSVoiceFrontendENU" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-mlang.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="he-IL" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Kernel-WMI" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-Keyboard-0000046f" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-RootSecurity" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Scripting-Shell-Extension" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Comctl32-v5.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="et-EE" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-TabletPC-InputPanel-Languages.Resources" version="6.1.7601.17514" processorArchitecture="x86" language="sr-Latn-CS" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-FilterManager-Utils" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Desktop_Technologies-Text_Input_Services-IME-EAShared-IMEPad" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Microsoft-Data-Access-Components-(MDAC)-Feature" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-RICHED32" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-WEBLOWTRUST_CONFIG_DEFAULT" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Desktop_Technologies-Text_Input_Services-IME-Japanese-HandwritingRecognizer" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-RegINI" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-Keyboard-0000042c" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-BootEnvironment-Core-BootManager-PCAT.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="de-DE" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-EVENTLOGMESSAGES_DLL" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-BootEnvironment-Core-BootManager-PCAT.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="pt-BR" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="NetFx-Scripting_Engine_TLB" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" publicKeyToken="b03f5f7f11d50a3a">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-SafeMode" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-Keyboard-00000423" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-NTVDM-System" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-TableDrivenTextService-Simplified-Chinese-QuanPin" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Security-Kerberos" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-International-CodePage-Core-Turkic" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="naphlpr" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-DriverQuery" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-comdlg32.Resources" version="6.1.7601.17514" processorArchitecture="x86" language="pt-PT" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-Security-NTLM" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-mlang.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="it-IT" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-DiagnosticInfrastructure-Server" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-EncoderAPI" version="6.1.7600.16385" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-TabletPC-InputPanel-Languages.Resources" version="6.1.7601.17514" processorArchitecture="x86" language="nb-NO" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-MSInfo32-Exe-Common" version="6.1.7601.17514" processorArchitecture="x86" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft-Windows-LSA-MSPrivs.Resources" version="6.1.7600.16385" processorArchitecture="x86" language="it-IT" buildType="release" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install">
+      <assemblyIdentity name="Microsoft.Windows.Common-Controls.Resources" version="6.0.7600.16385" processorArchitecture="x86" language="hu-HU" publicKeyToken="6595b64144ccf1df" type="win32">
+      </assemblyIdentity>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install"

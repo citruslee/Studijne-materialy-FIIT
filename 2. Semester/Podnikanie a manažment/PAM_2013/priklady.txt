@@ -1,0 +1,38 @@
+12. 3. 2013
+Príklad:
+	1) Robotník má priznanú mzdovú tarifu 1,20 eur / hod. Odpracoval 23 prac.
+	   dní pri 40-hodinovom pracovnom tıdni a opracoval 1700 súèiastok prièom 
+	   norma spotreby èasu na opracovanie 1 súèiastky = 10 min.
+
+		1)vypoèítaj úkolovu mzdu
+		2)Vypoèítajte vıšku úkolového nadzárobku k úkolovej mzde
+		3)Vypoèítajte % plnenia vıkonnovej normy.
+RIEŠENIE:
+	1) Sj[mzdová tarifa * norma èasu] = 1,2 * (10/60) = 0,2 euro
+	   Um[úkolová mzda] = 0,2 * 1700 = 340 eur
+
+	2) Cm = 1,2 * 23 * 8 = 220,8 euro
+	   Un[úkolovı nadzárobok] = 340 - 220,8 = 119,2 euro
+
+	3) = SV/NV * 100% 		NV = dåka  smeny v min / NZ
+		NV = (23[dní] * 8[hod] * 60[min]) / 10 = 1104 ks
+     		
+	%pln = 1700 / 1104 * 100% = 153,9 %		
+Príklad:
+	2) Spoloènos s.r.o. zakúpila v 2011 osobnı automobil za 20700, automobil je zaradenı do prvej odpisovej skupiny.
+	zostavte plán daòovıch odpisov na celú dobu ivotnosti
+		1) rovnomerné odpisovanie
+		2) zrıchlené odpisovanie
+
+RIEŠENIE:
+	1) VC(vecná cena) = 20 700 eur,
+	  Roènı odpis = 20 700 / 4 = 5 175 eur
+
+	2) [O1] roènı odpis v 1. roku = VC/k1 = 20 700/4 = 5 175 eur
+		ZC1[zostatková cena v 1. roku] = 20 700 - 5 175 = 15 525
+		O2[odpis] = (2*ZC)/(k[koeaficient] - (n[rok]-1)) = (2 * 15 525)/(5-1) = 7 763,5
+		ZC2 = ZC1 - Q2 = 15 535 - 7 762,5 = 7 762,5
+		O3 = (2*7 762,5)/(5-2) = 5 175
+		ZC3 = 7 762,5 - 5 175 = 2 587,5
+		O4 = (2*2 587,5)/(5-3) = 2 587,5
+		ZC4 = 0

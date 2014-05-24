@@ -1,0 +1,28 @@
+B.skupina
+
+1. Nech A, B, C sú náhodné udalosti. Zapíšte mnoinovımi operáciami udalosti spoèívajúce v tom, e spomedzi A, B a C
+a) nastala B alebo C
+b) nastala A a súèasne aspoò jedna z B, C
+c) nastali práve dve z nich (t.j. dve spomedzi A, B, C)
+d) nastali aspoò dve z nich
+(kadá z otázok a) – d) je 0,5 bodová)
+
+Ïalej nech P(A)=0,4, P(B)=0,4, P(C)=0,45, P(A/B)=5/8, P(B/C)=4/9, P(C/A)=5/8 a P(A prienik B prienik C)=0,15
+Urète pravdepodobnosti (kadá za 2 body)
+
+e) P(B zjednotenie C)
+f) P(A prienik B‘ prienik C)
+g) P(A prienik (B zjednotenie C))
+h) P(nastane aspoò jedna z A, B, C)
+
+ 
+2. (5 b)
+Škatu¾a obsahuje 15 vırobkov – 10 je prvej a 5 je druhej kvality. Náhodne vyberieme s vrátením postupne 7 vırobkov.
+(2 b) Aká je P toho, e prvıch pä bude prvej kvality a posledné dva druhej kvality?
+(3 b) Aká je P toho, e medzi vybranımi bude 5 vırobkov prvej kvality?
+
+
+Spracoval:
+
+         Tomas Goda
+(c) http://fei.toxicwaste.sk
