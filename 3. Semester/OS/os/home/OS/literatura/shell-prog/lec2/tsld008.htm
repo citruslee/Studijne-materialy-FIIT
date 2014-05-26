@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Files and their Inodes</title>
+</head>
+
+<body>
+
+<h1>Files and their Inodes</h1>
+
+<ul>
+  <li><h2>A file has several components: name, contents, and administrative info (e.g.
+    permissions and modification times) </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>Administrative information is stored in the inodes </h2>
+    <ul>
+      <li>inodes also contain contain essential system data: how long, where on disk stored, etc. </li>
+      <li>three times in inode: time contents last modified, time file last used, time that inode
+        itself was last changed (e.g. set permissions) </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>Directory actually only stores the starting inode number of files within it </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>Unix tracks files only by their inode numbers </h2>
+    <ul>
+      <li>Unix knows nothing at the file system level about names </li>
+      <li>user assigned names are in the directory associated with the inode that is that file as
+        far as Unix is concerned. </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld007.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld009.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

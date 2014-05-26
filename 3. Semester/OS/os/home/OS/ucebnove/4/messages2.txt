@@ -1,0 +1,198 @@
+synchronna komunikacia (synchronous communication)
+-----------------------
+Priklad:
+producent:
+	Cita pismena zo standardneho vstupneho zariadenia
+konzument:
+	konvertuje na velke pismena, pise na  
+        standardne vystupne zariadenie
+
+send(ciel, sprava)     => output(proces, vyraz)
+receive(zdroj, sprava) => input(proces,premenna)
+
+CSP - Communicating Sequential Processes
+
+
+process producer( )
+{ 
+	int c;
+	while (( c = getchar( )) ! = EOF)
+	      output(consumer, c);
+	output(consumer, EOF);
+}				  	
+
+process consumer( )
+{
+	int c;
+	for( ; ; ) {
+		input(producer,c);
+		if (c == EOF)
+	     		break;
+		if (male(c))
+            		c = velke(c);
+		putchar(c);
+	}
+} 
+
+
+synchronna obojsmerna komunikacia
+(synchronous bidirectional communication)
+----------------------------------
+rozsirene randevu (extended rendezvous)
+
+ADA (randevu)
+entry point - komunikacny vstup
+
+
+volanie
+  meno procesu.meno komunikacneho vstupu (parametre) 
+
+akceptovanie
+  accept meno komunikacneho vstupu (parametre)
+
+volanie vzdialenej proced£ry
+RPC - remote procedure call
+
+
+task PRODUCER;
+task CONSUMER is 
+	entry ZASLANY(C : in CHARACTER );
+end CONSUMER;
+
+task body PRODUCER is 
+	C: CHARACTER; 
+begin
+	while not END_OF_FILE(STANDARD_INPUT) loop
+	      GET(C); CONSUMER.ZASLANY(C);
+   	end loop;
+	CONSUMER.ZASLANY(ASCII.EOT);
+end PRODUCER;
+
+task body CONSUMER is
+	X: CHARACTER; 
+begin
+	loop
+	    accept ZASLANY(C: in CHARACTER ) do 
+	        X : C;
+	    end ZASLANY;
+	    if X = ASCII.EOT then exit;  end if;
+	    if MALE(X) then X = VELKE(X); end if;
+	    PUT(X);
+	end loop;
+end CONSUMER;
+
+rozdielne rychlosti => pouzime vyrovnavaciu pamat sprav
+
+PRODUCENT ->  BUFFER  <-  CONSUMER
+         send	    receive
+
+task BUFFER is 
+	entry SEND (c: out CHARACTER);
+	entry RECEIVE (c: in CHARACTER);
+end BUFFER;
+
+task body BUFFER is
+	N: constant  INTEGER := 100;
+	Q: array (1..N) of CHARACTER;
+	S,R: INTEGER range 1..N := 1;
+	POCET: INTEGER range 0..N := 0;
+begin
+   loop
+       select
+	   when POCET < N =>
+	       accept  SEND (C: in CHARACTER) do
+                   Q(S) : C; 
+              end SEND;
+              S := (S mod N) + 1;  POCET:= POCET + 1;
+          or when   POCET > 0  =>
+               accept RECEIVE (C: out CHARACTER) do
+                    C: Q(R);
+	        end RECEIVE;
+               R:= (R mod N) + 1;  POCET:= POCET - 1;
+          end select;
+     end loop;
+end BUFFER;  
+
+
+
+ASYNCHRONNA KOMUNIKACIA
+------------------------
+buffer je v operacnom systeme
+
+asynchronny send 
+
+obmedzime sa na N položiek (znakov) na ceste
+
+
+# define N 10
+process producer ( )
+{
+   int c,m;
+   for (;;) {
+	c = getchar ( );
+	receive (consumer, &m);
+	if (c == EOF)
+	      break;
+	send (consumer, c);
+   }
+   send(consumer, EOF);
+} 
+
+# define N 10
+process consumer ( )
+{
+   int c,m,i;
+   for (i = 0; i < N; i++)
+	send (producer, m);
+   for(;;) {
+	receive(producer, &m);
+	c = m;
+	send (producer, m);
+	if (c == EOF)
+	      break;
+	if (male(c))
+	      c = velke(c);
+	putchar(c);
+   }
+} 
+
+
+program obmedzoval velkost vyrovnavacej pamati
+
+nech je mozne poslat potencialne neobmedzeny pocet sprav
+odosielatelovi obmedzime predstih
+
+
+#define  PREDSTIH  100
+process producer ( )
+{
+   int c, ack, n = 0;
+   for (;;) {
+	c = getchar( );
+	send (consumer, c, (n == 0) ? 1 : 0);
+	if (c == EOF)
+	    break;
+	if (++n == PREDSTIH) {
+	    receive (consumer, &ack);
+	    n = 0;
+	}
+   }
+   receive
+}
+
+process consumer ( )
+{
+    int c, ack;
+    for(;;) {
+	receive(producer, &c, &ack);
+	if (ack)
+	      send(consummer, ack);
+	if (c == EOF)
+	      break;
+	if (male(c))
+             c = velke(c);
+       putchar(c);
+   }
+}
+
+

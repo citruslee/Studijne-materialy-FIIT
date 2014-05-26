@@ -1,0 +1,99 @@
+  Sprava pamati na 80386 - I. cast: segmentacia
+Pouzitie segmentov pri  adresovani na 80x86 vsetci poznaju  zo SOJ (registre
+CS,  DS, ES,  SS). V  chranenom rezime  (protected mode)  pristupuje ochrana
+pamati, pristupove prava, zvacsenie max. velkosti  segmentu od 386 je na 4GB
+(v ramci segmentu sa pouziva 32 offset).
+
+  Sprava pamati na 80386 - II. cast: strankovanie  
+(zabudnime na segmenty, nech to zatial nekomplikujeme)
+Procesor vyraba  fyzicku adresu velkosti  32 bitov. Kazdy  proces ma logicky
+adresovy priestor  takisto 32 bitovy. Ak  je vypnute strankovanie (bit  P6 v
+registri CR0 je nulovy), logicka adresa  = fyzicka adresa (ochrana pamati sa
+moze robit cez segmenty). Inak sa adresa preklada.
+Preklad logickej (nazyva sa linearna) adresy na fyzicku sa realizuje pomocou
+dvojurovnovej tabulky stranok.
+
+Linearna adresa:
+         31            22               12                 0
+         |--------------------------------------------------|
+         |  Adresar      |   Tabulka      |   Offset        |
+         |--------------------------------------------------|
+            |   Strankovy     |     Tabulka           |
+            |   adresar       |     stranok           |          |-------|
+            | |-------------  |   |-------------1023  |          |       |
+            | |            |  |   |            |      |          |       |
+            | |            |  |   |            |      |          |Fyzicka|
+            | |            |  |   |            |      |12 bitov  | pamat |
+            | |            |  |   |            |      |          |<= 4GB |
+Adresa      | |            |  |   |            |      v          |       |
+adresara    | |            |  |-->|============|----->+ -------->|       |
+procesu     | |            |      |            | 20bit    32bit  |       |
+v CR3:      |>|============|--    |            |         Fyzicka |       |
+|---------    |            | |    |            |         adresa  |       |
+|  DBA    |-->|------------- |--->|-------------                 |       |
+|---------     31         0        31         0                  |       |
+31       12                                                      |-------|
+
+
+Otazky: (odpovede su naznacene v zatvorkach)
+Aka je velkost stranky? (v stranke sa adresuje 12 bitmi)
+Kolko pamati zabera jedna tabulka stranok? (1024 poloziek, 32 bitov kazda)
+Kolko  fyzickej  pamati  adresuje  jedna  tabulka  stranok?  (1024 x velkost
+stranky)
+Kolko tabuliek  stranok potrebujem, ak program  vyuziva 1MB pamati (to  je v
+sucasnosti priemerna velkost pre program)?
+Spocitajte  adresovy  priestor  procesu!  (Adresar  =  1024  tabuliek, kazda
+tabulka 1024 stranok)
+
+Vyhodou  dvojurovnovych tabuliek  stranok  je  setrenie priestoru  na tabulky
+stranok:  pre kazdy  proces musi  byt naplneny  iba strankovy  adresar a  tie
+tabulky,  ktore naozaj  potrebuje. Ostatne  riadky v  strankovom adresari  sa
+oznacia ako  neexistujuce. Kazdy proces bezne  pouziva zopar tabuliek stranok
+(ved  sme spocitali,  ze jedna  tabulka adresuje  az 4MB  pamate!), teda  ich
+urcite nepotrebuje mat 1024.
+
+Ako presvedcit 80386, aby pouzival iba segmenty? (Nezapnut strankovanie)
+Ako  ho  presvedcit,  aby  pouzival  iba  strankovanie?  (Segmenty sa vypnut
+nedaju, ale da sa nastavit jediny  segment velkosti 4GB, ktory obsiahne cely
+adresovy priestor procesu. Vsetky segmentove registre sa nim naplnia - potom
+staci  pouzivat 32  offset v  ramci segmentu  = linearna  adresa. Vacsina 32
+bitovych OS to  robi prave takto. V jazyku C  sa mozete stretnut s oznacenim
+FLAT memory model.)
+
+
+ Advanced informacie o strankovani 80386 (nepovinne): 
+Polozka  v  adresari  aj  v  tabulke  vyzera  asi  takto:
+- 20 bitov  adresa strankoveho ramca (zaciatku  stranky vo fyzickej pamati),
+- bit P: stranka je pritomna vo fyzickej  pamati (inak Page Fault - INT 0Eh,
+  linearna adresa je v CR2 a operacny system musi stranku zohnat),
+- bit W: do stranky moze proces zapisovat
+- bit U: stranka sa moze pouzivat aj v neprivilegovanom rezime
+- bit A: stranka bola pouzita (Accessed)
+- bit D: stranka bola modifikovana (Dirty)
+- 3 bity AVL pre poznamky operacneho systemu, 4 bity rezerva
+
+Pri  prepnuti procesu  sa CR3  naplni adresou  fyzickeho ramca,  v ktorom sa
+nachadza strankovy adresar noveho procesu. Operacny system sa musi postarat,
+aby bol pritomny vo fyzickej pamati!!!  Tabulky ani stranky tam byt nemusia,
+mozu sa vytahovat zo zaloznej pamate (z disku) postupne.
+
+Na  zrychlenie   prekladu  linearnej  adresy   stranky  na  fyzicku   adresu
+strankoveho ramu sa takmer u  vsetkych procesorov pouziva  asociativna pamat .
+Asociativna pamat obsahuje polozky v  tvare (stranka, strankovy ram), pricom
+klucom pre vyhladavanie je stranka.  Adresovaci hardver hlada adresu stranky
+vo vsetkych polozkach  paralelne, co je velmi rychle.
+Iba  ak  nenajde  spravnu  polozku,  musi  zistovat  adresu strankoveho ramu
+pomocou tabulky stranok, co trva ovela dlhsie.
+U 80386  sa  asociativna  pamat  vola  TLB  (Translation  Look-aside Buffer)
+a obsahuje  4x8 poloziek.  Ak je  v  nej  spravna adresa,  preklad je  velmi
+rychly. Inak musi z CR3 zobrat  adresu adresara, pripocitat k nej hornych 12
+bitov  adresy,  odtial  precitat  4  bajty,  zobrat  z  nich adresu tabulky,
+pripocitat  k nej  strednych 12  bitov,  precitat  4 bajty  a z  nich zobrat
+fyzicku  adresu  ramca.  Nastastie,  programy  su  pisane rozumne a vacsinou
+pouzivaju susedne adresy, ktore su v tom istom ramci. A kedze v TLB moze byt
+32 adries ramcov, zrychlenie je poriadne.
+TLB  sa musi  vyprazdnit po  kazdej zmene  v tabulkach  stranok, po prepnuti
+procesu a podobne.
+
+
+

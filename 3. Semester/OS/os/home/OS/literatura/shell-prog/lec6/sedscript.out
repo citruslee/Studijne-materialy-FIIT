@@ -1,0 +1,55 @@
+Script started on Tue Feb 10 08:31:42 1998
+enterprise.aacc.cc.md.us{efs}41: ./sedscript
+Do a Who and change every occurence of ttyp in out to teletype
+erd      tty1     Feb  9 21:06
+cs235b11 teletype4    Feb  9 08:10 (fister.fister.ne)
+cs297a13 teletype1    Feb  4 09:54 (localhost)
+cs235b10 teletype6    Feb  6 20:48 (sp2d41.toad.NET)
+cs298a13 teletype3    Feb  9 20:34 (october)
+cs298a13 teletype7    Feb  9 21:20 (september)
+efs      teletype2    Feb 10 07:54 (trmmstocker.GSFC)
+cs287a11 teletype0    Feb 10 08:13 (sp1d34.toad.NET)
+ 
+Add phrase 'this is ok' to end of every line in fixedfile
+Henry, Jefferson Davis programmer 28this is ok
+Smith, Adam            economist  105this is ok
+Jefferies, William B   manager    51this is ok
+Billings, Henrich Q    clerk      21this is ok
+Maidenhood, Martha Ann programmer 32this is ok
+ 
+Print the first three lines and quit
+Remember by default sed prints the line
+Henry, Jefferson Davis programmer 28
+Smith, Adam            economist  105
+Jefferies, William B   manager    51
+ 
+Delete the first two lines
+Jefferies, William B   manager    51
+Billings, Henrich Q    clerk      21
+Maidenhood, Martha Ann programmer 32
+ 
+display disk usage to show format of the command
+ du gives space taken on disk by files in 512 byte blocks, tab separates the fields
+1	fixedfile
+1	grepscript
+2	grepscript.out
+1	junkfile
+2	sedscript
+1	sedscript.out
+ 
+use sed to delete the size field. uses regular expression
+fixedfile
+grepscript
+grepscript.out
+junkfile
+sedscript
+sedscript.out
+ 
+demonstrates an expression used to determine which lines to delete
+Smith, Adam            economist  105
+Billings, Henrich Q    clerk      21
+Maidenhood, Martha Ann programmer 32
+enterprise.aacc.cc.md.us{efs}42: exit
+exit
+
+Script done on Tue Feb 10 08:31:50 1998

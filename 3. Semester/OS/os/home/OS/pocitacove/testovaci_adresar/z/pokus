@@ -1,0 +1,7 @@
+#! /bin/csh
+
+set a = (a b c d e)
+
+set a[$#a] = `echo $a[$#a] | tr '[:lower:]' '[:upper:]'`
+
+echo $a

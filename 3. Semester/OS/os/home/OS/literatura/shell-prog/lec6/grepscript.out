@@ -1,0 +1,32 @@
+Script started on Tue Feb 10 08:07:27 1998
+enterprise.aacc.cc.md.us{efs}41: ./grepscript
+erd      tty1     Feb  9 21:06
+cs235b11 ttyp4    Feb  9 08:10 (fister.fister.ne)
+cs297a13 ttyp1    Feb  4 09:54 (localhost)
+cs235b10 ttyp6    Feb  6 20:48 (sp2d41.toad.NET)
+cs298a13 ttyp3    Feb  9 20:34 (october)
+cs298a13 ttyp7    Feb  9 21:20 (september)
+chris    ttyp5    Feb 10 02:56 (COLUMBIA.BBN.COM)
+efs      ttyp2    Feb 10 07:54 (trmmstocker.GSFC)
+those on since Feb 9
+erd      tty1     Feb  9 21:06
+cs235b11 ttyp4    Feb  9 08:10 (fister.fister.ne)
+cs298a13 ttyp3    Feb  9 20:34 (october)
+cs298a13 ttyp7    Feb  9 21:20 (september)
+those on since Feb 10
+chris    ttyp5    Feb 10 02:56 (COLUMBIA.BBN.COM)
+efs      ttyp2    Feb 10 07:54 (trmmstocker.GSFC)
+Looking for Capital R or Capital E in files
+grepscript:# Author:            Erich Franz Stocker                            #
+grepscript:# using a regular expression find which file in directory has an R or E  in caps in it
+grepscript:echo "Looking for Capital R or Capital E in files"
+grepscript:grep "[RE]" *
+grepscript.out:cs235b10 ttyp6    Feb  6 20:48 (sp2d41.toad.NET)
+grepscript.out:Looking for Capital R or Capital E in files
+grepscript.out:grepscript:# Author:            Erich Franz Stocker                            #
+grepscript.out:grepscript:# using a regular expression find which file in directory has an R or E  in caps in it
+junkfile:It is meant to sure that grep can do some REG 
+enterprise.aacc.cc.md.us{efs}42: exit
+exit
+
+Script done on Tue Feb 10 08:07:34 1998

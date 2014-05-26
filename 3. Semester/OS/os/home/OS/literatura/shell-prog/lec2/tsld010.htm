@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Inodes (contd)</title>
+</head>
+
+<body>
+
+<h1>Inodes (contd)</h1>
+
+<ul>
+  <li><br>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>Names are a feature of directory and not part of file. </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>System knows files only by inodes </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>links are handled by using the same inode number rather than actually copying file </h2>
+    <ul>
+      <li>in directory there is the original name with its inode </li>
+      <li>in directory there is the link name with same inode </li>
+      <li>lookup of name in directory gets the inode </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>only when the last link to a file disappears does the system remove the inode and
+    therefore the file itself </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>inode gives only starting location (1st cluster of file) on device; </h2>
+    <ul>
+      <li>pieces of the file do not have to be contiguous </li>
+      <li>each piece is linked to the next through a pointer to the location of the next cluster
+        for the file </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>fsck utility run at boot up checks the file system and one of the functions it does
+    is ensure that the inodes are valid</h2>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld009.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld011.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

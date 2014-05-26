@@ -1,0 +1,185 @@
+Cvicenie c.4(ucebna): Synchronizacia a komunikacia procesov pomocou sprav.
+==========================================================================
+
+I.   Motivacia - vysvetlenie problemu
+
+     Vyrovnavacia pamat sprav pomocou semaforov = odovzdavanie balikov
+tak,   ze  priamo   vidime  implementaciu   pomocou  spolocnej  pamati
+(miestnost  "balikovna", do  ktorej nesmie  vojst naraz  viac ludi. Je
+v nej niekolko stolov, na kazdy sa zmesti prave jeden balik).
+     Komunikacia pomocou  sprav = zavedenie  zasielacich sluzieb medzi
+procesmi (nemusime vidiet  implementaciu, zabezpecuje operacny system,
+problematika pocitacovych  sieti a pod.).  Teda procesy vidia  iba dve
+sluzby ("postove priehradky"):
+- send(adresa, sprava);
+- receive(adresa, sprava);
+Komunikacna  cesta sa  casto  nazyva  kanal. Existuje  mnoho variacii,
+ktore sa lisia v nasledovnych vlastnostiach:
+1.  Typ kanala:  rozlisujeme tri  zakladne typy  kanalov (uvadzame ich
+   typicke pomenovanie, ale nazvov je viac):
+   a) Linka: privatne spojenie medzi dvoma procesmi - adresou moze byt
+      pid  adresata u  send a  pid odosielatela  u receive.  Ak system
+      pozaduje  najskor  ziskat/zriadit/inicializovat  kanal,  adresou
+      bude identifikacia kanala.
+   b) Port  alebo mailbox: viac  odosielatelov (send), jeden  prijemca
+      (zvycajne je vlastnikom portu).
+      Adresou mozu byt pidy alebo identifikacia kanala.
+   c)   Multiport,   niekedy    tiez   mailbox:   Ktorykolvek   proces
+      (pripojeny/prihlaseny  k  multiportu)   moze  poslat  aj  prijat
+      spravu. Adresou je vzdy identifikacia multiportu.
+2. Pocet  sprav,  ktore  mozu  byt  "na  ceste" (send bez prislusneho
+   receive, kapacita kanala)
+   a) neobmedzeny  pocet  (=  asynchronny  prenos sprav). Odosielatel
+      vykona   send()  bez   blokovania,  sprava   moze  byt  prijata
+      kedykolvek neskor.
+   b)  ziadna (=  synchronny prenos  sprav). Odosielatel  je blokovany
+      v operacii send(), kym nie je prijemca pripraveny prijat spravu.
+   c) nieco medzi tym (bud  presne dane cislo, alebo podla podmienok).
+      Odosielatel je zdrzany iba ak je kanal plny.
+3.  Typ (struktura)  a dlzka  spravy: mnoho roznych rieseni.
+   Typicke (najma  pre Unix a  C-jazyk): na strukture  spravy sa musia
+   dohodnut oba  procesy, pre kanal  je sprava iba  postupnost bajtov,
+   v send() treba zadat dlzku spravy. Napriklad:
+        struct {tag1, tag2,...,tagn} message;
+        result = send(channel, (char*) &message, sizeof(message));
+   (U prijemcu  ma sprava ten  isty pocet bajtov.  Vynimkou su unixove
+    pajpy, sockety a pod.)
+
+     Komunikacia  =  tok  udajov   medzi  odosielatelom  a  prijemcom.
+Synchronizacia  = sprava  nemoze byt  prijata skor,  nez bola odoslana
+(teda  iba operacia  receive(), ale  u synchronnych  sprav pribuda  aj
+synchronizacia na strane odosielatela).
+
+Napr.: Pri asynchronnom prenose sprav sa casto pouziva potvrdzovanie:
+Nech mame dva procesy a proces P posiela spravu procesu Q:
+P:   send(Q, sprava);    receive(Q, sprava);
+Q:   receive(P, sprava); send(P, "potvrdenie"); /* acknowledgement */
+
+Problemy: Jeden z procesov skonci a druhy s nim dalej komunikuje (musi
+sa o to  postarat system - bud proces zrusit,  alebo mu vratit chybu),
+spravy sa potratia (timeout a opakuj),alebo su poskodene (CRC)...
+
+II.  Programove riesenie a priklady
+
+     V nasledujucom priklade predpokladajme  kanaly typu port. Adresou
+v operacii  bude identifikacia  portu (cele  cislo -  handle). Nech ma
+kazdy proces od svojho vzniku  stadnardne priradeny jeden default port
+(identifikuje ho premmenna my_default_port).  Dalsie porty moze ziskat
+volanim  AllocatePort().  Prijimat  spravy   z  portu  moze  iba  jeho
+vlastnik. Identifikacia  default portu nejakeho  procesu sa da  zistit
+volanim GetDefaultPort(pid). Cez default  porty zvycajne procesy zacnu
+komunikaciu  a  potom  si  oznamia  identifikaciu  dalsich  portov pre
+privatnu komunikaciu.
+
+typedef int chan_hndl;  /* index do internej tabulky portov  */
+SYSCALL Send(chan_hndl p; char *message; int message_length);
+SYSCALL Receive(chan_hndl p; char *message; int *message_length);
+SYSCALL AllocatePort(chan_hndl *port);
+chan_hndl GetDefaultPort(process_hndl pid);
+
+Priklad 1.: Komunikacia klient-server.
+Server poskytuje sluzby klientom podla nasledovneho algoritmu:
+1.  Prijmi   poziadavku  na  sluzbu  od   niektoreho  klienta.  Sluzby
+   (operacie) su  z mnoziny {OP1, OP2,...,  OPn}. Klient posiela cislo
+   pozadovanej operacie, jej argumenty a cislo portu, na ktorom prijme
+   vysledok.
+2. Uskutocni pozadovanu operaciu. (po pripadnej kontrole argumentov)
+3. Posli klientovi vysledky operacie.
+4. Opakuj od  bodu 1.  (server je  teda sekvencny proces, neobsluhuje
+   viac klientov naraz)
+Kazdy  klient  vytvori  poziadavku  na  operaciu  servera, zasle mu ju
+a caka na odpoved. Pre jednoduchost ich mozeme tiez zacyklit.
+Napiste telo servera a klientov.  Netrapte sa tym, ze operacie servera
+mozu mat argumenty  aj vysledky roznych typov a  dlzok (bud sa tvarte,
+ze  su  vsetky  rovnake,   alebo  vytvorte  union,  zdruzujucu  vsetky
+pripady).  Predpokladajte, ze  cislo  portu  servera je  zname vsetkym
+klientom (premenna server_port).
+
+Riesenie (je to iba priklad, bez kontroly chyb):
+
+typedef struct { chan_hndl reply_port;
+                 enum {OP1, OP2,...,  OPn} oper;
+                 arg_type arg;
+               } request_type;
+typedef struct { enum {OK, ERROR} status;
+                 res_type result;
+               } reply_type;
+
+void Server()
+{  request_type request; reply_type reply; int length;
+   Initialization();
+   while (1)
+   {  Receive(my_default_port, (char *)&request, &length);
+      case (request.oper)
+      {  switch OP1:
+            reply.status = Oper1(request.arg, &reply.result); break;
+         ...
+         switch OPn:
+            reply.status = OperN(request.arg, &reply.result); break;
+      };
+      Send(request.reply_port, (char *)&reply, sizeof(reply));
+   }
+}
+
+void Client()
+{  request_type my_request; reply_type my_reply; int length;
+   chan_hndl server_port; /* port servera ziska od spolocneho rodica*/
+   Receive(my_default_port, (char *)&server_port, &length);
+   ...
+   my_request.oper = OPi;   /* pozaduje niektoru operaciu */
+   my_request.arg  = ....;
+   my_request.reply_port = my_default_port;
+   Send(server_port, (char*) &my_request, sizeof(myrequest));
+   Receive(my_default_port, (char *)&my_reply, &length);
+   /* spracuj vysledok */
+   ...
+}
+
+int main()
+{
+   int server_pid = CreateProcess(Server);
+   chan_hndl server_port = GetDefaultPort(server_pid);
+   int client_pid = CreateProcess(Client);        /* vytvor klienta */
+   Send(GetDefaultPort(client_pid),     /* a oznam mu ako sa spojit */
+        (char*) &server_port, sizeof(server_port));
+
+   ....
+}
+
+
+Priklad 2.
+Ako by  ste vyriesili komunikaciu klient-server  podla uvedeneho vzoru
+pomocou  datovodov  (pipes)  v  Unixe  (predpokladajte,  ze  server aj
+klienti maju spolocny rodicovsky proces)?
+(Toto  by mali  ste vediet  sami vdaka  znalostiam zo  zadani. Netreba
+riesit podrobne, staci naznacit.)
+
+Adresovanie:
+Vratme sa k  adresovaniu. V oboch prikladoch sa  spravy adresovali cez
+privatne   premenne,  ktore   poskytol  rodicovsky   proces.  Ak  maju
+komunikovat  procesy, ktore  nie su  pribuzne, musi  sa pouzit  nejaka
+dohodnuta adresa. Procesy sa mozu identifikovat napriklad takto:
+   a)   Identifikacia    procesu   na   pocitaci    (casto   v   tvare
+      pocitac.cislo_procesu  alebo cislo_procesu@pocitac).  Pouziva sa
+      aj  tvar  local_id@pocitac,  pricom  local_id  si dohodne proces
+      s operacnym systemom (napr. cislo portu v TCP/IP).
+   b) Jedinecne cislo  procesu nezavisle od pocitaca  (proces sa moze
+      premiestnit  na  iny  pocitac),  umiestnenie  procesu sa zistuje
+      broadcastom (sprava:  "kde bezi server XXX?",  odpoved: "Tu som,
+      moja adresa je local_id@pocitac").
+   c)  V sieti  bezia specialne  servery (name  servers), ktore mapuju
+      ASCII mena serverov na adresy ako v pripade a. Klient si najskor
+      zisti adresu potrebnej sluzby  (serveru) u name servera, ktoreho
+      adresu pozna.
+      Napr.  Novel Netware:  novo instalovana  sluzba posle  "reklamu"
+      sama na seba a name servery ju automaticky zaradia do zoznamu.
+
+Randevu a RPC
+Pri synchronnom prenose sprav odovzdat  poziadavky a pockat na odpoved
+- to  sa da  zabalit do   mechanizmu, ktory  vyzera uplne  rovnako ako
+volanie  funkcie.  Mechanizmus  realizuje  kompilator  alebo  operacny
+system  (pomocou postupnosti  send a  receive). Pri  randevu sa  takto
+skontaktuje proces  klient s procesom serverom  (uz beziacim), odovzda
+mu  parametre, server  popracuje a  vrati vysledky  (a moze obsluhovat
+dalsieho, alebo  robit statistiku). Pri RPC  sa pre realizaciu vytvori
+novy proces, ktory zanikne hned po obsluzeni.

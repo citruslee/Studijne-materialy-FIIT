@@ -1,0 +1,8 @@
+Subor monitors.txt obsahuje vyseky zo slajdov 3.prednasky 
+so zdrojovymi kodmi monitorov a zasielania sprav.
+
+Najdete tu aj pripravy na cvicenie
+o synchronizacii procesov (asi obsahuje viac, nez vam stihnu
+cviciaci ukazat na hodine).
+Subor dispecer.c ukazuje priklad implementacie prepinania
+procesov na procesore 8086.

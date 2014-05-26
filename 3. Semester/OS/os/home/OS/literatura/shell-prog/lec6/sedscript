@@ -1,0 +1,36 @@
+#!/bin/sh
+#####################################################################
+# Program:           sedscript                                      #
+# Author:            Erich Franz Stocker                            #
+# Date-Written:      02/09/98                                       #
+# System:            CSI 235 - lecture 6                            #
+# Synopsis:                                                         #
+#    demonstrates some of the uses for sed in a script.             #
+#####################################################################
+echo "Do a Who and change every occurence of ttyp in out to teletype"
+who | sed 's/ttyp/teletype/'
+#notice in following to add to end of line just use regular expresssion '$' and subsititute it
+#sed will put new end of line after the text substituted
+echo " "
+echo "Add phrase 'this is ok' to end of every line in fixedfile"
+sed 's/$/this is ok/' fixedfile
+echo " "
+echo "Print the first three lines and quit"
+echo "Remember by default sed prints the line"
+sed 3q fixedfile
+echo " "
+echo "Delete the first two lines"
+sed 1,2d fixedfile
+echo " "
+echo "display disk usage to show format of the command"
+echo " du gives space taken on disk by files in 512 byte blocks, tab separates the fields"
+du *
+# here a tab character follows the asterisk. Must use single quotes so shell doesn't try
+# to use the period or asterisk 
+echo " "
+echo "use sed to delete the size field. uses regular expression"
+du * |sed 's/.*	//'
+# following section shows the use of a pattern to delete lines from the fixed file
+echo " "
+echo "demonstrates an expression used to determine which lines to delete"
+sed '/Jef/d' fixedfile

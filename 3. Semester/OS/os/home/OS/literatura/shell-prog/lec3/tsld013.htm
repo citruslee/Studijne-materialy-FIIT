@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Matching Exact Number of Characters</title>
+</head>
+
+<body>
+
+<h1>Matching Exact Number of Characters</h1>
+
+<ul>
+  <li><h2>Generally match looks for the largest number of character matching the regular
+    expressions </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>\{min,max\} syntax determines a certain number of chars </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>[A-Z]\{1,5\} </h2>
+    <ul>
+      <li>matches from 1 to 5 upper case letters </li>
+      <li>for cmd 1,$s/[A-Z]\{1,5\}/p/ would replace AAA with p </li>
+      <li>but BCDEFZW would become pZW since ZW were the 6th and 7th char and match only for up to
+        5 </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>\{number\} matches only exactly that many characters rather than a minimum to
+    maximum e.g. /a\{4\} matches exactly any aaaa and not aa or aaa or aaaba </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>\ char before { and } necessary because it says not to treat these as plain
+    characters but special characters. </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>\ known as the escape character</h2>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld012.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld014.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

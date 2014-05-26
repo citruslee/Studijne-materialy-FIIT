@@ -1,0 +1,181 @@
+@CT 1
+@LM 1
+@RM 76
+@PL 64
+@TB -----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T
+@MT 2
+@MB 2
+@PO 3
+@PN 1
+@OP 
+@LH 4
+
+@LH 6
+      Spr va pam„ti v multiprocesovìch syst‚moch - rieçen‚ pr¡klady.
+    ===================================================================
+
+Pr¡klad  1.:  (Multiprogramovanie  s   oblasœami  pevnej  d’§ky,  bez  vìmen
+              - swapovania)
+     PoŸ¡taŸovì  syst‚m m   v hlavnej  pam„ti priestor  pre çtyri  programy.
+     Tieto programy  v priemere 50%  Ÿasu Ÿakaj£ na  V/V oper cie. Ak   Ÿasœ
+     Ÿasu procesora (CPU) je v priemere nevyu§it ?
+Rieçenie:  PoŸas vykon vania  ka§d‚ho  programu  sa strieda  samotnì vìpoŸet
+     (procesor vykon va inçtrukcie programu) s Ÿakan¡m na V/V. Syst‚m je bez
+     swapovania, programy s£ umiestnen‚ v pam„ti od zaŸiatku do konca svojho
+     behu, t.j. aj  poŸas V/V oper cii. Keby bol v  pam„ti len jeden program,
+     bolo by nevyu§it‚ v priemere 50% jeho Ÿasu. V pr¡pade çtyroch programov
+     je to pravdepodobnosœ, §e vçetky  çtyri programy Ÿakaj£ na V/V oper cie
+     = p^n (p na n-t£, pn) = 0.54 = 1-0.9375 = 6.25%..
+
+Pr¡klad  2.:  (Multiprogramovanie s oblasœami pevnej d’§ky, bez vìmen -
+               swapovania)
+     Nech poŸ¡taŸ  m  2MB pam„te,  operaŸnì syst‚m zaber   512kB a aj  ka§dì
+     be§iaci  program zaber   512 kB.   Ak vçetky  programy tr via  60% Ÿasu
+     Ÿakan¡m na V/V,  o ko–ko percent by sme  zvìçili priepustnosœ (vyu§itie
+     CPU) pridan¡m 1MB pam„te?
+Rieçenie: Postup podobne ako v pr¡klade 1: v pr¡pade 2MB m“§u byœ v pam„ti 3
+     programy, nevyu§itì Ÿas  bude (0.6)^3 = 21.6%. Ak  prid me 1 MB, m“§eme
+     do pam„ti umiestniœ  5 programov a nevyu§itì Ÿas  bude (0.6)^5 = 7.77%,
+     t.j. dosiahli sme zvìçenie o 13.8%.
+
+Pr¡klad  3.:  (Multiprogramovanie so swapovan¡m)
+     Niektor‚   syst‚my   so   swapovan¡m   sa   sna§ia  eliminovaœ  extern£
+     fragment ciu pomocou kondenz cie (kompakcie)  pam„ti. Nech syst‚m s 1MB
+     pou§¡vate–skej  pam„ti rob¡  kondenz cie  raz  za sekundu.  Nech prenos
+     (copy) 1  bytu trv  0.5  mikrosec. a priemern   d’§ka vo–n‚ho £seku  je
+     0.4 kr t ve–kosœ  priemern‚ho segmentu. Ak  Ÿasœ celkov‚ho  Ÿasu CPU je
+     pou§it  na kondenz cie?
+Rieçenie: Najsk“r zist¡me,  ko–ko bytov pam„ti (v priemere)  sa prenesie pri
+     ka§dej kondenz cii: V pam„ti sa striedaj£ vo–n‚ a obsaden‚ £seky. Pri
+     kondenz cii sa  prenes£ vçetky obsaden‚  £seky (segmenty). Ich  celkov£
+     d’§ku d zist¡me nasledovne: d + 0.4*d = 1 MB, t.j. d = 1/1.4 MB.
+     Prenos tejto pam„ti bude trvaœ d*0.5  mikrosek. = 1/2.8 sekundy = 0.357
+     sec.  Teda ak  sa kondenz cia  rob¡  raz  za sekundu,  zaber  36%  Ÿasu
+     procesora !!!
+
+(Nasleduj£ce pr¡klady s£ pre virtu lnu pam„œ so str nkovan¡m)
+Pr¡klad  4.:  (Virtu lna pam„œ so str nkovan¡m)
+     Nech  vykonanie  jednej  inçtrukcie  trv   1  mikrosec.,  ale v pr¡pade
+     odvol vky  sa  na  nepr¡tomn£  str nku  pam„ti  (page  fault) Ôalç¡ch n
+     mikrosec.   Akì  je   efekt¡vny  (priemernì)   Ÿas  vykon vania  jednej
+     inçtrukcie, ak sa page fault vyskytuje priemerne ka§dìch k inçtrukci¡?
+Rieçenie:  k  inçtrukci¡  trv   k+n  mikrosec,  t.j. priemernì Ÿas vykonania
+     jednej inçtrukcie je (k+n)/k = 1+n/k mikrosec.
+
+Pr¡klad  5.:  (Virtu lna pam„œ so str nkovan¡m)
+     Logickì adresovì  priestor ka§d‚ho procesu m   8 str nok po 1024  slov a
+     mapuje sa do fyzickej pam„ti s 32 str nkovìmi r mami.
+     a) Ko–ko bitov m  logick  adresa?
+     b) Ko–ko bitov m  fyzick  adresa?
+Rieçenie:  Adresa =  adresa str nky  + offset  v str nke.  Pre adresovanie v
+     r mci str nky  pr¡p. str nkov‚ho r mu o  ve–kosti 1024 slov potrebujeme
+     Offset d’§ky 10 bitov.
+     a) V logickom adresovom priestore  potrebujeme na adres ciu 8 str nok 3
+     bity, t.j. logick  adresa m  d’§ku 13 bitov.
+     b)  Vo  fyzickom  adresovom   priestore  potrebujeme  na  adres ciu  32
+     str nkovìch r mov 5 bitov, t.j. fyzick  adresa m  d’§ku 15 bitov.
+     Pozn. V„Ÿçinou je logickì adresovì priestor v„Ÿç¡ (alebo aspoå rovnakì)
+     ako fyzick  pam„œ. V tomto pr¡klade nie. D  sa o tom diskutovaœ, preŸo.
+
+Pr¡klad  6.:
+     PoŸ¡taŸ m   32-bitovì adresovì priestor  a 8kB str nky.  Tabu–ka str nok
+     pre pr ve be§iaci proces je v hardv‚ri a ka§d  jej polo§ka m  32 bitov.
+     KeÔ proces çtartuje  (alebo sa prep¡na), tabu–ka str nok  sa kop¡ruje z
+     pam„ti do hardv‚ru rìchlosœou 1  polo§ka/100 nsec. Ak ka§dì proces be§¡
+     100 msec  (vr tane nap’åania tabu–ky),  ak£ Ÿasœ Ÿasu  CPU bude zaberaœ
+     nap’åanie?
+Rieçenie:   Str nke  ve–kosti   8kB   zodpoved    offset  d’§ky   13  bitov.
+     Zost vaj£cich  19 bitov  adresy sl£§i  na adresovanie  v r mci  tabu–ky
+     str nok, ktorej  d’§ka je 2^19  polo§iek. Naplnenie tejto  tabu–ky trv 
+     (2^19)*(10^-7)sek. = 52,43 msec (po zaokruhlen¡). Ak ka§dì proces be§¡
+     100  msec  vr tane  nap’åania   tabu–ky  str nok,  tìmto  nap’åan¡m  sa
+     spotrebuje 52% Ÿasu procesora !!!
+
+
+Pr¡klad  7.:
+     PoŸ¡taŸ  s 32-bitovìmi  adresami pou§¡va  dvoj£rovåov‚ tabu–ky  str nok
+     (ako napr. 80386):
+
+     ---------------------------------------------
+     |   9 bitov    |   11 bitov    |   offset   |
+     ---------------------------------------------
+     Ak‚ ve–k‚ s£  str nky a ko–ko ich je  vo virtu lnom adresovom priestore
+     jedn‚ho procesu?
+Rieçenie: V tomto pr¡pade je adresa  rozdelen  na 3 Ÿasti: najvyççia Ÿasœ (9
+     bitov)  predstavuje  adresu  do  adres ra  tabuliek  str nok. Adres r
+     tabuliek  str nok  je  tabu–ka  prvej  £rovne,  ktor   obsahuje  adresy
+     str nkovìch  r mov,  v  ktorìch  sa  nach dzaj£  tabu–ky str nok druhej
+     £rovne. Stredn  Ÿasœ adresy sl£§i na adresovanie v r mci tabu–ky druhej
+     £rovne.  Tabu–ky  druhej  £rovne   obsahuj£  adresy  str nkovìch  r mov
+     fyzickej pam„ti v ktorìch  sa nach dzaj£ jednotliv‚ str nky virtu lneho
+     adresov‚ho  priestoru  procesu  (ako  pri  jedno£rovåovom str nkovan¡).
+     Offset je adresa v r mci jednej str nky (ako obvykle).
+     V pr¡klade sa offset sklad  z 32-9-11=12 bitov, Ÿi§e ve–kosœ str nky je
+     4kB. Adres r tabuliek str nok obsahuje  2^9 = 512 polo§iek (t.j. adresy
+     512  tabuliek  druhej  £rovne),  ka§d   tabu–ka  druhej £rovne adresuje
+     2^11=2048 str nok.  Celkovì adresovì priestor procesu  pozost va z 2^20
+     str nok.
+
+Pr¡klad  8.:
+     Zistilo sa, §e poŸet inçtrukci¡  programu medzi dvoma vìpadkami str nky
+     (page  faults) je  priamo  £mernì  poŸtu pridelenìch  str nkovìch r mov
+     (t.j.  v„Ÿçia  Ÿasœ  vo  fyzickej   pam„ti  =  v„Ÿçie  intervaly  medzi
+     vìpadkami).  Nech inçtrukcia  trv  norm lne  1 mikrosec.  a s  vìpadkom
+     str nky 2001 mikrosec. Program trval 60  sec. a mal 15000 vìpadkov. Ako
+     dlho by trval vìpoŸet s dvojn sobnìm poŸtom str nkovìch r mov?
+Rieçenie: 15000 vìpadkov  trv  2001*15000 mikrosec = asi  30 sec. Òalç¡ch 30
+     sec (z  celkovìch 60) sa  vykon vali inçtrukcie d’§ky  1 mikrosec, bolo
+     ich  teda   30  mil.  Dvojn sobnì   poŸet  str nkovìch  r mov   znamen 
+     zdvojn sobenie poŸtu inçtrukci¡ vykonanìch  medzi dvoma vìpadkami, teda
+     frekvencia  vìskytu vìpadku  str nky  bude  poloviŸn , t.j.  poŸas behu
+     programu bude 7500 vìpadkov. To  trv  (aj s vykonan¡m inçtrukci¡, ktor‚
+     vyvolali  vìpadok) 7500*2001  mikrosec,  t.j.  pribli§ne 15  sec., teda
+     celkovì Ÿas vìpoŸtu  klesol zo 60 sec na pribli§ne  45 sec, t.j. na 75%
+     p“vodnej hodnoty.
+
+Pr¡klad  9.:
+     V  poŸ¡taŸi  maj£  logick‚  adresov‚  priestory  procesov  1024 str nok.
+     Tabu–ky str nok  s£ dr§an‚ v pam„ti.  ¬¡tanie slova z tabu–ky  trv  500
+     nsec. Na  zn¡§enie tejto r‚§ie m   poŸ¡taŸ asociat¡vnu pam„œ,
+     ktor   dr§¡ 32 p rov (virtu lna  str nka, fyzickì str nkovì r m)
+     a dok §e  vyh–adaœ  polo§ku  za  100  nsec.  Ak  £speçnosœ asociat¡vnej
+     pam„ti (hit rate) je potrebn   na redukciu priemernej doby vyh–ad vania
+     na 200 nsec?
+Rieçenie:
+Na  zrìchlenie   prekladu  line rnej  adresy   str nky  na  fyzick£   adresu
+str nkov‚ho r mu sa takmer u  vçetkìch procesorov pou§¡va asociat¡vna pam„œ.
+Asociat¡vna pam„t obsahuje polo§ky v  tvare (str nka, str nkovì r m), priŸom
+k–£Ÿom pre vyhlad vanie je str nka.  Adresovac¡ hardv‚r h–ad  adresu str nky
+vo vçetkìch polo§k ch  paralelne, Ÿo je ve–mi rìchle.
+Iba  ak  nen jde  spr vnu  polo§ku,  mus¡  zisœovaœ  adresu str nkov‚ho r mu
+pomocou tabu–ky str nok, Ÿo trv  ove–a dlhçie.
+     Hit  rate =  pravdepodobnosœ, §e  adresa sa  nach za na  takej str nke,
+     ktor  je v asociat¡vnej pam„ti.  Nech AP je poŸet (£speçnìch) vyh–adan¡
+     adresy  cez  asociat¡vnu  pam„œ,  TS  je  poŸet  vyh–adan¡  cez tabu–ku
+     str nok.     Priemern     doba     vyh–ad vania    bude     (v    nsec)
+     (100*AP+500*TS)/(AP+TS)   =   100*AP/(AP+TS)   +   500*TS/(AP+TS).  Pri
+     dostatoŸne   ve–kom   poŸte   pr¡stupov   bude   AP/(AP+TS)=hit_rate  a
+     TS/(AP+TS)=1-hit_rate,  teda  h–adan£   £speçnosœ  asociat¡vnej  pam„ti
+     z¡skame rieçen¡m rovnice:
+     200 = 100*hit_rate + 500*(1-hit_rate).
+
+(Nasleduj£ci pr¡klad sa tìka vlastnost¡ s£borov‚ho syst‚mu na diskoch)
+Pr¡klad  10.:
+     Ako  dlho bude  trvaœ preŸ¡tanie  64 kB  programu z  disku s priemernou
+     dobou  vyh–ad vania stopy  30 msec,  Ÿasom rot cie  20 msec a ve–kosœou
+     stopy 32 kB
+     a) pre ve–kosœ str nky 2kB
+     b) pre ve–kosœ str nky 4kB
+     Str nky s£ n hodne roztr£sen‚ po disku.
+Rieçenie: PreŸ¡tanie jednej str nky sa sklad  z troch Ÿinnost¡:
+     - vyh–adanie stopy = 30 msec
+     - otoŸenie disku, kìm bude pod hlaviŸkou zaŸiatok str nky = 10 msec
+     - prenos str nky a) (2kB/32kB) * 20msec = 5/4 msec
+                      b) (4kB/32kB) * 20msec = 5/2 msec
+     PreŸ¡tanie cel‚ho programu:
+     a) 32 str nok, ka§d  30+10+5/4 msec = 40 x 33 msec
+     b) 16 str nok, ka§d  30+10+5/2 msec = 40 x 17 msec
+
+
+@PA
+

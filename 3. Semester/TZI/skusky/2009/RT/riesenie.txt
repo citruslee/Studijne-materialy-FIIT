@@ -1,0 +1,201 @@
+1. Zaradte jazyk L={w, w ? {a,b,c}*, slovo w neobsahuje podslovo abba} do Chomskeho hierarchie jazykov.
+Odpoved zdovodnite, argumentujte. 
+
+Staci podla mna urobit gramatiku, ktora ho generuje a tu zaradit do Chom. hierarchie.
+
+
+
+Je to regularny jazyk, ked uvazujeme jazyk L2={w, w ? {a,b,c}*, slovo w obsahuje podslovo abba},
+vieme k nemu zostrojit nedetrministicky konecny automat, ten vieme previest na detrministicky,
+takze L2 je regularny a trieda regularnych jazykov je uzavreta na komplement.
+
+Asi spravne (by bmatias na fiitkarovi):
+S -> a1|bS|cS|?
+1 -> a1|b2|cS|?
+2 -> a1|b3|cS|?
+3 -> bS|cS|?
+
+matussvk:
+taky jazyk sa da rozoznat celkom jednoduchym konecnym automatom- ja by som siel touto cestou.
+Potom by som napisal, ze trieda jazykov rozpoznavana KA je totozna s triedou regularnych
+jazykov a tym je to podla mna hotove. ak chcete mozem nakreslit ten automat :)
+philips: bud taky dobry :) dakujem
+
+
+----------------------------------------------------------------------------------------------
+
+2. Vypoctovy stroj X je ekviv. so Zas. automatom, porovnajte jeho vypoctovu silu s programovacim
+jazykom Java. Odpoved zdovodnite, argumentujte.
+
+ Kazdy bezny programovaci jazyk (a teda aj Java) je ekvivalentny s Turingovym strojom.
+ => vypoctova sila Javy je vacsia ako vyp. sila vypoctoveho stroja X.
+
+Myslite ze to takto staci?
+
+matussvk: 
+podla mna je to fajn, ja by som este skumal ekvivalenciu X <=> Java pre istotu.
+
+ X =>  Java sa podari dokazat tak, ze vsetky operacie X sa daju v Jave priamo implementovat
+a teda v Jave vieme simulovat cinnost stroja X.
+ 
+ Java => X sa nepodari dokazat, kedze java by musela byt rozpoznavana zas. automatom a to
+sa neda, kedze je to programovaci jazyk ktoreho vypoctova sila je ekvivalentna vypoctovej
+sile univerzalneho tur. stroja. 
+ 
+ Aspon ja si to myslim nejako takto- inspiracia fiitkar minule roky :)
+
+
+----------------------------------------------------------------------------------------------
+
+3. Definicia nedeterministickeho zasobnikoveho automatu je NPDA = (K,?,?,?,q_0,Z_0,F), kde
+konfiguracia je trojica (q,w,y) e K x suma x sibenica. Definicuje krok vypoctu  NPDA. 
+
+Krok vypoctu NPDA je relacia ?A na mnozine konfiguracii  K x ?* x ?*
+definovana takto:
+
+(q, aw, Zc) ?A (p, w, bc) <=> (p,b) ? ?(q, a, c)
+
+pricom:
+
+q,p ? K
+a ? ? ? {?}
+w ? ?*
+Z ? ?
+b,c ? ?*
+
+----------------------------------------------------------------------------------------------
+
+4. Je dany Turingov stroj A= (K, ?, ?, ?, q_a, F), kde K = {q_a, q_b, q_c}, 
+? = {0,1}, ? =  ? ? {B}, F={q_c} a prechodova funkcia ? je dana nasledovne:
+?(q_a,0) = (q_b,0,R)
+?(q_b,0) = (q_a,1,R)
+?(q_a,1) = (q_a,1,R)
+?(q_b,1) = (q_b,1,R)
+?(q_a,B) = (q_a,B,R)
+?(q_b,B) = (q_c,1,L)
+
+a) Zistite, ci sa Turingov stroj A moze zacyklit. V pripade, ze ano, napiste priklad vstupneho
+slova, pre ktory tato moznost nastane.
+
+b) Zakodujte Turingov stroj A pomocou kodovania , ktorym sa koduju Turingove stroje v Univerzalnom
+Turingovom stroji. Nakreslite a oznacte pasku univerzalneho Turingovho stroja, na ktorej je
+zakodovany stroj A. Vysvetlite vyznam symbolov, ktore pouzivate na zakodovanie.
+
+a) Zacyklit sa moze pre slovo 00100 (by kudlohlavec, uvaha - )
+Kasi: staci aj slovo 00BBB...?
+
+b) Zakodovany tur. stroj (medzery iba kvoli prehladnosti):
+
+horna paska:   m                                                       m
+dolna paska: ccc 11R0 c 1R1 c 1RB cc 1R1 c 11R1 c 111L1 cc 0 c 0 c 0 ccc
+
+[postup vid.09TZI_UniverzalnyTuringovStroj.pdf]
+ak by bolo treba, mozem aj dopisat, prip. dopiste vy :)
+
+----------------------------------------------------------------------------------------------
+
+5. V registroch R1, R2 su ulozene dve nezaporne cele cisla x a y. Napiste pocitadlovy stroj,
+kroy realizuje vypocet funkcie f(x,y)=x^2+2y nedestruktivne a vysledok uklada do registra R3.
+Slovne popiste myslienku vypoctu a otnacte medzivysledky.
+
+(Sx A1 A2 Ap)x (Sp Ax)p        // do registrov '1' a '2' dame obsah reg. 'x'
+                               // cize: 1 = x;
+                               //       2 = x;
+
+[ (S2 Ap Av)2 (Sp A2)p S1 ]1   // do registra 'v' ulozime obsah reg. '2'
+                               // tolko krat, ake cislo sa nachadza v '1'
+                               // cize: v = 1*2 = x*x = x^2;
+
+(Sy Ap Av)y (Sp Ay)p           // do reg. 'v' pridame obsah reg.'y'
+                               // cize: v += y;
+
+(Sy Ap Av)y (Sp Ay)p           // ----||----
+
+
+Pozn.:
+cislo 'x' sa nachadza v registri 'x'
+cislo 'y' sa nachadza v registri 'y'
+vysledok ulozime do reg. 'v'
+register 'p' je pomocny
+
+----------------------------------------------------------------------------------------------
+
+6. Dokazte ze X-WHILE-IF-AbstractMachine+ je ekvivalentny s pocitadlovym strojom (Abacus Machine).
+
+rekurz. def. AM ktora by mala byt napomocna:
+Nech M1,M2...Mz su jednoduche AM s hlbkami h1,h2...hz, postupnost M1,M2...Mz sa nazyva AM
+s hlbkou _h = max(h1,h2...hz)
+
+riesenie ktore by malo byt ok (ale mozete ceknut a pripadne nejasnosti napisat do chatu):
+
+X-WHILE-IF-AbstractMachine+ je vlastne specialny pripad RAM stroja (podrobnosti v zadani)...
+
+I. Najskor dokazeme AM => X-WHILE-IF-AbstractMachine+ tym, ze vsetky instrukcie AM
+prepiseme na X-WHILE-IF-Abstr.:
+Kedze ale RAM ma specialny register '0' (akumulator) nad ktorym vykonava vsetky operacie,
+musime mapovanie registrov trochu upravit:
+- register Ri Abacusu budeme zobrazovat na register Ri+1 RAMu
+
+
+AM                 X-WHILE-IF-AbstractMachine+
+
+
+Ai                 LOAD i+1
+                   ADD =1
+                   STORE i+1
+          
+Si                 LOAD i+1
+                   SUB =1
+                   STORE i+1
+          
+postupnost         postupnost instrukcii P1 P2 P3...Pz    
+M1 M2 M3...Mz      za indukcneho predpokladu ze Mi ~ Pi
+            
+(M)i               LOAD i+1
+                   if (GZERO) { do  M  LOAD i+1  while (GZERO) }
+
+II. teraz dokazeme X-WHILE-IF-AbstractMachine+ => AM tym, ze vsetky instrukcie X-WHILE-IF-Abstr.
+prepiseme na AM:
+Pri tomto dokaze je mapovanie registrov identicke (Ri RAMu mapujeme na Ri Abacusu).
+
+pozn.:
+register 'p' je pomocny
+register '0' na AM predstavuje akumulator RAMu
+pred pouzitim musime nulovat registre AM, ktore potrebujeme mat prazdne
+vsetky operacie na AM musia byt nedestruktivne, presne ako na RAMe
+
+
+X-WHILE-IF-AbstractMachine+    AM
+
+
+LOAD i                        (S0)0 (Sp)p      (Si Ap A0)i   (Sp Ai)p 
+                              nulovanie        kopirovanie   restore registra i
+                              
+STORE i                       (Si)i (Sp)p      (S0 Ap Ai)0   (Sp A0)p
+                              nulovanie        kopirovanie   restore registra 0 (akoby akumulatora)
+
+ADD =i                        A0 ... A0      
+                               (i-krat)
+                               
+SUB =i                        S0 ... S0
+                               (i-krat)
+
+ADD i                         (Sp)p            (Si Ap A0)i    (Sp Ai)p
+                              nulovanie        pripocitanie   restore registra i
+
+SUB i                         (Sp)p            (Si Ap S0)i    (Sp Ai)p
+                              nulovanie        odratavanie    restore registra i
+
+do {...} while (GZERO)        ... (...)0
+                              urob operaciu a potom zasa, kym nie je v akumulatore 0
+                
+if (GZERO) {...}              (Sp)p (Sx)x    [Ap (S0 Ax)0 ]0           [... Sp (Sx A0)x ]p                     
+                              nulovanie      ak akum. > 0              ak je v 'p' priznak '1'     
+                                             zapiseme do 'p'           vykoname operaciu, priznak
+                                             priznak '1' a             zrusime a restorneme
+                                             potom vymazeme akum.      register '0' (akumulator)
+                                             aby sme sa neza-
+                                             cyklili :-)
+                                             ale jeho obsah
+                                             si zapamatame v
+                                             pomocnom registri 'x'

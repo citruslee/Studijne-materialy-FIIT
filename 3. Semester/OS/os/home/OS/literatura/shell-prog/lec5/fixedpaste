@@ -1,0 +1,22 @@
+#!/bin/sh
+#####################################################################
+# Program:           fixedpaste                                     #
+# Author:            Erich Franz Stocker (c)                        #
+# Date-Written:      02/02/98                                       #
+# System:            CSI235 Unix Shell - pipes and filters          #
+# Synopsis:                                                         #
+#    This bourne script demonstrates the output of the paste command#
+#    when pasting together two files with equal number of lines, two#
+#    files with unequal lines and a single file                     #
+#####################################################################
+echo "Paste two files each with same number of lines"
+echo "-----------------------------------------------"
+paste fixedfile pastefixedfile
+echo "Paste two files with different number of lines in each"
+echo "notice one line from second file with no matching part"
+echo "from the first file"
+echo "-------------------------------------------------------"
+paste fieldfile pastefixedfile
+echo "Paste a single file"
+echo "-------------------"
+paste -s pastefixedfile

@@ -1,0 +1,29 @@
+Script started on Wed Feb  4 15:58:55 1998
+enterprise.aacc.cc.md.us{efs}41: ./fieldcut
+Cut out the second field and the fourth field
+---------------------------------------------
+277448888	agent
+211887777	agent
+111878787	nurse
+0000000010110	manager
+Cut out the 1 through 3 fields
+------------------------------
+277448888	Smith, Jones	IRS
+211887777	Billingham, William Jose	FBI
+111878787	Barton, Clara	Red Cross
+0000000010110	Mission, Jefferson Johnson	IBM
+Cut out the 1 through 2 fields and the fourth
+---------------------------------------------
+277448888	Smith, Jones	agent
+211887777	Billingham, William Jose	agent
+111878787	Barton, Clara	nurse
+0000000010110	Mission, Jefferson Johnson	manager
+Incorrectly specify a delimiter not really used in file
+-------------------------------------------------------
+277448888	Smith, Jones	IRS	agent
+211887777	Billingham, William Jose	FBI	agent
+111878787	Barton, Clara	Red Cross	nurse
+0000000010110	Mission, Jefferson Johnson	IBM	manager
+exit
+
+Script done on Wed Feb  4 15:59:03 1998

@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>grep examples</title>
+</head>
+
+<body>
+
+<h1>grep examples</h1>
+
+<ul>
+  <li><h2>who | grep &#147;Apr 11&#148; </h2>
+    <ul>
+      <li>get who is on system </li>
+      <li>pipe to grep and see who has been on since Apr 11 </li>
+      <li>dates put out by who always have two places so if looking for Apr 1 would have to do Apr
+        1 (extra space in front of 1) </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>ls *| grep &#145;[Jj]a&#146; </h2>
+    <ul>
+      <li>list all files through grep </li>
+      <li>print out only those that have a Ja or ja in their names </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>generally should put the search pattern in single quotes so shell doesn&#146;t
+    interpret characters like * , $, &amp; </h2>
+    <ul>
+      <li>need to pass these to grep </li>
+      <li>if not in single quotes shell would use them not pass</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld005.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld007.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

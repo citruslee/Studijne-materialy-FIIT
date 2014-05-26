@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>sed general syntax</title>
+</head>
+
+<body>
+
+<h1>sed general syntax</h1>
+
+<ul>
+  <li><h2>syntax: sed command file </h2>
+    <ul>
+      <li>command is the editor command to be applied to each line (generally enclosed in single
+        quotes to hide from shell </li>
+      <li>file is the input file </li>
+      <li>failure to include file means that sed will work on the standard input </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>For example: sed &#145;s/UNIX/UNIX(TM)/g&#146; * &gt; zzz </h2>
+    <ul>
+      <li>substitues UNIX(TM) for UNIX </li>
+      <li>substitution is global not just first encountered occurrence on line that is the normal
+        behavior of command </li>
+      <li>shell expands * to the actual name of all files </li>
+      <li>substitution doesn&#146;t happen in input file but just on output</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld007.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld009.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

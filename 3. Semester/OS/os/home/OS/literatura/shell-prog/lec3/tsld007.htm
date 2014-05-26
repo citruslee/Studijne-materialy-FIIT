@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Matching Zero or More of Any character</title>
+</head>
+
+<body>
+
+<h1>Matching Zero or More of Any character</h1>
+
+<ul>
+  <li><h2>The period (.) is used to match any single character </h2>
+    <ul>
+      <li>sort of like $ shell metacharacater </li>
+      <li>for example /s..th/ would <ul>
+          <li>match smith, swath, snith </li>
+          <li>would not match snatch (more than 2 chars), sth (no chars), petth </li>
+        </ul>
+      </li>
+      <li>. Stands for any valid ASCII character </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>Asterisk (*) matches zero or more of any character </h2>
+    <ul>
+      <li>/A*/ means match anything with 0 or more X; this actually will match anything </li>
+      <li>/AA*/ means match anything that has an A followed by zero or more As </li>
+      <li>In the last case the first A was constant and had to be there unlike A*</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld006.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld008.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

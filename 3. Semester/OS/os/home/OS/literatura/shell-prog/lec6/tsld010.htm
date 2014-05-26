@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Some Additional Examples</title>
+</head>
+
+<body>
+
+<h1>Some Additional Examples</h1>
+
+<ul>
+  <li><h2>Delete the 5th line of the file names </h2>
+    <ul>
+      <p>sed 5d names <br>
+      </p>
+      <li>reads first 4 puts on standard output </li>
+      <li>skips the 5th name and then resumes putting the rest </li>
+      <li>input file is NOT altered; only output file has the 5th name missing </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>Print out only the first 10 names and then quit looking at the file names </h2>
+    <ul>
+      <p>sed 10q names <br>
+      </p>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>Do what tr can do </h2>
+    <ul>
+      <p>sed &#145;s/t/T/g&#146; names <br>
+      </p>
+      <li>same as tr &#145;t&#146; &#145;T&#146; &lt; </li>
+      <li>however tr faster because that only thing it does </li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld009.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld011.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

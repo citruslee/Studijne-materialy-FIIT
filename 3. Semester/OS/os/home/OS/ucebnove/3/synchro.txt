@@ -1,0 +1,489 @@
+OPERACNE SYSTEMY
+Cvicenie c.3(ucebna): Synchronizacia procesov so spolocnou pamatou.
+===================================================================
+Obsah:
+I.  Motivacia - vysvetlenie problemu
+II. Programove riesenie
+    A. Vstupny a vystupny protokol pre dva procesy
+       (Na cviceni doporucujem prejst iba riesenie 1. a 3., na ostatne
+        nebude cas.)
+    B. Riesenie vstupneho a vystupneho protokolu pre n procesov
+       (Na  cviceni uviest  iba ticket  algorithm, teda  bod 2. Zvysok
+        sluzi pre vseobecny rozhlad.)
+III.Specialne instrukcie
+       (Na cviceni  spomenut Test-and-Set z  prednasok, ukazat pomocou
+        nej vstup() a vystup() a  diskutovat o instrukcii LOCK XCHG na
+        procesore 80x86.)
+IV. Semafory
+       (Semantiku operacii  Wait() a Signal()  maju studenti vediet  z
+        prednasok. Priklady  mozu byt na domacu  ulohu. Pri nedostatku
+        casu sa da cela tema, alebo jej cast presunut na 4. cvicenie)
+
+  I. Motivacia - vysvetlenie problemu  
+
+ Proces  = postupnost po sebe vykonavanych operacii.
+Viacero paralelnych (subeznych, concurrent) procesov:
+a) spolocne vyuziva  jeden proceso r  (ich operacie sa v case vykryvaju,
+   napr. kazdy obsadzuje procesor na iste casove kvantum, diskusia)
+b) vykonava   sa  na   viacerych  procesoroch   so  spolocnou  pamatou 
+   (operacie jednotlivych procesov sa v case prekryvaju)
+c) na procesoroch bez spolocnej  pamati (ako b, ale procesy komunikuju
+    zasielanim sprav ).  Tymto pripadom sa  na dnesnom cviceni  nebudeme
+   zaoberat.
+
+Problemy s interakciou procesov (v pripade  a) a b)) nastanu v pripade
+spolocnych   premennych,  ktore   vyuziva  2   a  viac   procesov.  Vo
+vseobecnosti viacero procesov spolocne vyuziva nejaky prostriedok, ale
+je  potrebne  zabezpecit  ich   vzajomne  vylucovanie   pri  pristupe  k
+prostriedku.
+ Procesy,  prostriedok,  kriticka  oblast   =  operacie  procesu,  ktore
+pristupuju  k prostriedku  a je  treba pocas  nich zabezpecit  vylucny
+pristup  k  prostriedku,  t.j.  vzajomne  vylucovanie.  Synchronizacia
+procesov  = vseobecna  poziadavka  na  nejake usporiadanie  procesov v
+case.
+Procesy mozu o prostriedok  sutazit   (napr. o tlaciaren), alebo ho mozu
+pouzivat  na   spolupracu   (jeden  vyraba   udaje  a  zapisuje  ich  do
+prostriedku, druhy  ich spracovava).
+
+ Priklad  na  ilustraciu :  prostriedkom  bude  pamatova  struktura typu
+obojsmerne  zretazeny  zoznam,  ktory  obsahuje  poziadavky na diskove
+operacie  (zapis  na  disk/citanie  z  disku:  adresa na disku, adresa
+v pamati, kolko,  kam oznamit dokoncenie  operacie). Niekolko procesov
+pridava prvky do zoznamu (napr.  ak napisete program, ktory cita obsah
+suboru). Jeden  proces, zvany diskovy  ovladac (disk driver,  patri do
+operacneho  systemu)  vybera  prvky  zo  zoznamu  a  realizuje diskove
+operacie. Vsetky  operacie nad zretazenym zoznamom  sa musia vykonavat
+bez  prekryvania (nakreslit  preco), teda  musime zabezpecit  vzajomne
+vylucovanie.  Procesy sutazia  o pristup  k zoznamu,  ale spolupracuju
+s diskovym ovladacom (komunikuju s nim cez zoznam).
+
+ Jednoduchy priklad : nech su iba dva procesy, oznacime ich P a Q. Kazdy
+z nich  v nekonecnom  cykle pocita  priklady z  analyzy. Po vypocitani
+prikladu proces  inkrementuje premennu poc  (pocet vypocitanych), teda
+vykona C-ckovu instrukciu " poc++ ; ". Premenna poc predstavuje spolocne
+vyuzivany prostriedok  (vo vseobecnosti oznacme  R = resource).  Preco
+musime zabezpecit vzajomne vylucovanie pri pristupe k R?
+Inkrementaciu premennej moze kompilator C-cka prelozit dvoma sposobmi:
+a)  LOAD  Rx,  poc    (typicky na RISCoch, kde vsetko treba robit
+    INC   Rx                               v registroch )
+    STORE poc, Rx
+Ak sme  na jednom procesore,  prepnutie procesov sa  uskutocnuje medzi
+instrukciami. Nech poc=8  a proces P ju ide  inkrementovat. Ak dojde k
+
+
+odobratiu procesora  v citlivom okamihu  a aj Q  urobi poc++, vysledok
+bude nespravny (nakreslit, nazorne ukazat).
+
+|--------        |------------------
+| CPU   |        |    pamat        |
+|   P/Q |<------>|  obsahuje aj R  |
+|--------        |------------------
+
+    P         P             P          P
+||-----|    |----|       |-----|     |-- ...
+|---------------------------------------------->cas
+|      |----|    |-------|     |-----|   ...
+         Q           Q            Q
+
+b)  INC   poc         (napr. na 80x86)
+Na jednom procesore by malo byt vsetko OK, ale co na multiprocesore so
+spolocnou pamatou?
+
+                |------------------
+                | spolocna pamat  |
+                |  obsahuje aj R  |
+                |------------------
+|--------                |                 |--------
+| CPU 1 |                |                 | CPU 2 |
+|   P   |<------> ----------------- <----->|   Q   |
+|--------             zbernica             |--------
+
+
+                    P
+|--------------------------------------- ...
+|---------------------------------------------->cas
+|--------------------------------------- ...
+                    Q
+
+Nech procesy P aj Q chcu  inkrementovat premmenu priblizne v tom istom
+case.  Dvaja naraz  nemozu pristupit  k tej  istej pamatovej bunke, to
+zabezpeci arbiter zbernice. Ale  vykonna cast instrukcie INC potrebuje
+aspon dva zbernicove  cykly (citanie a zapis). Medzi  nimi moze ziskat
+zbernicu druhy  procesor a uskutocnit citanie  alebo zapis, co povedie
+k nespravnemu vysledku (ukazat).
+Ako  riesit  tento  problem?  (Diskusia:  napr.  zakazanie prerusenia,
+uzamknutie zbernice na nejaky cas, specialne instrukcie...) Ukazeme si
+najskor   ciste  programove   riesenie,  potom   pouzitie  specialnych
+instrukcii (+ hw. podpory).
+
+  II. Programove riesenie  
+
+Pre  zjednodusenie  zavedieme   abstraktny  zapis  synchronizacie  dvoch
+procesov  P a  Q, sutaziacich  o prostriedok  R. Pouzijeme  jazyk C  s
+moznostou  vytvorenia  threadov   ( "lahkych  procesov"  so  spolocnymi 
+ premennymi ). Nech sa ta spravna funkcia vola CreateProcess():
+
+#define TRUE     1
+#define FALSE    0
+int  CreateProcess (void (*procedure)());  /* prototyp funkcie */
+void ProcessP()
+{  while (TRUE) {   /* nekonecna slucka                    */
+      VstupP();     /* protokol pre vstup do krit. oblasti */
+      PouzivaR();   /* prostriedok R (= Resource)          */
+      VystupP();    /* vystupny protokol                   */
+      NepouzivaR(); /* proces je mimo kritickej oblasti    */
+   }
+}
+
+void ProcessQ()
+{  while (TRUE) {   /* nekonecna slucka                    */
+      VstupQ();     /* protokol pre vstup do krit. oblasti */
+      PouzivaR();   /* prostriedok R (= Resource)          */
+      VystupQ();    /* vystupny protokol                   */
+      NepouzivaR(); /* proces je mimo kritickej oblasti    */
+   }
+}
+main()
+{
+   CreateProcess(ProcessP);
+   CreateProcess(ProcessQ);
+   /* cakaj, kym procesy P a Q neskoncia... */
+}
+
+A.  Nasleduju navrhy   na  programove  riesenie vstupneho  a vystupneho 
+ protokolu  pre dva  procesy . Riesenia  1. az  4. obsahuju zakazdym inu
+chybu. Doporucujem prejst iba riesenie 1. a 3., na ostatne nebude cas.
+
+1.  int lock = FALSE;   /* spolocna premenna */
+    VstupP()  { while(lock); lock = TRUE; }
+    VystupP() { lock = FALSE; }
+
+Prve riesenie   nezarucuje vzajomne vylucovanie procesov   pri vstupe do
+kritickej  oblasti (napr.  ak proces  P bude  preruseny po vyhodnoteni
+premennej lock == FALSE, ale pred priradenim lock = TRUE).
+
+2.  enum { P, Q } naRade = P;
+    VstupP()  { while (naRade != P) /* cakaj */ ; }
+    VystupP() { naRade = Q; }
+
+Procesy  mozu  prostriedok  pouzivat   iba  striedavo,  v  postupnosti
+P,Q,P,Q,...  Proces teda  caka aj vtedy, ked to  nie je nevyhnutne , ked
+je iny proces mimo svojej kritickej oblasti.
+
+3.  int in1 = FALSE, in2 = FALSE;
+    VstupP()  { in1 = TRUE; while (in2); }
+    VystupP() { in1 = FALSE; }
+
+Ak  bude proces  preruseny po  priradeni do  premennej, moze  dojst ku
+ vzajomnemu blokovaniu procesov (deadlock ).
+
+4.  int in1 = FALSE, in2 = FALSE;
+    VstupP()  { while (TRUE) {
+                   in1 = TRUE;
+                   if (in2)  in1 = FALSE;
+                   else break;
+                }
+              }
+    VystupP() { in1 = FALSE; }
+
+Pri  nepriaznivych  rychlostiach  procesov  vznika  moznost dynamickeho 
+ blokovania  procesov  -  nie je  zaruceny vstup  do kritickej oblasti v
+konecnom  case. (Aj  ked pravdepodobnost  nekonecneho cakania  klesa k
+nule, predsa toto riesenie nie je vyhovujuce. Je ho mozne pouzit iba v
+odovodnenych pripadoch. Ako sa sprava Ethernet pri velkej zatazi???)
+
+5.   int in1 = FALSE, in2 = FALSE; 
+     enum { P, Q } last = P; 
+     VstupP()  { in1 = TRUE; last = P; 
+                 while (in2 && last == P)  /* cakaj */ ; 
+               }; 
+     VystupP() { in1 = FALSE; } 
+
+Toto jednoduche  riesenie navrhol Peterson v roku 1981 . Odovodnite jeho
+spravnost.
+Je mozne  vymenit poradie prvych dvoch  prikazov vo VstupP ?  (nie)
+Je mozne vymenit poradie vyhodnocovania podmienok vo while ? (ano)
+Prve spravne riesenie navrhol Dekker v roku 1965, ale je zlozitejsie.
+
+
+ B. Riesenie vstupneho a vystupneho protokolu pre n procesov: 
+(Na cviceni uviest iba ticket algorithm,  teda bod 2. Zvysok sluzi pre
+vseobecny rozhlad.)
+
+1. Rozsirenie Petersonovho algoritmu:
+   Vo  vstupnom  protokole  musi  kazdy  proces  prejt cez n-1 stadii.
+   Prechod  cez  kazde  stadium  sa  podoba  na  synchronizaciu  dvoch
+   procesov (ak  je v tom istom  stadiu este jeden a  ja som posledny,
+   musim  cakat). Algoritmus  zarucuje, ze  najviac jeden  proces smie
+   prejst v danom case cez vsetkych  n-1 stadii, t.j. iba tento vstupi
+   do kritickej oblasti.
+int in[n];    /* in[i] == j ak proces i je v stadiu j       */
+int last[n];  /* last[j] == i ak proces i
+                              vstupil posledny do stadia j  */
+Vstup(int i)  /* Proces i */
+{  int j, k;
+   for (j = 1; j < n; j++) {   /* prejdi stadiami 1,2,...,n-1 */
+       in[i] = j; last[j] = i;
+       for (k = 0; k < n; k++) { /* testuj vsetky procesy */
+          if (k == i) continue;  /* okrem seba            */
+          while (in[k] >= in[i] && last[j] == i) /* cakaj */ ;
+       }
+   }
+}
+Vystup(int i)  /* Proces i */ { in[i] = 0; }
+
+Najviac n-1 procesov moze prejst 1. stadiom, n-2 2. stadiom atd. (vzdy
+posledny zostava v cakacej slucke).
+
+2. Ticket algorithm (algoritmus listkov s poradovymi cislami)
+Predosle  riesenie je  prilis zlozite.  Ticket algoritmus  predstavuje
+najjednoduchsie riesenie, ak sa da efektivne implementovat.
+V cakarni u lekara, v pokladni v banke, (v USA v niektorych obchodoch)
+sa pouziva nasledovny postup: ked pride zakaznik, vytiahne si listok s
+cislom  o jedna  vacsim, nez  mal predosly  zakaznik. Potom  caka, kym
+nebudu obsluzeni zakaznici s nizsim cislom:
+
+int number = 1, next = 1;
+Vstup(int i)  /* Proces i */
+{  << int turn = number++; >>  /* ako ATOMICKA OPERACIA !!! */
+   while (next != turn)  /* cakaj */ ;
+}
+Vystup()  {next++; }
+
+Klucovym problemom  je, ako zabezpecit  atomicku operaciu (t.j.  medzi
+ziskanim hodnoty spolocnej premennej a jej inkrementaciou k nej nesmie
+mat pristup ziaden iny proces). Riesenia:
+a) niektore pocitace (pre nas  vacsinou exoticke, napr. BBN Butterfly,
+   NYU Ultracomputer, IBM RP3) maju specialnu atomicku instrukciu typu
+   Fetch-and-Add:
+int FA(int var, int incr) { <<int tmp=var; var+=incr; return tmp;>> }
+(Pozn.: ukazujeme  iba semantiku tejto instrukcie,  inak by var musela
+byt do funkcie odovzdana referenciou!!!)
+b) Atomicku operaciu povazovat za  samostatnu kriticku oblast a pouzit
+   na nu ine riesenie (napr. Test-and-Set z nasledujucej casti):
+VstupNumber(); turn = number++; VystupNumber();
+   Takyto  postup  moze  byt  vyhodny,  lebo  hlavny  zdroj cakania je
+   v  slucke  while.  Atomicka  operacia  trva  kratko  a  jej vstupny
+   protokol VstupNumber() nemusi byt spravodlivy. Spravodlivost ticket
+   algoritmu je jeho hlavnou vyhodou. Preto sa casto vyuziva.
+
+Problem pretecenia  number a next  nas nemusi velmi  trapit: zavedieme
+aritmetiku modulo MAX, kde MAX > n (pocet procesov).
+
+3. Bakery algorithm (Algoritmus z pekarne)
+Ide  o zlozitejsiu  variantu ticket  algoritmu s  tou vyhodou,  ze nas
+nebude trapit  atomicka operacia: ak si  viaceri zakaznici vytiahnu to
+iste  cislo,  ich  poradie   urci  staticky  definovana  priorita  (my
+pouzijeme  cislo procesu).  Nepouzijeme ani  number, ani  next, budeme
+kontrolovat iba listky v rukach ostatnych zakaznikov:
+
+int turn[n]; /* turn (poradie) je inicializovane na 0 */
+Vstup(int i)  /* Proces i */
+{  int j;
+   turn[i] = 1;  /* dolezity krok - premysliet preco !           */
+   turn[i] = maximum(turn) + 1; /* prehliadne vsetky, ale nie
+                    atomicky - viaceri mozu ziskat rovnake cislo */
+   for (j = 0; j < n; j++) {
+      if (j == i) continue;  /* preskoc seba */
+      while  (turn[j] != 0 && turn[i] > turn[j] ||
+             turn[i] == turn[j] && i > j)   /* cakaj */ ;
+   }
+}
+Vystup(int i)  { turn[i] = 0; }
+
+Hodnoty v poli turn mozu  pretiect, modulo aritmetiku pouzit nemozeme.
+Hodnota vsak bude  rast iba v takom pripade, ak  bude vzdy aspon jeden
+proces vo vstupe, resp. v kritickej oblasti. Pre takyto pripad je vsak
+obsadzujuce cakanie beztak nevhodne a treba pouzit ine metody.
+
+4. Pouzitie koordinacneho procesu.
+Doteraz kazdy proces vykonaval ten isty vstupny protokol. Alternativou
+je pouzitie specialneho procesu-koordinatora,  ktory bude riadit vstup
+do kritickej oblasti.  Ak proces P chce vstupit  do kritickej oblasti,
+povie  to  koordinatorovi  (cez  spolocne  premenne)  a  caka,  kym mu
+koordinator neudeli povolenie.
+Navrhnite  premenne, napiste  koordinacny proces  a procedury Vstup(),
+Vystup().
+
+  III. Specialne instrukcie  
+ Riesenie  vstupneho  a  vystupneho   protokolu  s  podporou  procesora 
+(pomocou specialnych atomickych instrukcii)
+(Na  cviceni spomenut  Test-and-Set  z  prednasok, ukazat  pomocou nej
+vstup() a vystup() a diskutovat o instrukcii LOCK XCHG na 80x86.)
+
+1.   Atomicky  vykonana  instrukcia  Test-and-Set   (salove pocitace IBM
+    a pod.):
+
+int TS(int *lock) { << int tmp=*lock; *lock=1; return tmp; >> }
+                 /* lock v C-cku musi ist cez smernik !!! */
+
+/* riesenie pre n procesov: */
+int flag;
+Vstup()  { int old = TS(&flag); while (old) old = TS(&flag); }
+Vystup() { flag = 0; }
+
+2. Instrukcia Fetch-and-Add (pouzita aj v ticket algoritme):
+int FA(int var, int incr) { <<int tmp=var; var+=incr; return tmp;>> }
+
+
+3. Instrukcia Exchange (aj 80x86 s prefixom LOCK):
+void XCHG(int a, int b) { << int tmp = a; a = b; b = tmp; >> }
+
+4. Atomicky dekrement (inkrement):
+int DEC(int var) { << var--; return (var >= 0) ? 0 : 1; >> }
+
+5. Instrukcia Compare-and-Swap:
+int CSW(int a, int b, int c) { << if (a==c) { c=b; return 0; }
+                                  else      { a=c; return -1;} >> }
+
+Pomocou kazdej z tychto instrukcii napiste procedury Vstup a Vystup.
+
+     Ziadna  atomicka instrukcia   nezaruci spravodlive  poradie  vstupu
+procesov  do  kritickej  oblasti  v  pripade,  ked  ich sutazi o vstup
+viacero.  Moze teda  dojst k   starvacii procesu  - proces  bude cakat
+nekonecne dlho, lebo vsetky ostatne ho budu predbiehat.
+     Spolocnou     nevyhodou     vsetkych     doterajsich    pristupov
+k synchronizacii procesov je  obsadzujuce cakanie  - teda plytvanie casu
+procesora.   U  multiprocesorovych   systemov  pristupuje   degradacia
+vykonnosti  pri  sutazeni  o  tu  istu  pamatovu  bunku,  najma  kvoli
+invalidacii obsahu cache vsetkych sutaziacich po kazdom zapise.
+
+  IV. Semafory  
+
+Odvolat  sa na  prednasky. Semantiku  operacii Wait()  a Signal() maju
+povedat studenti v diskusii.
+ Syntax v C-cku  moze byt nasledovna (je to iba priklad):
+
+typedef int  sem_hndl ;  /* index do internej tabulky semaforov */
+SYSCALL  Semaphore (sem_hndl *s, int initValue);
+          /* interne vytvori semafor a inicializuje ho na initValue
+             indexom naplni s = handle semaforu (= "drzadlo")
+             vrati pricinu chyby alebo OK                           */
+SYSCALL  Wait (sem_hndl s);       /* ak s neinicializovany, tak chyba */
+SYSCALL  Signal (sem_hndl s);
+
+ Riesenie vzajomneho vylucovania: 
+sem_hndl sem;
+Vstup()  { Wait(sem); }
+Vystup() { Signal(sem); }
+ ....
+main() { if (Semaphore(&sem,1) == OK)  /* alebo != SYSERR */
+            { CreateProcess(ProcessP);
+              CreateProcess(ProcessQ);
+            }
+       }
+
+(Nasledovne priklady mozu byt na domacu ulohu)
+ Priklad  1.:   Napiste  vsetky  mozne  hodnoty  premennej x po ukonceni
+              nasledovneho programu. Odpoved zdovodnite.
+int x=0; sem_hndl s1 = -1, s2 = -1; /*pre istotu priradme nepouzitelnu
+                 hodnotu, semafor musime  najskor inicializovat !!! */
+void Process1() { Wait(s2); Wait(s1); x *= 2; Signal(s1); }
+void Process2() { Wait(s1); x *= x; Signal(s1); }
+void Process3() { Wait(s1); x += 3; Signal(s2); Signal(s1); }
+main() { if (Semaphore(&s1,1) == SYSERR        /* init na 1 */
+             || Semaphore(&s2,0) == SYSERR)    /* init na 0 */
+            abort("Semaphore initialization failed"); /* error exit */
+         CreateProcess(Process1);
+         CreateProcess(Process2);
+         CreateProcess(Process3);
+         Suspend(myself);  /* wait na dokoncenie deti */
+       }
+Pozn.: Pouzili  sme niekolko vlastnosti, ktore  sa v roznych systemoch
+       lisia (inspirovali sme sa Parasolom):
+a) premenna myself oznacuje prave bezaci proces (teda seba)
+b) Suspend() pozastavi  proces, v nasom pripade ma  rovnaky vyznam ako
+   wait() v Unixe
+c)  Je  bezpecnejsie  priradit  handle  na  nespravnu  hodnotu.  Ak ho
+   pouzijeme bez  inicializacie, system nam  ohlasi chybu. Nezabudnut,
+   ze lokalne premenne mozu obsahovat akekolvek hodnoty!!!
+
+ Priklad  2.:   Napiste  skelet  programu  s  piatimi  procesmi, ktorych
+              vykonanie  bude v  case usporiadane  podla naslednovneho
+              precedencneho   grafu  (vrcholy   =  procesy,   hrany  =
+              usporiadanie:  proces  moze  zacat  iba  ak skoncil jeho
+              predchodca):
+             |-----          |-----
+         +-->| P2 |--------->| P4 |---+
+|-----   |   |-----          |-----   |    |-----
+| P1 |---+           |-----           +--->| P5 |
+|    |-------------->| P3 |--------------->|    |
+|-----               |-----                |-----
+(Navod: skelet pre jeden proces = - wait na predchodcov
+                                  - vykonaj telo procesu
+                                  - signal nasledovnikom
+                                  - koniec
+ Su dve metody, ako zvolit semafory. )
+
+
+
+ Implementacia vyrovnavacej pamati sprav pomocou semaforov: 
+(Na  cviceni  vysvetlit  problem,  prediskutovat  pouzitie  semaforov,
+definovat premenne a hlavicky funkcii, naznacit ich semantiku.)
+Procesy producenti  vyrabaju spravy a  odovzdavaju ich konzumentom  (=
+ komunikacia  procesov).  Robia to cez  vyrovnavaciu pamat o  kapacite N
+sprav.  Vyrovnavaciu  pamat  si  mozeme  predstavit  ako miestnost s N
+stolmi  usporiadanymi do  kruhu. Na  kazdy stol  sa zmesti prave jedna
+sprava. Procesy sa  synchronizuju  nasledovne:
+a) producent nesmie  odoslat spravu, ak vo vyrovnavacej  pamati nie su
+   ziadne prazdne miesta
+b) konzument  nesmie vybrat spravu,  ak vo vyrovnavacej  pamati nie su
+   ziadne miesta zaplnene.
+Implementujte vyrovnavaciu  pamat sprav s  operaciami Send (=  vloz do
+bafra) a Receive (= vyber z bafra) pomocou vseobecnych semaforov (t.j.
+takych, ze ich hodnoty mozu byt vacsie ako 1).
+Zistite,  ci  je  potrebne  vo  Vasej  implementacii  zaistit vzajomne
+vylucovanie procesov (max. jeden proces v miestnosti). Ak ano, pouzite
+binarny semafor.
+
+#define N 10
+typedef  ... message_t;         /* sprava nejakeho typu */
+typedef struct {
+       message_t buffer[N];
+       int  in, out;       /* in = dalsi volny, out = prvy plny */
+                           /* prazdny = (in == out)             */
+                           /* plny = ((in+1)%N == out)          */
+       sem_hndl mutex,     /* vzajomne vylucovanie; init na 1   */
+                atLeastOneEmpty,
+                           /* stop ak nie je volny; init na N   */
+                atLeastOneFull;
+                           /* stop ak ziaden plny;  init na 0   */
+       } buffer_t;
+
+SYSCALL Send(buffer_t *b, message_t m);      /* z m prevezme spravu */
+SYSCALL Receive(buffer_t *b, message_t *m);  /* *m maplni spravou   */
+buffer_t *CreateBuffer(); /* vytvori strukturu, inicializuje semafory,
+                             vrati NULL ak doslo k chybe            */
+
+Priklad riesenia tela funkcii:
+SYSCALL  Send (buffer_t *b, message_t m)
+{  Wait(b->atLeastOneEmpty); /* pozor na poradie semaforov -        */
+   Wait(b->mutex);           /* nesmie cakat v miestnosti !!!       */
+   b->buffer[in] = m;        /* kopirovanie spravy (mozno memcpy?)  */
+   in = (in+1)%N;            /* inkrement modulo N                  */
+   Signal(b->mutex);         /* moze vojst dalsi producent/konzument*/
+   Signal(b->atLeastOneFull);/* inkrementuj signal konzumentom !!!  */
+}
+SYSCALL  Receive (buffer_t *b, message_t *m)
+{  Wait(b->atLeastOneFull);  /* pozor na poradie semaforov -        */
+   Wait(b->mutex);           /* nesmie cakat v miestnosti !!!       */
+   *m = b->buffer[out];      /* kopirovanie spravy (mozno memcpy?)  */
+   out = (out+1)%N;          /* inkrement modulo N                  */
+   Signal(b->mutex);         /* moze vojst dalsi producent/konzument*/
+   Signal(b->atLeastOneEmpty);/* inkrem. signal producentom !!!     */
+}
+buffer_t * CreateBuffer ()
+{  buffer_t *b = malloc(sizeof(buffer_t));
+   if (buffer_t == NULL) return NULL;
+   in = out = 0;
+   if (Semaphore(&(b->mutex),1) == SYSERR              /* init na 1 */
+       || Semaphore(&(b->atLeastOneEmpty),N) == SYSERR /* init na N */
+       || Semaphore(&(b->atLeastOneFull),0) == SYSERR) /* init na 0 */
+      { free(b); return NULL; }
+   return b;
+}
+
+
+
+
+ 

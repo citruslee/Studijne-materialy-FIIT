@@ -1,0 +1,25 @@
+Script started on Wed Feb  4 15:59:40 1998
+enterprise.aacc.cc.md.us{efs}41: ./fixedpaste
+Paste two files each with same number of lines
+-----------------------------------------------
+Henry, Jefferson Davis programmer 28	410-000-1111 jak
+Smith, Adam            economist  105	301-101-1345 kqk
+Jefferies, William B   manager    51	202-325-2666 ajj
+Billings, Henrich Q    clerk      21	301-444-8787 jap
+Maidenhood, Martha Ann programmer 32	410-111-9876 ajq
+Paste two files with different number of lines in each
+notice one line from second file with no matching part
+from the first file
+-------------------------------------------------------
+277448888	Smith, Jones	IRS	agent	410-000-1111 jak
+211887777	Billingham, William Jose	FBI	agent	301-101-1345 kqk
+111878787	Barton, Clara	Red Cross	nurse	202-325-2666 ajj
+0000000010110	Mission, Jefferson Johnson	IBM	manager	301-444-8787 jap
+	410-111-9876 ajq
+Paste a single file
+-------------------
+410-000-1111 jak	301-101-1345 kqk	202-325-2666 ajj	301-444-8787 jap	410-111-9876 ajq
+enterprise.aacc.cc.md.us{efs}43: exit
+exit
+
+Script done on Wed Feb  4 15:59:53 1998

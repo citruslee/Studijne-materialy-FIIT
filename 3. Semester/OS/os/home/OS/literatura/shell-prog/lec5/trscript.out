@@ -1,0 +1,33 @@
+Script started on Thu Feb  5 07:24:47 1998
+enterprise.aacc.cc.md.us{efs}41: ./trscript
+Using pipeline use tr to change all e to X
+------------------------------------------
+HXnry, JXffXrson Davis programmXr 28
+Smith, Adam            Xconomist  105
+JXffXriXs, William B   managXr    51
+Billings, HXnrich Q    clXrk      21
+MaidXnhood, Martha Ann programmXr 32
+Use redirection to to the same thing
+-------------------------------------
+HXnry, JXffXrson Davis programmXr 28
+Smith, Adam            Xconomist  105
+JXffXriXs, William B   managXr    51
+Billings, HXnrich Q    clXrk      21
+MaidXnhood, Martha Ann programmXr 32
+Using pipeline change a group of chars rather than just one
+Replaces Je with QJ, J with Q and e with J and n with Z
+-----------------------------------------------------------
+HJZry, QJffJrsoZ Davis programmJr 28
+Smith, Adam            JcoZomist  105
+QJffJriJs, William B   maZagJr    51
+BilliZgs, HJZrich Q    clJrk      21
+MaidJZhood, Martha AZZ programmJr 32
+Replace colon with comma and at same time squeeze out multiple commas
+---------------------------------------------------------------------
+John Mary Smith,William Henry
+George Washington,John Jones
+Bob Dillon,Tammy Fay
+enterprise.aacc.cc.md.us{efs}42: exit
+exit
+
+Script done on Thu Feb  5 07:25:00 1998

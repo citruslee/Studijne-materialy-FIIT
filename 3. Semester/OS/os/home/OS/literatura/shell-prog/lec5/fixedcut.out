@@ -1,0 +1,34 @@
+Script started on Wed Feb  4 15:58:36 1998
+enterprise.aacc.cc.md.us{efs}41: ./fixedcut
+cut out just the fixed occupation characters
+--------------------------------------------
+programmer
+economist 
+manager   
+clerk     
+programmer
+cut out just the 35th char
+--------------------------
+2
+1
+5
+2
+3
+cut out just the fixed name characters
+--------------------------------------
+Henry, Jefferson Davis 
+Smith, Adam            
+Jefferies, William B   
+Billings, Henrich Q    
+Maidenhood, Martha Ann 
+cut out just the fixed age characters
+--------------------------------------
+28
+105
+51
+21
+32
+enterprise.aacc.cc.md.us{efs}42: exit
+exit
+
+Script done on Wed Feb  4 15:58:44 1998
