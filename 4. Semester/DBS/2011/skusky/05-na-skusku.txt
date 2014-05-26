@@ -1,0 +1,18 @@
+
+1, vytvorit nejaky SELECT v SQL
+2, doplnit SELECT tak aby fungoval
+
+DBS teoria:
+1, ulohy servera v architekture klientserver
+2, metody synchronizacie transakcii
+3, normalne formy relacii, vymenovat a charakterizovat
+4, ochrana relacnej integrity databaz
+   vymenovat principy a strucne charakterizovat
+5, strucne charakterizovat DBS rozhrania: ODBC, JDBC, ADO
+
+
+DBS1 toeria
+1, nakreslite architekturu distr. databazy
+2, relacny databazovy model - definicia+vlastnosti
+3, operacie s relaciami - vymenovat a strucne opisat
+4, opiste techniky paralelneho spracovania transakcii

@@ -1,0 +1,27 @@
+
+db:		proxy
+server: nimbus.fiit.stuba.sk:3306
+login:	dbs
+pwd:	dbsfiit2010
+
+
+pages
+terms
+pages-terms
+
+access_logs
+
+tasks:
+- posled. 20 pristupov z access_logs
+	select * from access_logs order by timestamp desc limit 20;
+
+- posled. 20 stranok na kt. bolo pristupovanych
+	select distinct pages.url from pages, access_logs where page_id = pages.id order by time desc limit 20;
+
+- prvych 10 termov pre kazdu z posled. 3 stranok
+
+- priem. pocet termov na stranku
+- pre kazdu stranku id cloveka ktory ju videl ako posledny
+- pre 'kazdeho' usera pocet pristupov na sme.sk
+
+- pocet pristupov na stranky, ktore maju pocet pristupov viac ako priemer prvych 100 stranok

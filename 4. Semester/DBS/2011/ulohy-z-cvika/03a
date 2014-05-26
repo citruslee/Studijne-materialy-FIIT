@@ -1,0 +1,54 @@
+Pre toto cvičenie použite schému dbs_rw. Ostatné prístupové údaje zostávajú rovnaké. Väčšinu úloh z tohto cvičenia je možné vyklikať. Snažte sa úlohu vyriešiť napísaním vlastného skriptu, s použitím MySQL dokumentácie.
+
+Prvá a posledná úloha sú povinné. Budeme to kontrolovať.
+
+1. Vytvorte tabuľku s názvom priezvisko_meno (dosaďte vaše) a stĺpcami id integer, meno varchar(50), priezvisko varchar(50)
+
+	create table srank_marek (id integer, meno varchar(50), priezvisko varchar(50))
+
+2. Do tejto tabuľky pridajte stĺpec vek integer, pohlavie char(1) a pozicia varchar(50)
+
+	alter table srank_marek add (vek integer, pohlavie char(1), pozicia varchar(50));
+
+3. Zväčšite stĺpec priezvisko na varchar(100)
+
+	alter table srank_marek modify column priezvisko varchar(100);
+
+4. Zmažte stĺpec pozicia
+
+	alter table srank_marek drop column pozicia;
+
+5. Tabuľku naplňte 10 riadkami dát (dáta si vymyslite), tak aby sa vo vzorke nachádzalo 5 mužov a 5 žien, a z toho 2 osoby mladšie ako 10 rokov, 2 osoby 10-20, 2 x 20-30, 2 x 30-40 a 2 osoby staršie ako 40 rokov
+
+	insert into srank_marek values (1, 'miso', 'mlady', 2, 'm');
+
+6. Pridajte stĺpec titul varchar(10) a pre všetky osoby staršie ako 20 rokov ho nastavte na Ing., pre všetky osoby staršie ako 30 rokov na Doc. a pre všetky osoby staršie ako 40 rokov na Prof.
+
+	alter table srank_marek add (titul varchar(10));
+	update srank_marek set titul = 'Ing.' where vek between 21 and 29 ;
+	update srank_marek set titul = 'Doc.' where vek between 31 and 39 ;
+	update srank_marek set titul = 'Prof.' where vek >= 40 ;
+
+7. Zmažte všetky záznamy pre mužov, mladších ako 10 rokov
+
+	delete from srank_marek where pohlavie = 'm' and vek < 10;
+
+8. Vytvorte tabuľku access_logs, ako kópiu (aj štruktúrou aj dátami) tabuľky access_logs zo schémy proxy, tak aby obsahovala len prístupy na doménu sme.sk
+
+	create table srank_access_logs as select proxy.logs.* from proxy.access_logs as logs inner join
+		proxy.pages as pgs where page_id = pgs.id and url like '%sme.sk%';
+
+9. Vytvorte tabuľku priezvisko_meno_pozicia so stĺpcami id integer, osoba_id integer, pozicia varchar(50) a nastavte stĺpec osoba_id ako cudzí kľúč do tabuľky priezvisko_meno na stĺpec id
+
+	create table srank_priezvisko_meno_pozicia (id integer, osoba_id integer, pozicia varchar(50),
+		foreign key (osoba_id) references srank_marek.id);
+
+10. Zmažte obe vaše tabuľky
+
+	drop table srank_marek;
+	drop table srank_access_logs;
+	drop table srank_priezvisko_meno_pozicia;
+
+
+
+

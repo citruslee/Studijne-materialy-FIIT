@@ -1,0 +1,36 @@
+
+
+Posielam otazky na databazy, ktore spomenul na prednaskach, ze by mohol 
+dat na skuske. Nebol som vsak na dvoch prednaskach, takze ak niekto moze 
+zoznam doplnit, nech ho rozosle o pridane otazky. Dik.
+
+    singer
+
+
+1) prednaska
+    >>> otazky na konci dokumentu
+    - z akych urovni sa sklada arch DBS
+    - definujte schema, extschema, intern scgena, subschema, konceptschema
+    - prepiste jednotlive urovne architektury
+    - popiste zobrazenia medzi urovnami
+
+
+Z dalsich prednasok: (nemam poznamenane, kde ktora zacina)
+- definujte co je system riadenia bazy dat
+- z akych casti sa SRBD sklada
+- ktore su zakladne fcie systemu SRBD
+- popiste rozdiel medzi centralizovanou arch SRBD a klient/server
+- Entitno-relacny konceptualny model
+- Relacny datovy model
+- Vlastnosti relacie
+- Relacna integrita
+- Primarny kluc
+- 4 nezav modely YSM
+- Konzistencne pravidla
+- Zakladne vlastnosti objektoveho jazyka
+- Motivacia k vzniku OODB
+- spajanie pribuznych dat
+- spajanie dat funkciami
+- spajanie DB a programovacieho jazyka
+
+

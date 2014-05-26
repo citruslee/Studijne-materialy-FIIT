@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Problémik pre 7. cvičenie z UI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+</head>
+<body>
+<h4>Problémik pre 7. cvičenie z UI</h4>
+<h2>Evolučné stratégie - selekcia<br></h2>
+
+<p>V nasledujúcom texte je uvedených niekoľko z používaných metód selekcie pri riešení úloh pomocou evolúcie.<br>
+</p>
+
+<ol>
+  <li>Usporiadajte uvedené metódy od najlepšej po najhoršiu, podľa toho, ako si myslíte, že by ich bolo
+ vhodné použiť vo svojom zadaní č. 3. (Uveďte, či riešite aproximáciu alebo programovanie.) Svoje
+ usporiadanie zdôvodnite.<br>
+  </li>
+  <li>Uveďte, ako sa jednotlivé spôsoby uplatňujú v prírode (ktorý akou mierou) a tiež stručne zdôvodnite.</li>
+  <li>Obdobia najväčšieho rozšírenia druhov zveri na zemi zodpovedajú práve ľadovým dobám. Viete nájsť korektné   zdôvodnenie? (V usadeninách tesne po skončení doby ľadovej boli nájdené pozostatky výrazne väčšieho počtu druhov zveri než v usadeninách zo začiatku tejto doby.)</li>
+</ol>
+
+<hr style="width: 100%; height: 2px;">
+<h4>Metódy selekcie</h4>
+
+<h5>Proporcionálna selekcia</h5>
+<p>Proporcionálna metóda selekcie (proportional selection) uvedená Hollandom bola prvá používaná v GA.
+ Pravdepodobnosť výberu jedinca sa určí ako podiel jeho sily voči celkovej sile populácie. Nevýhoda,
+ plynúca z faktu, že pravdepodobnosť výberu jedinca záleží na jeho sile, je tá, že môže dôjsť k predčasnej
+ konvergencii k neglobálnemu optimu pri výskyte “superjedinca” v počiatočných generáciach.
+ Keďže zvyčajne nie je potrebné jedincov triediť, časová zložitosť je O(n).</p>
+
+<h5>Turnaj</h5>
+<p>Turnajová selekcia
+(tournament selection) pracuje nasledovne: vyber náhodne <span style="font-style: italic; font-weight: bold;">t</span>
+ jedincov z populácie a prenes najlepšieho jedinca z tejto skupiny do dočasnej populácie a opakuj to
+ <span style="font-style: italic; font-weight: bold;">N</span>-krát, kde
+ <span style="font-style: italic; font-weight: bold;">N</span> je počet jedincov v populácii. Opakovanie má
+ zabezpečiť vytvorenie dočasnej populácie rovnakej veľkosti ako predchádzajúca populácia. Parameter
+ <span style="font-style: italic; font-weight: bold;">t</span> turnajovej selekcie sa nazýva veľkosť  turnaja (tournament size). Veľmi často je veľkosť turnaja rovná dvom. Implementácia turnajovej selekcie
+ je efektívna pretože nevyžaduje triedenie jedincov podľa ich sily a jej časová zložitosť je O(n).</p>
+
+<h5>Selekcia skrátením</h5>
+<p>Pri selekcii skrátením (truncation selection) s prahom (threshold)
+ <span style="font-style: italic; font-weight: bold;">T</span>, môže byť uvažovaných pre selekciu len podiel
+ <span style="font-style: italic; font-weight: bold;">T</span> najlepších jedincov v populácii. Parameter
+ <span style="font-style: italic; font-weight: bold;">T</span> má hodnoty z intervalu [0,1]. Uvažovaní jedinci
+ majú potom rovnakú pravdepodobnosť selekcie. Pretože je vyžadované pri tejto selekcii triedenie jedincov
+ podľa ich sily, časová zložitosť je O(n*ln(n)).</p>
+
+<h5>Selekcia ohodnotením</h5>
+<p>Selekcia ohodnotením (ranking selection) bola
+navrhnutá na odstránenie vážnych nedostatkov proporcionálnej selekcie. Pri
+tejto selekcii je vyžadované triedenie jedincov podľa ich sily tak, aby
+najlepší jedinec v populácii bol prvý v poradí. Parametrom je pravdepodobnosť
+výberu najlepšieho a najhoršieho jedinca v populácii. Pravdepodobnosť výberu ostatných
+jedincov je potom rovnomerne lineárne priradená medzi týmito extrémami.
+Časová zložitosť je O(n*ln(n)).</p>
+
+<hr style="width: 100%; height: 2px;">
+<p>Riešenia posielajte len počas cvičenia svojmu cvičiacemu na e-mailovú adresu meno@fiit.stuba.sk, kde meno je jedno z:
+</p><ul> 
+  <li> bartos
+  </li><li> kapustik
+  </li><li> kajsa
+</li></ul>
+<p>
+Nezabudnite uviesť Vaše meno!</p>
+</body>
+</html>

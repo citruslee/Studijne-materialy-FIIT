@@ -1,0 +1,13 @@
+Priklad bol taky ako po ine roky, ale tie query boli o dost tazsie, bol tam aj
+vnoreny select a ine veci. Bolo treba aj napisat sql prikazy na vytvorenie a
+naplnenie vsetkych tabuliek. Casu bolo malo, mozno aj preto Vojtek pridaval
+pausalne kazdemu 8b (potom aj na opravaku) na rozdiel od inych rokov ked
+pridaval 6b, pokial viem.
+
+Teoria, co si hmlisto spominam:
+1/ normalne formy
+2/ charakterizovat ODBC, DAO, ADO (tie rozhrania)
+3/ nieco s klient-server, asi charakterizovat a potom tam bolo aj vypisat funkcie ktore ma klient a server
+4/ ochrany proti nekonzistencii
+
+springfield

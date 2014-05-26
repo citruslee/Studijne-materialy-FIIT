@@ -1,0 +1,12 @@
+P,TR,TD,TH,INPUT,SELECT,H1,
+{
+    FONT-FAMILY: Verdana,Arial,Helvetica;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: none
+}
+
+DIV.codiv
+{
+    POSITION: absolute;
+    VISIBILITY: hidden
+}

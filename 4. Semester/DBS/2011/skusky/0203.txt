@@ -1,0 +1,21 @@
+Skuska roku 2002/2003 A.D. Databazove systemy I (Vojtek)
+
+SQL:
+ 1. Zadana databaza...5 tabuliek...zoznam studentov, ucitelov, predmetov, zapisane a uci...v kazdom dake riadky (napr u ucitela: meno, priezvisko, tituly, predmety uci/cvici...etc aj pre ostatne tabulky, ulohou je normalizovat tabulku (daktore atributy mali chybne typy alebo boli duplicitne...opravit...normalizovat tabulku a potom zapisat v SQL nasledujuce priklady:
+ 2.  K zadefinovanym tabulkam uvedte SQL prikazy, ktorymi:
+ 2.1 Vypise sa zoznam vsetkych studentov usporiadany po odboroch a abecedne podla priezviska a mena
+ 2.2 Vypise sa usporiadane pre kazdy rocnik v kazdom odbore pocet ziskatelnych kreditov z povinnych predmetov
+ 2.3 Urobi sa zoznam nazvov predmetov s poctami na ne prihlasenych studentov, ktory bude usporiadany podla rocnika, predmetu a v rocniku podla skratky predmetu abecedne
+ 2.4 Vypise sa zoznam predmetov a k nim priemerny pocet ziskanych bodov za cvicenia a za skusku usporiadany podla rocnikov a v nich abecedne podla nazvu
+ 2.5 Spocitajte studentov pre kazdy odbor a rocnika a vypiste sucty v abecednom usporiadani odborov a po rocnikoch
+ 2.6 Vypiste zoznam ucitelov cviciacich dany predmet a ku kazdemu z nich zoznam studentov, ktorych cvici a mena ucitelov aj studentov budu usporiadane abecedne
+ 2.7 Vypiste zoznam ucitelov cviciacich dany predmet a ku kazdemu z nich pocet studentov, ktorych cvici, priezviska a mena usporidane abecedne  Cele SQL bolo za 21 bodov. (7 normalizacia tabulky...ostatne podelene medzi otazky)
+
+TEORIA:
+ 1. Vymenovat a strucne charakterizovat modely databazoveho spracovania (5 bodov)
+ 2. Metody synchronizacie transakcii (6 bodov)
+ 3. Nakreslite architekturu DDBS (5 bodov)
+ 4. Ulohy servera v architekture klient/server (6 bodov)
+ 5. Normalne formy relacii - vymenovat/charakterizovat (7 bodov)
+ 6. Vlastnosti a delenie OODBS (5 bodov)
+ 7. Vysvetlite operacie: projekcie, restrikcie a spojenia relacii (5 bodov)

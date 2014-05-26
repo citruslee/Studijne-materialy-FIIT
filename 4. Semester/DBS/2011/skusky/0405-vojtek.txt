@@ -1,0 +1,22 @@
+Databazove systemy  2004/2005 riadny termin teoreticke otazky (5*7b=35b)
+
+1.Normalne formy relacii
+	-1.2.3.4.NF a BCNF + popis co musi platit aby bola relacia v tej danej normalnej forme
+
+2.Architektura DDBS (Distribuovaneho databazoveho systemu) + vlastnosti DDBS
+	- schema z prednasok
+	- vlastnosti
+
+3.Vysvetlite	- projekciu relacie
+		- restrikciu relacie
+		- spojenie relacii
+	- mozete nakreslit aj vysvetlujuce obrazky
+
+4.Modely DBS + popisat
+	- rozdelenie DBS
+	- SDBS(sietovy), DDBS(distribuovany), ERDBS(entitno relacny), 
+	  OODBS(objektovo orienotvany), HDBS(hierarchicky)
+
+5.Metody synchronizacie tranzakcii (+ popis, vysvetlenie a mozne ozsirenia)
+	- Timestamps 
+	- Locks 
