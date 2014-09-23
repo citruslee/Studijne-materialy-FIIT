@@ -1,0 +1,18 @@
+Píše sa rok 1946 a vy ste jednım z vıskumníkov pracujúcich na slávnom projekte Manhattan. Ako tak sedíte poèas poobednajšej prestávky pri šálke èaju po prvej nudnej polovièke dòa, osloví vás istı vıskumník s prosbou o pomoc. Netvárite sa nadšene, máte dos? svojich starostí, ale vnútornı hlas vám hovorí, e mu musíte pomôc. Èo len sa predstaví ako doktor Richard Feynmann (!?) okamite zbystríte pozornos. Ako jeho ve¾kı fanúšik poznáte ve¾mi dobre, e titul bakalára získal v roku 1939 na MIT a nakoniec si spravil doktorát na univerzite v Princetone. Z poèutia viete, e u ako 15-roènı vymyslel vlastnú notáciu pre parciálne derivácie a vyhral matematické majstrovstvá univerzity v New Yorku s tak ve¾kım náskokom, e ešte aj rozhodcovia boli z toho šokovaní. S ve¾kım záujmom teda poèúvate ako by ste mu mohli pomôc?. Vysvetlí vám, e momentálne pracuje na matematickom zápise, ktorım by vedel opísa? správanie subatómovıch èastíc. Od vás ako poèítaèového experta by potreboval spravi? program, ktorı by mu pomohol pri spracovaní tıchto vırazov. Ako prvı problém, ktorı potrebujete pri vıvoji tohto programu teraz vyrieši?, je prevod matematickıch vırazov z infixového zápisu do postfixového zápisu.
+
+Špecifikácia vstupu: Na vstupe je nieko¾ko riadkov. Na kadom riadku je jeden vıraz v infixovom zápise dlhı najviac 10000 znakov. Vašou úlohou je previes? tento vıraz do postfixového zápisu. Môete predpoklada?, e vıraz je korektnı a obsahuje iba okrúhle zátvorky, operandy reprezentované ako samostatné ve¾ké písmená a operátory z mnoiny {+,-,*,/}.
+
+Špecifikácia vıstupu: Na vıstupe vypíšte pre kadı vıraz na vstupe jeho ekvivalent v postfixovom zápise, kadı na samostatnı riadok.
+
+Návod:
+Prezeraj postupne aritmetickı vıraz zapísanı v infixe z¾ava doprava:
+
+ak aktuálny znak je operand:
+zapíš znak do vıstupného postfixového zápisu vırazu
+ak aktuálny znak je ¾avá alebo pravá zátvorka:
+ak znak je "(", vlo znak do zásobníka
+ak znak je ")", opakuj vıber znaku zo zásobníka a jeho zapísanie do vıstupu pokia¾ sa vyberie "(" zo zásobníka.
+ak aktuálny znak je operátor:
+ak je zásobník prázdny alebo je na vrchu '(' alebo je na vrchu operátor s menšou precedenciou ne je aktuálny znak tak vlo znak do zásobníka.
+ak je na vrchu zásobníka operátor s väèšou alebo rovnakou precedenciou ako je aktuálny znak tak vyber operátor zo zásobníka a zapíš ho do vıstupu a vlo aktuálny znak do zásobníka.
+Po prezretí všetkıch znakov vstupu vyberaj znak zo zásobníka a zapisuj do vıstupu pokia¾ nebude zásobník prázdny.

@@ -1,0 +1,9 @@
+Dostala sa k Vám nová poiadavka o pomoc pri vırobe nového prístroja, ktorı má slúi agentom na dešifrovanie kódov na zámkoch zabezpeèenıch kufríkov. Na trh sa toti dostal novı typ kufríkovıch zámkov. Takıto zámok má N-cifernı kód, ktorı musíte na zámku nastavi, aby sa odomkol. Keï sa so zámkom niè nerobí, tak sa po krátkom èase automaticky nastaví na permutáciu èísel od 1 do N.
+
+Špecifickou vlastnosou tohto kufríka je, e nemôete len tak meni hodnotu cifier kódu, ako to mono poznáte z inıch benıch kufríkovıch zámkov. Na tomto zámku môete zmeni kód v jednom ahu vdy len tak, e na urèitom súvislom intervale cifier obrátite ich poradie, take napr. ak je zámok s 5-cifernım kódom v základnom stave, èie má nastavenı kód 12345, tak vieme tento kód zmeni napr. otoèením strednıch troch cifier na 14325, ale nevieme tento kód zmeni (na jeden ah) napr. na 51234 alebo 14235.
+
+Navyše viete, e kadı kufríkovı zámok má špecifickú hodnotu K, ktorá urèuje, ko¾ko cifernı interval vieme zmeni na jeden ah. Napr. kufríkovı zámok s 5-cifernım kódom a s hodnotou K = 3 umoòuje zmeni (v jednom ahu) kód 12345 na 14325 alebo 12543, ale nemôete zmeni kód 12345 na 13245 alebo 43215. Vašou úlohou je spravi program, ktorı vypoèíta pre kufríkovı zámok s N-cifernım kódom a K-cifernı meniaci interval, ko¾ko najmenej ahov potrebujeme na nastavenie daného kódu.
+
+Špecifikácia vstupu: Na vstupe je nieko¾ko riadkov. Na kadom riadku sú najprv 2 èísla N a K, za ktorımi nasleduje N ïalších èísel v rozsahu od 1 po N. N urèuje poèet cifier kódu zámku a K urèuje ve¾kos intervalu cifier, ktoré vieme otoèi na jeden ah. Tıch N ïalších èísel reprezentuje kód, ktorı chceme na kufríkovom zámku nastavi.
+
+Špecifikácia vıstupu: Na vıstup vypíšte jediné èíslo - minimálny poèet ahov, ktoré potrebujeme na nastavenie daného kódu. Ak sa danı kód nedá nastavi, vypíšte -1.

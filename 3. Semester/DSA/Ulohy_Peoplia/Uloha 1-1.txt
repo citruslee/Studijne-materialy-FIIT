@@ -1,0 +1,18 @@
+Táto úloha je ukážková, odpoveï sa nehodnotí bodmi do priebežného hodnotenia.
+
+Napíšte algoritmus, ktorý nájde K-te (1 <= K <= 100 000) prvoèíslo v poradí od najmenších (pozn. prvé je 2).
+
+Štandardný vstup obsahuje nieko¾ko riadkov, na každom z nich bude jedno èíslo K. Pre každý riadok na vstupe vypíšte na štandardný výstup práve jedno èíslo -- K-te prvoèíslo.
+
+Pomôcka: Úlohu riešte Eratostenovým sitom. Pre zbehnutie v èasovom limite je podstatné, aby ste vo svojom algoritme nepoužívali operáciu delenia (resp. zvyšok po delení) a ve¾a operacií násobenia (okrem prístupu do pola cez []). Používajte najmä sèítanie.
+
+Návod:
+Zisti si ve¾kos (oznaème MAX) najväèšieho prvoèísla, ktoré v tejto úlohe môžeme požadova. (pre K = 100 000).
+Vytvor pole prvoèísel, dåžky 100 000, kde si predpoèítaš možné prvoèísla: na i-tom mieste bude i-te prvoèíslo.
+Vytvor pole prvoèíselnosti èísel, dåžky MAX (napr. 1300000), použi typ char, pretože nám staèí pre i-te prirodzené èíslo informácia èi JE/NIEJE i prvoèíslo. 0=NIEJE, 1=JE
+Predpoèítaj si pole prvoèíselnosti a (popritom) aj pole prvoèísel.
+Pole prvoèíselnosti predpoèítaš dvojitým cyklom. Všetky položky v òom najskôr nastav na hodnotu JE (1).
+Vonkajší cyklus i ide 2..MAX zisuje, èi èíslo i je prvoèíslo. Ak áno (hodnota je JE), zaznaè si nájdené èíslo do po¾a prvoèísel, a pokraèuj do vnútorného cyklu.
+Vnútorný cyklus vyznaèí násobky èísla i ako zložené èísla (hodnota NIEJE), príkaz cyklu: for (j=2*i; j<MAX; j+=i)
+Po predpoèítaní všetkých prvoèísel spracuj vstup v cykle, ktorý ide do konca vstupu (keïže nie je vopred zadaný poèet riadkov na vstupe).
+Do konca vstupu naèítavaš (do premennej n) príkazom while (scanf("%d", &n) > 0)
