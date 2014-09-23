@@ -1,0 +1,14 @@
+V rámci charitatívneho programu na pomoc telesne postihnutım ste v rámci vašej dnešnej pracovnej náplne dostali za úlohu preveri kvalitu spojov MHD, ktoré umoòujú prepravu telesne postihnutıch ¾udí na vozíèku v nieko¾kıch svetovıch mestách.
+
+V kadom meste je nieko¾ko zastávok MHD. Pre kadú dvojicu zastávok A a B máte dané, èi existuje spoj, ktorı umoòuje prepravu telesne postihnutıch ¾udí na vozíèku a premáva zo zastávky A do zastávky B. Vašou úlohou je zisti, ko¾ko existuje zastávok, z ktorıch sa vieme dosta na ¾ubobo¾nú inú zastávku a ko¾ko existuje zastávok, na ktoré sa vieme dosta z akejko¾vek inej zastávky.
+
+Špecifikácia vstupu: Na vstupe moe by viacero miest. Pre kadé mesto je najprv zadanı poèet zastávok N (1 < N <= 50) na samostatnom riadku. Potom nasleduje N riadkov, kadı obsahuje N znakov, kde i-ty znak v j-tom ståpci je '1' ak existuje priama jednosmerná linka z miesta i na miesta j, inak je '0'.
+
+Špecifikácia vıstupu: Pre kadé mesto vypíšte, ko¾ko je v òom zastávok, z ktorıch sa vieme dosta na ¾ubovo¾nú inú zastávku a ko¾ko je v òom zastávok, na ktoré sa vieme dosta z akejko¾vek inej zastávky.
+
+Návod:
+Na vstupe máme danı neohodnotenı orientovanı graf (resp. nieko¾ko grafov, ktoré spracúvame po jednom za sebou).
+Graf si zo vstupu naèítame do matice susednosti.
+Algoritmom (zvo¾te vhodnı) na h¾adanie najkratších ciest nájdeme dåku najkratšej cesty (resp. staèí existencia cesty) z lubovo¾ného vrcholu do ¾ubovo¾ného iného vrcholu.
+Nakoniec spoèítame, ko¾ko je vrcholov z ktorıch existuje cesta do všetkıch ostatnıch, a podobne ko¾ko je vrcholov do ktorıch existuje cesta zo všetkıch ostatnıch.
+Zistené èísla vypíšeme pod¾a poiadaviek úlohy, a pokraèujeme v spracovaní ïalšieho grafu na vstupe.

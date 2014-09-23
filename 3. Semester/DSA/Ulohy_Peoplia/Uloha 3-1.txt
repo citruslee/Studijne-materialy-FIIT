@@ -1,0 +1,23 @@
+Danı je strom (vrcholy a neorientované hrany medzi nimi) a dvojica vrcholov, vašou úlohou je zisti vzdialenos danıch vrcholov v strome. Vzdialenos vrcholov je definovaná ako najkratšia cesta (postupnost hrán) medzi vrcholmi.
+
+Špecifikácia vstupu: Prvı riadok vstupu obsahuje štyri èísla N (poèet vrcholov stromu), M (poèet hrán stromu), A (poèiatoènı vrchol), B (koncovı vrchol). Na nasledujúcich M riadkoch sú opísané (neorientované) hrany, kadı z riadkov obsahuje tri èísla Xi, Yi, Li, reprezentujúce hranu medzi vrcholmi Xi a Yi s dåkou Li.
+
+Špecifikácia vıstupu: Na vıstup napíšte jeden riadok obsahujúci jedno èíslo – vzdialenos vrcholov A a B v strome.
+
+
+Návod:
+Strom na vstupe reprezentujte ako zoznam spájanıch zoznamov hrán pre kadı vrchol.
+Pre kadı vrchol V máme spájanı zoznam hrán vychádzajúcich z vrchola V. Hranu v zozname si reprezentujeme ako dvojicu (cie¾ovı vrchol, dåka).
+Na zaèiatok naèítavania inicilizujeme zoznam hrán kadého vrchola na prázdny zoznam.
+Pri naèítaní neorientovanej hrany ju pridáme do zoznamov oboch jej koncovıch vrcholov.
+Po naèítaní môeme dåku cesty medzi vrcholmi A a B h¾ada rôznymi spôsobmi: rekurzívnou funkciou, vyuitím radu(frontu), a pod.
+Kadı vrchol stromu navštívime poèas preh¾adávania najviac raz.
+Rekurzívna funkcia nám vráti dåku h¾adanej cesty z aktuálneho vrchola (v) do cie¾ového vrchola (target), prièom bude ma tri vstupné parametre:
+v: aktuálny vrchol preh¾adávania
+from: vrchol, z ktorého preh¾adávanie prišlo do aktuálneho vrchola
+target: vrchol, do ktorého h¾adáme cestu
+Telo rekurzívnej funkcie je jednoduché:
+Ak aktuálny vrchol preh¾adávania je cie¾ovı vrchol, vrá 0. (dåka cesty z v do cie¾ového vrchola je 0)
+Prejdi všetkıch susedov aktuálneho vrchola (v), prièom neuvaujeme predchádzajúci vrchol (from): ak existuje cesta zo susedného vrchola (next) do cie¾a, tak vrá dåku tejto cesty zvıšenú o dåku hrany v-next.
+Ak sme nenašli cestu cez iadneho suseda, tak cesta z aktuálneho vrchola (v) do cie¾ového vrchola (target) neexistuje, a vrá -1.
+Pre urèenie dåky cesty medzi vrcholmi zadanımi na vstupe staèi zavola vytvorenú rekurzívnu funkciu s vhodnımi parametrami.

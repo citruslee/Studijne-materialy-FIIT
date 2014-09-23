@@ -1,0 +1,14 @@
+Na zaèiatku máte prázdnu mnoinu celıch èísel. Postupne do nej vkladáte èísla. Pre kadé vkladané èíslo zistite, aké èíslo v mnoine je k nemu najblišie. Ak sa vkladané èíslo v mnoine u nachádza, vypíšte k nemu najblišie èíslo (rôzne od vkladaného èísla). Ak existujú dve rôzne najblišie èísla, vypíšte menšie z nich. Ak je mnoina prázdna, vypíšte -1.
+
+Špecifikácia vstupu: Na vstupe je nieko¾ko kladnıch celıch èísel, ktoré nepresahujú hodnotu 2^31.
+
+Špecifikácia vıstupu: Pre kadé èíslo na vstupe vypíšte k nemu doteraz najblišie èíslo.
+
+Vedeli ste, e ...
+V roku 1962 sovietski vedci Georgij M. Ade¾son-Ve¾skij a Evgenij M. Landis vymysleli prvı samovyvaujúci binárny vyh¾adávajúci strom, ktorı dnes nazıvame pod¾a ich vynálezcov ako AVL strom.
+
+V roku 1971 nemeckı vedec Rudolf Bayer a americkı vedec Edward M. McCreight - vtedajší zamestnanci firmy Boeing - vymysleli ïalšiu efektívnu stromovú štruktúru nazıvanú B-strom. Dodnes sa nevie, èo presne znamená B v názve tejto štruktúry, hoci existujú špekulácie, e je to odvodené od mena Bayer alebo názvu spoloènosti Boeing.
+
+V roku 1972 Rudolf Bayer predstavil novı typ samovyvaujúceho vyh¾adávajúceho stromu, ktorı nazval symetrickı binárny B-strom. Táto štruktúra získala v roku 1978 svoje nové meno, kedy ju grécko-americkı vedec Leonidas J. Guibas a Robert Sedgewick (vtedy profesor na Brownovej Univerzite) nazvali èerveno-èierny strom. Tento názov si èerveno-èierny strom vyslúil vïaka tomu, e èervená bola po èiernej druhá najlepšie vyzerajúca farba na laserovej tlaèiarni, ktorú vtedy pouívali vo vıskumnom centre Palo Alto spoloènosti Xerox.
+
+V roku 2008 vynašiel Robert Sedgewick u ako profesor na Univerzite v Princetone obmenu èerveno-èierneho stromu nazıvanú	"do¾ava sa nakláòajúci" èerveno-èierny strom, ktorı garantuje rovnakú asymptotickú zloitos operácií ako pôvodnı èerveno-èierny strom,	ale je jednoduchší na implementáciu.

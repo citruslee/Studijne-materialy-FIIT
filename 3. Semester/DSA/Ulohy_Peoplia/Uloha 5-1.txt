@@ -1,0 +1,21 @@
+Dané dve mnoiny S a T prirodzenıch èísel, ich prvky sú s1, s2, ..., sN, a t1, t2, ..., tM. Zistite, èi je S podmnoinou T, teda, èi kadı prvok mnoiny S je aj prvkom mnoiny T. Riešenie musí pracova v optimálnej oèakávanej èasovej zloitosti O(N+M).
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+// vrati 1 ak 's' je podmnozina 't', inak vrati 0.
+int is_subset(int s[], int n, int t[], int m)
+{
+  // ...
+}
+Návod: Pouite hashovaciu tabu¾ku.
+
+Do tabu¾ky najskôr vlote prvky mnoiny T.
+Následne, v tabu¾ke vyh¾adajte prvky mnoiny S.
+Poznámka: Všetky potrebné operácie by ste mali implementova vlastnımi silami. Pomalšie ako optimálne lineárne riešenie nesplní èasovı limit v testovaèi.
+
+Vedeli ste, e...
+Jednım z prvıch, koho napadlo poui hashovanie, bol nemeckı vedec Hans Peter Luhn v januári 1953, ktorého poznáme aj ako vynálezcu Luhnovho algoritmu.
+
+Pribline v tom istom èase nezávisle od neho skupina okolo Geneho Amdahla implementovala program, ktorı tie vyuíval hashovanie.
+
+Gene Amdahl je tie povaovanı za vynálezcu otvoreného adresovania s lineárnym skúšaním.

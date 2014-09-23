@@ -1,0 +1,16 @@
+Aby vısledky vyh¾adávania na Webe boli vdy aktuálne, je potrebné pravidelne prelieza Web a indexova jeho obsah. Keïe pracujete pre tajnú slubu, podarilo sa vám naprogramova novı vírus, ktorı dokáe prelieza Web nie cez odkazy na webovıch stránkach, ale šíri sa priamo cez sieové smerovaèe a dokáe tak vyh¾adáva prepojenia v oboch smeroch. Jedinı problém predstavujú iba niektoré firewally, take sa nedokáete dosta všade len touto metódou a musíte ho nasadi na viaceré miesta v sieti. Navyše aby vírus ostal v utajení, nemôe sa šíri paralelne, take vdy sa môe prešíri naraz len cez jedno sieové prepojenie.
+
+Vašou úlohou je zisti, na ko¾ko miest musíte vírus nasadi a ko¾ko èasu bude trva, kım vírus prejde celı Web.
+
+Špecifikácia vstupu: Na vstupe je nieko¾ko testovacích prípadov, na ktorıch chcete vírus otestova pred jeho reálnym nasadením. Pre kadı prípad sú najprv zadané dve èísla N (2 <= N <= 100 000) a M (0 <= M <= 10 000), kde N je poèet sieovıch uzlov a M je celkovı poèet prepojení medzi nimi. Nasleduje M trojíc èísel A,B a W, kadá na samostatnom riadku, kde A a B (1 <= A, B <= N) sú indexy sieovıch uzlov, medzi ktorımi existuje prepojenie a vírusu trvá C milisekúnd, kım sa cez toto prepojenie prešíri. Môete predpoklada, e celkovı èas prešírenia vírusu sa zmestí do 32-bitovej celoèíselnej premennej.
+
+Špecifikácia vıstupu: Pre kadı testovací prípad vypoèítajte, na ko¾ko miest musíme vírus nasadi a ko¾ko milisekúnd bude trva, kım sa vírus prešíri cez celı Web.
+
+Vedeli ste, e ...
+Pri implementácii Kruskalovho algoritmu sa najèastejšie pouíva algoritmus zjedno-nájdi (z angl. Union-Find), ktorı vyuíva dátovú štruktúru disjunktnıch mnoín.
+
+Tento algoritmus mono jednoducho implementova tak, e amortizovaná èasová zloitos na kadú operáciu bude O(alfa(n)), kde alfa(n) je inverzná Ackermannova funkcia.
+
+Ackermannova funkcia je tak extrémne rıchlo rastúca, e alfa(n) je menej ako 5 pre všetky reálne pouite¾né hodnoty n.
+
+Prvı, komu sa podarilo dokáza horné ohranièenie èasovej zloitosti tohto algoritmu, bol americkı vedec Robert Tarjan v roku 1975. Dovtedy najlepšie ohranièenie bolo O(log* n) - iterovanı logaritmus n, èo je ïalšia pomaly rastúca funkcia, avšak nie tak pomaly ako inverzná Ackermannova funkcia, ktoré dokázali americkí vedci John Edward Hopcroft a Jeffrey David Ullman v roku 1973.

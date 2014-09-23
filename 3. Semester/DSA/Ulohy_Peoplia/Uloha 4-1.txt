@@ -1,0 +1,8 @@
+Uvažujte binárny vyh¾adávací strom. Na vstupe je daných nieko¾ko èísel, ktoré postupne vkladáte do tohto stromu. Strom nevyvažujte. Pre každé èíslo zistite, ako hlboko je v strome uložené. Ak sa èíslo v strome nenachádza, tak ho najprv pridajte do stromu.
+
+Špecifikácia vstupu: Na vstupe je nieko¾ko èísel, ktoré postupne vkladáte do stromu. Èísla sú oddelené medzerou alebo novým riadkom.
+
+Špecifikácia výstupu: Pre každé èíslo na vstupe vypíšte jedno èíslo -- ako hlboko je dané èíslo uložené v strome.
+
+
+Návod: Simulujte jednoduché pridávania do binárneho vyh¾adávacieho stromu. Pri pridávaní si pamätajte aktuálnu håbku v strome, kde sa práve nachádzate. Ak zistíte, že vkladané èíslo sa už v strome nachádza, alebo sa dostanete na spodok (do listu) stromu a vytvoríte nový uzol, vypíšte aktuálnu håbku.

@@ -1,0 +1,16 @@
+Šéf bezpeènostnej sluby sa na Vás obrátil s poiadavkou, aby ste mu pomohli preveri stav pokrytia svetovıch miest agentmi s vyuitím letovıch liniek, ktoré majú momentálne k dispozícií. Máte spravi program, ktorı na základe letovıch liniek a pozícií agentov, vypoèíta na ko¾ko prestupov sa vie ¾ubovo¾nı agent dosta do kadého z miest.
+
+Špecifikácia vstupu: Na prvom riadku sú 3 èísla N, M a K. N urèuje poèet miest, M urèuje poèet letov medzi mestami a K urèuje poèet miest, v ktorıch máme agentov. Kadé mesto je oznaèené indexom v internom katalógu miest od 1 po N. Nasleduje M riadkov, na kadom sú dve èísla A a B, ktoré vyjadrujú, e medzi mestami A a B existuje letová linka. Nasleduje K riadkov, na kadom je jedno èíslo, ktoré vyjadruje, e v danom meste sa nachádza agent.
+
+Špecifikácia vıstupu: Pre kadé mesto, do ktorého sa vie nejakı agent dosta danımi letovımi linkami, vypíšte index tohto mesta a na ko¾ko najmenej prestupov to agent dokáe. Mestá vypíšte vo vzostupnom poradí od najmenšieho indexu po najväèší. Ak sa do mesta nevie dosta iadny z uvedenıch agentov vyuitím danıch letovıch liniek, tak pre toto mesto nevypisujte niè.
+
+Návod:
+Na vstupe máme danı neohodnotenı neorientovanı graf.
+Pre kadı vrchol grafu budeme ma spájanı zoznam hrán, ktoré z neho vychádzajú.
+Dåku najkratšej cesty v neohodnotenom grafe urèíme preh¾adávaním do šírky z poèiatoèného vrcholu.
+Preh¾adávanie do šírky budeme realizova vyuitím dátovej štruktúry rad (angl. queue).
+H¾adanú dåku d[v] (pre koncovı vrchol v) inicializujeme na -1 (nedá sa tam dosta). Chceme urèi d[v] pre všetky vrcholy grafu.
+Najskôr do radu vloíme všetky poèiatoèné vrcholy (mestá, resp. vrcholy, v ktorıch sa nachádzajú agenti), a nastavíme ich hodnotu d na 0 (dåka najkratšej cesty z poèiatoènıch vrcholov do tıchto vrcholov je 0).
+Potom opakujeme nasledovnı krok (a pokım nie je rad prázdny): vyber prvı prvok x (vrchol) z radu, prejdi všetky susedné vrcholy n_i a ak sme ešte vrchol n_i v preh¾adávaní nenavštívili (teda d[n_i] je -1) tak vlo n_i na koniec radu a nastav hodnotu d[n_i] o jedna viac ako d[x] (prešli sme ïalšiu hranu).
+Opakovaním vyššie uvedeného kroku postupne navštívime všetky vrcholy grafu, ktoré sú dosiahnute¾né z poèiatoènıch vrcholov preh¾adávania, a urèíme pre ne dåku najkratšej cesty.
+Nakoniec nájdené hodnoty vypíšeme pod¾a poiadaviek úlohy.
