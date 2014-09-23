@@ -1,0 +1,493 @@
+Editor VI
+
+
+1 Úvod a história
+
+Editor VI je najrozšírenejší textový editor na systémoch typu UNIX. Jeho meno je v
+dnešnej dobe trochu kuriózne. Editor vznikol v zaciatkoch operacných systémov UNIX,
+kedy boli k dispozícii iba editory, ktoré vedeli zobrazovat v jednom okamžiku iba
+jeden riadok textu a ten upravovat. Editor VI už zobrazoval na obrazovke celú
+stranu textu (dokumentu) naraz a umožnoval pohyb v tomto texte a jeho modifikácie,
+tak ako sme dnes všetci zvyknutí. Táto jeho skvelá vlastnost viedla jeho tvorcov k
+menu, ktoré editor dostal. Okrem editora VI, ktorý vznikol velmi dávno, existuje aj
+editor VIM. Editor VIM je klasický editor VI rozšírený o množstvo dalších
+vlastností a funkcií. Editor VI je súcastou každého OS UNIX. V OS LINUX je možné sa
+stretnút prevažne len s jeho vylepšenou verziou - VIM.
+Editor VI je kvalitný editor poskytujúci používatelovi širokú škálu najrôznejších
+funkcií, ktoré môže používatel pri písaní textov a zdrojových kódov potrebovat.
+Vela ludí aj napriek jeho dobrým vlastnostiam tento editor radšej nepoužíva.
+Dôvodom je na prvé použitie komplikované ovládanie. Ide väcšinou o ludí, ktorí
+prišli z operacného systému Microsoft Windows, a teda ludí zvyknutých na vizuálne
+prostredie a textové editory (procesory), ktorých funkcie sú jednoducho prístupné
+cez menu a použitie myši. Aj napriek komplikovanému ovládaniu nie je potrebné hned
+zanevriet na tento editor a skúsit sa naucit používat ho. Jeho ovládanie je možno
+trochu komplikovanejšie ako ovládanie MS Wordu, ale na druhej strane poskytuje
+ovela väcšiu efektívnost pri práci. Treba skúsit.
+
+
+1.1 Na co sa hodí a nehodí editor VI (M)
+
+Editor VI (M) je vhodný na písanie lubovolného textu, ktorý netreba nejako
+špeciálne formátovat pre potreby tlace. Teda žiadne fonty, odrážky, formátovnia
+odstavcov, farby (pre tlac) a podobne. Vzhladom na funkcnú podporu, ktorú má editor
+zabudovanú (odkazy na chyby po kompilácii, doplnanie textu), je editor vhodný na
+písanie programov.
+
+
+1.2 Preco používat VI (M)
+
+ - editory VI (M) sú velmi rozšírené v OS UNIX / LINUX, ktoré sa vyznacujú svojou
+robustnostou, stabilitou a (nie len) sietovou bezpecnostou => tieto OS sa v
+komercnom svete casto používajú => je dobré vediet používat štandardné nástroje,
+ktoré sa nachádzajú v týchto OS
+ - editor VI (M) je velmi efektívny editor, co môže viest k znacnému ušetreniu casu
+pri jeho použití a zvládnutí jeho ovládania
+ - existujú aj verzie VIM pre OS Windows => stací ked viete dobre používat jeden
+editor a vystacíte si na najpoužívanejších OS (aspon v Európe myslím, že sú
+najpoužívanejšie)
+
+
+
+
+2 Práca s editorom
+
+
+2.1 Spustenie editora
+
+Editor VI (M) umožnuje používatelovi editovat existujúci súbor a pokracovat v jeho
+editácii alebo vytvorit nový súbor. Príkaz na naštartovanie editora je vi
+nasledované menom súboru. Napr.
+vi temp.txt
+pre editovanie súboru temp.txt (ak neexistuje, tak sa vytvorí pri uložení
+otvoreného súboru na disk), alebo
+	vi
+cím sa vytvorí docasný súbor (neodporúcam).
+Po spustení editora je možné na obrazovke vidiet zaciatok textu súboru. Ak je súbor
+malý alebo bol vytvorený nový súbor, tak je možné vidiet na zaciatku riadkov znak
+~. Tento znak sa objavuje na zaciatku každého riadku obrazovky, ktorý je prázdny,
+teda súbor koncí posledným riadkom bez znaku ~.
+
+
+2.2	Ukoncenie editora
+
+Ked máme otvorený editor VI je dobré aj vediet, ako ho ukoncit. Na ukoncenie
+editora je potrebné dostat sa do tzv. príkazového módu (command mode) a zadat
+príkaz na ukoncenie práce s editorom. Do príkazového módu sa dostaneme stlacením
+klávesy
+	Esc
+(po spustení sa default nachádzame v príkazovom móde, teda netreba sa do neho
+nijako dostávat). Potom treba zadat príkaz na ukoncenie práce s editorom :q, ktorý
+ukoncí editor v prípade, že neboli vykonané žiadne zmeny v dokumente. V prípade, že
+zmeny boli urobené, editor na to upozorní používatela a nedovolí mu ukoncit ho. Ked
+chceme ukoncit editor a ignorovat vykonané zmeny treba napísat príkaz
+	:q!
+Ak chceme vykonané zmeny uložit je potrebné v príkazovom móde napísat
+	:w
+Ak chceme zmeny zapísat do iného súboru je potrebné napísat
+	:w filename
+kde filename je meno súboru. Ak chceme uložit zmeny a ukoncit prácu v editore je
+možné príkazy spojit a napísat
+	:qw
+alebo napísat príkaz
+ZZ
+co je ekvivalent pre :qw  a je to rýchlejšie pri písaní (tie ZZ sú velké).
+
+
+2.3	Módy práce VI
+
+Editor VI má dva módy práce. Ide o príkazový mód (command mode) a vkladací mód
+(insert mode).
+Príkazový mód umožnuje zadávat príkazy pre manipuláciu s textom a riadenie a
+konfigurovanie editora (exit, nastavenie velkosti tabulátora a pod.) . Tieto
+príkazy sú väcšinou zadávané formou klávesových skratiek. Vkladací mód umožnuje
+pridávat nový text.
+Editor VI sa po štarte nachádza v príkazovom móde. Na prechod editora do
+vkladacieho módu sa môžete použit príkazy
+	a
+a
+	i
+ktoré budú popísané neskôr. Na prechod z vkladacieho módu do príkazového treba
+stlacit klávesu
+	Esc
+Ked už sme v príkazovom móde, opätovné stlacenie klávesy Esc nespôsobí prechod do
+vkladacieho módu.
+
+
+2.4	Ako písat príkazy v príkazovom móde
+
+Príkazy v príkazovom móde majú väcšinou takýto tvar:
+	[pocet] príkaz [kde]
+pricom pocet definuje kolko krát sa má príkaz uskutocnit a je zadaný ako císlo. Ak
+napríklad chcem zmazat 10 znakov napíšem v príkazovom móde
+	10x
+pricom príkaz x zmaže znak v mieste kde sa nachádza kurzor.
+Kde špecifikuje oblast textu na ktoré sa má aplikovat príkaz. Možno špecifikovat
+kolko riadkov alebo akú cast dokumentu má príkaz postihnút. Kde môže byt aj další
+príkaz ktorý slúži na pohyb kurzora (v podstate vždy to je príkaz na pohyb
+kurzoru). Napr. zmazanie všetkých riadkov do konca súboru by sa napísalo ako
+	dG
+kde d je príkaz na mazanie a G je príkaz na posun kurzora na koniec dokumentu.
+
+
+2.5	Jednoduché príkazy
+
+Na zaciatok niekolko najpoužívanejších príkazov. V zátvorke budú uvedené varianty
+pre daný príkaz v editore VIM.
+	a - prechod do vkladacie módu, vkladané znaky budú umiestnované za aktuálnu
+pozíciu kurzoru. Ak sa špecifikuje pocet, tak vložený text sa vloží opakovane na
+toto miesto.
+	i - prechod do vkladacie módu, vkladané znaky budú umiestnované pred aktuálnu
+pozíciu kurzora. Ak sa špecifikuje pocet, tak vložený text sa vloží opakovane na
+toto miesto (insert)
+	h - posun kurzora jednu pozíciu dolava (šipka vlavo)
+	j - posun kurzora jeden riadok nižšie (šipka dole)
+	k - posun kurzora jeden riadok vyššie (šipka hore)
+	l - posun kurzora jednu pozíciu doprava (šipka vpravo)
+	r - nahradí jeden znak pod kurzorom zadaným znakom. Ak sa špecifikuje pocet, tak
+zadaný text nahradí pocet znakov na tomto mieste.
+	u - undo posledná zmena. Ak sa napíše znova tak to znamená redo. (viac krokové
+undo)
+	x - zmaže znak na pozícii kurzora. Ak sa špecifikuje pocet, tak je zmazaných
+pocet znakov.
+
+
+2.6	Pohybovanie v texte
+
+Na pohybovanie v texte slúžia okrem spomenutých základných príkazoch aj niektoré
+dalšie. Príkazy na pohyb kurzora sa používajú aj pri stanovení rozsahu platnosti
+iných príkazov (mazanie, kopírovanie a pod.). Preto sa venujeme najskôr pohybom v
+texte a až potom ostatným príkazom.
+	E, e - presun na koniec tohto slova, v prípade e je slovo text oddelený
+interpunkcnými a inými znakmi, v prípade E je slovo všetko co je oddelené bielymi
+znakmi
+	B, b - presun na zaciatok tohto slova, v prípade b je slovo text oddelený
+interpunkcnými a inými znakmi, v prípade B je slovo všetko co je oddelené bielymi
+znakmi
+	W, w - presun na zaciatok dalšieho slova, v prípade w je slovo text oddelený
+interpunkcnými a inými znakmi, v prípade W je slovo všetko co je oddelené bielymi
+znakmi
+	$ - presun na koniec riadku (end)
+	^ - presun na zaciatok riadku (home)
+	G - presun na koniec súboru
+	rG - presun na riadok císlo r, kde r je pocítané od zaciatku súboru. Ciže 1G nás
+presunie na zaciatok prvého riadku súboru
+
+
+2.7	Vystrihávanie, kopírovanie a vkladanie textu
+
+Príkaz d slúži na vystrihnutie textu, ciže zmaže text a uloží ho do štandardného
+buffera (nieco ako clipboard vo Windows) a príkaz y slúži na skopírovanie text do
+štandardného buffera. Príkazy sú predchádzané špecifikáciu poctu použitia príkazu
+(pocet) a nasledované špecifikáciou pohybu kurzora (kde). Ak zapíšeme príkaz dva
+krát po sebe znamená to že sa vztahuje na aktuálny riadok. Nasledujú nejaké
+príklady:
+
+	d^ - zmaže znaky od pozície kurzoru po zaciatok riadku
+	d$ - zmaže znaky od pozície kurzoru po koniec riadku
+	dw - zmaže znaky od pozície kurzoru po koniec tohto slova
+	yy - skopíruje riadok na ktorom sa nachádza kurzor do buffera
+	3dd - zmaže tri riadky vrátane riadku kde je umiestnený kurzor
+
+Príkazy p a P slúžia na vkladanie obsah buffera do textu. Príkaz P vloží pred
+riadok, na ktorom je umiestnený kurzor a p za tento riadok.
+
+
+2.8	Buffere
+
+Ako už bolo spomínané príkazy y, d a p pracujú z buffrom, ktorého správanie je
+možné prirovnat k správaniu clipboardu. Okrem štandardného buffera, ktorý sa
+používa ak nie je uvedené inak, je možné používat aj pomenované buffere. Pomenované
+buffere sa používajú tak, že pred samotný príkaz sa vloží postupnost
+	"m
+kde znak m je lubovolné písmeno alebo císlica, tzv. meno buffera. Napríklad
+skopírovanie 5 riadkov do buffera b a jeho vloženie na koniec súboru bude táto
+postupnost príkazov:
+	"m5yy
+	G
+	p	
+
+
+2.9	Vyhladávanie v texte
+
+Na vyhladávanie slúžia príkazy /, ?, n. Vyhladávanie sa vykonáva prostredníctvom
+regulárnych výrazov (ak neviete regulárne výrazy nevadí, ani nezbadáte, že ich
+potebujete). Pre hladanie prvého výskytu textu awk smerom dole zapíšeme ako
+	/awk
+Ak sa takýto text vyskytuje v texte kurzor sa presunie na pozíciu prvého výskytu.
+Ak chceme hladat další výskyt, tak zadáme príkaz
+	n
+Ak sa hladaný text nenachádza v texte editor nás na toto upozorní prostredníctvom
+správy v stavovom riadku. Pre hladanie toho textu turbo smerom hore zapíšeme príkaz
+takto:
+	?turbo
+V prípade dalšieho hladania opät použijeme príkaz n.
+
+
+2.10 Nahrádzanie textu iným textom
+
+Nahrádzanie sa robí nasledujúcim príkazom:
+	:s/povodny_text/novy_text/g
+povodny_text je regulárny výraz ktorý špecifikuje co sa má nahrádzat, novy_text je
+text, ktorým sa majú nájdené výskyty nahradit. Ak sa neuvedie na konci príkazu g
+tak sa nahradí len prvý výskyt na každom riadku. Ak sa g uvedie nahradia sa všetky
+výskyty. Pred samotným príkazom s možno uviest rozsah dokumentu na ktorý sa má
+vyhladávanie vztahovat. Za všetky keci radšej nejaké príklady:
+	:1,$s/var_name/new_name/g
+alebo
+	:%s/var_name/new_name/g
+Nahradí v celom súbore všetky výskyty textu var_name za text new_name (od prvého
+riadku po posledný).
+	:.,+20s/\<var_name/new_name/g
+Nahradí v súbore od aktuálneho riadku po riadok o 20 nižšie všetky výskyty slova
+zacínajúceho var_name za text new_name (od aktuálneho riadku plus 20 riadkov).
+	:s/var_name/new_name/
+Nahradí v aktuálnom riadku prvý výskyt textu var_name za text new_name.
+
+
+
+
+3 Editovanie viacero súborov naraz
+
+Ak potrebuje pracovat s viacerými súbormi naraz (kopírovat text z jedného do
+druhého) je potrebné vediet otvorit viacero súborov naraz a prepínat sa medzi nimi.
+Otvorit viacero súborov sa dá spustením editora s viacerými argumentmi, ktoré
+špecifikujú mená súborov.
+	vi filename1 filename2 ... filenameN
+alebo
+	vi *.c
+Prepínanie medzi súbormi je možné prostredníctvom príkazov :n smerom na další
+súbor, žial smerom spät to nejde. To dokáže iba VIM pomocou príkazu :N.
+
+
+
+
+4	Zhrnutie príkazov
+
+V nasledujúcej casti sú zhrnuté príkazy pre príkazový mód editora VI. Žial zatial
+len v anglickom jazyku ale myslím, že to nemôže robit nikomu problémy.
+
+
+4.1	Práca z blokmi textu (kopírovanie, mazanie a pod.)
+	" - Specify a buffer to be used any of the commands using buffers. Follow the "
+with a letter or a number, which corresponds to a buffer.
+	D - Delete to the end of the line from the current cursor position.
+	P - Paste the specified buffer before the current cursor position or line. If no
+buffer is specified (with the " command.) then 'P' uses the general buffer.
+	X - Delete the character before the cursor.
+	Y - Yank the current line into the specified buffer. If no buffer is specified,
+then the general buffer is used.
+	d - Delete until where. "dd" deletes the current line. A count deletes that many
+lines. Whatever is deleted is placed into the buffer specified with the " command.
+If no buffer is specified, then the general buffer is used.
+	p - Paste the specified buffer after the current cursor position or line. If no
+buffer is specified (with the " command.) then 'p' uses the general buffer.
+	x - Delete character under the cursor. A count tells how many characters to
+delete. The characters will be deleted after the cursor.
+	y - Yank until , putting the result into a buffer. "yy" yanks the current line.
+a count yanks that many lines. The buffer can be specified with the " command. If
+no buffer is specified, then the general buffer is used.
+
+
+4.2	Vkladanie textu
+	
+	A - Append at the end of the current line.
+	I - Insert from the beginning of a line.
+	O - (letter oh) Enter insert mode in a new line above the current cursor
+position.
+	a - Enter insert mode, the characters typed in will be inserted after the
+current cursor position. A count inserts all the text that had been inserted that
+many times.
+	i - Enter insert mode, the characters typed in will be inserted before the
+current cursor position. A count inserts all the text that had been inserted that
+many times.
+	o - Enter insert mode in a new line below the current cursor position.
+
+
+4.3	Pohyb kurzoru v texte
+	
+	^B - Scroll backwards one page. A count scrolls that many pages.
+	^D - Scroll forwards half a window. A count scrolls that many lines.
+	^F - Scroll forwards one page. A count scrolls that many pages.
+	^H - Move the cursor one space to the left. A count moves that many spaces.
+	^J - Move the cursor down one line in the same column. A count moves that many
+lines down.
+	^M - Move to the first character on the next line.
+	^N - Move the cursor down one line in the same column. A count moves that many
+lines down.
+	^P - Move the cursor up one line in the same column. A count moves that many
+lines up.
+	^U - Scroll backwards half a window. A count scrolls that many lines.
+	$ - Move the cursor to the end of the current line. A count moves to the end of
+the following lines.
+	% - Move the cursor to the matching parenthesis or brace.
+	^ - Move the cursor to the first non-whitespace character.
+	( - Move the cursor to the beginning of a sentence.
+	) - Move the cursor to the beginning of the next sentence.
+	{ - Move the cursor to the preceding paragraph.
+	} - Move the cursor to the next paragraph.
+	| - Move the cursor to the column specified by the count.
+	+ - Move the cursor to the first non-whitespace character in the next line.
+	- - Move the cursor to the first non-whitespace character in the previous line.
+	_ - Move the cursor to the first non-whitespace character in the current line.
+	0 - (Zero) Move the cursor to the first column of the current line.
+	B - Move the cursor back one word, skipping over punctuation.
+	E - Move forward to the end of a word, skipping over punctuation.
+	G - Go to the line number specified as the count. If no count is given, then go
+to the end of the file.
+	H - Move the cursor to the first non-whitespace character on the top of the
+screen.
+	L - Move the cursor to the first non-whitespace character on the bottom of the
+screen.
+	M - Move the cursor to the first non-whitespace character on the middle of the
+screen.
+	W - Move forward to the beginning of a word, skipping over punctuation.
+	b - Move the cursor back one word. If the cursor is in the middle of a word,
+move the cursor to the first character of 	that word.
+	e - Move the cursor forward one word. If the cursor is in the middle of a word,
+move the cursor to the last character of that word.
+	h - Move the cursor to the left one character position.
+	j - Move the cursor down one line.
+	k - Move the cursor up one line. 
+	l - Move the cursor to the right one character position.
+	w - Move the cursor forward one word. If the cursor is in the middle of a word,
+move the cursor to the first character of the next word.
+	
+	
+4.4	Skrolovanie obrazovky (bez pohybu kurzoru v texte)
+
+	E - Scroll forwards one line. A count scrolls that many lines.
+	^Y - Scroll backwards one line. A count scrolls that many lines.
+	z - Redraw the screen with the following options. "z<return>" puts the current
+line on the top of the screen; "z." puts the current line on the center of the
+screen; and "z-" puts the current line on the bottom of the screen. If you specify
+a count before the 'z' command, it changes the current line to the line specified.
+For example, "16z." puts line 16 on the center of the screen.
+	
+	
+4.5	Nahrádzanie textu
+
+	C - Change to the end of the line from the current cursor position.
+	R - Replace characters on the screen with a set of characters entered, ending
+with the Escape key.
+	S - Change an entire line.
+	c - Change until . "cc" changes the current line. A count changes that many
+lines.
+	r - Replace one character under the cursor. Specify a count to replace a number
+of characters.
+	s - Substitute one character under the cursor, and go into insert mode. Specify
+a count to substitute a number of characters. A dollar sign ($) will be put at the
+last character to be substituted.
+
+
+4.6	Hladanie postupnosti znakov
+
+	, - Repeat the last f, F, t or T command in the reverse direction.
+	/ - Search the file downwards for the string specified after the /.
+	; - Repeat the last f, F, t or T command.
+	? - Search the file upwards for the string specified after the ?.
+	F - Search the current line backwards for the character specified after the 'F'
+command. If found, move the cursor to the position.
+	N - Repeat the last search given by '/' or '?', except in the reverse direction.
+	T - Search the current line backwards for the character specified after the 'T'
+command, and move to the column after the if it's found.
+	f - Search the current line for the character specified after the 'f' command.
+If found, move the cursor to the position.
+	n - Repeat last search given by '/' or '?'.
+	t - Search the current line for the character specified after the 't' command,
+and move to the column before the character if it's found.
+
+
+4.7	Manipulácia zo znakmi a formátovanie riadkov
+
+	~ - Switch the case of the character under the cursor.
+	< - Shift the lines up to where to the left by one shiftwidth. "<<" shifts the
+current line to the left, and can be specified with a count.
+	> - Shift the lines up to where to the right by one shiftwidth. ">>" shifts the
+current line to the right, and can be specified with a count.
+	J - Join the current line with the next one. A count joins that many lines.
+
+
+4.8	Ukladanie a ukoncenie
+	^\ - Quit out of "VI" mode and go into "EX" mode. The EX editor is the line
+editor VI is build upon. The EX command to get back into VI is ":vi".
+	Q - Quit out of "VI" mode and go into "EX" mode. The ex editor is a line-by-line
+editor. The EX command to get back into VI is ":vi".
+	ZZ - Exit the editor, saving if any changes were made.
+
+
+4.9	Rôzne
+
+	^G - Show the current filename and the status.
+	^L - Clear and redraw the screen.
+	^R - Redraw the screen removing false lines.
+	^[ - Escape key. Cancels partially formed command.
+	^^ - Go back to the last file edited.
+	! - Execute a shell. If a is specified, the program which is executed using !
+uses the specified line(s) as standard input, and will replace those lines with the
+standard output of the program executed. "!!" executes a program using the current
+line as input. For example, "!4jsort" will take five lines from the current cursor
+position and execute sort. After typing the command, there will be a single
+exclamation point where you can type the command in.
+	& - Repeat the previous ":s" command.
+	. - Repeat the last command that modified the file.
+	: - Begin typing an EX editor command. The command is executed once the user
+types return. (See section below.)
+	@ - Type the command stored in the specified buffer.
+	U - Restore the current line to the state it was in before the cursor entered
+the line.
+	m - Mark the current position with the character specified after the 'm'
+command.
+	u - Undo the last change to the file. Typing 'u' again will re-do the change.
+
+
+5 Príkazy prevzaté z riadkového editora EX
+
+The VI editor is built upon another editor, called EX. The EX editor only edits by
+line. From the VI editor you use the : command to start entering an EX command.
+This list given here is not complete, but the commands given are the more commonly
+used. If more than one line is to be modified by certain commands (such as ":s" and
+":w" ) the range must be specified before the command. For example, to substitute
+lines 3 through 15, the command is ":3,15s/from/this/g".
+	:ab string strings
+Abbreviation. If a word is typed in VI corresponding to string1, the editor
+automatically inserts the corresponding words. For example, the abbreviation ":ab
+usa United States of America" would insert the words, "United States of America"
+whenever the word "usa" is typed in.
+	:map keys new_seq
+Mapping. This lets you map a key or a sequence of keys to another key or a sequence
+of keys.
+	:q
+Quit VI. If there have been changes made, the editor will issue a warning message.
+	:q!
+Quit VI without saving changes.
+	:s/pattern/to_pattern/options
+Substitute. This substitutes the specified pattern with the string in the
+to_pattern. Without options, it only substitutes the first occurence of the
+pattern. If a 'g' is specified, then all occurences are substituted. For example,
+the command 	":1,$s/Dwayne/Dwight/g" substitutes all occurences of "Dwayne" to
+"Dwight".
+	:set [all]
+Sets some customizing options to VI and EX. The ":set all" command gives all the
+possible options. (See the section on customizing VI for some options.)
+	:una string
+Removes the abbreviation previously defined by ":ab".
+	:unm keys
+Removes the remove mapping defined by ":map".
+	:vi filename
+Starts editing a new file. If changes have not been saved, the editor will give you
+a warning.
+	:w
+Write out the current file.
+	:w filename
+Write the buffer to the filename specified.
+	:w >> filename
+Append the contents of the buffer to the filename.
+	:wq
+Write the buffer and quit.
+
+
+6	Záver
+
+Odporúcam používat radšej editor VIM ako VI. VIM má ovela viac funkcií a
+príjemnejšie ovládanie. Jeho nevýhodou môže byt to že sa nemusí nachádzat na
+všetkých OS typu UNIX.

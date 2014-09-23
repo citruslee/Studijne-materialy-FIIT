@@ -1,0 +1,39 @@
+Úloha 17 - Elektromobil (max. 1 bod)
+
+Daný je popis cestnej siete v krajine. Medzi N (N ≤ 100,000) mestami
+vedie M (M ≤ 100,000) obojsmerných ciest rozličných dĺžok. Výrobcovia
+áut testujú nový typ elektromobilu, ale stále sa rozhodujú, akú by mal
+mať elektromobil výdrž bateriek. Vašou úlohou je určiť najmenší dosah
+potrebný nato, aby sa dalo pomocou elektromobilu prepraviť medzi ľubovoľnou
+dvojicou miest v sieti. Každé mesto obsahuje nabíjaciu stanicu. Počas jazdy
+medzi dvojicou miest, môže elektromobil prechádzať ľubovoľnými mestami
+(a dobíjať si baterky), ale vzdialenosť susedených miest na tejto ceste
+nemôže presiahnuť dosah auta (s prázdnymi baterkami sa elektromobil už
+nikam ďalej nedostane).
+
+Prvý riadok vstupu obsahuje dve čísla N, M. Nasledujúcich M riadkov
+obsahuje každý popis jednej cesty – tri čísla. Prvé dve sú (rôzne)
+čísla miest ktoré spája daná cesta, tretie číslo je dĺžka cesty.
+
+Pre cestnú sieť na vstupe vypíšte jeden riadok na výstup obsahujúci
+hodnotu minimálneho dosahu elektromobilu, aby sa pomocou neho dalo
+dostať z každého mesta do každého. Ak nie možné sa dostať medzi
+ľubovoľnou dvojicou miest bez ohľadu na dosah elektromobilu,
+vypíšte „IMPOSSIBLE‟.
+
+Príklad vstupu č.1: 3 3
+0 1 3
+1 2 4
+2 1 5
+
+
+
+Výstup pre príklad č.1: 4
+
+
+
+Príklad vstupu č.2: 2 0
+
+
+
+Výstup pre príklad č.2: IMPOSSIBLE

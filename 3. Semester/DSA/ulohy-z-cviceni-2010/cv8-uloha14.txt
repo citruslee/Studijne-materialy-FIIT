@@ -1,0 +1,17 @@
+Úloha 14 - Postav haldu (max. 1 bod)
+
+Daných je N prirodzených čísel, vytvorte z týchto prvkov binárnu
+haldu -- teda preusporiadajte vstupný vektor tak, aby v ňom platila
+vlastnosť haldy (najmenší prvok je vrch haldy; pod prvkom haldy su
+prvky väčšie ako tento prvok).
+
+Naprogramujte funkciu v nasledovnom tvare:
+// Vytvori z prvkov haldu. Prvky su item[1..n] (teda nie
+// od nuly, ale od jednotky). Vrch haldy (najmensi prvok)
+// bude item[1], priame deti vrchu haldy su item[2] a
+// item[3], atd.
+
+void build(int *item, int n)
+{
+  // ...
+}
