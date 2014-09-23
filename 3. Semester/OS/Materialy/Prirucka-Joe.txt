@@ -1,0 +1,324 @@
+--------------------------------------------------------
+     Prirucka k efektivnemu pouzivaniu editora JOE
+--------------------------------------------------------
+
+UVOD
+
+"JOE" je popularny textovy editor pod OS Unix (Linux). Tento text je
+urceny jednak pre zaciatocnikov, ktori v JOE este nepracovali, ale hlavne sa
+zameriava na efektivne pouzitie tohoto programu pri editovani zdrojovych
+textov, napriklad v C.
+
+Nie su tu vymenovane vsetky moznosti JOE, na to sluzi jeho manual. Ide
+hlavne o to, aby sa studenti predmetu OS naucili pouzivat editor takym
+sposobom, aby im pomahal pri tvorbe zadani. Pocas semestra budete mat
+niekolko testov, kde bude VELMI zalezat na case. Ak sa pocas testu budete
+napriklad posuvat na koniec riadku klavesou 'sipka doprava' namiesto
+pouzitia
+spravnej kombinacie klaves, zistite sami, ze slaba efektivita vie byt
+bolestiva - dostanete malo bodov, lebo ani nestihnete napisat zadanie.
+
+S textovym editorom by ste mali zrast, malo by to byt nieco, co vam pomaha,
+nie vas obmedzuje. Nemali by ste vlastne ani citit, ze editor existuje, vase
+programatorske myslienky by mali samy skakat na obrazovku :-) Ale take nieco
+sa
+da dosiahnut iba praxou, stalou pracou s editorom.
+
+Nastastie, zakladnych povelov je v JOE zopar, takze uz po nejakej hodinke
+pisania s pouzivanim klavesovych skratiek budete mat ten spravny zaklad.
+
+
+Pokial poznate zaklady prace v JOE, mozete zacat citat od kapitoly 2.
+
+
+1. JOE - predstavenie programu (JOE - citaj 'dzou')
+
+Editor JOE je textovy editor - nie je to textovy procesor, ktory by
+obsahoval desiatky funkcii a masivne rozhranie. Jeho vyznam skor naplna
+klasicku filozofiu Unixu - mat sadu programov s roznou zlozitostou a svoju
+pracu zalozit na ich efektivnom vyuzivani. Teda, treba roztlkat orechy takym
+velkym kladivom, ake sa prave na to hodi, ani mensim, ani vacsim.
+
+JOE ma preto jednoduche rozhranie a obsahuje prave tolko funkcii, kolko
+budete potrebovat na beznu pracu s textom. Vulgarne povedane, JOE vam bude
+sprvoti pripominat Notepad, kvoli jednoduchemu vyzoru. Avsak poskytuje viac
+moznosti a jeho spravanie sa da lepsie nakonfigurovat. Porovnavanim s
+Notepadom by sme velmi znevazovali JOEove schopnosti.
+
+Na zaver uvodu mi neda, aby som nespomenul zakladne pravidlo 'vitazstva' nad
+kazdym programom - treba ho vediet ukoncit. Aj editor JOE sa lahko 'opusta'
+- staci stisnut CTRL+C. Ale omnoho rozumnejsie spravanie je, ked mate
+spusteneho JOE a neviete co a ako, vsimnut si malu hlasku vpravo hore na
+obrazovke: "Ctrl+K H for help", co znaci, ze drzite Ctrl, stisnete najprv K,
+potom H a potom uz len citate a citate....
+
+
+
+1.1. Mody prace, vyzor, stavovy riadok (kde mam kurzor ???)
+
+Joe je tzv. jedno-modovy editor: napriklad oproti editoru 'vi' sa vzdy
+nachadza v jedinom mode a to v mode editacie textu. Takze odteraz vas mody
+prace nemusia zaujimat, proste vzdy to, co klepete, naskakuje na obrazovku.
+
+Stavovy riadok je indikatorom vsetkeho doleziteho a nachadza sa navrchu
+obrazovky. Zobrazuje meno suboru, to ci bol subor od zaciatku editacie
+modifikovany, kde sa prave nachadza kurzor, aktualny cas a tiez klasicku
+frazu "Ctrl+K H for help".
+
+Nie uplne vsetky dolezite vypisy sa vpracu do stavoveho riadku - tam sidlia
+len jednoduche priznaky. Dialogy typu "Naozaj chcete ulozit tento subor ?"
+sa zobrazuju v spodnom riadku obrazovky.
+
+
+1.2. Co JOE dokaze
+
+Naschval nebudem spominat take speciality, ako je vyhladavanie pomocou
+regularnych vyrazov. Pri praci so zdrojovymi textami vam viac pomoze:
+
+- pouzivanie blokov (vyznacenie, kopia, presun, ulozenie do suboru)
+- UNDO / REDO operacie
+- rychle skratky na navigaciu textom (pohyb po slovach, znacky),
+   prikaz "chod na riadok XYZ'
+- priatelske dialogy pri ukladani
+- hladanie vyrazov v texte (kde mam ten "format c: /u/q >nul")
+- nastavovanie moznosti editora za behu (napr. pravy okraj,...)
+- automaticke odsadzovanie (napr. pri *.c suboroch)
+- klavesova skratka na hladanie opacnej zatvorky ( napr. {x=4;} ),
+  funguje samozrejme aj vnorene
+- editacia viacerych suborov naraz (kazdy je vo svojom "okne")
+
+
+
+
+
+2. Efektivna praca v editore JOE
+
+2.1. Co je efektivita ?
+
+Efektivita v editore znamena co najucelnejsie pouzivat dane moznosti:
+po slovach sa hybe Ctrl+X a Ctrl+Z miesto tukania do sipky, nastavenie si
+odsadzovania (alebo pouzivanie klavesy TAB) miesto tukania do medzery,
+pouzivanie blokov miesto rucneho prepisovania,...
+
+Efektivita znaci aj to, ze poznate spravanie sa programu (a nie ze
+predpokladate u neho take iste spravanie ako u inych programov).
+
+Efektivita znaci aj to, ze poznate sposob, akym pracujete akurat vy - a ze
+ste ochotni tento sposob zmenit tak, aby ste pracovali lepsie (rychlejsie,
+robili menej chyb, vas produkt vyzeral krajsie,...), taktiez na zaklade
+poznania vlastneho sposobu prace si viete spravanie programu prisposobit.
+
+Dolezite je, aby ste sa nebali naucit sa nove veci (to plati aj pre zivot,
+nielen pre JOE). Takze ked zistite, ze behanie po subore vam trva prilis
+dlho, je najvyssi cas naucit sa 'behat rychlejsie', bez ohladu na to, ze
+tukanie do sipky neboli, ale stlacanie nejakych divnych Ctrl kombinacii asi
+ano. :-)
+
+
+2.2. Poznaj sam seba: pisanie zdrojovych textov
+
+Pri programovani pouzivate editor specifickym sposobom - nepisete az tak
+vela, viacej opravujete (hlavne drobne syntakticke chyby), velmi vela sa
+hybete kurzorom po texte, obcas presuvate bloky textu (ale ak prepisujete
+blok textu 'rucne' po pismenku, tak to trva neumerne dlho).
+
+Taktiez je VELMI dobrym zvykom ukladat editovany subor na disk CO
+NAJCASTEJSIE - nie raz sa stane, ze spojenie na server padne akurat ked
+editujete najdolezitejsi subor. Nahoda je blbec, ale JOE nie - v kazdom
+pripade 'stuhnutia' sa snazi vytvorit v danom adresari subor DEADJOE, ktory
+obsahuje to, co ste pisali. Ak vam padne viac suborov za sebou, mali by tam
+byt vsetky obsahy - ale je lepsie pouzivat ukladanie na disk, ako dufat, ze
+'sa to zachrani'.
+
+Caste ukladanie suboru sa vyplati napriklad aj vtedy, ak NAHODOU stisnete
+Ctrl+C a hned nato Y (obcas sa podari, ked pisete prirychlo a netriafate
+klavesnicu), nuz tak sa JOE vykasle na cely vas subor, ved ste mu to
+nakazali. "Save often" hovoria prognostici.
+
+
+2.3. Klavesove skratky
+
+Odporucam vam ucit sa klavesove skratky postupne - ak este nepoznate JOE,
+bude toho na vas na zaciatok urcite privela. Malo by vam stacit, ked budete
+studovat skratky tak, ako su v kapitolach - na kazdu kapitolu priblizne
+pol hodiny pisania nejakeho jednoducheho programu. Mysli sa tym pol hodiny
+pouzivania skratiek, lebo aj ked tych 5 skratiek v kapitole sa da zapametat
+za 3 minuty, treba ich dostat pod kozu - aby ste ich klepali automaticky,
+nie si vzdy spominali ako na to. (Aj ked Ctrl-H je vam k dispozicii.)
+
+Vysvetlenie ku skratkam: Aj ked pismena v skratkach su velkym pismom,
+netreba
+stlacat SHIFT. Tiez napriklad Ctrl-KH znaci, ze drzite Ctrl, stlacite K,
+potom stlacite H. Je jedno, kedy pustite klavesu Ctrl, JOE skratku rozpozna.
+
+
+2.3.1. Najpouzivanejsie skratky:
+
+Minimalne nasledovne skratky treba poznat, aby ste boli schopni zakladnej
+prace:
+(pri niektorych uvadzam aj mnemotechnicku pomocku - familiarne vysvetlenie
+danej skratky)
+
+Ctrl-KH   - vyvolanie okna pre pomoc   (Konecne Help)
+sipky     - pohyb kurzorom
+PgUp      - predchadzajuca strana
+PgDn      - nasledujuca strana
+
+Ctrl-KD   - ulozenie suboru na disk, opyta sa na meno (Konec Delani)
+Ctrl-C    - ukoncenie prace bez ulozenia suboru
+Ctrl-KX   - ulozenie suboru a nasledne ukoncenie editora
+
+Ctrl-Y    - zmazanie celeho riadku
+Ctrl-D    - zmaz znak na pozicii kurzora
+
+Ctrl-A    - skok na zaciatok riadku (A je prve v abecede)
+Ctrl-E    - skok na koniec riadku   (E ako End)
+
+
+2.3.2. Dalsie skratky, ktore posluzia dobrej veci:
+
+Praca s blokom textu (oznacenie, kopia, presun,...)
+
+Ctrl-KB   - oznacenie zaciatku bloku (od pozicie kurzora)
+Ctrl-KK   - oznacenie konca bloku    (po kurzor)
+Ctrl-KC   - kopirovanie bloku - tam kde je kurzor
+Ctrl-KM   - presun bloku
+Ctrl-KY   - vymazanie bloku
+
+(K ako bloK, B - begin, K-koniec, Copy, Move, Yes,erase (Yrase))
+
+
+Pre zachranu nervov (a pre zachranu nahodne zmazanych riadkov) je dobre
+poznat
+UNDO a REDO. Tu je situacia troska zlozitejsia, kedze musite stiskat aj
+SHIFT
+naraz s CTRL:
+
+UNDO, teda navrat o jednu operaciu dozadu, napr. ked si nahodou vymazete
+riadok:
+Ctrl-Shift-MINUS (klavesa '-')
+                 (mnemotechnika: Minus ako krok naspet)
+
+REDO, teda po operacii UNDO znova spravi to, co ste cez UNDO odstranili:
+Ctrl-^     (^ je na klavese 6 alebo 7, podla toho za akou klavesnicou
+sedite)
+           stiskate vlastne 3 klavesy: Ctrl, Shift, '6' (alebo '7').
+           (mnemotechnika  ^ - sipka hore)
+
+
+UNDO aj REDO maju historiu - teda dokazete sa vratit aj o viac krokov
+dozadu.
+
+
+
+2.3.3. Skratky pre efektivnu editaciu zdrojoveho textu (Cshell, C):
+
+Pohyb po texte:
+
+Ctrl-A    - skok na zaciatok riadku
+Ctrl-E    - skok na koniec riadku
+Ctrl-KL   - skok na konkretny riadok - JOE sa spyta na cislo riadku
+Ctrl-X    - skok kurzorom na zaciatok nasledujuceho slova (dalsie slovo)
+Ctrl-Z    - skok za koniec slova na ktorom je kurzor (predchadzajuce slovo)
+(nemotechnika: Z a X funguju akoby to boli sipky vlavo a vpravo)
+
+
+Ctrl-G    - skok na zodpovedajucu zatvorku (citajte dalej)
+
+Tato skratka je specialne pre vyhladavanie 'parovych' zatvoriek v
+zdrojovych textoch - normalne zatvorky pre funkcie, napr. sqrt(123), ale
+tiez pre zlozene zatvorky blokov {int a; a=5;} a aj hranate zatvorky
+napr.polia:  pole[123+b]. Postavite sa kurzorom na jednu zatvorku a po
+stisnuti Ctrl-G sa kurzor premiestni na zodpovedajucu druhu zatvorku. Pekne
+je, ze to pracuje aj pri vnorenom kode - a prave v tom je sila jdnoduchej
+skratky - da sa rychlo dostat na logicky zodpovedajuce miesto, bez toho, aby
+ste ho hladali rucne.
+
+
+Ctrl-KF   - hladaj retazec
+Ctrl-L    - hladaj nasledujuci vyskyt retazca (po Ctrl-KF)
+
+Ctrl-W    - zmaz slovo od kurzora doprava  --->
+Ctrl-O    - zmaz slovo od kurzora dolava <---
+
+Ctrl-KR   - pridanie k textu text zo suboru
+Ctrl-TT   - nastavenie vklad/prepis rezimu
+
+
+
+2.3.4. Praca s oknami:
+
+Niekedy je uzitocne mat otvorenych viac suborov naraz, hlavne, ak sa ucite
+podla nejakeho prikladu, ktory mate v dalsom subore:
+
+Ctrl-KO   - otvor nove okno                      (mnemotechnika: Open)
+Ctrl-KN   - preskoc kurzorom do dalsieho okna    (mnemotechnika: Next)
+Ctrl-KP   - preskoc do predchadzajuceho okna     (mnemotechnika: Previous)
+Ctrl-KI   - ukaz vsetky okna / ukaz jedno okno   (mnemotechnika: swItch)
+
+V oknach sa SAVE, CLOSE,.. robi takisto, ako ked sme editovali jediny subor,
+operacia
+plati pre okno, v ktotom je kurzor:
+
+Ctrl-C    - zavri aktualne okno
+Ctrl-KX   - skonci a uloz subor v aktualnom okne
+
+
+
+
+3.  Pre pokrocilych (Ak dlho kracas, si pokrocily)
+
+Ak pracujete v UNIXe dost dlho, viete o koncepcii ".rc" suborov. Ide o to,
+ze kazdy program ma svoj konfiguracny subor, do ktoreho uklada nastavenia.
+Konvencia pomenovania a umiestnenia tychto suborov je, ze pre program XYZ sa
+subor vola .XYZrc (vratane bodky !) a nachadza sa v domovskom adresari
+pouzivatela.  Aj JOE ma svoj subor .joerc - avsak pokial vam administrator
+tento subor neskopiroval, tak ho vo svojom domovskom adresari nenajdete.
+Nevadi, subor sa zvycajne nachadza v /usr/local/lib/joerc (bez bodky) a
+staci si ho skopirovat "ku vam domov" (cp /usr/local/lib/joerc ~/.joerc).
+
+V .joerc sa nachadza velke mnozstvo nastaveni pre editor JOE. Ked (ak) ich
+budete upravovat, davajte si preto pozor, co robite - aj ked v pripade
+nespravnych
+zmien si este vzdy mozete skopirovat povodny subor joerc.
+Subor .joerc ma svoju vlastnu strukturu (takato nie je vseobecna pre vsetky
+.XYZrc subory). V subore su uvedene VSETKY moznosti, ktore si mozete
+nastavit
+spolu aj s moznym formatom. Platne su vsak len tie riadky, ktorych PRVY ZNAK
+JE MINUS ("-"). Takze riadok:
+-tab 4
+je "neaktivny", lebo prvy znak je medzera. Ak chcete mat sirku tabulatora
+nastavenu na 4, treba umiestnit "minus" na zaciatok:
+-tab 4
+
+Je v podstate jedno, kde umiestnite vase nastavenia, ale je dobre nechat
+ich v tych sekciach, kde su okomentovane - lahsie ich potom najdete.
+
+Okrem toho sa niektore nastavenia zvyknu davat ku konkretnemu suboru -
+v druhej sekcii su masky suborov (tiez zacinaju v prvom stlpci) a za nimi
+su nastavenia, ktore budu platit, ked budete editovat subor vyhovujuci
+maske.
+
+Odporucam vam nastavit si aspon nasledovne moznosti:
+
+*.csh
+-tab  4
+-rmargin 100            (pravy okraj,podla vasej potreby)
+-autoindent             (automaticke odsadzovanie)
+-nowrap
+
+Aj ked skripty mozu mat hocijaku priponu, nielen .csh, takze trebars mozete
+prepinace dat do sekcie '*' - teda pre vsetky subory.
+
+Ak chcete nejaku moznost "odnastavit" (clear option) tak treba pred nazov
+umiestnit dve minuska ("--force" napr. vypne automaticke pridavanie znaku
+konca riadka na koniec suboru pri ukladani).
+
+A uplne nakoniec spomeniem este moznost upravit si vyzor stavoveho riadku
+(ten uplne navrchu editora) - ale tuto moznost uz necham na vas. Zmenu vsak
+odporucam, minimalne nastavit si zobrazovanie pozicie v subore, ale da sa
+pridat aj vlastny text, hlaska,...
+
+Prajem prijemnu pracu a otazky ohladom editora JOE adresujte na:
+
+hudecjoz@decef.elf.stuba.sk

@@ -1,0 +1,55 @@
+Úloha 18 - Burza (max. 2 body)
+
+Menová burza môže byť niekedy nestabilná, a môžete na tom veľa zarobiť :)
+V niektorom okamihu sa môže stať, že výmenné kurzy sú také, že keď si
+začnete vymienať nejakú menu, tak nakoniec skončíte s väčším množstvom
+pôvodnej meny. Vašou úlohou je zistiť, či stav výmenných kurzov dovoľuje takýto obchod.
+
+Vstup obsahuje niekoľko stavov na burze. Prvý riadok stavu obsahuje
+cislo N (N ≤ 100), počet obchodovaných mien. Ak je N=0, označuje to koniec vstupu.
+Nasleduje N názvov mien. Potom vstup obsahuje číslo M, počet výmenných kurzov,
+a nasleduje M riadkov, na každom sú dva názvy mien a výmenný kurz v tvore
+počet jednotiek prvej meny k počtu jednotiek druhej meny. Výmenný kurz je
+jednosmerný, teda ak zaplatíme príslušný počet prvej meny dostaneme
+príslušný počet druhej meny (nemusí to platiť aj naopak).
+
+Pre každý stav burzy na vstupe vypíšte na nový riadok slovo YES ak je
+možné na výmenných kurzoch zarobiť, inak napíšte NO.
+
+Ukážka vstupu: 2
+SKK EUR
+2
+SKK EUR 30:1
+EUR SKK 1:30
+2
+GBP USD
+2
+USD GBP 8:5
+GBP USD 5:9
+3
+BON DEM CZK
+3
+DEM BON 1:6
+BON CZK 1:5
+DEM CZK 1:20
+3
+CZK EUR GBP
+3
+CZK EUR 24:1
+EUR GBP 5:4
+GBP CZK 1:30
+3
+CZK USD GBP
+4
+CZK USD 28:1
+CZK GBP 31:1
+GBP CZK 1:31
+USD GBP 1:1
+0
+
+
+Výstup pre ukážkový vstup: NO
+YES
+NO
+NO
+YES

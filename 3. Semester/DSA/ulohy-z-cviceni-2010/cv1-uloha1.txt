@@ -1,0 +1,12 @@
+Úloha 1 - Najväčší spoločný deliteľ (max. 1 bod)
+
+Dané sú dve prirodzené čísla U a V, napíšte algoritmus,
+ktorý nájde ich najväčší spoločný deliteľ.
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+  // vrati najvacsi spolocny delitel cisel u a v.
+int nsd(int u, int v)
+  {
+    // ...
+  }

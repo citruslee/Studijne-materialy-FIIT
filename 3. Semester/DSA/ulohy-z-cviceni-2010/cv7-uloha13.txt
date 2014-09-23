@@ -1,0 +1,13 @@
+Úloha 13 - Nie je prvkom množiny (max. 1 bod)
+
+Dané sú dve množiny S a T reťazcov (mien). Určte počet prvkov množiny S, ktoré nie sú prvkami množiny T.
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+// vrati pocet prvkov mnoziny S (prvky s[0..n-1]),
+// ktore nie su prvkami mnoziny T (prvky t[0..m-1])
+
+int not_in_set(char *s[], int n, char *t[], int m)
+{
+  // ...
+}

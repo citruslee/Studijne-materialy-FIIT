@@ -1,0 +1,33 @@
+Úloha 11 - 2-3 strom (max. 1 bod)
+
+Daný je (binárny vyhľadávací) 2-3 strom, vašou úlohou je implementovať
+operáciu vyhľadania prvku ‘najdi’, teda určiť v strome vrchol (list),
+v ktorom je hľadaná hodnota; alebo ak taký neexistuje, tak vráti posledný
+vrchol na ceste od koreňa pri vyhľadávaní.
+
+V strome sú reťazce (char*), každý iný, používa sa lexikografické usporiadanie.
+
+V programe môžete predpokladať, že strom je reprezentovaný nasledovne: struct Node
+{
+  char *key1, *key2; // ak key1 == NULL sme v liste, a data su v key2
+  struct Node *child1, *child2, *child3;
+  struct Node *parent;
+};
+
+struct Tree
+{
+  struct Node *root;
+};
+
+
+
+
+Naprogramujte funkciu v nasledovnom tvare: /* najdi vrchol (list) v
+ktorom je hodnota value; alebo
+ak taky neexistuje, tak posledny vrchol na ceste
+od korena (pri vyhladavani hodnoty value) */
+
+struct Node *najdi(struct Tree *tree, char *value)
+{
+  ...
+}

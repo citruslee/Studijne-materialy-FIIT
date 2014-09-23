@@ -1,0 +1,30 @@
+Úloha 7 - Najkratšia cesta (max. 1 bod)
+
+Daný je strom obsahujúci N vrcholov (a N-1 hrán). N < 1,000,000.
+Nájdite dĺžku (najkratšej) cesty medzi dvoma zadanými vrcholmi v tomto strome.
+Kedže je to strom, tak medzi ľubovoľnými dvoma vrcholmi existuje práve jedna cesta,
+a preto je táto cesta zároveň najkratšou cestou medzi týmito vrcholmi.
+
+V našom prípade je strom neorientovaný graf, zadaný na štandardnom vstupe.
+Prvý riadok obsahuje N (počet vrcholov). Potom nasleduje N-1 riadkov,
+na každom sú tri čísla: od, do a dlzka, ktoré predstavujú hrany z vrchola
+od do vrchola do a dĺžkou dlzka. Posledný riadok obsahuje dve čísla – A a B – čísla vrcholov,
+medzi ktorými hľadáme (najkratšiu) cestu. Na štandardný výstup vypíšte jediné číslo – dĺžku
+cesty medzi vrcholmi A a B.
+
+Príklad:
+
+Vstup: 7
+1 5 2
+5 4 1
+3 5 4
+2 5 6
+2 6 3
+7 2 7
+4 7
+
+
+Výstup: 14
+
+
+(cesta medzi vrcholmi 4 a 7 je dlhá 1+6+7=14)

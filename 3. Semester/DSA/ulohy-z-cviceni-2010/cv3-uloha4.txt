@@ -1,0 +1,28 @@
+Úloha 4 - Zacyklený spájaný zoznam? (max. 1 bod)
+
+Daný je spájaný zoznam L (pozostávajúci s niekoľkých prvkov), napíšte program, ktorý zistí,
+či v L existuje cyklus. Vedeli by ste aj určiť, aký je cyklus dlhý?
+
+Bližšie vysvetlenie: Aj keď je spájaný zoznam tvorený konečným počtom položiek
+(viď. štruktúra nižšia), tak môžu byť tak poprepájané, tak, že žiadna položka nemá nasledovníka NULL.
+Teda, ako keby bol spájaný zoznam zacyklený. Vašou úlohou je zitiť, či je spájaný
+zoznam konečný alebo zacyklený. Spájaný zoznam v testovacích dátach môže obsahovať veľké množstvo
+položiek (aj 50-100 miliónov).
+
+Predpokladajte, že spájaný zoznam je reprezentovaný nasledovne:
+
+struct Node {
+  struct Node *next; // moze byt NULL (koniec zoznamu)
+  int value;
+};
+
+
+
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+// vrati 1, ak zoznam obsahuje cyklus, inak vrati 0.
+
+int obsahuje_cyklus(struct Node *zoznam) {
+  // ...
+}

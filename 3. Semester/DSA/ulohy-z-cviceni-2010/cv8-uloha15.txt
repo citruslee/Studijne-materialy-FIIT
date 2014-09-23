@@ -1,0 +1,32 @@
+Úloha 15 - Šikovný podnikateľ (max. 1 bod)
+
+Podnikatelia nemajú vždy veľa času a musia si vyberať, ktorých
+zákazníkov obslúžia. Priebežne podnikateľovi chodia zákazníci,
+ktorých si ohodnotí hodnotou, akú majú pre jeho podnikanie.
+Z času na čas, keď má podnikateľ čas, môže niekoho spracovať,
+v tomto momente sa pozrie do svojho zoznamu a vyberie toho,
+kto má najvyššiu hodnotu a spracuje ho. Pomôžte podnikateľovi a
+spravte mu program, ktorý mu pomôže operácie vloženia a vybratia
+najväčšieho rýchlo vykonávať.
+
+Naprogramujte funkcie v nasledovnom tvare:
+// vlozi meno a hodnotu do prioritneho radu
+void insert(char *name, int value)
+{
+  // ...
+}
+
+/// vrati meno (name), ktore bolo doteraz vlozene
+// s najvacsou hodnotou (value) a odstrani ho z radu
+
+char *delete_max_name()
+{
+  // ...
+}
+
+
+
+Ako prioritný rad využite haldu. Testovač bude volať len funkcie insert
+a delete_max_name, žiadne iné funkcie volať nebude, inicializáciu haldy
+(globálna premenná) spravte pri prvom volaní týchto funkcii. Môžete
+predpokladať, že testovač zavolá funkciu insert najviac milión krát.

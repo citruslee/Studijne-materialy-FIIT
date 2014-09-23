@@ -1,0 +1,31 @@
+Úloha 3 - Rad pomocou dvoch zásobníkov (max. 1 bod)
+
+Dátová štruktúra zásobník podporuje operácie stack_create(), stack_push(), stack_pop() a stack_empty().
+Implementujte dátovú štruktúru rad (fronta) – operácie queue_create(),
+queue_enqueue() a queue_dequeue() – pomocou dvoch zásobníkov.
+
+Zásobník má nasledovné signatúry operácii: struct Stack *stack_create();
+void stack_push(struct Stack *stack, int number);
+int stack_pop(struct Stack *stack);
+int stack_empty(struct Stack *stack);
+
+
+
+Implementuje operacie radu nasledovne: struct Queue
+{
+  struct Stack *s1, *s2;
+};
+
+struct Queue *queue_create()
+{
+ // ...
+}
+
+void queue_enqueue(struct Queue *queue, int number)
+{
+  // ... }
+
+int queue_dequeue(struct Queue *queue)
+{
+  // ...
+}

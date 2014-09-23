@@ -1,0 +1,3 @@
+1.Napíšte formálnu špecifikáciu abstraktného údajového typu jednorozmerné pole.
+2.Uvedte reprezentáciu typu abstraktných údajov viacrozmerné pole. Uprednostnite rýchlost prístupu pred pamäťovými nárokmi.
+3.Nech x je prvok, ktorý sa v binárnom vyhladávacom strome T nachádza práve raz. Napíšte (implementujte) funkciu NASLEDOVNÍK (T,x), ktorá vráti hodnotu najbližšieho väčšieho prvku nachádzajúceho sa v strome T ako je hodnota prvku x. Ošetrite prípad, ak taký prvok v T neexistuje.
