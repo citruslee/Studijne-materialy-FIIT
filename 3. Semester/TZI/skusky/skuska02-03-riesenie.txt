@@ -1,0 +1,280 @@
+2002/2003
+[edit]
+Riadny termín
+Teoreticke zaklady informatiky - skuska
+2002/2003 letny semester - normalny termin
+------------------------------------------
+
+(1) Definujte, kedy je trieda jazykov X uzavreta vzhladom na homomorfizmus
+    g:A->B. Dokazte, ze trieda bezkontextovych jazykov LCF je uzavreta
+    vzhladom na homomorfizmus. [4b]
+
+(2) Napiste program na pocitaci RAM, ktory pre vstupne cislo n vypocita
+    vysledok 2n/n2. Urcte vsetky 4 zlozitostne miery Vasho programu (stacia
+    horne odhady) [8b]
+
+(3) Navrhnite nejake kodovanie Turingovych strojov a neformalne opiste
+    konstrukciu univerzalneho Turingovho stroja, tak aby vyuzival uvedene
+    kodovanie. [8b]
+
+(4) Je dana gramatika G=(N,T,P,S). kde T={8,9,+,*,%} a P su:
+
+S -> AB
+A -> RXX | BS
+B -> 8 | 9 | %B
+R -> +X | *BR
+X -> 9 | RX
+
+Na priklade gramatiky G vysvetlite princip cinnosti algoritmu syntaktickej
+analyzy LL(1) vratane intuitivnej konstrukcie riadiacej tabulky. [6b]
+
+
+(5) Je dany pocitac WHILE-RAM+, ktory pouziva instrukcie pocitaca RAM okrem
+    nasobenia, delenia a vsetkych skokov. Namiesto toho pouziva konstrukciu
+    while(GZERO) {...}, co je standartny while cyklus jazyka C, ktory vykonava
+    svoje telo pokial hodnota akumulatora R0 je kladna (vecsia ako nula).
+    Prepiste zadanu postupnost WHILE-RAM+ instrukcii na pocitadlovy stroj
+    (Abacus Machine) tak, aby vykonaval ten isty vypocet, bez toho aby ste
+    zistovali, co dany vypocet realizuje [6b]
+
+while(GZERO) {
+       SUB   =2
+       STORE  1
+       LOAD   2
+       ADD   =3
+       STORE  2
+       LOAD   1
+       }
+  LOAD 2
+  ADD 4
+
+
+(6) Uvedte definiciu T-vypocitatelnej funkcie. Dokazte, ze kazda funkcia
+    vypocitatelna na pocitadlovom stroji je aj T-vypocitatelna. Uvedte aj cast
+    prechodovych funkcii. [8b]
+
+(7) [ PREMIA - 5b ]
+Zistite, ci trieda jazykov L(DLBA) je uzavreta vzhladom na prienik. Odovodnite!
+
+Riesenia:
+
+1. Definujte, kedy je trieda jazykov X uzavreta vzhladom na homomorfizmus g:A -> B.
+
+ak pre kazdy jazyk z triedy X po aplikovani homomorfizmu vznikne jazyk, ktory tiez
+patri do triedy X
+
+Dokazte, ze trieda bezkontextovych jazykov L_CF je uzavreta vzhladom na homomorfizmus.
+
+kedze homomorfizmus sa aplikuje na terminalne symboly (cize v bezkomextovych
+pravidlach to ovpyvni iba pravu stranu pravidiel) a aplikaciou homomorfizmu sa tento
+terminal meni na iny terminal, pripadne zretazenie terminalov, tak sa podmienka pre
+bezkontextove jazyky (lava strana je jeden neterminal a prava je (N zjednotene s
+T)* ) neporusi, cize je uzavreta vzdladom na homomorfizmus.
+
+2. Napiste program na pocitaci RAM, ktory pre vstupne cislo n vypocita vysledok
+(2^n)/(n^2). Urcte vsetky 4 zlozitostne miery Vasho programu. (Stacia horne odhady.)
+
+  READ 0            l(n)
+  JZERO blbost          1
+  STORE 1   (ulozim si nacitane n)    l(1)+l(n)
+  STORE 2   (este raz-tu ho budem kazit)  l(2)+l(n)
+  LOAD =1           l(1)
+  STORE 3   (tu budem pocitat 2n)   l(3)+l(1)
+skok: LOAD 2            l(2)+l(n-i)
+  JZERO koniec          1
+  LOAD 3            l(3)+l(2^i)
+  MULT =2           l(2)
+  STORE 3           l(3)+l(2^(i+1))
+  LOAD 2            l(2)+l(n-i)
+  SUB =1            l(1)
+  STORE 2           l(2)+l(n-i-1)
+  JUMP skok         1
+koniec: LOAD 1    (idem vypocitat n2)   l(1)+l(n)
+  MULT 1            l(1)+l(n)+l(n^2)
+  STORE 4           l(4)+l(n^2)
+  LOAD 3            l(3)+l(2^n)
+  DIV 4   (spocitam 2n/n2)    l(4)+l(n^2)+l(2^n/n^2)
+  WRITE 0           l(2^n/n^2)
+  HALT
+
+Odhady:
+jednotkovy cas:
+      pocet instrukcii je 6 + (n*9) + 2 + 7(ak pocitam ja HALT)  co je O(n)
+jednotkova pamat:
+      pouzivam vzdy iba 4 registre (+ akumulator) -> O(1)
+
+logaritmicky cas:
+
+f(n)=(a+2*log(n))) + Σ(i=0 az N-1) (c+d*log(n-1)+e*log(2^(i+1))) + f +2*log(n)+3*log(n^2) + 2* log(2^n/n^2) + log(2^n)
+
+myslim ze by to malo byt oki (hoci taqto podrobne to asi netreba).....
+ta suma je  Σ(i=0 az N-1) (i+1) = n*(1+n)/2  co je O(n^2)
+
+logaritmicka pamat:
+maximalne hodnoty registrov:
+R0 - 2^n
+R1 - n
+R2 - n
+R3 - 2n
+R4 - n2
+
+cize najvacsie cislo je 2^n - a toto cislo je ulozene v log2(2^n) = n
+zlozitost O(n)
+
+3. Navrhnite nejake kodovanie Turingovych strojov a neformalne opiste konstrukciu
+univerzalneho Turingovho stroja, tak aby vyuzival uvedene kodovanie.
+
+turingov stroj s prechod funkciami (namiesto delty pisem "d")
+(akceptuje slova kde je parny pocet 0)
+
+d(q1,0) = (q2,0,R)
+d(q1,1) = (q1,1,R)
+d(q2,0) = (q1,1,R)
+d(q2,1) = (q2,1,R)
+d(q1,B) = (q3,B,L)
+
+tieto prech. fcie zapiseme do tabulky
+  0 1 B
+q1  q20R  q11R  q3BL
+q2  q11R  q21R  -
+q3  - - -
+
+tieto prech. fcie zakodujeme na pasku nasledovne....naprv budu jednotky (pre stav q1
+bude jedna, pre stav q2 dva a pre q3 tri), potom bude ci sa ma hlava posunut doprava
+alebo dolava (R/L) a nakoniec aky znak sa ma na pasku zapisat. Na paske sa pouzivaju
+dalsie symboly: c - oddelovac ccc oznacuje zaciatok a koniec pasky, cc ozancuje novy
+riadok v tabulke a c dalsi stlpec tabulky. 0 - dana prech. fcia nie je definovana.
+
+cize paska bude nasledovna:
+
+ccc 11R0 c 1R1 c 111LB cc 1R1 c 11R1 c 0 cc 0 c 0 c 0 ccc
+
+takto sa zakoduje turingov stroj.
+
+Teraz treba skonsturovat univerzalny turingov stroj.
+Ten bude mat dvojstopu pasku na hornej stope budu iba dva znaky m (vysvetlenie
+ neskor) a na doslnej stope bude cely zakodovany turingov stroj a hned za nim bude
+vstup pre dany turingoc stroj.Cele to bude vyzerat asi takto:
+
+horna stopa: m                                      m
+dolna stopa: ccc11R0c1R1c111LBcc1R1c11R1c0cc0c0c0ccc010
+
+prve m oznavuje stav v ktorom sa prave nachadza TS a druhe m poziciu halvy pre
+data.UTS funguje nasledovne: najprv sa hlava posunie na druhe m a zo spodnej stopy
+precita vstup (u nas 0). potom sa posunie na prve m (teraz je to oznacenie stavu q1)
+a zisti co ma so vstupm robit (ak nacitalo zo vstupnych dat 0 taq pozera prvy stlpec,
+ak 1 druhy a ak B tak treti), u nas je to 11R0, cize sa ma dostat do stavu q2....cize
+vezme prve m a posunie ho nad zaciatok stavu q2.Stale si ale pamata co ma robit so
+vstupnymi datami cize R0. Tak ide na druhe m namiesto danej nuly zapise nulu a
+posunie to druhe m o jednu poziciu doprava znova nacita vstup a opakuje.
+
+
+4. Je dana gramatika G=(N, T, P, S), kde T={ 8, 9, +, *, % } a P su:
+  S -> AB
+  A -> RXX | BS
+  B -> 8 | 9 | %B
+  R -> +X | *BR
+  X -> 9 | RX
+Na priklade gramatiky G vysvetlite princip cinnosti algoritmu syntaktickej
+analyzy LL(1) vratane intuitivnej konstrukcie riadiacej tabulky.
+
+LL(k) zanmena max. na kolko znakov na pravej strane pravidla musim precitat aby som
+vedel deterministicky rozlisit pravidlo.(viac k tomu nemam)
+
+ta tabulka by mala vyzerat taqto:
+  8 9 + * % $
+S S->AB S->AB S->AB S->AB S->AB
+A A->BS A->BS A->RXX  A->RXX  A->BS
+B B->8  B->9      B->%B
+R     R->+X R->*BR
+X   X->9  X->RX X->RX
+
+
+5. Je dany pocitac WHILE-RAM+, ktory pouziva instrukcie pocitaca RAM okrem
+nasobenia,delenia a vsetkych skokov. Namiesto toho pouziva konstrukciu
+  while( GZERO ){ ... },co je standardny while cyklus z C-jazyka, ktory
+vykonava svoje telo pokial hodnota akumulatora R0 je kladna (vacsia ako nula). Prepiste
+zadanu postupnost WHILE-RAM+ instrukcii na pocitadlovy stroj (t.j. zostrojte
+Abacus machine) tak, aby vykonaval ten isty vypocet, a to bez toho aby ste zistovali,
+co dany vypocet realizuje.
+  while( GZERO ) {
+    SUB =2
+    STORE   1
+    LOAD  2
+    ADD =3
+    STORE 2
+    LOAD  1
+  }
+  LOAD  2
+  ADD   4
+
+(s3)3 (s0s0 (s0a1)0 a2a2a2 (s1a3a0)1 (s3a1)3 )0 (s2a0a3)2 (s3a2)3 (s4a0a3)4 (s3a4)3
+
+6. Uvedte definiciu T-vypocitatelnej funkcie. Dokazte, ze kazda funkcia vypocitatelna
+na pocitadlovom stroji je aj T-vypocitatelna. Uvedte aj cast prechodovych funkcii.
+
+funkcia f: N^k -> N je T-vypocitatelna ak existuje TS A, ktory rozpoznava jazyk
+L={1^x1€1^x2€1^x3€......€1^xk$1^f( )
+
+(namiesto € by malo byt c 2x zvislo presktnute).
+
+Dokaz:
+format zapisu obsahov registrov pocitadlovych strojov na paske tur stroja (pocet
+jednotiek udava hodnotu registra, nuly su oddelovace)
+
+0111011011111100
+ R0  R1  R2    R3
+
+zavediem 5 funkcii, ktore zapisem pomocou prech. funkcii tur. stroja, a operacie
+pocitadlovych strojov prevediem na dane funkcie.
+
+
+SEARCH(Rk) - najdenie reg. Rk - iba presunutie citacej hlavy na dany register.
+SHIFT(0R) - posunutie nuly doprava (a nasledne zvyslu pasky) - cize zvacsenie
+daneho registra o 1
+SHIFT(0L) - obdobne, ale posunutie dolava - zmensenie o 1
+TEST(ZERO) - test registra ci je nulovy alebo nie
+A------>B - presmerovanie stavu v korom skoncil TS A na pocitcony stav TS B
+(toto sa nezapisuje pre tur. stroj)
+
+SHIFT(0R)
+
+d(qx,1) = (qx,1,R)
+d(qx,0) = (qx1,1,R)
+d(qx1,1) = (qx,0,R)
+d(qx1,0) = (qx1,0,R)
+d(qx1,B) = (qx2,0,L)
+d(qx2,0) = (qx2,0,L)
+d(qx2,1) = (qx2,1,L)
+d(qx2,B) = (qxf,B,R)
+
+TEST(ZERO)
+
+d(qy,0) = (qy0,0,L)   - ak na zac registra je nula je nulovy
+d(qy,1) = (qy1,1,L)   - nasiel som jednotku-je nenulovy
+d(qy0,0) = (qy0,0,L)
+d(qy0,1) = (qy0,1,L)
+d(qy1,0) = (qy1,0,L)
+d(qy1,1) = (qy1,1,L)
+d(qy0,B) = (qf0,B,R)    -koncovy stav nulovy
+d(qy1,B) = (qf1,B,R)    -koncovy stav nenulovy
+
+prepis poc. strojov:
+
+ak  SEARCH(Rk)---->SHIFT(0R)
+sk  SEARCH(Rk)---->SHIFT(0L)
+
+viac automatov za sebou:
+
+M1M2M3M4M5M6 ..........    T1--->T2--->T3--->T4--->T5--->T6
+
+cyklus
+               qf0
+(M)k .......    --->SEARCH(Rk)---->TEST(ZERO)--------->END
+               |                       |
+               |                       | qf1
+    -----------T----------- |
+
+
+7. (PREMIA) Zistite, ci je trieda jazykov rozpoznavanych deterministickymi linearne
+ohranicenymi automatmi L(DLBA) uzavreta vzhladom na prienik.Odpovede zdovodnite!
