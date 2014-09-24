@@ -1,0 +1,18 @@
+pozn.: v minulosti byvala zapoctovka neskor, preto na nej byvalo viac veci...
+------------------------------------------------
+
+
+dokazat (0,1) = (0;nek)
+|N x N| = |N|
+
+definujte zretazenie jazykov
+homomorfizmus jazykov
+dokazte ze mnozina ma rovnako prvkov ako R (0,4> x {3, 7}
+zretazit L1.L2, ked
+L1 = 0, 01, 011
+L2 = 1, 11 , 111
+
+1) deterministicky automat pre L={uabv, xbay | u,v,x,y є{a, b, c}}
+2) prepisat stavovy diagram na gramatiku
+3) zasobnikovy automat a^(3n+1)b^(2n+1) +napisat ci je alebo nie je determ. a vysvetlit preco
+4) nieco s uzavretostou pre (L1 u L2)* u L3

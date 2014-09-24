@@ -1,0 +1,225 @@
+=========================skuska TZI 16.1.2009 RT - vypracovanie===============================
+Znenie otazok: https://fiitkar.sk/wiki/index.php/Teoretické_základy_informatiky_skúšky#Riadny_term.C3.ADn
+(ak chcete, dopiste sem aj zadania)
+
+1. Zaradte jazyk L={w, w ∈ {a,b,c}*, slovo w neobsahuje podslovo abba} do Chomskeho hierarchie jazykov. Odpoved zdovodnite, argumentujte.
+
+Staci podla mna urobit gramatiku, ktora ho generuje a tu zaradit do Chom. hierarchie, ale to neviem.
+Nebude to kontextova? (Vyzera ze nie :)
+
+bmatias: asi regularna, kedze sa daju spravit pravidla regularnej gramatiky
+pravidla (z fiitkara)
+S -> a1 | bS | cS | ε
+1 -> aS | b2 | cS | ε
+2 -> aS | b3 | cS | ε
+3 -> bS | cS | ε
+//toto nie je dobre, vid fiitkara, zoberie to aabba
+
+A toto?
+Este niekde asi epsilon?
+Toto by bolo ok, ak by v zadani bolo w ∈ {a,b,c}+
+S → aA | bS | cS | a | b | c
+A → aA | bB | cS | a | b | c
+B → aA | bC | cS | a | b | c
+C → bS | cS | b  | c
+
+Alebo toto? (z fiitkara by ivanka)
+Tato gram. nevygeneruje slovo 'bba'
+S -> aS|b1|cS|ε
+1 -> aS|b2|cS|ε
+2 -> bS|cS|ε
+
+Je vari toto spravne riesenie?
+S -> a1|bS|cS|ε
+1 -> aS|b2|cS|ε
+2 -> aS|b3|cS|ε
+3 -> bS|cS|ε
+
+
+----------------------------------------------------------------------------------------------
+
+2. Vypoctovy stroj X je ekviv. so Zas. automatom, porovnajte jeho vypoctovu silu s programovacim jazykom Java. Odpoved zdovodnite, argumentujte.
+
+ Kazdy bezny programovaci jazyk (a teda aj Java) je ekvivalentny s Turingovym strojom.
+ => vypoctova sila Javy je vacsia ako vyp. sila vypoctoveho stroja X.
+
+Myslite ze to takto staci?
+
+----------------------------------------------------------------------------------------------
+
+3. Definicia nedeterministickeho zasobnikoveho automatu je NPDA = (K,Σ,Γ,δ,q_0,Z_0,F), kde konfiguracia je trojica (q,w,y) e K x suma x sibenica. Definicuje krok vypoctu  NPDA.
+
+Krok vypoctu NPDA je relacia ⊢A na mnozine konfiguracii  K x Γ* x Σ*
+definovana takto:
+
+(q, aw, Zc) ⊢A (p, w, bc) <=> (p,b) ∈ δ(q, a, c)
+
+pricom:
+
+q,p ∈ K
+a ∈ Σ ∪ {ε}
+w ∈ Σ*
+Z ∈ Γ
+b,c ∈ Γ*
+
+----------------------------------------------------------------------------------------------
+
+4. Je dany Turingov stroj A= (K, Σ, Γ, δ, q_a, F), kde K = {q_a, q_b, q_c},  Σ = {0,1}, Γ =  Σ ∪ {B}, F={q_c} a prechodova funkcia δ je dana nasledovne:
+δ(q_a,0) = (q_b,0,R)
+δ(q_b,0) = (q_a,1,R)
+δ(q_a,1) = (q_a,1,R)
+δ(q_b,1) = (q_b,1,R)
+δ(q_a,B) = (q_a,B,R)
+δ(q_b,B) = (q_c,1,L)
+
+a) Zistite, ci sa Turingov stroj A moze zacyklit. V pripade, ze ano, napiste priklad vstupneho slova, pre ktory tato moznost nastane.
+
+b) Zakodujte Turingov stroj A pomocou kodovania , ktorym sa koduju Turingove stroje v Univerzalnom Turingovom stroji. Nakreslite a oznacte pasku univerzalneho Turingovho stroja, na ktorej je zakodovany stroj A. Vysvetlite vyznam symbolov, ktore pouzivate na zakodovanie.
+
+a) Zacyklit sa moze pre slovo 00100 (by kudlohlavec, uvaha - https://www.fiitkar.sk/forum/viewtopic.php?f=585&t=6820#p99315 )
+
+b) Zakodovany tur. stroj (medzery iba kvoli prehladnosti):
+
+horna paska:   m                                                       m
+dolna paska: ccc 11R0 c 1R1 c 1RB cc 1R1 c 11R1 c 111L1 cc 0 c 0 c 0 ccc
+
+[postup vid.09TZI_UniverzalnyTuringovStroj.pdf]
+ak by bolo treba, mozem aj dopisat, prip. dopiste vy :)
+
+----------------------------------------------------------------------------------------------
+
+5. V registroch R1, R2 su ulozene dve nezaporne cele cisla x a y. Napiste pocitadlovy stroj, kroy realizuje vypocet funkcie f(x,y)=x^2+2y nedestruktivne a vysledok uklada do registra R3. Slovne popiste myslienku vypoctu a otnacte medzivysledky.
+
+(Sx A1 A2 Ap)x (Sp Ax)p        // do registrov '1' a '2' dame obsah reg. 'x'
+                               // cize: 1 = x;
+                               //       2 = x;
+
+[ (S2 Ap Av)2 (Sp A2)p S1 ]1   // do registra 'v' ulozime obsah reg. '2'
+                               // tolko krat, ake cislo sa nachadza v '1'
+                               // cize: v = 1*2 = x*x = x^2;
+
+(Sy Ap Av)y (Sp Ay)p           // do reg. 'v' pridame obsah reg.'y'
+                               // cize: v += y;
+
+(Sy Ap Av)y (Sp Ay)p           // ----||----
+
+
+Pozn.:
+cislo 'x' sa nachadza v registri 'x'
+cislo 'y' sa nachadza v registri 'y'
+vysledok ulozime do reg. 'v'
+register 'p' je pomocny
+
+----------------------------------------------------------------------------------------------
+
+6. Dokazte ze X-WHILE-IF-AbstractMachine+ je ekvivalentny s pocitadlovym strojom (Abacus Machine).
+
+rekurz. def. AM ktora by mala byt napomocna:
+Nech M1,M2...Mz su jednoduche AM s hlbkami h1,h2...hz, postupnost M1,M2...Mz sa nazyva AM s hlbkou _h = max(h1,h2...hz)
+
+riesenie ktore by malo byt ok (ale mozete ceknut a pripadne nejasnosti napisat do chatu):
+
+X-WHILE-IF-AbstractMachine+ je vlastne specialny pripad RAM stroja (podrobnosti v zadani)...
+
+I. Najskor dokazeme AM => X-WHILE-IF-AbstractMachine+ tym, ze vsetky instrukcie AM prepiseme na X-WHILE-IF-Abstr.:
+Kedze ale RAM ma specialny register '0' (akumulator) nad ktorym vykonava vsetky operacie, musime
+mapovanie registrov trochu upravit:
+- register Ri Abacusu budeme zobrazovat na register Ri+1 RAMu
+
+
+AM                 X-WHILE-IF-AbstractMachine+
+
+
+Ai                 LOAD i+1
+                   ADD =1
+                   STORE i+1
+
+Si                 LOAD i+1
+                   SUB =1
+                   STORE i+1
+
+postupnost         postupnost instrukcii P1 P2 P3...Pz
+M1 M2 M3...Mz      za indukcneho predpokladu ze Mi ~ Pi
+
+(M)i               LOAD i+1
+                   if (GZERO) { do  M  LOAD i+1  while (GZERO) }
+
+II. teraz dokazeme X-WHILE-IF-AbstractMachine+ => AM tym, ze vsetky instrukcie X-WHILE-IF-Abstr. prepiseme na AM:
+Pri tomto dokaze je mapovanie registrov identicke (Ri RAMu mapujeme na Ri Abacusu).
+
+pozn.:
+register 'p' je pomocny
+register '0' na AM predstavuje akumulator RAMu
+pred pouzitim musime nulovat registre AM, ktore potrebujeme mat prazdne
+vsetky operacie na AM musia byt nedestruktivne, presne ako na RAMe
+
+
+X-WHILE-IF-AbstractMachine+    AM
+
+
+LOAD i                        (S0)0 (Sp)p      (Si Ap A0)i   (Sp Ai)p
+                              nulovanie        kopirovanie   restore registra i
+
+STORE i                       (Si)i (Sp)p      (S0 Ap Ai)0   (Sp A0)p
+                              nulovanie        kopirovanie   restore registra 0 (akoby akumulatora)
+
+ADD =i                        A0 ... A0
+                               (i-krat)
+
+SUB =i                        S0 ... S0
+                               (i-krat)
+
+ADD i                         (Sp)p            (Si Ap A0)i    (Sp Ai)p
+                              nulovanie        pripocitanie   restore registra i
+
+SUB i                         (Sp)p            (Si Ap S0)i    (Sp Ai)p
+                              nulovanie        odratavanie    restore registra i
+
+do {...} while (GZERO)        ... (...)0
+                              urob operaciu a potom zasa, kym nie je v akumulatore 0
+
+if (GZERO) {...}              (Sp)p (Sx)x    [Ap (S0 Ax)0 ]0           [... Sp (Sx A0)x ]p
+                              nulovanie      ak akum. > 0              ak je v 'p' priznak '1'
+                                             zapiseme do 'p'           vykoname operaciu, priznak
+                                             priznak '1' a             zrusime a restorneme
+                                             potom vymazeme akum.      register '0' (akumulator)
+                                             aby sme sa neza-
+                                             cyklili :-)
+                                             ale jeho obsah
+                                             si zapamatame v
+                                             pomocnom registri 'x'
+
+----------------------------------------------------------------------------------------------
+
+7. Ktore slova je mozne vygenerovat gramatikou G? (oznacte spravne moznosti)
+G = (N,T,P,A) N = (A,B) T = (a,b)
+P:
+A -> BabB
+B -> ab | bB | ε
+
+1) ε NIE
+2) aaabbb NIE
+3) ab ANO
+4) ababab ANO
+5) abb ANO
+6) aab NIE
+7) aba NIE
+8) bab ANO
+9) bbbaaa NIE
+10) ababbab ANO
+
+----------------------------------------------------------------------------------------------
+
+8.
+
+----------------------------------------------------------------------------------------------
+
+9.
+
+----------------------------------------------------------------------------------------------
+
+10.
+
+=================================================================================
+
+dalsie skusky/priklady sem
