@@ -1,0 +1,24 @@
+1. Porovnajte techniku DFD a diagram pripadov pouzitia; uvazujte aspon 3 hladiska
+ na zaklade ktorych ich porovnate
+
+2. Zapiste slovne strucnu specifikaciu softveru pre bankovy automat. Vytvorte
+pre tuto spec. model spravania stavovym diagramom.
+
+3. Vysvetlite princip mutacneho testovania.
+
+4. Uvedte dolezite principy spiraloveho modelu zivotneho cyklu. Aky je vztah s vodopadnym,
+s evolucnym, iskr. modelom?
+
+5. Uvedte ake modely umoznuje vytvarat jazyk UML (priradte aj jednotlive techniky). Uvazujte
+viazere dimenzie modelu.
+
+6. Co je to RUP?
+Rational Unified Process 
+
+7. Co je to regresne testovanie?
+
+8. Co je to walkthrough testovanie?
+
+9. Co je to inspection testovanie?
+
++bol tam priklad a este 3 otazky za 2 body na ktore sa nepametam;

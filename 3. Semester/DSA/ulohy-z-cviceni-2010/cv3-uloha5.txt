@@ -1,0 +1,28 @@
+Úloha 5 - Spájanie spájaných zoznamov (max. 1 bod)
+
+Dané sú dva spájané zoznamy L1 a L2 obsahujúce čísla usporiadané v zostupnom poradí.
+Napíšte program, ktorý tieto spájané zoznamy spojí do jedného, v ktorom budú všetky
+prvky z pôvodných zoznamov a budú všetky tiež v zostupnom poradí. Pre nový zoznam
+nemusíte alokovať novú pamäť, môžete znovupoužiť existujúce prvky.
+
+V testovacích dátach budú aj veľmi dlhé zoznamy. Aj také veľké, že alokovanie novej
+pamäte nebude možné. Zostrojte teda algoritmus, ktorý nepotrebuje okrem pôvodných
+spájaných zoznamov dodatočnú pamäť.
+
+
+Predpokladajte, že spájaný zoznam je reprezentovaný nasledovne:
+
+struct Node {
+  struct Node *next; // moze byt NULL (koniec zoznamu)
+  int value;
+};
+
+
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+// vrati spojenie prvkov do jedneho zostupneho poradia
+
+struct Node *spoj(struct Node *l1, struct Node *l2) {
+  // ...
+}

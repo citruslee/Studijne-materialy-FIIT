@@ -1,0 +1,23 @@
+>>> 4.10.1993 <<<
+1. Instalacia programu:
+-----------------------
+
+install destination
+
+Kde "destination" je cielova cesta pre instalaciu.
+
+
+2. Spustenie integrovaneho prostredia:
+--------------------------------------
+
+stasim subor
+
+Kde "subor" je kompletna cesta k suborom *.SRC a *.STA.
+Parameter "subor" je nutne uviest bez pripony (rozsirenia).
+
+Priklady:
+---------
+stasim demo1
+stasim d:\stasim\pentium
+
+					Jaro POPLUHAR

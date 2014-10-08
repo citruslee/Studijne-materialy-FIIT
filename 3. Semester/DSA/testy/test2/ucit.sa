@@ -1,0 +1,65 @@
+---SLAJDY:---------------------------------------------------
+
+ADT
+stack (zasobnik)
+queue (fronta)
+kruhova fronta (Bqueue)
+ZVP
+
+strom
+bin. strom
+bin. vyhladavaci strom
+eulerovo prechadzanie stromu
+
+array (pole)
+slovnik/tabulka
+hashtable (rozptylova tabulka)
+
+prioritna fronta
+bin. halda - vektorom / dynamicky
+
+
+---TESTY:---------------------------------------------------
+
+
+Bin. Tree - preorder
+          - inorder
+          - postorder
+
+BST - insert (cas. zloz. najhorsia + priem.)
+    - delete (cas. zloz. najhorsia + priem.)
+    - successor (nasledovnik)
+
+HashTable - search
+          - insert
+          - vlastnost hash. f-ie
+
+Queue (Fronta) - form. specifikacia
+               - v kt. operaciach moze nastat chyba v sulade so specifikaciou
+
+Stack (Zasobnik) - form. specifikacia
+                 - v kt. operaciach moze nastat chyba v sulade so specifikaciou
+
+ADT Vektor - specifikujte operaciu READY
+
+ADT Array - form. specif.
+ADT MultiDimensional Array - reprezentacia
+
+
+---Usporiadane-podla-pravdepodobnosti:----------------------
+
+
+binary tree
+BST (bin. vyhlad. strom)
+HashTable (rozptylova tabulka)
+stack (zasobnik)
+queue (fronta)
+array (pole)
+ADT vektor
+kruhova fronta (Bqueue)
+slovnik/tabulka
+eulerovo prechadzanie stromu
+
+ZVP
+(self-balancing BST; Red-black / AVL / 2-3 tree)
+(prioritna fronta (bin. halda - vektorom / dynamicky))

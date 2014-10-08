@@ -1,0 +1,744 @@
+                     Simulator  STARTLE
+
+0.UVOD
+     Simulator   STARTLE   (Simulator    for   Teaching   computer
+system  Architecture  at  the  Register  Transfer  LEvel)  ziskala
+Katedra  informatiky   a  vypoctovej  techniky   z  University  of
+Sheffield,  Velk   Britania.  Pocitac   je  simulovany  na  urovni
+medziregistrovych prenosov. Na tejto  urovni je pocitac definovany
+zakladnymi  technickymi  modulmi  a  ich  prepojeniami.  Prikladmi
+takychto  modulov mozu  byt: registre,  preklapacie obvody, pamat,
+funkcne bloky, pocitadla. Cinnost pocitaca na tejto urovni spociva
+v prenose   udajov   medzi   modulmi   s/bez   ich   modifikaciou,
+nastavovanim  a testovanim registrov resp. preklapacich obvodov.
+     Aby sme boli schopny specifikovat funkciu pocitaca, simulator
+vyzaduje opis technickych modulov a definovanie elementarnych ope-
+racii (mikrooperacii), ktore su  schopne tieto moduly vykonat. Po-
+vel, na zaklade ktoreho sa  dana mikrooperacia realizuje sa nazyva
+mikroinstrukcia.  Strojove instrukcie  pocitaca sa  vykonavaju ako
+postupnost mikroinstrukcii.  Cyklus strojovych instrukcii  sa deli
+na cast vyberu a dekodovania strojovej instrukcie a cast vykonania
+strojovej instrukcie. Simulator STARTLE implicitne predpoklada, ze
+simulovany pocitac vykonava instrukcne cykly, t.j. postupnost mik-
+roinstrukcii  je rozdelena  na cast  realizujucu vyber  instrukcie
+(instruction fetch) z pamati  a jej dekodovanie (instruction deco-
+ding) a cast realizujucu  vykonanie instrukcie (instruction execu-
+tion). Pocitac je uplne urceny technickymi modulmi a postupnostami
+mikroinstrukcii, ktore realizuju vykonanie jednotlivych strojovych
+instrukcii. Program  pozostavajuci z postupnosti  strojovych inst-
+rukcii je  ulozeny v pamati simulovaneho  pocitaca. Simulator dava
+informacie alebo po kazdej mikroinstrukcii alebo po kazdej strojo-
+vej instrukcii. Pri specifikacii  technickych modulov a elementar-
+nych operacii sa udava doba oneskorenia alebo doba trvania elemen-
+tarnej  operacie,  takze  simulant  moze  ziskat  realnu predstavu
+o cinnosti nim simulovaneho navrhu pocitaca.
+
+
+1.TECHNICKE MODULY
+
+     V simulatore su implementovane tieto technicke moduly:
+Register - modul schopny uchovavat udaje
+Preklapaci obvod - jednobitovy register
+Kanal   - pomale  vstupno  vystupne  zariadenie, ktore simuluje
+          snimac stitkov, tlaciaren alebo dalekopis
+Pamat - linearne  pole  registrov,  ktore su  adresovane indexom
+        pola. S pamatou su zviazane dva registre:
+        - adresovy register pamati - Memory Address Register MAR,
+          udava adresu, ku ktorej sa pristupuje
+        - vyrovnavaci register -  Memory Buffer Register MBR
+          uchovava udaj, ktory sa zapisuje/cita do/z pamati
+Zasobnik - linearny subor registrov, ku ktorym sa pristupuje podla
+         pravidla "prvy  dnu posledny von"  (zasobnik). Taktiez su
+         s  nim   zviazane  dva  registre:   ukazovatel  zasobnika
+         (inkrementacia  resp.  dekrementacia  po  pristupe nie je
+         automaticka) a vyrovnavaci register.
+
+
+     Specifikacie technickych modulov:
+
+Register:
+NAME width time
+NAME - specifikuje meno registra (maximalne 10 znakov)
+width - pocet bitov registra (bity sa cisluju z lava do prava od 0
+        do width-1)
+time - doba pristupu k registru a zapisu do registra.
+
+Preklapaci obvod:
+NAME time
+NAME - specifikuje meno preklapacieho obvodu
+time - doba nastavenie/nulovania preklapacieho obvodu.
+
+Kanal:
+NAME width time DIRECTION
+NAME - specifikuje meno kanala
+width - pocet bitov kanala
+time - doba zapisu/citania udajov do/z kanala
+DIRECTION - typ kanala:  INP - vstupny kanal
+                          OUT - vystupny kanal
+                          BOTH - obojsmerny kanal.
+
+Pamat:
+NAME ADDRESS-REGISTER BUFFER-REGISTER width lenght time
+NAME - specifikacia mena pamati
+ADDRESS-REGISTER  a  BUFFER-REGISTER  su  specifikacie mien vyssie
+uvedenych   registrov  MAR   (adresovy  register   pamati)  a  MBR
+(vyrovnavaci register)
+width  -  pocet  bitov   slova,  ktore  sa  nacita/zapise  jednym
+          pristupom k pamati (sirka ulozenych slov)
+lenght - pocet slov v pamati. Slova sa adresuju od 0 po lenght-1
+time - doba pristupu k pamati.
+
+Zasobnik:
+NAME TOP-POINTER BUFFER-REGISTER width lenght time
+vyznam  jednotlivych parametrov  je rovnaky  ako pri  pamati okrem
+TOP-POINTER, ktory ukazuje na prvu volnu polozku v zasobniku.
+
+
+2.MIKROINSTRUKCIE
+
+     Simulator STARTLE ponuka  standardnu mnozinu mikroinstrukcii,
+z ktorych  mozno  skonstruovat  postupnosti  realizujuce  strojove
+instrukcie.
+     Jednym  z  dolezitych  vystupov  simulatora  je  realna  doba
+trvania realizacie mikroinstrukcii  a strojovych instrukcii. Tymto
+je   umoznene   simulantovi   posudzovat   efektivnost  navrhnutej
+architektury  z hladiska  zvolenej struktury,  technickych modulov
+a vyuzivania paralelizmu.
+     Kazda  mikroinstrukcia  obsahuje  parameter  CURRENCY.  Tento
+parameter pri volbe  EXCLUSIVE zabezpeci vykonanie mikroinstrukcie
+po vykonani mikroinstrukcie, ktora je  v postupnosti pred nou. Pri
+volbe  CONCURRENT  parameter  zabezpeci  vykonanie mikroinstrukcie
+paralelne s mikroinstrukciou, ktora je v postupnosti pred nou.
+     Pri    specifikacii    mikroinstrukcii,    ktore    realizuju
+mikrooperacie  nad funkcnymi  blokmi,  je  urcena aj  doba trvania
+tejto mikrooperacie.
+     V  niektorych pripadoch  (aritmetika) po  realizacii mikroin-
+strukcii moze vzniknut situacia, ze nova hodnota udaju nie  je
+zobrazitelna  v registri  s  danym  poctom bitov.  Preto simulator
+umoznuje  definovat  jednobitove  rozsirenie  registra,  ktore  sa
+nazyva OVERFLOW.  Do tohto preklapacieho obvodu  sa zapisuje bit,
+ktory by sa bez rozsirenia stratil. Hodnota bitu OVERFLOW moze byt
+testovana  v  dalsich  mikroinstrukciach.  Ak  sa preklapaci obvod
+OVERFLOW nespecifikuje, potom sa do formatu mikroinstrukcie zapise
+znak " - ".
+     Simulator umoznuje  zakladne reprezentacie cisel:  priamy kod
+(SANDM  -   Sign  AND  Magnitude),  inverzny   kod  (ONES  -  ONES
+complement)  a  doplnkovy  kod  (TWOS  -  TWOS  complement). Tieto
+reprezentacie su zvolene uvedenou  volbou, ktora plati pocas celej
+simulacie.
+     Pri  mikroinstrukciach  presunu  moze  vzniknut poziadavka na
+presun  iba casti  registra. Preto  v tychto  mikroinstrukciach sa
+vzdy  specifikuju prenasane  bity. Priznak  P1 indikuje zaciatocny
+bit registra vratane, priznak P2 indikuje  koncovy  bit  registra
+vratane. Pri prenose  celych registrov je mozne P1  a P2 zvolit za
+-1.  Pri  mikroinstrukcii  TRANSFER   musi  byt  cielovy  register
+definovany cely. Ak pri presune chceme prepisat iba cast cieloveho
+registra, potom pouzijeme mikroinstrukciu OVERWRITE.
+
+     MNOZINA MIKROINSTRUKCII:
+
+
+PRENOS
+
+   Moze realizovat prenosy:
+   -  z  registra  do  registra  alebo  kanala alebo preklapacieho
+     obvodu
+   - konstanty (specifikovanej  v instrukcii)  do registra  alebo
+      preklapacieho obvodu
+   - kanala do registra alebo preklapacieho obvodu.
+Format:
+TRANSFER FROM-NAME P1  P2  TO-NAME P1  P2 constant CURRENCY
+FROM-NAME -  je meno registra,  preklapacieho obvodu alebo  kanala
+       odkial sa prenasa, ak meno nie je specifikovane tak sa pou-
+       zije symbol " - "
+TO-NAME - je meno registra,  kanala alebo preklapacieho obvodu kam
+       sa prenasa
+P1,P2 - urcuju bity registrov, medzi  ktorymi dochadza  k prenosu.
+       Bity registra su cislovane zlava od 0. P1 urcuje zaciatocny
+       bit vratane,  P2 urcuje koncovy bit  vratane. Ak sa prenosu
+       zucastnuju  vsetky  bity  registra  alebo  register  nie je
+       specifikovany priznaky P1 a P2 sa nastavia na -1.
+constant - specifikuje cislo, ktore  sa pouzije v prenose ako kon-
+       stanta. Ak constant sa nepouzije, tak sa specifikuje ako 0.
+CURRENCY - specifikuje sekvencne (pri volbe EXCLUSIVE) alebo para-
+       lelne  (pri volbe  CONCURRENT) vykonavanie  mikroinstrukcie
+       vzhladom k predchadzajucej mikroinstrukcii v postupnosti.
+
+
+
+CITANIE
+
+   Realizuje citanie  z pamati. Adresa  slova sa nachadza  v MAR a
+vycitane data budu v MBR (pozri specifikaciu pamati).
+Format:
+READ STORE-NAME CURRENCY
+STORE-NAME - specifikuje meno pamati
+CURRENCY (pozri vyssie).
+
+
+ZAPIS
+
+   Realizuje zapis do pamati. Na adresu danou v MAR sa zapise udaj
+pripraveny v MBR (pozri specifikaciu pamati).
+Format:
+WRITE STORE-NAME CURRENCY
+STORE-NAME - specifikuje meno pamati
+CURRENCY (pozri vyssie).
+
+
+VLOZ DO ZASOBNIKA
+
+   Realizuje vlozenie slova do zasobnika. Do zasobnika zapise udaj
+z registra MBR na adresu danu ukazovatelom zasobnika. Je na pouzi-
+vatelovi, aby zabezpecil  inkrementaciu alebo dekrementaciu ukazo-
+vatela zasobnika (pozri specifikaciu zasobnika).
+Format:
+PUSH STACK-NAME CURRENCY
+STACK-NAME - specifikuje meno zasobnika
+CURRENCY (pozri vyssie).
+
+
+VYBER ZO ZASOBNIKA
+
+   Realizuje vyber slova zo zasobnika. Zo zasobnika vyberie udaj z
+adresy  danej ukazovatelom  zasobnika a  ulozi ho  do registra MBR
+(pozri specifikaciu zasobnika). Je na pouzivatelovi, aby zabezpecil
+inkrementaciu alebo dekrementaciu ukazovatela zasobnika.
+Format:
+POP STACK-NAME CURRENCY
+STACK-NAME - specifikuje meno zasobnika
+CURRENCY (pozri vyssie).
+
+
+NULOVANIE
+
+   Vynuluje specifikovany register alebo preklapaci obvod.
+Format:
+CLEAR NAME CURRENCY
+NAME - specifikuje meno registra alebo preklapacieho obvodu, ktory
+       sa vynuluje
+CURRENCY (pozri vyssie).
+
+
+KONIEC
+
+   Tato mikroinstrukcia indikuje  koniec postupnosti mikroinstruk-
+cii dekodovania a vykonania pre asynchronne systemy.
+Format:
+ENDS
+
+
+SUCET
+
+   Realizuje  sucet dvoch  registrov, vysledok  zapise do tretieho
+registra a pripadne pretecenie zapise do preklapacieho obvodu
+overflow.
+Format:
+ADD REGISTER-A REGISTER-B REGISTER-C OVERFLOW time CURRENCY
+REGISTER-A, REGISTER-B, REGISTER-C  su  mena registrov. Registre
+     mozu byt roznej velkosti.
+REGISTER-C = REGISTER-A + REGISTER-B
+OVERFLOW - specifikuje meno rozsirujuceho bitu, kde sa zapise pri-
+           padne pretecenie pri sucte
+time - doba realizacie mikroinstrukcie
+CURRENCY (pozri vyssie).
+
+
+ROZDIEL
+
+   Realizuje odcitanie. Ma  ten isty format ako sucet,  iba ADD je
+nahradene SUBTRACT a REGISTER-C = REGISTER-A - REGISTER-B.
+
+
+NASOBENIE
+
+   Realizuje nasobenie. Ma  ten isty format ako sucet,  iba ADD je
+nahradene MULTIPLY a REGISTER-C = REGISTER-A x REGISTER-B.
+
+
+DELENIE
+
+   Realizuje  delenie. Ma  ten isty  format ako  sucet, iba ADD je
+nahradene DIVIDE  a REGISTER-C =  REGISTER-A / REGISTER-B,  pricom
+v REGISTER-C zostane celociselny podiel.
+
+
+INKREMENTOVANIE / DEKREMENTOVANIE
+
+   Realizuje  inkrementaciu  alebo  dekrementaciu  obsahu registra
+tym,   ze  k   obsahu   registra   pripocita  konstantu.   Ak  pri
+inkrementacii  pretecie obsah  registra, toto  pretecenie moze byt
+zapisane do preklapacieho bitu OVERFLOW.
+Format:
+INCREMENT NAME constant time OVERFLOW CURRENCY
+NAME - specifikuje meno registra, ktory sa bude inkrementovat
+constant -  konstanta   (kladna  alebo   zaporna),  urcujuca  krok
+       inkrementacie alebo dekrementacie
+time - doba realizacie mikroinstrukcie
+OVERFLOW, CURRENCY (pozri vyssie).
+
+
+PREPISANIE
+
+   Prepisanie je pouzivane v  tom pripade, kde destruktivna ucinok
+mikroinstrukcie TRANSFER na cely cielovy register by bol neziaduci.
+Pomocou mikroinstrukcie prepisania mozno zmenit iba cast cieloveho
+registra (zvysok registra ostane nezmeneny).
+Format:
+OVERWRITE REGISTER-A P1 P2 REGISTER-B P1 P2 CURRENCY
+REGISTER-A prepisuje REGISTER-B
+CURRENCY (pozri vyssie).
+
+
+DEKODOVANIE
+
+   Tato  mikroinstrukcia  simuluje   cinnost  dekodera  strojovych
+instrukcii  a  je  vzdy  posledna  v  postupnosti  mikroinstrukcii
+vyberu. Specifikuje  register alebo jeho cast,  kde je ulozeny kod
+strrojovej instrukcie. Podla dekodovanej  hodnoty sa zacne vykona-
+vat prislusna vykonavacia postupnost strojovej instrukcie.
+Format:
+DECODE REGISTER P1 P2 CURRENCY
+REGISTER - specifikuje meno registra,  kde sa nachadza kod strojo-
+           vej instrukcie
+P1, P2, CURRENCY (pozri vyssie).
+
+
+TESTOVANIE
+
+   Testovacia  mikroinstrukcia  porovnava   obsah  registra  alebo
+preklapacieho obvodu s hodnotou  konstanty. Ak vysledok porovnania
+je pravdivy  pokracuje sa vo  vykonavani postupnosti mikroinstruk-
+cii, v opacnom pripade sa obskoci (vynecha) vykonavanie nasleduju-
+cich  mikroinstrukcii. Pocet  vynechanych mikroinstrukcii  ja dany
+cislom omit.
+Format:
+TEST NAME P1 P2 compare constant omit time CURRENCY
+NAME - specifikuje meno  registra alebo preklapacieho obvodu, kto-
+       reho obsah sa porovnava
+compare - indikuje, ake porovnanie sa vykonava. Su mozne tieto
+       pripady: LT - mensi nez
+                LE - mensi alebo rovny
+                EQ - rovny
+                NE - nerovny
+                GE - vacsi alebo rovny
+                GT - vacsi nez
+constant - ciselna konstanta
+omit - pocet vynechanych mikroinstrukcii  za testom, ak  je test
+       neuspesny
+time - doba realizacie testu
+P1, P2, CURRENCE (pozri vyssie).
+
+
+LOGICKE OPEACIE
+
+   Realizuju  logicke operacie  (bit  po  bite) nad  obsahmi dvoch
+(jednym) registrov so zapisom do tretieho registra. Vsetky regist-
+re musia mat rovnaku velkost.
+Format:
+LOGICAL REGISTER-A REGISTER-B REGISTER-C operation time CURRENCY
+operation - volba logickej operacie.  Moze byt AND, OR, XOR alebo
+            NOT
+REGISTER-C =  REGISTER-A operation REGISTER-B  v pripade logickych
+     operacii AND,  OR a XOR.  V pripade logickej  operacie NOT sa
+     musia REGISTER-B a REGISTER-C specifikovat ako " - ".
+time - doba realizacie logickej operacie
+CURRENCY (pozri vysie).
+
+
+POSUV
+
+   Realizuje posuv obsahu registra doprava, dolava alebo cyklicky.
+Na uvolnene miesto sa zapisuje nula pri logickych posuvoch a lavom
+aritmetickom posuve. Pri pravom aritmetickom posuve sa reprodukuje
+znamienkovy bit.  Pri kruhovych posuvoch sa  na uvolnenenu poziciu
+zapise bit, ktory z registra vypadol.
+Format:
+SHIFT NAME TYPE DIRECTION number time CURRENCY
+NAME - specifikuje meno registra, ktoreho obsah sa posuva
+TYPE - volba typu posuvu. Moze byt LOGIC, ARITH a CYCLIC
+DIRECTION - urcuje smer posuvu. Moze byt RIGHT alebo LEFT
+number - urcuje pocet o kolko bitov sa posuv vykona
+time - doba realizacie posuvu
+CURRENCY (pozri vyssie)
+
+
+VETVENIE
+
+   Umoznuje zmenit poradie vykonavania predpisanej postupnosti mi-
+kroinstrukcii. Zmenu je mozne realizovat iba obskocenim nasleduju-
+cich mikroinstrukcii alebo vratenim sa spat v postupnosti mikroin-
+strukcii.  Pocet obskocenych  mikroinstrukcii alebo  navratenie sa
+spat v postupnosti je dane relativne k tejto mikroinstrukcii.
+Format:
+BRANCH number
+number je  pocet mikroinstrukcii, ktore sa  obskocia v postupnosti
+    (cislo number je kladne),  alebo pocet mikroinstrukcii o kolko
+    sa vrati v postupnosti (cislo number je zaporne).
+
+
+
+3.DEFINICIA POSTUPNOSTI VYBERU,  DEKODOVANIA A VYKONANIA.
+
+   Pocitacovy system sa definuje  samostatnym suborom. Meno suboru
+musi mat rozsirenie DEF. V tomto subore je cast, kde su definovane
+vsetky mikroinstrukcie operujuce nad technickymi modulmi pocitaca.
+Kazda  mikroinstrukcia   je  definovana  na   jednom  riadku.  Pri
+zostavovani  postupnosti  mikroinstrukcii  nie  je  mozne pouzivat
+zavedene   mnemonicke  znacenia   (kvoli  jednoznacnosti,  pretoze
+napriklad mikroinstrukcii TRANSFER moze  byt viacero), preto sa na
+oznacenie mikroinstrukcie pouziva cislo odpovedajuce poradiu defi-
+novania mikroinstrukcie (prva  definovana mikroinstrukcia ma pora-
+die 1).
+   Postupnost  vyberu a  dekodovania strojovej  instrukcie je  pre
+vsetky strojove instrukcie rovnaka  a musi koncit mikroinstrukciou
+dekodovania. Tato postupnost sa zapise do jedneho riadku v tvare:
+
+number sequence
+
+kde  number udava  pocet  mikroinstrukcii  v postupnosti  vyberu a
+dekodovania    a    sequence    je    postupnost   mikroinstrukcii
+(mikroinstrukcie  su  oznacene  cislami  udavajucimi  ich  poradie
+definovania).
+   Vykonavacie  postupnosti jednotlivych  strojovych instrukcii su
+definovane hned  za riadkom postupnosti vyberu  a dekodovania a to
+tak, ze pre kazdu strojovu  instrukciu je definicia na samostatnom
+riadku.   Poradie   definovania   vykonavacich   postupnosti  musi
+zodpovedat kodu  strojovej  instrukcii  (ako  prva bude definovana
+vykonavacia  postupnost pre  strojovu  instrukciu  s kodom  0, ako
+druha   bude  definovana   vykonavacia  postupnost   pre  strojovu
+instrukciu s  kodom 1 atd).  Definicia vykonavacej postupnosti  ma
+format:
+
+NAME number sequence
+
+kde NAME  je mnemonicke oznacenie  strojovej instrukcie (maximalne
+10  znakov),   number  je  pocet   mikroinstruncii  vo vykonavacej
+postupnosti a  sequence je vykonavacia  postupnost mikroinstrukcii
+(mikroinstrukcie  su  oznacene  cislami  udavajucimi  ich  poradie
+definovania).
+
+
+4.DEFINICIA PROGRAMU A INICIALIZACIA.
+
+   Pre  definovany pocitac  moze simulant  napisat program.  Tento
+program  je zapisany  v samostatnom  subore s  rovnakym menom  ako
+definicia  pocitaca, ale  s rozsirenim  PRG. Program  sa zapise  v
+strojovych instrukciach.  Vsetky strojove instrukcie  maju rovnaky
+format, ktory zvoli simulant. Pri  programovani sa kazde pole for-
+matu instrukcie definuje samostatne. Definovany program sa automa-
+ticky ulozi do pamati, ktora je na to urcena.
+   Pred spustenim programu je mozne inicializovat obsahy zvolenych
+registrov  a preklapacich  obvodov. Vsetky  pamati a  zasobniky su
+inicializovane na  nulu (okrem oblasti pamati,  kde sa automaticky
+zavedie program).
+
+
+5.VYSTUP ZO SIMULATORA.
+
+   Simulator  zaznamenava  protokol   o  simulacii  do  vystupneho
+suboru. Vystupny subor ma rovnake meno ako subor definicie pocita-
+ca a  subor programu, ale  ma rozsirenie LST.  Simulator analyzuje
+definiciu  pocitaca a  prepise ju  do vystupneho  suboru. Ak zisti
+nejaku  chybu v  definicii,  generuje  chybovu spravu  a simulaciu
+skonci. Ak v definicii pocitaca nenasiel chybu pokracuje nacitanim
+programu (jedneho alebo viacerych) a  jeho realizaciou. Ak pri re-
+alizacii programu zisti chybu, generuje chybovu spravu a simulaciu
+skonci.
+   Pocas  realizacie  programu   simulator  do  vystupneho  suboru
+zaznamenava  stavy pocitaca podla volby parametra STEP a to alebo
+po kazdej mikroinstrukcii (volba  MICRO) alebo po kazdej strojovej
+intrukcii   (volba   MACHINE).   Zobrazovane   stavy   pocitaca  v
+jrdnotlivych krokoch sa nastavuju  volbou parametra DISPLAY a mozu
+byt REGISTER, FLIP FLOP, STACK, STORE. Pri vybere viacerych volieb
+sa tieto oddeluju medzerami. Zaznamenavanie stavov pocitaca mozno
+obmedzit na  istu sledovanu oblast adries  instrukcii. Tato oblast
+je dana zaciatocnou adresou FROM  a koncovou adresou TO. Prikaz na
+vypis protokolu zo simulacie realizacii programu ma tvar:
+
+FROM TO STEP DISPLAY END
+
+
+
+6.VSTUPNE DATA PRE SIMULATOR
+
+   Vstupne data pre simulator na  simulovanie pocitaca DEMO su dva
+subory. uPrvy subor s oznacenim DEMO.DEF definuje pocitac DEMO.
+Druhy subor s oznacenim DEMO.PRG obsahuje program pre pocitac DEMO
+spolu  s  prikazmi  na  inicialializaciu,  vstupne data nacitavane
+vstupnym kanalom, prikaz pre tlac a vypis.
+   V opisoch struktury suborov symbol - indikuje novy riadok.
+
+
+   Struktura suboru DEMO.DEF
+
+- pocet bitov v slove hostitelskeho pocitaca (pre PC/AT je 16)
+- zvolena reprezentacia cisel (ONES alebo TWOS alebo SANDM)
+- pocet  registrov,  preklapacich  obvodov,  kanalov,  zasobnikov,
+  pamati, mikroinstrukcii, pocet  strojovych instrukcii (jednotli-
+  ve cisla oddelene medzerou)
+- specifikacia registrov (vsetky specifikacie  zacinaju  na  novom
+  riadku)
+- specifikacia preklapacich obvodov
+- specifikacia kanalov
+- specifikacia zasobnikov
+- specifikacia pamati
+- specifikacia mikroinstrukcii
+- specifikacia vyberovej a dekodovacej postupnosti
+- specifikacia vykonavacich postupnosti
+- meno preklapacieho obvodu zastavujuceho cinnost pocitaca (HALT),
+  meno programoveho  pocitadla, meno pamati  programu simulovaneho
+  pocitaca (mena oddelene medzerami)
+- pocet  poli  formatu  strojovej  instrukcie,  pocet  bitov slova
+  simulovaneho  pocitaca,  pocty   bitov  v  jednotlivych  poliach
+  formatu  (polia  z  lava  do  prava,  jednotlive  cisla oddelene
+  medzerami)
+
+
+
+    Struktura suboru DEMO.PRG
+
+- pocet simulovanych programov
+pre kazdy program
+ - pocet  inicializovanych slov pamati programu  (program a data),
+   startovacia adresa programu
+ - hodnota dat pre kazde pole formatu  strojovej instrukcie (kazda
+   instrukcia na novom riadku)
+ - pocet inicializovanych registrov a preklapacich obvodov
+  pre kazdu inicializaciu
+  - meno hodnota
+ - pocet prikazov tlace protokolu o simulacii vykonavania programu
+  pre kazdy prikaz
+  - prikaz tlace (vid cast 5, kazdy prikaz na novy riadok)
+ - vstupne data pre program (citane kanalom)
+
+
+Poznamky:
+a) maximalna dlzka mena premennych je 10 znakov
+b) ako oddelovac sa pouzije aspon jedna medzera
+c)  ak meno  vo vstupnom  riadku je  volitelne a  nie je  pouzite,
+   nahradi sa symbolom " - "
+d) ak  by sa v  mikroinstrukciach vyzadovala iba  cast registra, v
+   specifikacii tento register musi byt urceny cely.
+e)  jeden  preklapaci  obvod  sa  pouziva  na  zastavenie cinnosti
+   simulovaneho pocitaca. Tento preklapaci obvod sa zvycajne  vola
+   HALT. Pri inicializacii je nastaveny na 0 a instrukciou HLT sa
+   nastavi  na   1,  cim  sa   zastavi  vykonavanie  programu   na
+   simulovanom pocitaci.
+
+
+7.DEMONSTRACNY PRIKLAD
+
+   Nech je  dana takato uloha. Navrhnite  jednoduchy pocitac DEMO,
+ktory je charakterizovany takto:
+
+- 14 bitovy pocitac,  hlavna pamat 2048 slov s  dobou pristupu 400
+  ns
+
+- procesor ma tieto strojove instrukcie:
+  HLT      - zastav cinnost procesora
+  LDA adr  - napln akumulator ACC obsahom pamati z adresy adr
+  STA adr  - odloz obsah akumulatora ACC do pamati na adresu adr
+  ADD adr  - k obsahu ACC pripocitaj obsah pamati  na adrese adr a
+             sucet ponechaj v ACC
+  JMP adr  - nepodmieneny skok na adresu adr
+  JMPZ adr - podmieneny skok: ak  obsah ACC je nula, potom skoc na
+             adresu adr
+  RAR      - nad obsahom ACC vykonaj pravy aritmeticky posuv
+  NOT      - nad obsahom ACC vykonaj logicku operaciu NOT
+  kody instrukcii nech su 0 az 7 podla vyssie uvedeneho poradia
+
+- pre pouzite technicke moduly predpokladajte taketo oneskorenia:
+  - doba pristupu a zapisu do registrov je 100 ns, doba nastavenia
+    preklapacieho obvodu je 40 ns
+  -   trvanie  operacii   suctu   a   inkrementacie  je   180  ns,
+    aritmetickeho  posuvu  je  100  ns,  logickej  negacie 100 ns,
+    testovania ACC na nulu je 50 ns.
+
+
+
+Subor DEMO.DEF moze mat takyto tvar:
+
+16
+TWOS
+5 1 0 0 1 15 8
+MAR 11 100
+MBR 14 100
+PC 11 100
+IR 14 100
+ACC 14 100
+HALT 40
+MEMORY MAR MBR 14 2048 400
+TRANSFER ACC -1 -1 MBR -1 -1 0 EXCLUSIVE
+TRANSFER MBR -1 -1 ACC -1 -1 0 EXCLUSIVE
+TRANSFER PC -1 -1 MAR -1 -1 0 EXCLUSIVE
+TRANSFER IR 3 13 PC 0 10 0 EXCLUSIVE
+TRANSFER IR 3 13 MAR 0 10 0 EXCLUSIVE
+TRANSFER MBR -1 -1 IR -1 -1 0 EXCLUSIVE
+TRANSFER - -1 -1 HALT -1 -1 1 EXCLUSIVE
+READ MEMORY EXCLUSIVE
+WRITE MEMORY EXCLUSIVE
+ADD ACC MBR ACC - 180 EXCLUSIVE
+INCREMENT PC 1 180 - CONCURRENT
+DECODE IR 0 2 CONCURRENT
+TEST ACC -1 -1 LT 0 1 50 EXCLUSIVE
+LOGICAL ACC - - NOT 100 EXCLUSIVE
+SHIFT ACC ARITH RIGHT 1 100 EXCLUSIVE
+5 3 8 6 11 12
+HLT 1 7
+LDA 3 5 8 2
+STA 3 5 1 9
+ADD 3 5 8 10
+JMP 1 4
+JMPZ 2 13 4
+RAR 1 15
+NOT 1 14
+HALT PC MEMORY
+2 14 3 11
+
+
+   Pre  pocitac DEMO  napiste program  od adresy  0, ktory spocita
+cisla 5,4,3,2,1 ulozene  v pamati od adresy 10 do  adresy 14 a ich
+sucet ulozi na adresu 15. Symbolicky zapis programu a dat:
+0:    LDA 10
+1:    ADD 11
+2:    ADD 12
+3:    ADD 13
+4:    ADD 14
+5:    STA 15
+6:    HLT
+
+
+10:   5
+11:   4
+12:   3
+13:   2
+14:   1
+15:   0
+
+   Zabezpecte tlac celeho programu s  krokom po instrukciach s vy-
+pisovanim obsahu registrov a pamati v kazdom kroku. Subor DEMO.PRG
+bude takyto:
+
+1
+16 0
+1 10
+3 11
+3 12
+3 13
+3 14
+2 15
+0 0
+0 0
+0 0
+0 0
+0 5
+0 4
+0 3
+0 2
+0 1
+0 0
+1
+PC 0
+1
+0 7 MACHINE STORE REGISTER END
+
+
+   Simulator STARTLE sa spusta  vyvolanim STARTLE.COM. Po vypisani
+hlavicky  simulatora si  vypyta meno  suboru. Zada  sa mu iba meno
+DEMO (bez  rozsirenia). Implicitne predpoklada,  ze subor DEMO.DEF
+obsahuje  definiciu pocitaca  a subor  DEMO.PRG program.  Vystupny
+subor ma meno DEMO.LST.
+
+
+8.PODPORNE PROSTRIEDKY
+
+     Pisat program v absolutnom kode je velka otrava a este vacsia
+je jeho ladenie. Preto pre podporu programovania bol vyvinuty jed-
+noduchy  assembler  ASM.EXE.  Umoznuje  programovanie pomocou mien
+instrukcii  a  navesti.  Taktiez  umoznuje  definovanie  konstant.
+Tabulka kodu instrukcii a im pridelenych mien sa definuje v subore
+s rozsirenim .SUB. Struktura suboru .SUB je takato:
+
+- pocty   bitov  v   jednotlivych  poliach   strojovej  instrukcie
+  (jednotlive  pocty  oddelene  oddelovacom  -  medzera, tabulator
+  alebo  ciarka)
+- symbolicke   meno   instrukcie   a   pocet  parametrov  (poradie
+  vymenovania instrukcii je podla  kodu operacie, kazda instrukcia
+  na novy riadok)
+- ako posledna "instrukcia" sa moze urcit pseudoinstrukcia DW (de-
+  fine word), ktora umoznuje definovat konstantu.
+
+     Pocet specifikovanych parametrov  v jednotlivych instrukciach
+sa vzhladom  k formatu instrukcie  odpocitava sprava. Ak  niektore
+polia v instrukcii nie su urcene,  potom sa nastavia na 0. Pre de-
+monstracny pocitac je tvar suboru DEMO.SUB takyto:
+
+3 11
+HALT 0
+LDA 1
+STA 1
+ADD 1
+JMP 1
+JMPZ 1
+RAR 0
+NOT 0
+DW 1
+
+     Zdrojovy program sa pripravi v subore s rozsirenim .STA. Jeho
+struktura je prisposobena jednoduchemu  prekladu na subor .PRG. To
+znamena, ze okrem samotneho  symbolickeho zapisu programu zdrojovy
+subor .STA obsahuje dalsie riadky podla struktury suboru .PRG.
+Implicitne sa predpoklada, ze subor .STA je iba pre jeden program.
+Struktura suboru .STA je takato:
+
+- .SA adresa (udanie ukladacej adresy)
+- program zapisany  v symbolickych instrukciach  (kazda instrukcia
+  na novy riadok)
+- .NIR pocet (pocet inicializovanych registrov)
+- vymenovanie inicializovanych  registrov spolu s  hodnotou (kazdy
+  register na novy riadok)
+- pocet prikazov  tlace, prikazy tlace  a vstupne data  podla .PRG
+  (tato cast  suboru .STA sa  priamo prepise do  vystupneho suboru
+  .PRG).
+
+Meno  instrukcie  a  navestia  moze  mat  az  10  znakov  a zacina
+pismenom.   Parametre   instrukcie   su   od  instrukcie  oddelene
+oddelovacom.  To iste  plati  aj  o vzajomnom  oddeleni parametrov
+v instrukcii. Riadok s navestim zacina menom navestia, za navestim
+je dvojbodka a meno instrukcie.
+
+Pre demonstracny program je tvar suboru DEMO.STA takyto:
+
+.SA 0
+LDA 10
+ADD 11
+ADD 12
+ADD 13
+ADD 14
+STA 15
+HALT
+DW 0
+DW 0
+DW 0
+DW 5
+DW 4
+DW 3
+DW 2
+DW 1
+DW 0
+.NIR 1
+PC 0
+1
+0 7 MACHINE STORE REGISTER END
+
+     Pripadne  problemy  s  pouzivanim  programu  ASM.EXE je mozne
+konzultovat s jeho autorom Ing.Borisom Dadom, miestnost D-122.
+
+   Poznamka na zaver. Simulator STARTLE sme doniesli zo Sheffieldu
+iba  vo vykonatelnom  tvare. Zistilli  sme (zatial),  ze ma nejake
+muchy   pri   stanovovani   celkovej   doby  realizacie  programu.
+Na zaklade  skusenosti sa ocakava,  ze posluchaci pri  zostavovani
+svojich uloh otestuju STARTLE  aj tym najneocakavanejsim sposobom.
+Budem preto  rad, ked mi  (Ladislav Hudec) oznamite  vsetky chyby,
+ktore sa pri prevadzke STARTLE objavia.

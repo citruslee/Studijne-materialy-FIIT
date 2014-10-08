@@ -1,0 +1,151 @@
+1.
+
+Náhodnı vıber z normálneho rozdelenia sa realizoval hodnotami: 4.8, 4.7, 4.4, 5.0, 3.9, 4.6, 4.2, 4.4, 4.5. Urète realizáciu 95%-ného intervalového odhadu pre strednú hodnotu.
+
+(4.32; 4.68)
+(4.28; 4.72)
+(4.30; 4.70)
+(4.25; 4.75)
+iaden z uvedenıch
+
+----------------------------------------------------------------------------------------
+2.
+
+Nech var(U) = 2, var(V) = 3, cov(U, V) = -2. Nájdite var(2U - 3V).
+
+37
+59
+24
+15
+iná
+
+----------------------------------------------------------------------------------------
+3.
+
+Poèas skúšky spo¾ahlivosti dochádza k znièeniu vırobku s pravdepodobnosou p = 0.02. Nájdite pravdepodobnos toho, e v sérii 3000 vırobkov bude znièenıch menej ako 64 vırobkov. Odpoveïou nech je ten interval, ktorı obsahuje h¾adanú pravdepodobnos!
+
+[0.65; 0.70]
+[0.71; 0.75]
+[0.76; 0.80]
+[0.81; 0.85]
+iadna z uvedenıch moností
+
+----------------------------------------------------------------------------------------
+4.
+
+Náhodnı vıber z normálneho rozdelenia sa realizoval hodnotami 3.3, 4.0, 3.6, 3.4, 3.9, 3.4, 3.8. Na hladine 0.05 testujte
+
+hodnotu 2.2 porovnávame s 2.4469, nezamietame
+hodnotu 2.2 porovnávame s 2.3646, nezamietame
+hodnotu 2.2 porovnávame s 1.9432, zamietame
+hodnotu 1.6 porovnávame s 1.8946, nezamietame
+iaden z uvedenıch záverov nie je správny
+
+----------------------------------------------------------------------------------------
+5.
+
+Nech X má exponenciálne rozdelenie a . Nech G je distribuèná funkcia velièiny Y a g nech je hustota Y. Urète G(0.5) a g(2).
+
+0.10 a 0.15
+0.12 a 0.27
+0.25 a 0.40
+0.30 a 0.27
+iadna z uvedenıch moností
+
+----------------------------------------------------------------------------------------
+6.
+
+Hustota f náhodnej velièiny X je daná vzahmi: pre x z intervalu [0, 1], f(x) = 0, inde. Urète hodnotu medzikvartilového rozpätia.
+
+0.2235
+0.2430
+0.2500
+0.2725
+iadna z uvedenıch
+
+----------------------------------------------------------------------------------------
+7.
+
+Laboratórny krvnı test s pravdepodobnosou p=0.95 indikuje prítomnos vírusu, ak je naozaj prítomnı, ale na druhej strane s pravdepodobnosou q = 0.01 indikuje prítomnos vírusu, hoci v skutoènosti prítomnı nie je. Predpokladajme, e 0.5% populácie vírus naozaj má. Aká je pravdepodobnos, e osoba má vírus, ak v jej prípade bol test pozitívny?
+
+0.2565
+0.2843
+0.3231
+0.3454
+iadnej z predchádzajúcich moností
+
+----------------------------------------------------------------------------------------
+8.
+
+Systém pozostáva z troch blokov typu I, a troch blokov typu II. Spo¾ahlivos bloku je pravdepodobnos toho, e blok bude fungova poèas doby T. Nech spo¾ahlivos blokov typu I sa rovná 0.9 a spo¾ahlivos blokov typu II sa rovná 0.8. Predpokladajme, e udalosti fungovania jednotlivıch blokov poèas doby T sú totálne vzájomne nezávislé. Urète pravdepodobnos toho, e budú fungova všetky bloky typu I a súèasne aspoò dva bloky typu II.
+
+0.682
+0.653
+0.624
+0.612
+iadnej z predchádzajúcich moností
+
+----------------------------------------------------------------------------------------
+9.
+
+Dáta sú dané tabu¾kou poèetností triednych intervalov:
+
+triedy: |20 - 30 | 30 - 40 | 40 - 50 | 50 - 60 | 60 - 70
+poèetn: |__ 12 __|___ 18 __|___ 36 __|___ 26 __|___ 8 __
+
+Aproximujte hodnotu 75%-ného vıberového kvantilu.
+
+53.46
+54.26
+55.35
+56.60
+iadna z uvedenıch hodnôt
+
+----------------------------------------------------------------------------------------
+10.
+
+Dáta sú dané tabu¾kou poèetnosti triednych intervalov:
+
+10 - 20 | 20 - 30 | 30 - 40 | 40 - 50 | 50 - 60
+__ 10 __|__ 30 ___|___ 35 __|___ 20 __|___ 5 __
+
+Aproximujte hodnotu vıberovej smerodajnej odchılky. Pre vıberovı rozptyl pouite normujúci faktor 1/n.
+
+9.2
+9.6
+10.3
+11.5
+iadna z uvedenıch hodnôt
+
+----------------------------------------------------------------------------------------
+11.
+
+Náhodnı vıber sa realizoval hodnotami: 15.6, 14.4, 16.1, 16.7, 13.6, 14.8, 15.2. Urète hodnotu vıberového medzikvartilového rozpätia (bez pouitia vıb. distr. funkcie).
+
+1.7
+1.6
+1.5
+1.4
+iadna z uvedenıch
+
+----------------------------------------------------------------------------------------
+12.
+
+Nech ivotnos spotrebièa má rozdelenie N(200, 400), (rozmery parametrov sú v hodinách). Ak sa spotrebiè pokazí, máme k dispozícii jeden náhradnı, ktorého ivotnos má rozdelenie N(150, 225). Aká je pravdepodobnos toho, e sa poèas 300 hodín nedostaneme do akostí? (t.j. budeme ma k dispozícii funkènı spotrebiè - pôvodnı, alebo zálonı).
+
+0.685
+0.725
+0.850
+0.977
+iadna z uvedenıch
+
+----------------------------------------------------------------------------------------
+13.
+
+Nech je náhodnı vıber rozsahu n = 16 z normálneho rozdelenia , t.j. smerodajná odchılka sa rovná . Uvaujme o teste. Nech testovacou štatistikou je vıberovı priemer. Nájdite kritickú mnoinu K, tak, aby hladina vıznamnosti testu sa rovnala 0.05.
+
+[5.4; )
+[5.7; )
+[5.9; )
+[6.1; )
+iadna z uvedenıch

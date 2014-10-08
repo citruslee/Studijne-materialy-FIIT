@@ -1,0 +1,4 @@
+this is a file that has some text in it but it
+doesn't have grep appearing on the first line
+It is meant to sure that grep can do some REG 
+expression use.

@@ -1,0 +1,15 @@
+Jakubko sa nudí na hodine matematiky a tak si zaèal na papier èmára èísla. Zapaèíli sa mu èísla, ktoré sú súèinom nejakıch mocnín èísel 3, 5, 7. Píše si rastúcu postupnos, ale obèas nevie ako ïalej. Napíšte program, ktorı pre Jakubka urèí k-te èíslo v usporiadanej postupnosti èísel tvaru (3i) * (5j) * (7k) pre i, j, k >= 0. Postupnos zaèína nasledovne: 1, 3, 5, 7, 9, 15, ...
+
+Špecifikácia vstupu: Na vstupe je nieko¾ko èísel ve¾kosou do 5000. Èísla sú oddelené medzerou alebo novım riadkom.
+
+Špecifikácia vıstupu: Pre kadé èíslo i na vstupe vypíšte jedno èíslo -- i-ty prvok vo vyššie opísanej postupnosti èísel.
+
+
+Návod: 
+
+Pre generovanie postupnosti vyuite prioritnú frontu implementovanú binárnou haldou.
+Najskôr, do prioritnej fronty vlote èíslo 1.
+Opakujte a kım neurèíte potrebnı poèet prvkov postupnosti: vyberte najmenší prvok z prioritnej fronty, vlote tam jeho 3-násobok, 5-násobok a 7-násobok.
+Tımto postupom vygenerujete všetky prvky postupnosti, niektoré mono ale viackrát.
+Vdy pri vıbere ïalšieho najmenšieho prvku z prioritnej fronty spracujte len ten, ktorı ste ešte predtım nedostali -- musí by väèší ako zatia¾ poslednı prvok postupnosti.
+Po predpoèítaní potrebného mnostva èísel z postupnosti spracujte vstup a priamo vypíšte èísla na poadovanom indexe v postupnosti.

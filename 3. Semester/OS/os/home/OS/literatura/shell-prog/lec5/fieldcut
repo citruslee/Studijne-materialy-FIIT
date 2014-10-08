@@ -1,0 +1,23 @@
+#!/bin/sh
+#####################################################################
+# Program:           fieldcut                                       #
+# Author:            Erich Franz Stocker (c)                        #
+# Date-Written:      02/02/98                                       #
+# System:            CSI235 Unix Shell - pipes and filters          #
+# Synopsis:                                                         #
+#    This bourne script demonstrates the output of cut commands when#
+#    fields are cut. This script assumes fieldfile fields are sep-  #
+#    arated by tab characters.                                      #
+#####################################################################
+echo "Cut out the second field and the fourth field"
+echo "---------------------------------------------"
+cut -f1,4 fieldfile
+echo "Cut out the 1 through 3 fields"
+echo "------------------------------"
+cut -f1-3 fieldfile
+echo "Cut out the 1 through 2 fields and the fourth"
+echo "---------------------------------------------"
+cut -f1-2,4 fieldfile
+echo "Incorrectly specify a delimiter not really used in file"
+echo "-------------------------------------------------------"
+cut -d';' -f1,3 fieldfile

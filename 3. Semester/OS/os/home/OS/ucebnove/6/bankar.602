@@ -1,0 +1,243 @@
+@CT 1
+@LM 1
+@RM 65
+@PL 69
+@TB -----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T
+@MT 3
+@MB 3
+@PO 5
+@PN 1
+@OP 
+@LH 6
+                       BANKµROV ALGORITMUS
+
+                 ætudijnì text pre OS 2. roŸn¡k.
+
+
+I. évod.
+
+Uviaznutie  je situ cia,  v ktorej  dva alebo  viac procesov Ÿak 
+neobmedzene dlho na podmienky,  ktor‚ nem“§u nastaœ. V operaŸnìch
+syst‚moch  tento  probl‚m  vznik   v  d“sledku s£œa§enia procesov
+o spoloŸne pou§¡van‚ prostriedky.  Presnejçie, mo§nosœ uviaznutia
+vznik  v  operaŸnìch syst‚moch, v ktorìch  s£ splnen‚ nasleduj£ce
+nevyhnutn‚ podmienky:
+1. Vz jomn‚  vyluŸovanie. Prostriedok m“§e  byœ v ka§dom  okamihu
+pridelenì najviac jedn‚mu procesu.
+2.  Nepreempt¡vne pl novanie.  Prostriedok m“§e  byœ uvo–nenì iba
+procesom,  ktorì ho  z¡skal, t.j.  nie je  mo§n‚ n silne  odobraœ
+procesu prostriedok, ktorì mu bol pridelenì.
+3.  ¬iastoŸn‚  pridelenie.  Ak   proces  potrebuje  s£Ÿasne  viac
+prostriedkov, m“§e tieto z¡skavaœ postupne.
+4.  ¬akanie  na  prostriedky.  Proces  pri  Ÿakan¡  na pridelenie
+prostriedku neuvo–åuje dovtedy z¡skan‚ prostriedky.
+
+Probl‚m  uviaznutia   mo§no  rieçiœ  niektorìm   z  nasleduj£cich
+pr¡stupov:
+1. Prevencia.  V syst‚me je trvale  zruçen  platnosœ jednej alebo
+viacerìch z uvedenìch çtyroch podmienok.
+2. Detekcia a zotavenie. Detekuje  sa vznik uviaznutia a n sladne
+sa vykon  zotavenie.
+3.  Vyhìbanie.  Pride–ovanie  prostriedkov  je  riaden‚  tak, aby
+v ka§dej situ cii bolo mo§n‚ v koneŸnom Ÿase uspokojiœ po§iadavky
+vçetkìch  procesov.  Najzn mejç¡m  z  tejto  skupiny  je bank rov
+algoritmus.
+
+
+II. Bank rov algoritmus.
+
+N zov algoritmu vych dza z nasledovnej anal¢gie:
+
+BANKµR     =   OPERA¬Ní SYSTM
+ZµKAZNÖK   =   PROCES
+PENIAZE    =   PROSTRIEDKY (RESOURCES)
+MENA       =   TYP PROSTRIEDKU
+SUMA       =   PO¬ET INæTANCIÖ PROSTRIEDKU
+
+élohou   bank ra  je   riadiœ  pride–ovanie   p“§iŸiek  tak,  aby
+v koneŸnom  d“sledku dok zal  s tìm  kapit lom, ktorìm disponuje,
+uspokojiœ  potreby vçetkìch  z kazn¡kov. K  tomu potrebuje bank r
+vedieœ  od ka§d‚ho  z kazn¡ka  celkov£  sumu, ktor£  bude dotyŸnì
+z kazn¡k  po§adovaœ. T£to  inform ciu dostane  bank r od  ka§d‚ho
+nov‚ho z kazn¡ka. Predpoklad me, §e  vìçka bank rovho kapit lu je
+v„Ÿçia   nanajvìç  rovn    celkovej  po§iadavke  najn roŸnejçieho
+z kazn¡ka, ktorì  sa m“§e vyskytn£œ. Z kazn¡k m“§e Ÿerpaœ p“§iŸku
+postupne, a§  kìm nedosiahne celkov£  sumu, ktor£ potrebuje.  KeÔ
+t£to sumu z¡ska, pou§ije ju a v koneŸnom Ÿase vr ti bank rovi.
+ Stav cel‚ho tohto syst‚mu je  v ka§dom okamihu danì "rozlo§en¡m"
+peåaz¡ v  banke a u  jednotlivìch z kazn¡kov, t.j.  sumou peåaz¡,
+ktor‚  m   bank r  v  banke  a  sumami, ktor‚ moment lne vlastnia
+jednotliv¡   z kazn¡ci.   KeÔ   pr¡de   od  niektor‚ho  z kazn¡ka
+po§iadavka na p“§iŸku a bank r tejto po§iadavke vyhovie, vedie to
+k nov‚mu "rozlo§eniu" peåaz¡, teda k nov‚mu stavu. Sk“r vçak, ne§
+bank r po§iadavke  vyhovie, zist¡ si,  Ÿi to bude  bezpeŸnì stav,
+t.j.  Ÿi   potom  bude  schopnì   uspokojiœ  po§iadavky  vçetkìch
+z kazn¡kov. M“§e  to zistiœ tak,  §e simuluje postupnosti  stavov
+a h–ad  tak£ postupnosœ, ktor  vedie ku koneŸnej situ cii - ka§dì
+z kazn¡k dostal to Ÿo §iadal a vçetky peniaze s£ sp„œ v banke.
+
+
+Sumariz cia pravidiel bankovìch p“§iŸiek:
+
+1. Novì z kazn¡k deklaruje max. sumu v ka§dej mene, ktor£ si zamìç–a po§iŸaœ.
+2. Ak z kazn¡k dostal vçetky peniaze, vr ti ich v koneŸnom Ÿase.
+3.  P“§iŸku m“§e  z kazn¡k Ÿerpaœ  postupne. Ak  bank r zist¡, §e
+po§iŸanie  pr ve  po§adovanej  sumy  nevedie  k  bezpeŸn‚mu stavu
+pokladne, z kazn¡k mus¡ Ÿakaœ,  kìm inì z kazn¡k nevr ti dostatok
+peåaz¡.
+4.  Stav je  bezpeŸnì, ak  bank r dok §e  aplik ciou pravidiel 2.
+a 3. uspokojiœ potreby vçetkìch z kazn¡kov v koneŸnom Ÿase.
+
+
+
+
+Pr¡klad 1 - jeden typ prostriedkov.
+
+M me  5   z kazn¡kov  (5 procesov)  P[0]  -   P[4],
+pre jednoduchosœ 1 menu  (1 typ prostriedkov)
+aktu lny stav je danì nasledovnou tabu–kou:
+
+      Allocation    Max.       (Need)    Available
+
+P[0]      0          7          7          3
+P[1]      2          3          1
+P[2]      3          9          6
+P[3]      2          2          0
+P[4]      0          4          4
+
+V st’pci 'Allocation'  s£ sumy peåaz¡, ktor‚  u§ boli jednotlivìm
+z kazn¡kom  po§iŸan‚ (pridelen‚),  v st’pci  'Max.' s£  maxim lne
+(celkov‚)  sumy, ktor‚  bud£ z kazn¡ci  po§adovaœ, st’pec  'Need'
+uv dza,  ko–ko eçte  bud£  potrebovaœ  a 'Available'  je aktu lna
+suma, ktor£ m  bank r v banke.
+
+a) Ide  o bezpeŸnì stav?  (Dajte pr¡klad v  akom porad¡ m“§u  byœ
+z kazn¡ci - procesy vybaven‚.)
+b) Nech z kazn¡k  (proces) P[1] §iada o sumu  1 peåa§n  jednotka.
+M“§e byœ jeho po§iadavka uspokojen  okam§ite?
+c) To ist‚ ako b), ale tentoraz proces P[4] §iada sumu 3.
+
+Rieçenie:
+a)
+Stav  je bezpeŸnì,  ak existuje  tak  postupnosœ  stavov, §e bud£
+splnen‚ po§iadavky vçetkìch z kazn¡kov. Tak to postupnosœ vznikne
+napr. pri nasledovnom porad¡ vybavovania z kazn¡kov:
+     P[3] - u§ m  ko–ko §iadal, v koneŸnom Ÿase p“§iŸku vr ti, po
+     vr ten¡ bude v banke 5
+     P[4] - po vr ten¡ p“§iŸky bude v banke 5
+     P[1] - po vr ten¡ p“§iŸky bude v banke 7
+     P[0] - po vr ten¡ p“§iŸky bude v banke 7
+     P[2] - po vr ten¡ p“§iŸky bude v banke 10
+
+b)
+Ak by  bank r vyhovel po§iadavke z kazn¡ka  P[1], vznikol by stav
+danì nasledovnou tabu–kou:
+
+      Allocation    Max.       (Need)    Available
+
+P[0]      0          7          7          2
+P[1]      3          3          0
+P[2]      3          9          6
+P[3]      2          2          0
+P[4]      0          4          4
+
+a £lohou  bank ra je  zistiœ, Ÿi  je tento  stav bezpeŸnì.  Mo§n‚
+poradie vybavovania z kazn¡kov je napr.:
+P[1], P[3], P[4], P[2], P[0].
+Novì  stav bude  bezpeŸnì, bank r  teda m“§e  vyhovieœ po§iadavke
+okam§ite.
+
+c)
+Ak by  bank r vyhovel po§iadavke z kazn¡ka  P[4], vznikol by stav
+danì nasledovnou tabu–kou:
+
+      Allocation    Max.       (Need)    Available
+
+P[0]      0          7          7          0
+P[1]      2          3          1
+P[2]      3          9          6
+P[3]      2          2          0
+P[4]      3          4          1
+
+a £lohou bank ra je op„œ zistiœ, Ÿi je tento  stav bezpeŸnì.  Mo§n‚
+poradie vybavovania z kazn¡kov je napr.:
+P[3], P[4], P[1], P[2], P[0].
+Novì  stav bude  bezpeŸnì, bank r  teda m“§e  vyhovieœ po§iadavke
+okam§ite.
+
+
+
+
+Pr¡klad 2 - viac typov prostriedkov.
+
+M me  5   z kazn¡kov  (procesov)  P[0]  -   P[4],
+3 meny  (3 typy prostriedkov) A, B, C,
+aktu lny stav je danì nasledovnou tabu–kou:
+
+      Allocation     Max.       (Need)    Available
+          A B C      A B C      A B C      A B C
+P[0]      0 1 0      7 5 3      7 4 3      3 3 2
+P[1]      2 0 0      3 2 2      1 2 2
+P[2]      3 0 2      9 0 2      6 0 0
+P[3]      2 1 1      2 2 2      0 1 1
+P[4]      0 0 2      4 3 3      4 3 1
+
+a) Ide  o bezpeŸnì stav?  (Dajte pr¡klad v  akom porad¡ m“§u  byœ
+procesy vybaven‚.)
+b)  Nech proces  P[1] §iada  prostriedky (1,0,2).  M“§e byœ  jeho
+po§iadavka uspokojen  okam§ite?
+c) To ist‚ ako b), ale tentoraz proces P[4] §iada (3,3,0).
+
+
+Rieçenie.
+Proces  mus¡  maœ  s£Ÿasne  vçetky  prostriedky (vçetkìch typov),
+ktor‚ po§adoval, aby ich mohol pou§iœ a v koneŸnom Ÿase vr tiœ.
+Rieçenie je analogick‚ ako v pr¡klade 1.
+
+a)
+Poradie vybavovania procesov m“§e byœ napr:
+     P[1] - po vr ten¡ p“§iŸky bude stav v banke (5, 3, 2)
+     P[4] - po vr ten¡ p“§iŸky bude stav v banke (5, 3, 4)
+     P[3] - po vr ten¡ p“§iŸky bude stav v banke (7, 4, 5)
+     P[0] - po vr ten¡ p“§iŸky bude stav v banke (7, 5, 5)
+     P[2] - po vr ten¡ p“§iŸky bude stav v banke (10, 5, 7)
+
+b)
+Ak  by  bank r  vyhovel   po§iadavke  procesu  P[1],  vznikol  by
+nasledovnì stav:
+
+      Allocation     Max.       (Need)    Available
+          A B C      A B C      A B C      A B C
+P[0]      0 1 0      7 5 3      7 4 3      2 3 0
+P[1]      3 0 2      3 2 2      0 2 0
+P[2]      3 0 2      9 0 2      6 0 0
+P[3]      2 1 1      2 2 2      0 1 1
+P[4]      0 0 2      4 3 3      4 3 1
+
+Tento stav je bezpeŸnì, procesy m“§u byœ vybaven‚ v porad¡ napr:
+P[1], P[4], P[3], P[2], P[0].
+
+c)
+Ak  by  bank r  vyhovel   po§iadavke  procesu  P[4],  vznikol  by
+nasledovnì stav:
+      Allocation     Max.       (Need)    Available
+          A B C      A B C      A B C      A B C
+P[0]      0 1 0      7 5 3      7 4 3      0 0 2
+P[1]      2 0 0      3 2 2      1 2 2
+P[2]      3 0 2      9 0 2      6 0 0
+P[3]      2 1 1      2 2 2      0 1 1
+P[4]      3 3 2      4 3 3      1 0 1
+
+S kapit lom (0, 0, 2) nem“§e bank r uspokojiœ zost vaj£cu potrebu
+§iadneho   z  procesov   (mohol  by   vybaviœ  nejak£   Ÿiastkov£
+po§iadavku,  avçak   §iadny  z  procesov   nem“§e  z¡skaœ  vçetky
+prostriedky, ktor‚ potrebuje). Tento stav nie je bezpeŸnì, viedol
+by k  uviaznutiu. Bank r teda nem“§e  vyhovieœ po§iadavke procesu
+P[4].
+
+
+----------------------------------------------------------------
+Pou§it  literat£ra:
+[1] J.æafaı¡k, OperaŸn‚ syst‚my
+[2] Pom“cka pre cviŸiaceho OS 2. roŸ.
+

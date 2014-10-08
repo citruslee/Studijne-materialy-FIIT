@@ -1,0 +1,84 @@
+Poznamky k tvorbe zadani v jazyku C
+-----------------------------------
+
+V tejto skupine zadani budete pouzivat kniznicne funkcie, ktore zabaluju
+systemove volania Unixu a tiez samotne systemove volania. 
+Mozeme ich rozdelit zhruba na dve skupiny:
+A. orientovane na pracu so subormi a adresarmi
+B. orientovane na procesy
+
+Potrebne informacie najdete 
+- v ucebniciach jazyka C (praca so subormi)
+- v knizkach o Unixe
+- v on-line manualoch (man meno-funkcie) 
+- v podadresari doc (niekolko manualov prelozenych do slovenciny)
+    (to je vlastne zbytocne, vsetci viete po anglicky :-)
+- v podadresari priklady (niekolko hotovych inspiracii (*.c) 
+     na systemove volania UNIX-u
+- diskutujte s cviciacim, s kolegami, spytajte sa na prednaske, atd.
+
+
+
+A.  Praca so subormi OS UNIX.
+Praca so suborovym systemom je mozna na dvoch zakladnych urovniach:
+
+	1. funkcie zamerane na file descriptors (int file_handle)
+		open, read, write, close, lseek, ...
+	2. funkcie zamerane na streamy (struct FILE *f)
+		fopen, fread, fwrite, fprintf, fscnaf, 
+		fclose, feof, fgetc, fputc...
+		(pripadne ich varianty getchar, gets, putchar, puts, printf)
+
+Funkcie z prvej mnoziny  
+ - su operacnemu systemu blizsie, pretoze priamo zodpovedaju 
+   systemovym volaniam 
+
+Funkcie z druhej mnoziny  
+ - su implementovane v standardnej kniznici pomocou volani funkcii 
+   z prvej mnoziny
+ - maju lepsie moznosti z hladiska formatovania vstupu/vystupu
+ - na pracu so vstupom a vystupom pouzivaju vlastne vyrovnavacie pamate
+   (buffers), co moze zlepsit efektivnost programu
+ - su standardnou sucastou kniznic jazyka C podla normy ANSI (teda mali by
+   ste ich najst na vela roznych typoch pocitacov a operacnych systemov).
+
+
+Ako znalci jazyka C by ste mali poznat obe skupiny a vediet rozdiely medzi 
+nimi (nielen v Unixe, obe urovne poskytuju napr. aj prekladace v MS-DOSe). 
+
+Ku kazdej z tychto funkcii existuje podrobny man, takze nebude pre vas 
+problem skombinovat man s niektorymi prikladmi uvedenymi v podadresari
+priklady/.
+
+Pre tych ktori maju vo svojom zadani prechadzat cez adresare, (citat obsah 
+adresarov a pod..) bude potrebne pouzit niektore z tychto funkcii:
+opendir, readdir, telldir, seekdir, rewinddir, closedir 
+
+Podrobne informacie o subore:
+stat, lstat
+
+Vymazavanie suborov:
+unlink
+
+Pre pracu s menami, ID cislami a inymi informaciami o pouzivateloch odporucame
+pozriet funckie:
+getpwent, getpwuid, getpwnam, setpwent, endpwent, setpwfile 
+
+Na zistovanie informacii o aktualne prihlasenych pouzivateloch odporucame
+pozriet informacie o subore utmp (man utmp)
+
+
+B.  Praca s procesmi.
+Bude potrebne pochopit a pouzit funkcie ako:
+
+fork
+execl, execv,...
+pipe
+dup
+sleep (man 3 sleep)
+wait
+kill
+
+V rieseni vasho zadania nesmiete pozivat funkcie system, popen a pod.
+To by bolo potom prilis jednoduche. (Ale nikto vam nebrani aby ste sa
+naucili ako sa tieto funkcie pouzivaju).

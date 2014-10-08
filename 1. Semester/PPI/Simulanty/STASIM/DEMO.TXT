@@ -1,0 +1,176 @@
+              STARTLE SIMULATION
+              ------------------
+         THE HARDWARE UNITS
+THE SIGN CONVENTION IS TWOS      
+REGISTERS
+NUMBER        NAME  LENGTH  TIME
+     1  MAR             11   100
+     2  MBR             14   100
+     3  PC              11   100
+     4  IR              14   100
+     5  ACC             14   100
+FLIPFLOPS
+NUMBER        NAME  TIME
+     1  HALT          40
+CHANNELS
+NUMBER        NAME, WIDTH  TIME  DIRECTION
+NO CHANNELS
+STACKS
+NUMBER        NAME         TOP      BUFFER WIDTH LENGTH TIME
+NO STACKS
+STORES
+NUMBER        NAME     ADDRESS     BUFFER WIDTH LENGTH TIME
+     1  MEMORY      MAR         MBR           14   2048  400
+    THE MICRO-INSTRUCTION SET 
+    ************************* 
+NUMBER    TYPE      SOURCE    P1  P2    RESULT    P1  P2  LITERAL CURRENCY
+     1 TRANSFER    ACC        -1  -1   MBR        -1  -1        0  EXCLUSIVE 
+     2 TRANSFER    MBR        -1  -1   ACC        -1  -1        0  EXCLUSIVE 
+     3 TRANSFER    PC         -1  -1   MAR        -1  -1        0  EXCLUSIVE 
+     4 TRANSFER    IR          3  13   PC          0  10        0  EXCLUSIVE 
+     5 TRANSFER    IR          3  13   MAR         0  10        0  EXCLUSIVE 
+     6 TRANSFER    MBR        -1  -1   IR         -1  -1        0  EXCLUSIVE 
+     7 TRANSFER    -          -1  -1   HALT       -1  -1        1  EXCLUSIVE 
+NUMBER    TYPE      STORE     CURRENCY
+     8 READ        MEMORY      EXCLUSIVE 
+NUMBER    TYPE      STORE     CURRENCY
+     9 WRITE       MEMORY      EXCLUSIVE 
+NUMBER    TYPE    A-REGISTER  B-REGISTER  C-REGISTER OVERFLOW   TIME   CURRENCY
+    10 ADD         ACC         MBR         ACC         -           100  EXCLUSIVE 
+NUMBER    TYPE     LOCATION   VALUE TIME  OVERFLOW    CURRENCY
+    11 INCREMENT   PC             1  100  -           CONCURRENT
+NUMBER    TYPE      SOURCE    P1   P2   TEST VALUE OMIT TIME CURRENCY
+    12 TEST        ACC        -1  -1          LT             0    1     0  EXCLUSIVE 
+NUMBER    TYPE    A-REGISTER  B-REGISTER  C-REGISTER OP TIME  CURRENCY
+    13 LOGICAL     ACC         -           -         NOT           0  EXCLUSIVE 
+NUMBER    TYPE     REGISTER   TYPE  DIRECTION BITS TIME CURRENCY
+    14 SHIFT       ACC       ARITH      RIGHT         1  100  EXCLUSIVE 
+NUMBER    TYPE      SOURCE    P1   P2 CURRENCY
+    15 DECODE      IR          0   2  CONCURRENT
+            FETCH AND EXECUTE SEQUENCES
+   FETCH SEQUENCE 
+    3    8    6   11   15
+       EXECUTE SEQUENCES 
+   0HALT          7
+   1LDA           5    8    2
+   2STA           5    1    9
+   3ADD           5    8   10
+   4JMP           4
+   5JMPZ         12    4
+   6RAR          14
+   7NOT          13
+   PROGRAM NUMBER    1
+ INSTRUCTION FIELD CONTENTS 
+         1         7      2055     0
+         3         8      6152     1
+         3         9      6153     2
+         3        10      6154     3
+         3        11      6155     4
+         2        12      4108     5
+         0         0         0     6
+         0         0         0     7
+         0         0         0     8
+         0         0         0     9
+         0         5         5    10
+         0         4         4    11
+         0         3         3    12
+ INITIALISATION PHASE  2  TO BE INITIALISED
+PC        0
+MAR       0
+ PRINT CONTROL INFORMATION
+  RANGE      WHEN    HARDWARE UNITS REQUIRED
+      0     7MACHINE   STORE     REGISTER  
+  STATE OF COMPUTER BEFORE EXECUTION BEGINS
+ REGISTERS
+   ACC       0    IR        0    PC        0    MBR       0  
+   MAR       0  
+  FLIPFLOPS 
+   HALT         0  
+ STACKS 
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       3       0       0       0
+
+THE INSTRUCTION BEING OBEYED IS LDA        AT LOCATION      0
+ REGISTERS
+   ACC       0    IR        2055    PC        1    MBR       0  
+   MAR       7  
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       3       0       0       0
+ THE TIME TO EXECUTE THIS INSTRUCTION WAS 01600
+
+THE INSTRUCTION BEING OBEYED IS ADD        AT LOCATION      1
+ REGISTERS
+   ACC       0    IR        6152    PC        2    MBR       0  
+   MAR       8  
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       3       0       0       0
+ THE TIME TO EXECUTE THIS INSTRUCTION WAS 01500
+
+THE INSTRUCTION BEING OBEYED IS ADD        AT LOCATION      2
+ REGISTERS
+   ACC       0    IR        6153    PC        3    MBR       0  
+   MAR       9  
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       3       0       0       0
+ THE TIME TO EXECUTE THIS INSTRUCTION WAS 01500
+
+THE INSTRUCTION BEING OBEYED IS ADD        AT LOCATION      3
+ REGISTERS
+   ACC       5    IR        6154    PC        4    MBR       5  
+   MAR       10  
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       3       0       0       0
+ THE TIME TO EXECUTE THIS INSTRUCTION WAS 01500
+
+THE INSTRUCTION BEING OBEYED IS ADD        AT LOCATION      4
+ REGISTERS
+   ACC       9    IR        6155    PC        5    MBR       4  
+   MAR       11  
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       3       0       0       0
+ THE TIME TO EXECUTE THIS INSTRUCTION WAS 01500
+
+THE INSTRUCTION BEING OBEYED IS STA        AT LOCATION      5
+ REGISTERS
+   ACC       9    IR        4108    PC        6    MBR       9  
+   MAR       12  
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       9       0       0       0
+ THE TIME TO EXECUTE THIS INSTRUCTION WAS 01600
+
+THE INSTRUCTION BEING OBEYED IS HALT       AT LOCATION      6
+ REGISTERS
+   ACC       9    IR        0    PC        7    MBR       0  
+   MAR       6  
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       9       0       0       0
+ THE TIME TO EXECUTE THIS INSTRUCTION WAS 0840
+   STATE OF COMPUTER AFTER  EXECUTION
+
+   Total time for execution was 140
+ REGISTERS
+   ACC       9    IR        0    PC        7    MBR       0  
+   MAR       6  
+  FLIPFLOPS 
+   HALT         0  
+ STACKS 
+  STORES
+   MEMORY    
+ 0--    2055    6152    6153    6154    6155    4108       0       0
+ 8--       0       0       5       4       9       0

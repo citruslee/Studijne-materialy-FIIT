@@ -1,0 +1,88 @@
+ 7. Monitory	[Monitors]
+ 		Hoare (1974)
+ 		Brinch Hansen (1975)
+
+ * udajovy typ, podpora kompilatora
+ * zdruzuje premenne + operacie nad nimi
+   (ako class v C++)      [encapsulation]
+ * premenne su lokalne
+   (zvonku nepristupne, private)
+ * operacie mozu procesy pouzivat bez obmedzenia (funkcie su public)
+ * operacie sa v case vylucuju:
+   ak iny proces aktivny v monitore, cakaj
+   ( vzajomne vylucovanie da kompilator
+   (napr. binarny semafor)
+
+ monitor R	/* encapsulation of R */
+ {	variables;	/* accessible only from operations */
+ 	void pouziva() { ... };	/* operations here */
+ }
+ ProcessP() { while(1) { R.pouziva(); nepouzivaR(); } }
+
+ Prostriedky monitora pre explicitnu manipulaciu s procesmi
+  (lokalne operacie):
+
+ queue x ;	/* waiting processes */
+
+ BOOL isEmpty(queue x);
+ void delay(queue x);     	/*    calling process is inserted
+ 		into the queue and Blocked */
+ void continue(queue x);   	/*          one waiting process is
+ 		removed and made Ready */
+
+ continue() smie byt pouzita iba ako posledny prikaz v operacii monitora
+ (inak dva procesy v kritickej oblasti)
+
+ terminologia u Tanenbauma:
+ 	delay = wait, continue = signal
+
+ Riadenie pristupu k externemu prostriedku:
+
+ monitor accessR	/* controlling access to R */
+ {	BOOL volny = TRUE;
+ 	queue cakajuci;
+      void vstup()
+ 	{  	if (volny)  volny = FALSE;
+ 		else delay(cakajuci);	/* block itself */
+ 	};
+      void vystup()
+ 	{  	if (isEmpty(cakajuci))  volny = TRUE;
+ 		else continue(cakajuci);	/* final statement!!! */
+ 	};
+ }
+
+ ProcessP()
+ {  while(1) {
+ 	accessR.vstup();
+ 	pouzivaR();
+ 	accessR.vystup();
+ 	nepouzivaR();
+   }
+ }
+
+
+ Vyrovnavacia pamat pomocou monitora:
+
+ #define N 10	/* buffer capacity */
+ typedef  ...  message_t;	/* works with any type */
+
+ monitor Buffer
+ {	message_t  array[N];
+ 	int in = 0, out = 0, count = 0;
+ 	queue qProd, qCons;
+ 	void put(message_t m)
+ 	{  	if (count == N)  delay(qProd);
+ 		array[in] = m;
+ 		in = (in+1)%N;	/* modulo N */
+ 		count++;
+ 		if (!isEmpty(qCons))  continue(qCons);
+ 	};
+ 	void get(message_t *m)
+ 	{  	if (count == 0)  delay(qCons);
+ 		*m = array[out];
+ 		out = (out+1)%N;
+ 		count--;
+ 		if (!isEmpty(qProd))  continue(qProd);
+ 	};
+ }
+

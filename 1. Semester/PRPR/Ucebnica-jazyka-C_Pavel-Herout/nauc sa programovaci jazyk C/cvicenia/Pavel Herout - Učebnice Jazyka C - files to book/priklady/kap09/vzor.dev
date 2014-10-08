@@ -1,0 +1,13 @@
+[Project]
+FileName=D:\ujc\programy\PRIKLADY\KAP9\vzor.dev
+Name=vzor
+Use_gpp=0
+UnitCount=2
+ResFiles=D:\tmp\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\DEV-C_~1\Bin\Mainicon.ico
+[Unit1]
+FileName=D:\ujc\programy\PRIKLADY\KAP9\kru_main.c
+[Unit2]
+FileName=D:\ujc\programy\PRIKLADY\KAP9\kru_io.c

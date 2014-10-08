@@ -1,0 +1,17 @@
+Úloha 19 - Triedenie^2 (max. 1 bod)
+
+Daných je N celých čísel v rozsahu od 0 do N2, napíšte program,
+ktorý ich utriedi do vzostupného poradia.
+
+Naprogramujte funkciu v nasledovnom tvare: // utriedi cisla a[0, ..., n-1] vzostupne.
+void utried(int *a, int n)
+{
+  // ...
+}
+
+
+
+----------
+pozn. - bolo treba nakodit daco rychlejsie ako standardny quicksort.
+napr. bucket sort
+

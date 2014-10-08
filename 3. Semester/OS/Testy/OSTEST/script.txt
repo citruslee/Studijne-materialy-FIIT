@@ -1,0 +1,222 @@
+kratky04
+hamar
+sandala04
+polak04
+kajsa04
+lukacv04
+rada04
+dzurik04
+hamar
+polacik05
+michalak04
+> who | awk '{print$1}'|uniq
+pisar04
+gono
+bohm04
+nemsila04
+tekel04
+simonr04
+lukac04
+spacek04
+lukac04
+spacek04
+bohm04
+steinmul
+bohm04
+lukac04
+kozmon04
+erhardt04
+olejnik04
+mika04
+bohm04
+lukac04
+rabcan03
+nagy04
+kasan04
+bellay04
+polak04
+hamar
+kratky04
+hamar
+sandala04
+polak04
+kajsa04
+lukacv04
+rada04
+dzurik04
+hamar
+polacik05
+michalak04
+> who | awk '{print$1}' | uniq|grep /"04"/
+> who | awk '{print$1}' | uniq | grep 04
+pisar04
+bohm04
+nemsila04
+tekel04
+simonr04
+lukac04
+spacek04
+lukac04
+spacek04
+bohm04
+bohm04
+lukac04
+kozmon04
+erhardt04
+olejnik04
+mika04
+bohm04
+lukac04
+nagy04
+kasan04
+bellay04
+polak04
+michalak04
+kratky04
+sandala04
+polak04
+kajsa04
+lukacv04
+dzurik04
+rada04
+dzurik04
+michalak04
+olejnik04
+> who | awk '{print$1}' | uniq | grep 04
+pisar04
+bohm04
+nemsila04
+tekel04
+simonr04
+lukac04
+spacek04
+lukac04
+spacek04
+bohm04
+bohm04
+lukac04
+kozmon04
+erhardt04
+olejnik04
+mika04
+bohm04
+lukac04
+nagy04
+kasan04
+bellay04
+polak04
+michalak04
+kratky04
+sandala04
+polak04
+kajsa04
+lukacv04
+dzurik04
+rada04
+dzurik04
+michalak04
+olejnik04
+> who | awk '{print$1}' | uniq | grep 04|sort
+bellay04
+bohm04
+bohm04
+bohm04
+bohm04
+dzurik04
+dzurik04
+erhardt04
+kajsa04
+kasan04
+kozmon04
+kratky04
+lukac04
+lukac04
+lukac04
+lukac04
+lukacv04
+michalak04
+michalak04
+mika04
+nagy04
+nemsila04
+olejnik04
+olejnik04
+pisar04
+polak04
+polak04
+rada04
+sandala04
+simonr04
+spacek04
+spacek04
+tekel04
+> who | awk '{print$1}'| grep 04 | sort|uniq
+bellay04
+bohm04
+dzurik04
+erhardt04
+kajsa04
+kasan04
+kozmon04
+kratky04
+lukac04
+lukacv04
+michalak04
+mika04
+nagy04
+nemsila04
+olejnik04
+pisar04
+polak04
+rada04
+sandala04
+simonr04
+spacek04
+tekel04
+> who | awk '{print$1}' | grep 04 | sort | uniq|tr "04" " "
+bellay
+bohm
+dzurik
+erhardt
+kajsa
+kasan
+kozmon
+kratky
+lukac
+lukacv
+michalak
+mika
+nagy
+nemsila
+olejnik
+pisar
+polak
+rada
+sandala
+simonr
+spacek
+tekel
+>
+Message from hamar@osa.dcs.elf.stuba.sk on ttypu at 18:23 ...
+who | awk '{print $1$6}' | grep -f utorok_1655 | grep cpu | sort | uniq | tr "()
+" " " | sed s/"04 "/" "/ | awk -F . '{print $1}' | awk -v X="sed " '{X=X"-e s/"$
+2"/"$1"/ "} END {X=X"cpu.txt"; system(X)}'
+EOF
+> who | awk '{print $1$6}' | grep -f utorok_1655 | grep cpu | sort | uniq | tr "
+Unmatched ".
+" " " | sed s/"04 "/" "/ | awk -F . '{print $1}' | awk -v X="sed " '{X=X"-e s/"$
+2"/"$1"/ "} END {X=X"cpu.txt"; system(X)}'
+> " " " | sed s/"04 "/" "/ | awk -F . '{print $1}' | awk -v X="sed " '{X=X"-e s/
+Unmatched ".
+> 2"/"$1"/ "} END {X=X"cpu.txt"; system(X)}'
+Unmatched '.
+>
+> who | awk '{print$1}' | grep 04 | sort | uniq | tr "04" " "who | awk '{print $1$6}' | grep -f utorok_1655 | grep cpu | sort | uniq | tr "()
+Unmatched ".
+" " " | sed s/"04 "/" "/ | awk -F . '{print $1}' | awk -v X="sed " '{X=X"-e s/"$
+2"/"$1"/ "} END {X=X"cpu.txt"; system(X)}'
+> " " " | sed s/"04 "/" "/ | awk -F . '{print $1}' | awk -v X="sed " '{X=X"-e s/"$
+Unmatched ".
+> 2"/"$1"/ "} END {X=X"cpu.txt"; system(X)}'
+Unmatched '.
+>

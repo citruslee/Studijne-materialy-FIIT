@@ -1,0 +1,267 @@
+***Simulation started***
+
+MEMORY:
+Instructions on addresses: 0|1|2|3|4|5|6|7|8|
+Operands on addresses: 10(5)|11(7)|256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 0
+MAR: 0
+MBR: 0
+ACC: 0
+IR: 0
+
+-------------------
+Instruction LOAD fetched from address 0
+REGISTERS:
+PC: 1
+MAR: 0
+MBR: LOAD [256]
+ACC: 0
+IR: LOAD [256]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 1
+MAR: 256
+MBR: 5
+ACC: 5
+IR: LOAD [256]
+
+-------------------
+Instruction MUL fetched from address 1
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: MUL 4
+ACC: 5
+IR: MUL 4
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 2
+MAR: 1
+MBR: 4
+ACC: 20
+IR: MUL 4
+
+-------------------
+Instruction ADD fetched from address 2
+REGISTERS:
+PC: 3
+MAR: 2
+MBR: ADD [257]
+ACC: 20
+IR: ADD [257]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 3
+MAR: 257
+MBR: 2
+ACC: 22
+IR: ADD [257]
+
+-------------------
+Instruction DIV fetched from address 3
+REGISTERS:
+PC: 4
+MAR: 3
+MBR: DIV [MEM(258)]
+ACC: 22
+IR: DIV [MEM(258)]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 4
+MAR: 259
+MBR: 7
+ACC: 3
+IR: DIV [MEM(258)]
+
+-------------------
+Instruction JMPZ fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: JMPZ [7]
+ACC: 3
+IR: JMPZ [7]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: JMPZ [7]
+ACC: 3
+IR: JMPZ [7]
+ (evaluated FALSE)
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 3
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 2
+IR: ADD -1
+
+-------------------
+Instruction JMP fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: JMP [4]
+ACC: 2
+IR: JMP [4]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 4
+MAR: 6
+MBR: JMP [4]
+ACC: 2
+IR: JMP [4]
+
+-------------------
+Instruction JMPZ fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: JMPZ [7]
+ACC: 2
+IR: JMPZ [7]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: JMPZ [7]
+ACC: 2
+IR: JMPZ [7]
+ (evaluated FALSE)
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 2
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 1
+IR: ADD -1
+
+-------------------
+Instruction JMP fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 4
+MAR: 6
+MBR: JMP [4]
+ACC: 1
+IR: JMP [4]
+
+-------------------
+Instruction JMPZ fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: JMPZ [7]
+ACC: 1
+IR: JMPZ [7]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: JMPZ [7]
+ACC: 1
+IR: JMPZ [7]
+ (evaluated FALSE)
+-------------------
+Instruction ADD fetched from address 5
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: ADD -1
+ACC: 1
+IR: ADD -1
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 6
+MAR: 5
+MBR: -1
+ACC: 0
+IR: ADD -1
+
+-------------------
+Instruction JMP fetched from address 6
+REGISTERS:
+PC: 7
+MAR: 6
+MBR: JMP [4]
+ACC: 0
+IR: JMP [4]
+
+>>Instruction executed!<<
+MEMORY(check for update...):
+Operands on addresses: 256(5)|257(2)|258(259)|259(7)|
+REGISTERS:
+PC: 4
+MAR: 6
+MBR: JMP [4]
+ACC: 0
+IR: JMP [4]
+
+-------------------
+Instruction JMPZ fetched from address 4
+REGISTERS:
+PC: 5
+MAR: 4
+MBR: JMPZ [7]
+ACC: 0
+IR: JMPZ [7]

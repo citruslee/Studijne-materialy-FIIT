@@ -1,0 +1,592 @@
+PIKT / Prednáška 6 / 25.3.2013
+On-line služby
+	Európska komisia definovala 20 verejných on-line služieb: 
+	12 je určených pre občanov 
+	8 je určených pre podnikateľov, resp. právnické osoby
+	Zoznam definovala ako základ pre hodnotenie úrovne verejných on-line služieb
+	Verejné on-line služby sú zaradené do 4 úrovní 
+	hodnotenie úrovne verejných on-line služieb v hodnote od 0, čo znamená, že poskytovateľ služby je bez on-line pripojenia až po hodnotu 4, teda možnosť úplnej elektronickej transakcie.
+Služby pre občanov
+	Daň z príjmu fyzických osôb                
+	Vyhľadávanie pracovného miesta         
+	Príspevky sociálneho zabezpečenia       
+	Osobné doklady                                 
+	Evidencia vozidiel                                                           
+	Oznámenia polícii
+	Stavebné povolenia                              
+	Verejné knižnice                                 
+	Úradné výpisy z matriky
+	Prihlásenie na vysoké školy
+	Oznámenie o presťahovaní
+	Zdravotnícke služby
+Služby pre podnikateľov
+	Sociálne dávky pre zamestnancov
+	Daň z príjmu právnických osôb
+	Daň z pridanej hodnoty
+	Registrácia právnickej osoby
+	Vykazovanie štatistických údajov
+	Colné vyhlásenia
+	Povolenia životného prostredia
+	Verejné obstarávanie
+Stupne pripojenia
+0. Bez On-line pripojenia
+Poskytovateľ služby je bez on-line pripojenia:
+	t.j. nemá verejne prístupnú internetovú stránku, 
+	alebo na verejne prístupnej internetovej stránke poskytovateľa sa nenachádzajú informácie potrebné na začatie poskytovania príslušnej verejnej služby. 
+	Občan/podnikateľ realizuje vybavenie príslušnej služby klasickým "papierovým" spôsobom.
+1. Informatívna úroveň
+Na verejne prístupnej internetovej stránke sú dostupné informácie pre klienta:
+	napríklad kontakt 
+	poštová alebo elektronická adresa inštitúcie poskytujúcej danú službu, prípadne mená konkrétnych pracovníkov 
+	úradné hodiny 
+	dokumenty v elektronickej forme na stiahnutie 
+	ďalšie náležitosti, ktoré sú potrebné na začatie administratívneho spracovania príslušnej verejnej služby
+2. Jednosmerná interakcia
+Z verejne prístupnej internetovej stránky si môže občan stiahnuť:
+	tlačivá, formuláre alebo iné dokumenty potrebné na začatie administratívneho spracovania príslušnej verejnej služby
+	stiahnuté príslušné tlačivá občan
+	vyplní, 
+	zabezpečí k nim zákonom stanovené prílohy 
+	po skompletizovaní ich 
+	zašle 
+	alebo osobne doručí príslušnému spracovateľovi služby
+	občan si spracované rozhodnutie vyzdvihne osobne alebo poštou
+3. Obojsmerná interakcia
+Pomocou verejne prístupnej internetovej stránky je možná vzájomná komunikácia (interakcia):
+	medzi poskytovateľom na jednej strane a občanom na strane druhej 
+	občan môže 
+	získať tlačivá potrebné na využitie príslušnej verejnej služby, 
+	prostredníctvom tej istej verejne prístupnej internetovej stránky môže tieto vyplnené tlačivá aj spätne odoslať.
+	táto forma si vyžaduje autentifikáciu občana, aby sa príslušná verejná služba zrealizovala,
+	občan už nemusí vyplnené dokumenty a príslušné prílohy zasielať alebo osobne doručiť príslušnému poskytovateľovi,
+	v priebehu spracovávania služby sa občan informuje o stave spracovania,
+	spracované rozhodnutie si vyzdvihne osobne alebo poštou.
+4. Transakčná
+Na verejne prístupnej internetovej stránke má občan možnosť :
+	kompletne elektronicky spracovať príslušnú službu 
+	vrátane sledovania prijatia rozhodnutia a uskutočnenia finančnej transakcie.
+	poskytovaná služba sa realizuje 
+	bez priameho kontaktu občana,
+	nahradzuje osobný alebo poštový kontakt medzi poskytovateľom a občanom,
+	takéto spracovanie príslušnej služby si nevyžaduje ďalšie administratívne „papierové“ konanie.
+Vybrané (kľúčové) elektronické služby a ich právna relevancia
+Daň z príjmu fyzických osôb
+Každý občan, ktorý má v zmysle zákona o dani z príjmov povinnosť podať daňové priznanie k dani z príjmov fyzických osôb a zo závislej činnosti, môže tak urobiť tromi spôsobmi:
+	v papierovej forme,
+	elektronicky so zaručeným elektronickým podpisom,
+	elektronicky bez zaručeného elektronického podpisu.
+Legislatíva umožňuje daňovým úradom akceptovať podanie daňových priznaní elektronicky bez dodatočného odoslania papierového formulára daňového priznania
+Túto formu môžu však použiť iba autorizovaní používatelia, ktorí použijú pri elektronickej komunikácii zaručený elektronický podpis
+	Autorizovaným používateľom môže byť daňový subjekt alebo jeho právny zástupca, ktorý musí vyplniť registračný formulár na portáli Daňového úradu a vyplnený formulár  predložiť miestnemu správcovi dane. K takémuto vyplnenému formuláru sa vyžaduje zaručený elektronický podpis, pri ktorom certifikát pre zaručený elektronický podpis vydala akreditovaná certifikačná autorita
+Takto autorizovaní používatelia môžu podať elektronicky tieto daňové dokumenty:
+	Daňové priznanie k dani z príjmov - fyzické osoby typ A a typ B.
+	Tlačivá k dani z príjmov zo závislej činnosti.
+2. Daň z príjmu právnických osôb
+Miesto 
+Prístup k službe je v súčasnosti možný iba na informatívnej úrovni cez Ústredný portál verejnej správy
+	v sekciách životné situácie, 
+	agendy určené pre podnikateľov
+	s odvolaním sa na portál Daňovej správy SR (www.drsr.sk), ktorý ponúka občanom (podnikateľom) transakčnú (najvyššiu) úroveň služby
+K podávaniu elektronického daňového priznania sa daňový subjekt musí registrovať
+Pri registrácii je daňovému subjektu pridelený osobný identifikátor pre vstup do autorizovanej časti portálu
+Registrovanému používateľovi sú na základe 
+	procesu autorizácie vykonanej u miestne príslušného správcu dane 
+	a v súlade so stanovenými procedurálnymi podmienkami 
+	pridelené prístupové práva k dátam daňového subjektu 
+
+Pre využívanie služby elektronického podávania daňových dokumentov si subjekt vyberie jednu z dvoch možností elektronického doručovania písomností, ktoré mu v súlade s platnými legislatívnymi podmienkami ponúka daňová správa:
+	podávanie písomností so zaručeným elektronickým podpisom 
+	podávanie písomností bez zaručeného elektronického podpisu
+3. Príspevky sociálneho zabezpečenia
+	príspevky sociálneho zabezpečenia majú z hľadiska prístupu občana pomerne komplikovanú štruktúru 
+	ide o rôzne typy sociálnych dávok, podpôr a príspevkov, ktoré  sú v kompetencii rôznych inštitúcií, 
+	napr. ministerstvá, úrady práce, sociálnych vecí a rodiny, sociálna poisťovňa atď.
+	Z hľadiska obsahového zamerania pre hodnotenie úrovne elektronických služieb tohto typu, sledujeme iba štyri z nich:
+	dávky v nezamestnanosti,
+	prídavky na deti,
+	náklady na zdravotnú starostlivosť,
+	štipendiá pre študentov.
+4. Osobné doklady
+Vybavovanie agendy osobných dokladov občanov majú v súčasnosti v kompetencii útvary Policajného zboru SR
+ 
+Sú to tieto doklady:
+	občianske preukazy,
+	cestovné doklady – pasy,
+	zbrojné preukazy,
+	vodičské preukazy
+V súčasnosti sú v rámci e-Governmentu občanovi k dispozícii iba informácie potrebné na vybavovanie dokladov
+Prístup k nim je možný 
+	buď cez Ústredný portál verejnej správy (www.portal.gov.sk),
+	alebo jednotlivé Krajské riaditeľstvá Policajného zboru SR, ktoré uvádzajú,
+	podmienky, spôsob a údaje o mieste a čase úradných hodín (www.minv.sk/krpzba/).
+Inštitút doručovania
+Má vo všetkých druhoch konania nezastupiteľné miesto
+	správne konanie, 
+	civilný proces - napr. občianskosúdne konanie, 
+	exekučné konanie, 
+	konkurzné a vyrovnacie konanie, 
+	rozhodcovské konanie, 
+	v trestnom procesnom práve trestné konanie.
+Nezastupiteľnosť tohto inštitútu, t.j. doručovania spočíva v tom, že 
+	bez riadneho doručenia právnymi predpismi vymedzených písomností nie je možné spravidla začať takéto konanie, 
+	v už začatom konaní  postupovať, právoplatne ukončiť konanie, 
+	prípadne nútene vymôcť povinnosti vyplývajúce z vykonateľného rozhodnutia príslušného orgánu.
+Čo je ekvivalentom „doručenky“ v elektronickom svete, resp. za akých podmienok má tento inštitút charakter písomnej „doručenky“?
+	Je potrebná špeciálna právna úprava tohto inštitútu? 
+	Ak áno, akým spôsobom a v ktorom právnom predpise?
+	Má elektronická potvrdenka charakter „písomnej doručenky“ a je teda potvrdením o prevzatí elektronického dokumentu prijímateľom?
+	Elektronická podateľňa v rámci zásad svojich činností generuje spravidla dve potvrdenky: 
+	prvá - obsahuje iba strohú informáciu o tom, že elektronická podateľňa prijala elektronický dokument, 
+	druhú - vydáva až po tom, čo overí 
+	platnosť kvalifikovaného certifikátu, zaručeného elektronického podpisu 
+	a neporušenosť integrity prijatého dokumentu
+	ktorá z nich je z právneho hľadiska záväzným potvrdením o prevzatí elektronického dokumentu?
+	Čo musí takáto „elektronická doručenka“ obsahovať  ?
+	t.j. aké obsahové a formálne náležitosti musí mať, aby bola právne záväzná a právo na jej základe vynútiteľné
+Procesný inštitút doručovania v jednotlivých druhoch konania
+	patrí z hľadiska foriem príslušných orgánov medzi materiálno-technické úkony príslušného orgánu
+	prostredníctvom týchto úkonov príslušné orgány zabezpečujú oznamovanie skutočností vymedzených právnymi predpismi:
+	účastníkom konania,
+	ako aj iným osobám zúčastneným na danom konaní,
+	alebo ktorých sa konanie týka.
+Právna úprava doručovania v niektorých (vybraných) oblastiach verejnej správy
+Právna úprava doručovania, obsiahnutá  v zákone o správnom konaní
+	je upravená najmä v ustanoveniach § 24 - § 26. 
+	Ustanovenia týkajúce sa doručovania sú upravené v osobitných druhoch správneho konania  akými sú napr. 
+	konania týkajúce sa územného plánovania a stavebného poriadku, 
+	zákona o poštových službách 
+	Správny poriadok na rozdiel od kódexov upravujúcich civilné konanie alebo trestné konanie neobsahuje osobitné vymedzenie spôsobov, akými sa má v správnom konaní doručovať. 
+	V zásade ide o niekoľko spôsobov doručovania, ktoré sa využívajú v oblasti správneho práva.
+Spôsoby doručovania (správne právo)
+	doručovanie prostredníctvom pošty – t.j. prostredníctvom poskytovateľa univerzálnej poštovej služby, ktoré správne orgány využívajú najčastejšie:
+	doručovanie do vlastných rúk,
+	obyčajné doručovanie,
+	doručovanie prostredníctvom doručovateľa správneho orgánu,
+	osobné prevzatie na správnom orgáne,
+	doručenie verejnou vyhláškou,
+	doručovanie prostredníctvom kuriérskej služby (kuriérska služba však nemôže vyberať a distribuovať korešpondenciu určenú do vlastný rúk adresáta.
+	doručovanie prostredníctvom doručovateľa správneho orgánu
+	osobné prevzatie na správnom orgáne 
+	doručenie verejnou vyhláškou
+	doručovanie prostredníctvom kuriérskej služby (kuriérska služba však nemôže vyberať a distribuovať korešpondenciu určenú do vlastný rúk adresáta. Takéto oprávnenie vyberať a distribuovať korešpondenciu do vlastných rúk má iba držiteľ licencie na poskytovanie univerzálnej poštovej služby, ktorým je v súčasnosti Slovenská pošta, a.s.
+	zákon o správnom konaní (Správny poriadok) v súčasnosti nevyužíva doručovanie písomností, resp. oznámení prostredníctvom elektronickej pošty, hoci z dôvodu uplatňovania zásady rýchlosti a hospodárnosti konania by sa výmena informácií medzi účastníkmi konania a správnym orgánom uplatňovať mala. 
+Doručenie do vlastných rúk
+	považuje sa za najdokonalejšiu formu doručenia 
+	pomocou „doručenia do vlastných rúk“ správny orgán oznamuje subjektu určitú skutočnosť
+Dôležité písomnosti, ktoré sa doručujú do vlastných rúk:
+	rozhodnutia (§ 24, § 46 a nasl.)
+	predvolanie (§ 41)
+	upovedomenie ostatných účastníkov konania o obsahu podaného odvolania a výzva aby sa  k nemu vyjadrili (§ 56)
+	oznámenie začatia výkonu rozhodnutia
+	pri doručovaní do vlastných rúk sa používajú osobitne označované doručenky (v súčasnosti sú označené modrým pruhom)  
+	Zákon o správnom konaní ponecháva na voľnej úvahe správneho orgánu, ktorú ďalšiu písomnosť (okrem rozhodnutia) bude považovať za takú dôležitú, že ju bude doručovať do vlastných rúk.
+Doručenka
+Riadne vyhotovená doručenka 
+	má povahu verejnej listiny a 
+	podáva dôkaz o tom, že sa doručilo (že bolo doručené)
+Verejné listiny 
+	všetky listiny vydané súdmi Slovenskej republiky alebo inými štátnymi orgánmi v medziach ich právomoci 
+	listiny, ktoré sú osobitnými predpismi vyhlásené za verejné (napr. notárske zápisnice)
+Z formálno-právneho hľadiska je nevyhnutné uviesť, že:
+	dátum na doručenke má napísať ten, komu sa doručilo
+	iba ním napísaný dátum je dôkazom o dni doručenia.
+Z hľadiska dokazovania:
+	ak sa nemôže predložiť doručenka, možno vykonať dôkaz inými prostriedkami, napr. svedectvom orgánu, ktorý vykonal dourčenie
+	ak nemožno doručenie dokázať, treba doručovať znova
+	ak prevezme písomnosť doručovanú do vlastných rúk iná osoba než adresát, písomnosť sa nepovažuje za doručenú.
+Doručovanie v civilnom procese
+Význam doručovania v civilnom procese 
+	Vyplýva z toho, že súd môže konať a rozhodovať len vtedy, ak má preukázané, že
+	účastníci dostali všetky písomnosti, ktorých znalosť je predpokladom 
+	ďalšieho postupu v konaní
+	použitia opravného prostriedku
+	prostriedkov procesnej obrany a ochrany
+	a ďalších úkonov, ktoré je potrebné urobiť len v zákonom alebo súdom ustanovenej lehote
+	Doručovanie do vlastných rúk 
+	ak tak ustanovuje  zákon alebo ak tak nariadi predseda senátu
+	Obyčajné doručovanie
+	Spoločné obom spôsobom doručovania je, že také doručovanie okrem zákonom ustanovených výnimiek, možno nahradiť náhradným doručením.
+Doručovanie verejnou vyhláškou
+	použije  správny   orgán v prípade, keď 
+	účastníci konania alebo  ich pobyt nie sú mu známi, 
+	alebo pokiaľ to ustanovuje osobitný zákon
+	vykoná  sa tak,  že
+	písomnosť  sa vyvesí  po  dobu  15  dní  na  úradnej tabuli správneho orgánu
+	posledný deň tejto lehoty je dňom doručenia
+	Správny orgán zverejňuje  písomnosť  súčasne  iným  spôsobom  v mieste obvyklým: 
+	v miestnej tlači 
+	rozhlase  
+	alebo na dočasnej úradnej tabuli správneho orgánu na mieste, ktorého sa konanie týka
+Doručovanie a plynutie lehôt ako rozhodnujúcich právnych skutočností
+Poznáme dva druhy lehôt:
+	lehoty zákonné 
+	lehoty určené správnym orgánom
+Lehoty zákonné – dĺžku, príp. okamih, kedy možno úkon najneskoršie urobiť 
+	posledný možný termín vykonania napr. povinnosť rozhodnúť, podať odvolanie a pod. určuje priamo zákon alebo osobitný právny predpis
+Lehoty určené správnym orgánom 
+	lehota, ktorú určil na vykonanie správny orgán, ktorý môže lehotu na základe  žiadosti buď predĺžiť alebo skrátiť: 
+	lehota na doplnenie podania,
+	lehota na plnenie,
+	lehota na prerušenie konania.
+Autorské právo
+ Autorské právo patrí do oblasti práv duševného vlastníctva.
+Vzťahy vznikajúce v súvislosti s vytvorením a použitím literárneho a iného umeleckého diela a vedeckého diela, upravuje zákon č. 618/2003 Z. z. o autorskom práve a právach súvisiacich s autorským právom (autorský zákon) v platnom znení (ďalej len "zákon"). Tento zákon sa vzťahuje na dielo: 
+	autora, ktorý je štátnym občanom Slovenskej republiky alebo má na jej území trvalý pobyt, alebo 
+	zverejnené v Slovenskej republike bez ohľadu na štátne občianstvo alebo trvalý pobyt jeho autora. 
+Predmetom autorského práva je literárne a iné umelecké dielo a vedecké dielo, ktoré je výsledkom vlastnej tvorivej duševnej činnosti autora, najmä (aspoň 7 vedieť)
+	slovesné dielo a počítačový program, 
+	ústne podané, predvedené alebo inak vykonané slovesné dielo, najmä prejav a prednáška, 
+	divadelné dielo, predovšetkým dramatické dielo, hudobnodramatické dielo, pantomimické dielo a choreografické dielo, ako aj iné dielo vytvorené na zverejnenie, 
+	hudobné dielo s textom alebo bez textu, 
+	audiovizuálne dielo, predovšetkým filmové dielo, 
+	maľba, kresba, náčrt, ilustrácia, socha a iné dielo výtvarného umenia, 
+	fotografické dielo, 
+	architektonické dielo, predovšetkým dielo stavebnej architektúry a urbanizmu, dielo záhradnej a interiérovej architektúry a dielo stavebného dizajnu, 
+	dielo úžitkového umenia, 
+	kartografické dielo v analógovej alebo v inej forme. 
+Predmetom autorského práva je aj súborné dielo, najmä zborník, časopis, encyklopédia, antológia, pásmo, výstava alebo iná databáza, ak je súborom nezávislých diel alebo iných prvkov, ktorý je spôsobom výberu alebo usporiadaním obsahu výsledkom vlastnej tvorivej duševnej činnosti autora. 
+Ochrana podľa tohto zákona sa nevzťahuje na 
+	myšlienku, spôsob, systém, metódu, koncept, princíp, objav alebo informáciu, ktorá bola vyjadrená, opísaná, vysvetlená, znázornená alebo zahrnutá do diela, 
+	text právneho predpisu, úradné rozhodnutie, verejnú listinu, verejne prístupný register, úradný spis, slovenskú technickú normu vrátane ich prípravnej dokumentácie a prekladu, denné správy a prejavy prednesené pri prerokúvaní vecí verejných; na súborné vydanie týchto prejavov a na ich zaradenie do zborníka je potrebný súhlas toho, kto ich predniesol. 
+Osobnostné práva
+	autor sa ich nemôže vzdať; tieto práva sú neprevoditeľné a smrťou autora zanikajú. 
+	Po smrti autora si nikto nesmie prisvojiť jeho autorstvo k dielu; dielo možno použiť len spôsobom neznižujúcim jeho hodnotu a musí sa uviesť meno autora alebo jeho pseudonym, ak nejde o anonymné dielo. Ochrany sa môže domáhať ktorákoľvek autorovi blízka osoba, a to aj v prípade, ak zanikli majetkové práva k dielu. Rovnako sa tejto ochrany môže domáhať aj autorský zväz, profesijná komora a príslušná organizácia kolektívnej správy.
+Majetkové práva
+Tieto práva udelením súhlasu autora nezanikajú; autor je len povinný strpieť použitie diela inou osobou v rozsahu udeleného súhlasu. Sú neprevoditeľné, autor sa ich nemôže vzdať a nemožno ich postihnúť súdnym výkonom rozhodnutia, ani exekúciou vedenou podľa osobitného predpisu; to sa nevzťahuje na pohľadávky vzniknuté z majetkových práv.
+Bez súhlasu autora teda nikto nesmie použiť cudzie dielo, avšak z tohto existujú určité výnimky: ide napr. o vyhotovenie rozmnoženiny zverejneného diela, ktorú osoba môže vyhotoviť bez súhlasu autora pre svoju osobnú potrebu a na účel, ktorý nie je obchodný. Za také použitie nevzniká povinnosť uhradiť autorovi odmenu. Ďalšími príkladmi sú citácia diela, použitie diela na vyučovacie účely, použitie diela pre potreby zdravotne postihnutých, použitie v rámci občianskych a náboženských obradov, v rámci školských predstavení, použitie diela knižnicou alebo archívom atď.
+Súhlas autora na použitie diela taktiež nie je potrebný v prípade, ak je dielo vytvorené v rámci pracovného pomeru, ide teda o tzv. zamestnanecké dielo, kedy majetkové práva k dielu vykonáva vo svojom mene a na svoj účet zamestnávateľ. 
+Majetkové práva sú predmetom dedičstva. Ak spoluautor nemá dedičov, jeho podiel pripadá ostatným spoluautorom. 
+SOZA
+Slovenský ochranný zväz autorský spravuje majetkové práva autorov a vydavateľov hudobných diel. Jeho právomocou je udeľovať súhlas – tzv. licenciu na použitie hudobného diela. 
+SOZA  uzatvára licenčné zmluvy s používateľmi hudobných diel, na základe ktorých získavajú oprávnenie hudobné diela použiť, vyberá autorské odmeny a rozdeľuje ich oprávneným vlastníkom práv.
+
+	usporiadatelia podujatí (napr. diskotéky, koncertu, prezentácie firmy, divadelného predstavenia a pod.), 
+	majitelia prevádzok (reštaurácií, kaviarní, barov, plavární a fitness, prevádzok poskytujúcich služby (napr. kaderníctvo, kozmetika a pod.), príp. nájomcovia priestorov, v ktorých znie hudba z technického zariadenia (rozhlasového alebo televízneho prijímača, CD prehrávača, PC, DVD a pod.), 
+	majitelia alebo prevádzkovatelia hudobných automatov, 
+	výrobcovia zvukových a zvukovo-obrazových nosičov, 
+	rozhlasový a televízny vysielatelia, 
+	prevádzkovateľ TKR/MMDS (káblová retransmisia prevzatých a nezmenených programov v televíznom káblovom rozvode), 
+	prevádzkovateľ internetovej stránky s hudbou. 
+	oznámiť mestskému alebo obecnému úradu, na území ktorého sa hudobná produkcia bude konať, zámer usporiadať podujatie (§ 3 zákona SNR č. 96/1991 Zb. o verejných kultúrnych podujatiach), 
+	pred každým podujatím poslať  priamo na adresu SOZA (nie inšpektora) 2x vyplnené tlačivo Hromadnej licenčnej zmluvy. Zmluvu nájdete na web stránke SOZA (Informácie pre používateľov hudobných diel) alebo vám ju SOZA zašle na žiadanie.  SOZA zmluvu zaregistruje a 1 potvrdený exemplár vám zašle naspäť. Na základe vami vyplnenej zmluvy SOZA vystaví faktúru podľa platného sadzobníka SOZA. 
+Podľa autorského zákona č. 618/2003 Z. z. je nerešpektovanie majetkových práv autorov hudobných diel porušovaním duševného vlastníctva. Dodržiavanie majetkových práv autorov v súčasnosti sleduje 30 inšpektorov SOZA, ktorí kontrolujú prakticky celé územie Slovenska. Ak inšpektor zistí používanie hudobných diel bez uzatvorenia licenčnej zmluvy, SOZA bude žiadať o vydanie bezdôvodného obohatenia a súčasne môže podať podnet na prešetrenie priestupku, resp. trestného činu za neoprávnené nakladanie s dielami, ktoré sú predmetom autorského práva ako aj návrh na  občianske súdne konanie, 
+	
+Organizácie kolektívnej správy práv duševného vlastníctva
+	SOZA - Slovenský ochranársky zväz autorský (www.soza.sk) spravuje majetkové práva autorov a iných nositeľov práv k hudobným dielam; 
+	SLOVGRAM - Nezávislá spoločnosť hudobných zvukových záznamov (www.slovgram.sk) spravuje majetkové práva výkonných umelcov, výrobcov zvukových záznamov a výrobcov           zvukovoobrazových záznamov a vysielateľov k umeleckým výkonom, zvukovým záznamom, zvukovo-obrazovým záznamom a vysielaniu; 
+	LITA – Autorská spoločnosť (www.lita.sk) spravuje majetkové práva autorov k literárnym, dramatickým, choreograf., fotografickým,   audiovizuálnym a dielam úžitkového umenia;
+	OZIS – Ochranné združenie interpretov Slovenska  (www.ozis.sk) spravuje majetkové práva iba slovenských výkonných umelcov k umeleckým výkonom;  
+	SAPA – Slovenská asociácia producentov v audiovízii  (www.sapa.cc) spravuje majetkové práva výrobcov zvukovoobrazových záznamov; 
+	IFPI - Medzinárodná federácia fonografického priemyslu (www.ifpi.sk) ochrana práv pri vysielaní zvukových a hudobno-zvukových záznamov v rozhlase, televízii a výrobe rozmnožením zvukových a hudobno-zvukovo obrazových záznamov pre komerčné účely;  
+	BSA – Business Software Alliance (www.bsa.org/slovakia/) ochrana autorských práv, ktoré prináležia výrobcom programov, pri nelegálnom používaní software a boj proti nelegálnej výrobe, distribúcii a používania software.
+
+Z pohľadu informačných technológií sú dnes za autorské diela považovateľné:
+	počítačové programy 
+	databázy 
+	zdrojové kódy počítačových programov 
+	podkladové materiály pre tvorbu programu 
+	multimediálne diela 
+	literárne diela v digitalizovanej forme 
+	hudobné diela v digitalizovanej forme 
+	filmové diela v digitalizovanej forme 
+
+Porušovanie autorských práv v oblasti informačných technológií
+	používanie programov v rozpore s licenčnou zmluvou 
+	používanie programov bez platnej licencie (nezakúpené softvérové produkty) 
+	používanie programov formou tzv. nadužívania licencií – používajú sa inštalácie programov na väčšom počte počítačov než pre aký bola zakúpená platná licencia 
+	používanie programov v rozpore s licenciou napr. prevádzkovanie softvéru v internetových kaviarňach bez platnej licencie na verejné prevádzkovanie 
+	neoprávnené šírenie počítačových programov a iných autorských diel (multimediálne diela, literárne diela, ...) 
+	duplikovanie médií obsahujúcich produkty podliehajúce autorským právam 
+	prevádzkovanie internetových stránok ponúkajúcich stiahnutie nelegálnych kópií licenčného softvéru či iných diel 
+	prevádzkovanie a využívanie peer-to-peer sietí umožňujúcich neautorizovaný prenos programov či iných produktov požívajúcich autorsko-právnu ochranu 
+	osobitnou kategóriou je tzv.hard disk loading - predaj počítačov s predinštalovaným programovým vybavením, kedy predajca v snahe získať alebo zvýhodniť zákazníka poskytne spolu s predávaným hardvérom aj nelegálne kópie operačného systému či aplikačných programov.
+
+	plagiátorstvo - tvorba a šírenie počítačových programov, ktoré parazitujú na dobrom mene už zabehnutých produktov kopírovaním ich dizajnu, mena alebo funkcionality. Vtomto prípade však nemusí ísť len o porušovanie autorských práv, podobné kauzy často zasahujú do oblasti porušovania priemyselného vlastníctva.
+
+Počítačové pirátstvo
+	nízka úroveň všeobecno-právneho povedomia 
+	vysoké náklady na obstaranie legálnej licencie 
+	ľahká replikovateľnosť spôsobená základnými vlastnosťami SW 
+	kópia je vytvoriteľná v rovnakej kvalite ako originál 
+	vytvorením kópie nedochádza k obmedzeniu strany vlastniacej originál 
+
+Zodpovednosť
+Nelegálnym používaním softvéru dochádza k porušovaniu Autorského zákona a Trestného zákona. Podľa Trestného zákona za porušovanie autorských práv sa vyžaduje konkrétna osobná zodpovednosť. Nemôžete sa spoliehať na kolektívnu vinu, stíhanie spoločnosti za používanie nelegálneho softvéru. Za činnosť organizácie nesie zodpovednosť jej štatutárny zástupca - konateľ. Ten bude prvý na rade pri hľadaní vinníka, a až v ďalšej fáze sa dostáva na rad administrátor informačného systému, úplne na konci je používateľ PC.
+
+
+Medzinárodná dohoda o obchodných aspektoch práv duševného vlastníctva TRIPs
+	Výsledok Uruguajského kola mnohostranných obchodných rokovaní v rámci GATT v Marrákeši v r. 1994
+	Súčasť vzniku Svetovej obchodnej organizácie (WTO) v Marrákeši 
+
+Bernský dohovor o ochrane literárnych a umeleckých diel
+	Diplomatická konferencia k otázkam autorských práv a práv príbuzných autorskému právu (20. december 1996 v Ženeve)
+	prijatie Dohody, ktorá je špeciálnou dohodou vo vzťahu k Bernskému dohovoru a je v súlade s čl. 20 Bernského dohovoru
+	Dohoda prijala niektoré ustanovenia, ktoré sa stali súčasťou Bernského dohovoru (celkom 14)
+	Čl. 4 Počítačové programy. Sú chránené ako literárne diela a to bez ohľadu na spôsob a formu ich vyjadrenia
+	Čl. 5 Databázy. Tu je chránená kompilácia dát alebo iných materiálov v akejkoľvek forme, ktorých výsledkom je výber alebo usporiadanie ich obsahu a sú výsledkom tvorivej duševnej činnosti.
+Zabezpečenie harmonizácie danej problematiky s právom Európskej únie
+	Implementácia smerníc  Európskej únie, do nášho právneho poriadku zákonom č. 383/1997 Z.z. AZ
+	Smernica Rady 91/250/EEC zo 14. mája 1991 o právnej ochrane počítačových programov 
+	Smernica Rady 93/98/EEC z 29. októbra 1993 o harmonizácii trvania ochrany autorských práv a niektorých príbuzných práv 
+	Smernica Rady 92/100/EEC z 19. novembra 1992 o nájomnom práve a výpožičnom práve 
+	Smernica Rady 93/83/EEC z 27. septembra 1993 o koordinácii niektorých pravidiel týkajúcich sa autorského práva a práv príbuzných autorskému právu vzťahujúcich sa na satelitné vysielanie a káblovú retransmisiu 
+
+Ochrana počítačových programov zákonom o vynálezoch
+Základným pojmovým znakom vynálezu je :
+	či ide o vyriešenie technického problému, ktoré je nové z hľadiska stavu techniky vo svete, 
+	t. j. či ide o vyriešenie problému technickými prostriedkami 
+	druhým základným pojmovým znakom je novosť 
+	V zmysle § 5 ods. 3 písm. d) Zák. č. 435/2001 Z.z. o patentoch 
+	“za vynálezy sa nepovažujú programy počítačov”
+	Vynález  sa považuje  za nový,  ak nie  je súčasťou  stavu techniky.
+	Za  stav techniky  sa považuje  všetko, čo  bolo kdekoľvek pred  dňom,  od  ktorého  patrí  prihlasovateľovi  právo prednosti, sprístupnené verejnosti akýmkoľvek spôsobom 
+
+Počítačový program v právnom poriadku SR
+	Občiansky zákonník č. 40/1964 Zb. ako lex generalis 
+	 Do roku 1997  - AZ č. 35/1965 Zb.
+	Od 1.1. 1998 - Autorský zákon č. 383/1997 Z.z.
+	Od 1. 1. 2004 - Autorský zákon č. 618/2003 Z.z.
+	Obchodný zákonník č. 513/1991 Zb. v znení neskorších 
+	predpisov
+	Trestný zákon č. 300/2005 Z.z. v znení neskorších predpisov
+	a ďalšie
+
+Zákon č. 618/2003 Z.z. Autorský zákon
+členenie :
+I. časť - úvodné ustanovenia, týkajúce sa predmetu a 
+	   	pôsobnosti zákona a vymedzeniu niektorých 		   	pojmov 
+II. časť - najdôležitejšia časť AZ - vymedzuje autorské právo 
+III. časť - obsahuje práva súvisiace s autorským právom (osobnostné a majetkové práva 		   	výkoných umelcov)
+IV. časť - osobitné právo k databáze 
+V. časť -  kolektívna správa práv 
+VI. časť - prechodné a záverečné ustanovenia 
+
+I. časť - úvodné ustanovenia, týkajúce sa predmetu a pôsobnosti zákona a vymedzeniu niektorých 	pojmov
+
+	§ 1 Predmet úpravy 
+	Tento zákon upravuje vzťahy, vznikajúce v súvislosti s vytvorením a použitím literárneho a iného umeleckého a vedeckého diela...
+	tak, aby boli chránené práva a oprávnené záujmy autora 
+	Pôsobnosť zákona je vymedzená v § 2, 3 a 4
+
+Vymedzenie pojmu počítačový program a jeho význam pre využitie počítačov v praxi
+	Podľa § 5 ods. 8) Zák. č. 618/2003 Z.z. Autorský zákon počítačový   program  je:
+	súbor  príkazov   a  inštrukcií 
+	použitých priamo  alebo nepriamo v počítači.  
+	Príkazy a inštrukcie môžu  byť   napísané  alebo  vyjadrené  
+	v   zdrojovom  kóde  
+	alebo v strojovom kóde. 
+	Neoddeliteľnou súčasťou počítačového programu je aj podkladový materiál potrebný na jeho prípravu; ak spĺňa pojmové znaky diela (§ 7 ods. 1), je chránený ako literárne dielo.
+	
+
+II. Časť Autorské právo
+§ 6 - Autor - fyzická osoba, ktorá dielo vytvorila 
+	Autorskoprávna teória vychádza z osobno-právnej teórie autorského práva, t.j.
+	u nás môže byť autorom iba fyzická osoba, lebo len ona je schopná tvorivej duševnej činnosti.
+§ 7  Dielo
+Predmetom autorského práva je:
+	literárne a iné umelecké dielo a vedecké dielo, 
+	ktoré je výsledkom vlastnej tvorivej duševnej činnosti autora, 
+	najmä slovesné dielo a počítačový program
+	Ochrana sa nevzťahuje na
+	myšlienku, spôsob, systém, metódu, koncept, princíp, objav alebo informáciu, 
+	ktorá bola vyjadrená, opísaná, vysvetlená, znázornená alebo zahrnutá do diela.
+§ 8 Dielo spoluautorov
+Dielom spoluautorov je:
+	dielo, ktoré vzniklo vlastnou tvorivou duševnou činnosťou 
+	dvoch alebo viacerých autorov 
+	ako dielo jediné 
+	ku ktorému patria práva všetkým autorom spoločne a nerozdielne 
+
+§ 9 Spojené dielo
+	spojenie dvoch alebo viacerých samostatných   diel
+	so súhlasom ich autorov
+	na dohodnutý účel
+	so spojenými dielami nakladajú autori spoločne 
+
+§ 10 - Spoločné dielo
+	vzniklo spoločnou činnosťou dvoch alebo viacerých autorov 
+	títo súhlasili s využitím ich vlastnej tvorivej duševnej činnosti 
+	pod vedením fyzickej osoby alebo právnickej osoby ktorá:
+	iniciovala vytvorenie tohto diela 
+	usmerňovala a zabezpečovala proces vytvorenia diela 
+	Na spoločné dielo sa vzťahujú ustanovenia o zamestnaneckom diele (§ 50) 
+
+§ 15  - Vznik autorského práva na dielo
+	vzniká okamihom keď je vyjadrené vo vnímateľnej podobe 
+	vzťahuje sa na dokončené dielo, 
+	   vzťahuje sa aj na jeho jednotlivé vývojové fázy a časti 
+	   vrátane názvu diela a mien  postáv, ak spĺňajú pojmové   znaky diela.
+
+Pojmové znaky diela:
+	  musí ísť o dielo literárne, vedecké alebo umelecké 
+	  musí to byť výsledok tvorivej duševnej činnosti autora 
+	  musí byť vyjadrené vo vnímateľnej podobe 
+§ 17 Osobnostné práva(treba vedieť)
+Autor má právo:
+	označiť svoje  dielo menom alebo pseudonymom  a žiadať,   aby   sa jeho meno alebo pseudonym  uvádzalo na všetkých rozmnoženinách diela   náležitým  spôsobom   pri  každom   použití  diela  na    verejnosti, a to podľa spôsobu použitia 
+	neoznačiť svoje dielo menom alebo pseudonymom 
+	rozhodnúť o zverejnení svojho diela 
+	na  nedotknuteľnosť  svojho  diela,   najmä  na  ochranu  pred  akoukoľvek nedovolenou  zmenou alebo iným  nedovoleným zásahom  do svojho diela 
+
+
+§ 18  Majetkové práva(treba vedieť)
+	Autor má právo použiť svoje dielo. 
+	Autor má  právo udeľovať súhlas  na každé použitie  diela, najmä na:
+	vyhotovenie rozmnoženiny diela,
+	verejné rozširovanie  originálu diela alebo  jeho rozmnoženiny predajom alebo inou formou prevodu vlastníckeho práva,
+	verejné rozširovanie  originálu diela alebo  jeho rozmnoženiny nájmom alebo vypožičaním,
+	spracovanie, preklad a adaptáciu diela,
+	zaradenie diela do súborného diela,
+	verejné vystavenie diela,
+	verejné vykonanie diela,
+	verejný prenos diela 
+	Práva podľa  odsekov 1 a  2 udelením súhlasu  autora podľa odseku 2  nezanikajú;
+	Autor je len  povinný strpieť použitie diela inou osobou v rozsahu udeleného súhlasu. 
+
+
+Trvanie majetkových práv
+	Majetkové práva trvajú, ak nie je v tomto zákone ustanovené inak, 
+	počas autorovho života a 70 rokov po jeho smrti 
+	 Pri diele spoluautorov a pri spojených dielach vytvorených na účel použitia v takomto spojení 
+	majetkové práva trvajú počas života posledného z autorov a 70 rokov po jeho smrti.
+	 Pri spoločnom diele majetkové práva trvajú 
+	70 rokov po jeho zverejnení. 
+	Ak bolo dielo označené menami autorov, ktorí dielo vytvorili, majetkové práva trvajú počas života posledného z autorov a 70 rokov po jeho smrti.
+	Pri diele zverejnenom pod pseudonymom alebo pri anonymnom diele 
+	majetkové práva trvajú 70 rokov po jeho zverejnení
+Práva obdobné priemyselným právam
+	Zlepšovateľské právo
+	Právo nových spôsobov 
+	prevencie, diagnostiky a liečenia ľudí a zvierat 
+	a ochrany rastlín proti škodcom a chorobám
+	Právo know-how 
+	Právo loga
+	Právo doménových mien
+	Právo na ochranu názvu a dobrej povesti právnickej osoby (goodwill)
+
+Práva súvisiace s právom duševného vlastníctva
+	Medzi tieto práva patrí:
+	Právo obchodného tajomstva
+	Právo nekalej súťaže
+	Mediálne právo
+
+Druhy nehmotných statkov (extenzívne – najširšie – poňatie)
+Jednotlivé stránky osobnosti človeka – fyzickej osoby:
+	Život
+	Telesná nedotknuteľnosť
+	Zdravie
+	Sloboda
+	Občianska česť
+	Ľudská dôstojnosť
+	Osobné tajomstvo
+	Súkromie
+	Meno a priezvisko
+	Tieto stránky človeka sú chránené v rámci ochrany osobnosti – § 11 a nasl. Občianskeho zákonníka
+	Hmotne zachytené prejavy jednej stránky alebo viacerých stránok osobnosti človeka:
+	Písomnosti osobnej povahy
+	Podobizne
+	Obrazové snímky
+	Obrazové a zvukové záznamy týkajúce sa fyzickej osoby
+	Alebo iné prejavy osobnej povahy
+	Tieto stránky človeka sú chránené v rámci ochrany osobnosti – § 12 a nasl. Občianskeho zákonníka
+Ochrana osobnosti - § 12 OZ
+	Písomnosti osobnej povahy, podobizne, obrazové snímky a obrazové a zvukové záznamy týkajúce sa fyzickej osoby alebo jej prejavov osobnej povahy sa smú vyhotoviť alebo použiť len s jej privolením
+	Privolenie nie je potrebné, ak sa použijú písomnosti osobnej povahy, podobizne, obrazové snímky alebo obrazové a zvukové záznamy na úradné účely na základe zákona
+	Podobizne, obrazové snímky a obrazové a zvukové záznamy sa môžu bez privolenia fyzickej osoby vyhotoviť alebo použiť primeraným spôsobom tiež na vedecké a umelecké účely a pre tlačové, filmové, rozhlasové a televízne spravodajstvo
+	Ani takéto použitie však nesmie byť v rozpore s oprávnenými záujmami fyzickej osoby. 
+
+
+
+Ochranná známka - vymedzenie pojmu
+Ochranná známka je: :
+	akékoľvek  označenie 
+	možno ho graficky  znázorniť 
+	môžu ho tvoriť najmä slová  vrátane osobných mien
+	ďalej ho môžu tvoriť 
+	písmená, číslice,  kresby,  tvar  výrobku alebo  jeho obal, 
+	prípadne ich  vzájomné kombinácie spôsobilé  rozlíšiť tovary alebo služby jednej osoby od tovarov  alebo služieb inej osoby 
+	sú zapísané do registra ochranných známok 
+Legálne znaky, ktoré musí ochranná známka obsahovať (pojmové znaky):
+Ochranná známka je označenie, ktoré:
+	je vnímateľné zrakom 
+	má rozlišovaciu schopnosť 
+	je zapísané v registri ochranných známok 
+Druhy ochranných známok
+	Z hľadiska tvaru ochrannej známky:
+	slovné OZ 
+	tvorené jedným alebo viacerými slovami 
+	môžu to byť osobné mená, písmená alebo číslice 
+	môžu sa použiť slová z nášho jazyka alebo umelo vytvorené 
+	môže sa vyjadriť štandardným písmom ale aj graficky upraveným písmom 
+	obrazové OZ
+	tvorené určitou kresbou, vyobrazením 
+	priestorové OZ
+	je tzv. trojrozmerná (na rozdiel od plošných známok) 
+	Z hľadiska subjektov (majiteľov OZ)
+	individuálne 
+	slúžia na označovanie výrobkov alebo služieb iba jednej právnickej osoby alebo fyzickej osoby, pre ktorú je zapísaná do registra - t.j. jej majiteľom je iba jeden subjekt 
+	kolektívne 
+	ak sú spôsobilé rozlíšiť tovary alebo služby pochádzajúce od členov právnickej osoby založenej na ochranu ich záujmov alebo na iný účel (združenie) alebo od tovarov alebo služieb iných osôb zapísané do registra 
+
+Druhy ochranných známok	
+	Z hľadiska teritoriálneho pôsobenia 
+	ochranné známky národné (platia iba na území jedného štátu)
+	ochranné známky medzinárodné (platí na území viacerých štátov na základe medzinárodnej registrácie ochrannej známky)
+	ochranné známky Spoločenstva (CTM Community Trade Mark - udeľuje sa na základe nariadenia Rady EÚ č. 40/94 o ochrannej známke Spoločenstva)
+Práva majiteľa ochrannej známky
+	Právo používať ochrannú známku 
+	t.j. má výlučné právo označovať svoje tovary a služby ochrannou známkou alebo ju používať v spojení s týmito tovarmi alebo službami 
+	je oprávnený používať spolu s ochrannou známkou značku ®
+	Právo poskytnúť licenciu 
+	majiteľ OZ má právo poskytnúť licenciu na používanie svojej ochrannej známky inému subjektu 
+	Právo previesť ochrannú známku 
+	majiteľ OZ môže previesť písomnou zmluvou ochrannú známku na iný subjekt (právnickú osobu alebo fyzickú osobu)
+	Právo dať OZ do zálohu 
+	záložné právo na ochrannú známku sa zriaďuje najčastejšie na základe záložnej zmluvy (zabezpečovací prostriedok na zabezpečenie záväzku 
+
+
+
+
+ 
+
+Zánik ochrannej známky
+	Ochranná známka môže zaniknúť:
+	uplynutím ochrannej doby 
+	vzdaním sa práva na ochrannú známku 
+	výmazom z registra - odo dňa výmazu ochrannej známky z registra 
+	Medzinárodné označenie ochrannej známky ®
+Právo obchodných mien
+	Právna úprava obchodného mena na našom území 
+	pre právnické osoby - bola zakotvená v rakúskom obchodnom zákonníku - č. 1/1863 r.z. 
+	pre fyzické osoby –bola zakotvená v rakúskom živnostenskom poriadku č. 229/1859 r.z. 
+	v zákone o nekalej súťaži č. 111/1927 Zb. 
+	neskôr v Občianskom zákonníku - č. 141/1950 Zb.
+	úpravu ochrany obchodného mena prevzal aj Občiansky zákoník z r. 1964 (Zák. č. 40/1964 Zb. OZ)
+	táto úprava platila až do prijatia Obchodného zákonníka v r. 1991
+Pojem obchodné meno
+	názov, pod ktorým podnikateľ vykonáva právne úkony pri svojej podnikateľskej činnosti 
+	podnikateľa odlišuje od iných podnikateľov 
+	patrí k nemu aj skratka, ak je zapísaná v obchodnom registri 
+	je vždy spojené s právnou subjektivitou označovaného subjektu 
+	vzniká a zaniká spolu s týmto subjektom 
+	odlišujú sa ním rôzni podnikatelia, ktorí vykonávajú rovnakú alebo podobnú činnosť 
+
+Prechod obchodného mena	
+	Prechod obchodného mena na inú fyzickú osobu - 
+	môže nastať v dôsledku dedenia podniku 
+	ten kto zdedí podnik (pôvodný podnikateľ bol fyzická osoba) môže podnikať pod doterajším OM s dodatkom označujúcim nástupníctvo a s menom nástupcu 
+	Prechod obchodného mena na inú právnickú osobu 
+	je možný pri zániku právnickej osoby bez likvidácie, t.j. pri prechode podniku na právneho nástupcu, ak PO prevezme obchodné meno 
+
+Neoprávnené používanie obchodného mena (návrhy na začatie súdneho konania - žaloby)
+Koho práva boli dotknuté, môže sa domáhať, aby:
+	sa neoprávnený používateľ takéhoto konania zdržal (zdržovacia žaloba)
+	aby neoprávnený používateľ odstránil závadný stav (odstraňovacia žaloba)
+	oprávnený používateľ obchodného mena môže od neoprávneného používateľa požadovať primerané zadosťučinenie (žaloba na priznanie primeraného zadosťučinenia) 
+	ak sa neoprávneným používaním obchodného mena spôsobila škoda, možno sa jej náhrady domáhať podľa Obchodného zákonníka - náhrada škody upravená v § 373 a nasl OBZ pre porušenie povinnosti zo záväzkového vzťahu sa použije na základe § 757 OBZ aj pre náhradu škody vzniklej z neoprávneného používania obchodného mena. 
+
+
+
+
+
+PIKT 6 – 25.3.2013	16

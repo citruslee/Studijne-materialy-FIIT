@@ -1,0 +1,20 @@
+#!/bin/sh
+#####################################################################
+# Program:           grepscript                                     #
+# Author:            Erich Franz Stocker                            #
+# Date-Written:      02/09/98                                       #
+# System:            CSI 235 - lecture 6                            #
+# Synopsis:                                                         #
+#    demonstrate the use of grep in a script.                       #
+#####################################################################
+# find out who is on the system
+who
+# find out who is on the system for Feb 9
+echo "those on since Feb 9"
+who |grep "Feb  9"
+# find out who is on the system for Feb 10
+echo "those on since Feb 10"
+who |grep "Feb 10"
+# using a regular expression find which file in directory has an R or E  in caps in it
+echo "Looking for Capital R or Capital E in files"
+grep "[RE]" *

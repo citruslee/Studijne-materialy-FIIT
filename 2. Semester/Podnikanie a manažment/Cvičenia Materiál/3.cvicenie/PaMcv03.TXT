@@ -1,0 +1,175 @@
+ *Cvicenie 3
+void poznamky() extends Sarcasm {
+
+**Zdruzenie (druzstvo)
+	-spolocenstvo neuzavreteho poctu osob
+	-zalozene za ucelom podnikania alebo zabezpecenia socialnych, hospodarskych alebo inych potrieb svojich clenov
+	-minimalne 5 clenov alebo 2 pravnicke osoby
+	-zakladne imanie nazyvame vlastne imanie 
+		-(co to je? =)suhrn clenskych vkladov ktoreho minimalna vyska je 1250 eur
+	-druzstvo si povinne vytvara nedelitelny fond (ako pri s.r.o. a a.s. )
+	-delenie zisku podla vysky splatenych kapitalovych vkladov ak nie je rozhodnute inak
+	-rucenie
+		-druzstvo ruci celym svojim majetkom
+		-clenovia za zavazky nerucia
+	-organy
+		-clenska schodza
+		-predstavenstov-statutarny organ
+		-kontrolna komisia-kontrolny organ
+	
+-Priklad
+	-drzustvo bolo zalozene siestimi clenmi
+	-udaje o ich vkladoch a dlzke trvania clenstva:
+		-A	clensky vklad:1300eur	dlzka trvania[roky]:5
+		-B	clensky vklad:1000eur	dlzka trvania[roky]:5
+		-C	clensky vklad:1700eur	dlzka trvania[roky]:4
+		-D	clensky vklad:2700eur	dlzka trvania[roky]:3
+		-E	clensky vklad:1700eur	dlzka trvania[roky]:1
+		-F	clensky vklad:1300eur	dlzka trvania[roky]:1/2
+		-spolu	clensky vklad:9700	
+	-vlastne imanie druzstva je 45000eur
+	-vsetky vklady boli splatene pri zapise druzstva do obchodneho registra
+	-v roku 2011 hrubeho 27000
+	-clenska schodza sa uniesla na takomto rozdeleni zisku
+		-pridel do nedelitelneho fondu = 10% z cisteho zisku
+		-zvysok sa rozdeli medzi clenov podla splatenych kapitalovych vkladov
+	
+	-vypocitajte podiel zisku kazdeho clena druzstva v roku 2011
+		-27000*0.8=21600	cisteho
+		-21600-216=19044	po fonde
+		-A=19044/1300 = 13.4% 2604.96eur
+		-B=10.3%	2002.32eur
+		-C=17.5%	3402eur
+		-D=27.9%	5423.76eur
+		-E=17.5%	3402eur
+		-F=13.4%	2604.96eur
+
+-Priklad
+	-vypocitajte potencialny vyrovnavaci podiel kazdeho clena ak v nedelitelnom fonde 2000eur
+	-vysledok=koeficien vyrovavacieho podielu + ciste obchodne imanie
+	-koeficienty:
+		-6500
+		-5000
+		-6800
+		-8100
+		-1700
+		- - (vklad clena ktory je v druzstve menej ako jeden rok sa do vyrovnavacieho koeficientu nezapocitava )
+		-28100(spolu)
+	-A_koef=6500/28100=0.231
+	-B_koef=0.178
+	-C_koef=0.242
+	-D_koef=0.238
+	-E_koef=0.061
+	-(vlastne imanie) - (nedelitelny fond) - (vklady clenov co su v druzstve menej ako jeden rok)
+		-45000-2000-1300=41700
+	-A=0.231*41700=9632.7
+	-B=7422.6
+	-C=10091.4
+	-D=12009.6
+	-E=2543.7
+	-F= -
+
+**Tiche spolocenstvo
+	-posobi na zaklade zmluvy o tichom spolocenstve ktoru upravuje obchodny zakonnik
+	-tichym spolocnikom moze byt fyzicka aj pravnicka osoba
+		-napr. spolocnik, zamestnanec, rodinny prislusnik
+	-nad touto zmluvou sa 
+		-tichy spolocnik zavazuje poskytnut podnikatelovi vklad
+		-podnikatel zavazuje vyplatit tichemu spolocnikovy zisku ako podielu ticheho spolocnika na vysledku podnikania
+
+-Priklad
+	-k 31.12.2010 dosiahla spolocnost s.r.o. stratu vo vyske 6000eur
+	-na zaklade zmluvy o tichom spolocenstve medzi fyzickou osobou a s.r.o.
+		-sa fyzicka osoba bude podielat na zisku a strate 40%-timi 
+		-jej vklad do spolocnosti je 5000eur
+	-v nasledujucom roku 2011 dosiahla spolocnost zisk po zdaneni 10000eur
+	
+	-vypocitajte podiel fyzickej osoby na strate v roku 2010
+		-(podielanie na strane)=40% zo 6000=2400eur
+		-5000-2400=2600 
+		-celkova odpoved = strata 2400eur, vklad sa snizi o 2600 eur
+	-vypocitajte podiel fyzickej osoby na zisku v roku 2011
+		-(nestihol som chlopi)
+
+**Zmluva o zdruzeni
+	-vytvara sa z fyzickych i pravnickych osob za konkretnym ucelom a z pravidla na urcity cas
+	-ucastnici vkladaju do zdruzenia penazne i nepenazne vklady
+	-tieto vklady a majetok sa potom stava spoluvlastnictvom ucastnikov
+	-voci tretim osobam vystupuju rovnako a bezrozdielne
+	-nedeli sa zisk, ale prijmy a vydavky (nie zisk!)
+		-rovnakym dielom ak v zmluve nie je urcene inak
+		-kazdy sam si odvadza dan z prijmu	
+
+-Priklad
+	-traja podnikatelia (zivnostnici) sa rozhodli zdruzit svoje prostriedky s cielom dodat pocitacovu siet pre miestnu postu
+	-uzatvorili zmluvu o zdruzeni na obdobie jedneho roka
+	-(uz vidime ucel aj cas)
+	-do zdruzenia vlozili nasledujuce vklady
+		-A = 10000eur
+		-B = 16000eur
+		-C = 15000eur
+	-na konci roka odovzdali pocitacovu siet miestnej poste
+	-v spolocnom uctovnictve zistili, ze dosiahli prijmy 73000eur a vynalozili vydavky 16000eur
+	-v zmluve sa dohodli na deleni prijmov a vydavkov podla vlozenych vkladov
+
+	-vypocitajte podiely podnikatelov na prijmoch a vydavkoch
+		-(pozor na urcenie delenia v zmluve)
+		-(dnes zas nic -> Flash by kokot nestihol sa vystat kym ona nadiktuje priklad cely)
+		* * *
+		-	podiely na vklade	podiely na prijmoch	podiel na vydavkoch
+		-A		0.24			17520			3840
+		-B		0.39			28480			6240
+		-C		0.37			?27018			5920
+		-D		??			??			??
+		* * *
+		-odpisane od nahodneho Passerby .. nesedi to 'Use at your own discretion'
+
+**Kapitalova ucast podnikov
+	-(len priklad)
+
+-Priklad
+	-materska spolocnost A stoji na cele skupiny podnikov
+		-ma 60% podiel v dcerskej spolocnosti B
+		-ma 50%	podiel v spolocnosti C
+		-ma 18% podiel v spolocnosti D
+	-dcerska spolocnost C
+		-ma 25% podiel v spolocnosti E
+		-ma 15% podiel v spolocnosti F
+	-spolocnost B
+		-ma 20% podiel v spolocnosti E
+	-spolocnost E
+		-ma 20% podiel v spolocnosti G
+
+	-vypocitajte akym podielom sa materska spolocnost A podiela na zisku alebo strate spolocnosti G
+		-("nakreslime si obrazok" ... textak mam, v  pici som jak letny sneh)
+			-A->(60%)->B
+			-A->(50%)->C
+			-A->(18)->D
+			-B->(20%)->E
+			-C->(25%)->E
+			-C->(20%)->G
+			* * *
+			-(v podstate je to strom kde od A ideme dole a od kazdeho prislusneho pismenka k prislusnemu dalsiemu pismenku)
+		-cez B:0.6*0.2*0.2=0.024
+		-cez C:0.5*0.25*0.2=0.025
+		-vysledok=0.024+0.025=0.049=4.9%
+
+
+**Sracky k zameru
+	-2 zamere celkovo u nas na skupinu
+	-jeden s gulami to na konci odprednasa pred tabulou forever alone
+	-v histori to bolo pre kazdeho samostatne takze to teraz musime spravit premakane
+	-osnova:(Flash sa zas nestihol vystat)
+	-aby sme mali prestavu: ...(Flash je mokry... fuuuu)
+	-produktom marketingu je aj sluzba(nie len produkt)!
+	-('Snow - Informer' je spievane pomalsie jak tato rozprava)
+	-"vskutocnosti je financny plan prehlad financii" (you dont say bro)
+	
+**MOJ PROJEKT
+	-technicko organizacny plan, ISO normy
+
+**Poznamka do buducnosti
+	-POJEBANY VOICE RECORDER
+
+}
+

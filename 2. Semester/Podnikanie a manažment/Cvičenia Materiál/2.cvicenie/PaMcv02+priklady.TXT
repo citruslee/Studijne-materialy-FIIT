@@ -1,0 +1,177 @@
+*Cvicenie 2
+
+**Komanditna spolocnost
+	-1 alebo viacery spolocnici ktory rucia za zavazky spolocnosti:
+		-celym svojim majetkom = komplementar
+		-do vysky svojho nesplateneho vkladu zapisaneho do obchodneho registra = komanditista
+	-minimalna vyska vkladu kazdeho komanditistu je 250eur
+	-spolocnost vznika zapisom do obchodneho registra
+	-navrh na zapis predkladaju vsetci spolocnosti a prikladaju k nemu spolocensku zmluvu
+	-delenie zisku 
+		-ak spolocenska zmluva neurcuje inak, tak sa medzi skupinu komplementarov a komanditistov rovnym dielom
+			-v ramci skupiny komplementarov rovnym dielom	
+			-v ramci skupiny komanditistov podla vysky splatenych kapitalovych vkladov
+	-organy spolocnosti
+		-statutarny organ - vsetci komplementary
+		-komanditisti niesu statutarny organ, ale maju kontrolnu funkciu
+-Priklad
+	-KS zalozili 4 spolocnici
+		-zaviazali sa vlozit a splatit kapitalove vklady takto:
+			-A (komplementar):	vklad=1200eur	hodnotu_sukromneho_majetku:40000
+			-B (komplementar):	vklad=2000eur	hodnotu_sukromneho_majetku:34000
+			-C (komanditista):	vklad=4300eur	hodnotu_sukromneho_majetku:neruci(ruci iba do vysky nesplateneho vkladu)
+			-D (komanditista):	vklad=3800eur	hodnotu_sukromneho_majetku:neruci(ruci iba do vysky nesplateneho vkladu)
+		-v roku 2011 spolocnost dosiahla zisk pred rozdelenim 12000 eur
+		-v uvedenom roku boli splatene vsetky vklady okrem vkladu spolocnika C ktory bol v sulade so SZ na 70%
+	-vypocitajte podieli na zisky kazdeho spolocnika na v roku 2011, ak spolocenska zmluva neupravuje sposob rozdelenia zisku
+	
+	-A+B=12000/2=6000
+	-C+D=12000/2=6000
+	-A=6000/2=3000(nezdanene zisky)
+	-B=6000/2=3000(nezdanene zisky)
+	-C+D=(zdaneny zisk)6000*0.8=4800 (pocitanie 80% sa zrejme robi troska inac)
+	-C=((4300*0.7)/(4300*0.7)+3800)*4800=(3010/6810)*4800=2121
+	-D=3800/(4300*0.7)+3800=2676
+
+-Priklad
+	-vypocitajte podiely kazdeho spolocnika v roku 2011 ak spolocenska zmluva urcuje rozdelenie zisku 
+		-medzi skupina podla obchodneho zakonnika
+		-vnutry skupin podla splatenych kapitalovych vkladov
+	
+	-A=(1200/3200)*6000=2250
+	-B=(2000/3200)*6000=3750
+	-C a D sa nemeni od ulohy 1 pretoze komandisti uz defaultne rozdeluju podla zadanim stanovenych pravidiel
+	
+-Priklad
+	-vypocitajte podiely na zisku v roku 2011 kazdeho spolocnika ak spolocneska zmluva urcuje rozdelenie zisku
+		-tak medzi skupiny ako aj vnutry skupin podla rucenia majetkom a vysky splatenych kapitalovych vkladov ku dnu delenia zisku
+	
+	-A+B=(((40000+34000+1200+2000)/(40000+34000+1200+2000+3010+3800))*100%) *12000=91.9%*12000=11028
+	-C+D=((3010+3400)/(40000+34000+1200+2000+3010+3800))*8.1%=972*0.81=777.6
+	-A=((1200+40000)/(1200+40000+2000+34000))*11028=5888.2
+	-B=((2000+34000)/(1200+40000+2000+34000))*11028=5139.4
+	-C=((3010)/(3800+3010))*777.6=343.7
+	-D=((3800)/(3800+3010))*777.6=443.9
+
+**s.r.o.
+	-kapitalova spolocnost ktorej zakladne imanie tvoria vopred urcene vklady spolocnikov
+	-minimalny vklad zakladneho imania = 5000 eur
+	-minimalny vklad kazdeho spolonika = 750 eur 
+	-spolocnost moze zalozit 1 - 50 spolocnikov	
+		-ak je to jedna osoba musi splatit cele zakladne imanie a robi sa notarsky zapis
+		-ak je to viac spolocnikov uzatvori sa spolocenska zmluva ktora sa podpise pred notarom
+	-spolocnost vznika zapisom do obchodneho registra
+		-navrh na zapis predkladaju vsetci konatelia 
+			-prikladaju k nemu spolocensku zmluvu
+	-spolocnost ruci za svoje zavazky do vysky svojho imania
+	-spolocnik ruci za zavazky spolocnosti do vysky svojho nesplatene vkladu zapisaneho do obchodneho registra
+	-delenie zisku
+		-spolocnost si povinne vytvara rezervny fond
+			-hned pri zalozeni alebo v prvom roku ked dosiahnu zisk
+			-kazdy rok sa musi doplnit o istu ciastku
+				-odvadza sa od cisteho zisku (zisk po zdaneni)
+				-odvadzaju sa dalsie ciastky na ktorych sa spolocnosti dohodly v spolocenskej zmluve
+		-zvysok zisku sa deli podla pomerov vkladov spolocnikov (splatenych kapitalovych vkladov)
+	-organy(najvyssi->najnizsie)
+		-valne zhromazdenie
+			-schvaluje rocnu uctovnu zavierku
+			-schvaluje rozdelenie zisku
+			-schvaluje stanovy a ich zmeny
+			-rozhoduje o zmene zakladneho imania
+			-rozhoduje o zmene spolocenskej zmluvy
+			-rozhoduje o zlozeni dozornej rady
+			-rozhoduje konateloch
+			-rozhoduje o vyluceni clena
+			-rozhoduje o zruseni spolocnosti
+		-konatelia
+			-su statutarnym organom
+		-dozorna rada
+			-je to kontrolny organ
+	
+-Priklad
+
+	-vypocitajte podiel na zisku kazdeho spolocnika spolocnosti s.r.o. v roku 2011
+	-zisk pred zdanenim 50000 eur
+	-valne zhromazdenie sa dohodlo na rozdeleni zisku:
+		-1.)minimalny pridel do rezervneho fondu = 5% cisteho zisku
+		-2.)investicie = 1667 eur
+		-3.)zvysok zisku sa deli medzi spolocnikov podla obchodneho zakonnika
+	-kazdy z piatich spolocnikov vlozil/splatil kapitalovy vklad vo vyske 1667 eur
+	
+	-cisty_zisk=50000*0.8=40000 (zas cudne delenie percent)
+	-rezervny_fond=40000*0.05=2000
+	-celkova_delena_suma=40000-2000-1667=36333
+	-podiel_kazdeho=36333/5=7266.6
+
+**a.s.
+	-kapitalova spolocnost ktorej zakladne imanie je rozvrhnute na akcie s urcitou menovitou hodnotou
+	-minimalna vyska zakladneho imania je 25000 eur
+	-tvorba zakladneho imania (dva sposoby)
+		-1.)upisanim a splatenim akcii v stanovenej lehote
+			-vtedy sa kona ustanovujuce valne zhromazdenie
+		-2.)splatenim zakladneho imania zakladatelmi
+			-vtedy sa robi notarsky zapis
+	-o zvyseni resp. znizeni zakladneho imania, na navrh predstavenstva rozhoduje valne zhromazdenie
+	-rucenie:
+		-spolocnost ruci za svoje zavazky celym svojim majetkom
+		-akcionar za zavazky spolocnosti neruci
+	-spolocnost moze zalozit
+		-jeden zakladatel = pravnicka osoba
+			-spisovanie zakladatelska listina
+		-viacery zakladatelia	
+			-uzatvaranie zakladatelskej zmluvy
+	-spolocnost vznika zapisom do obchodneho registra
+		-navrh na zapis predkladaju clenovia predstavenstva
+			-prikladaju k nim zakladatelsku zmluvu a stanovy spolocnosti
+	-organy (najvyssie->najnizsie):
+		-valne zhromazdenie
+		-predstavenstvo
+			-je statutarny organ
+		-dozorna rada
+			-je kontrolny organ
+	-a.s. si povinne vytvara rezervny fond (podobne ako s.r.o.)
+	-akcia
+		-definovana obchodnym zakonnikom
+		-je to cenny papier, s ktorym su spojene prava akcionara ako spolocnika podielat sa na:
+			-riadeni spolocnosti
+			-zisku
+			-na likvidacnom zostatku (po zruseni a.s.)
+		-akcia moze zniet na meno alebo dorucitela
+			-ak je na meno je prevoditelna
+				-prevod sa uskutocnuje rubopisom a uskutocnenym prevodu akcie
+			-na dorucitela je neprevoditelna
+				-nachadza sa v zaknihovanej forme
+	-druhy (spravna odpoved na: ake druhy pozname?):
+		-kmenove
+			-su snimi spojene kmenove prava a povinnosti
+		-prioritne
+			-nie su snimi spojene hlasovacie prava
+			-vlastnik ma pravo na prednostne platenie dividendy
+		-zamestnanecke
+			-zamestnanecke su prevoditelne medzi zamestnancami
+
+-Priklad
+	-a.s. ma zakladne imanie 495000eur
+	-tvoria ho akcie s menovitou hodnotou 33 eur na akciu (delenie stanovene v spolocnosti)
+	-z celkoveho poctu stanovenych akcii je 30% prioritnych a 70% kmenovych
+	-spolocnost dosiahla v roku 2011 zisk pred zdanenim 435000 eur
+	-valne zhromazdenie rozhodlo o nasledujucom rozdeleni zisku:
+		-1.)pridel do rezervneho fondu = 10% z cisteho zisku
+		-2.)odmeny statutarnym organom 45000eur
+		-3.)investicie 85000eur
+		-4.)fakultativne (dobrovolne) fondy = 47000eur
+		-5.)dividendy prioritnych akcionarov = 15%
+		-6.)dividendy kmenoveho akcionara = ?
+	-vypocitajte vysku dividendu kmenoveho akcionara
+
+	-zakladne_imanie=495000eur
+	-menovita_hodnota=33eur
+	-kusov_akcii=495000/33=15000ks
+	-prior_akcie=(30%)4500ks
+	-kmen_akcie=(70%)10500ks
+	-po_zdaneni=435000-20%=348000
+	-348000-34800-45000-85000-67000=116200
+	-15% / 33eur = 4.95eur
+	-hodnota_prior_akcii=4.95 * 4500 = 22275eur
+	-hodnota_kmen_akcii=116200-22275=93925eur
+	-dividendy_kmen_akcionara=93925/10500=8.95eur

@@ -1,0 +1,105 @@
+@CT 1
+@LM 1
+@RM 76
+@PL 64
+@TB -----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T-----T
+@MT 2
+@MB 2
+@PO 3
+@PN 1
+@OP 
+@LH 6
+Spr va pam„ti na 80386 - I. Ÿasœ: segment cia
+Pou§itie segmentov pri  adresovan¡ na 80x86 vçetci poznaj£  zo SOJ (registre
+CS,  DS, ES,  SS). V  chr nenom re§ime  (protected mode)  pristupuje ochrana
+pam„ti, pr¡stupov‚ pr va, zv„Ÿçenie max. ve–kosti  segmentu od 386 je na 4GB
+(v r mci segmentu sa pou§¡va 32 offset).
+
+Spr va pam„ti na 80386 - II. Ÿasœ: str nkovanie
+(zabudnime na segmenty, nech to zatia– nekomplikujeme)
+Procesor vyr ba  fyzick£ adresu ve–kosti  32 bitov. Ka§dì  proces m  logickì
+adresovì priestor  takisto 32 bitovì. Ak  je vypnut‚ str nkovanie (bit  P6 v
+registri CR0 je nulovì), logick  adresa  = fyzick  adresa (ochrana pam„ti sa
+m“§e robiœ cez segmenty). Inak sa adresa preklad .
+Preklad logickej (nazìva sa line rna) adresy na fyzick£ sa realizuje pomocou
+dvoj£rovåovej tabu–ky str nok.
+
+Line rna adresa:
+         31            22               12                 0
+         ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+         ³  Adres r      ³   Tabu–ka      ³   Offset        ³
+         ÀÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÙ
+            ³   Str nkovì     ³     Tabu–ka           ³
+            ³   adres r       ³     str nok           ³          ÚÄÄÄÄÄÄÄ¿
+            ³ ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿  ³   ÚÄÄÄÄÄÄÄÄÄÄÄÄ¿1023  ³          ³       ³
+            ³ ³            ³  ³   ³            ³      ³          ³       ³
+            ³ ³            ³  ³   ³            ³      ³          ³Fyzick ³
+            ³ ³            ³  ³   ³            ³      ³12 bitov  ³ pam„œ ³
+            ³ ³            ³  ³   ³            ³      ³          ³<= 4GB ³
+Adresa      ³ ³            ³  ³   ³            ³      v          ³       ³
+adres ra    ³ ³            ³  ÀÄÄ>³============³ÄÄÄÄÄ>+ ÄÄÄÄÄÄÄÄ>³       ³
+procesu     ³ ³            ³      ³            ³ 20bit    32bit  ³       ³
+v CR3:      À>³============ÃÄ¿    ³            ³         Fyzick  ³       ³
+ÚÄÄÄÄÄÄÄÄÄ¿   ³            ³ ³    ³            ³         adresa  ³       ³
+³  DBA    ÃÄÄ>ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ ÀÄÄÄ>ÀÄÄÄÄÄÄÄÄÄÄÄÄÙ                 ³       ³
+ÀÄÄÄÄÄÄÄÄÄÙ    31         0        31         0                  ³       ³
+31       12                                                      ÀÄÄÄÄÄÄÄÙ
+
+
+Ak  je ve–kosœ str nky? (v str nke sa adresuje 12 bitmi)
+Ko–ko pam„ti zaber  jedna tabu–ka str nok? (1024 polo§iek, 32 bitov ka§d )
+Ko–ko  fyzickej  pam„ti  adresuje  jedna  tabu–ka  str nok?  (1024 x ve–kosœ
+str nky)
+Ko–ko tabuliek  str nok potrebujem, ak program  vyu§¡va 1MB pam„ti (to  je v
+s£Ÿasnosti priemern  ve–kosœ pre program)?
+SpoŸ¡tajte  adresovì  priestor  procesu!  (Adres r  =  1024  tabuliek, ka§d 
+tabu–ka 1024 str nok)
+Ak   je  vìhoda  dvoj£rovåovìch  tabuliek  str nok?  (Ka§dì  proces mus¡ maœ
+str nkovì adres r + tie tabu–ky  str nok, ktor‚ sa naozaj pou§¡vaj£. Ostatn‚
+polo§ky  v  str nkovom  adres ri  sa  oznaŸia  ako neexistuj£ce. Pou§¡vanìch
+tabuliek str nok m“§e byœ okolo 10. )
+Porovnajte priestor, ktorì  zaber  10 tabuliek str nok s  pr¡padom, keby ich
+musel byœ plnì poŸet.
+
+Ako presvedŸiœ 80386, aby pou§¡val iba segmenty? (Nezapn£œ str nkovanie)
+Ako  ho  presvedŸiœ,  aby  pou§¡val  iba  str nkovanie?  (Segmenty sa vypn£œ
+nedaj£, ale d  sa nastaviœ jedinì  segment ve–kosti 4GB, ktorì obsiahne celì
+adresovì priestor procesu. Vçetky segmentov‚ registre sa n¡m naplnia - potom
+staŸ¡  pou§¡vaœ 32  offset v  r mci segmentu  = line rna  adresa. V„Ÿçina 32
+bitovìch OS to  rob¡ pr ve takto. V jazyku C  sa m“§ete stretn£œ s oznaŸen¡m
+FLAT memory model.)
+
+@PA
+Advanced inform cie o str nkovan¡ 80386 (nepovinn‚):
+Polo§ka  v  adres ri  aj  v  tabu–ke  vyzer   asi  takto:
+- 20 bitov  adresa str nkov‚ho r mca (zaŸiatku  str nky vo fyzickej pam„ti),
+- bit P: str nka je pr¡tomn  vo fyzickej  pam„ti (inak Page Fault - INT 0Eh,
+  line rna adresa je v CR2 a operaŸnì syst‚m mus¡ str nku zohnaœ),
+- bit W: do str nky m“§e proces zapisovaœ
+- bit U: str nka sa m“§e pou§¡vaœ aj v neprivilegovanom re§ime
+- bit A: str nka bola pou§it  (Accessed)
+- bit D: str nka bola modifikovan  (Dirty)
+- 3 bity AVL pre pozn mky operaŸn‚ho syst‚mu, 4 bity rezerva
+
+Pri  prepnut¡ procesu  sa CR3  napln¡ adresou  fyzick‚ho r mca,  v ktorom sa
+nach dza str nkovì adres r nov‚ho procesu. OperaŸnì syst‚m sa mus¡ postaraœ,
+aby bol pr¡tomnì vo fyzickej pam„ti!!!  Tabu–ky ani str nky tam byœ nemusia,
+m“§u sa vyœahovaœ zo z lo§nej pam„te (z disku) postupne.
+
+Na  zrìchlenie   prekladu  line rnej  adresy   str nky  na  fyzick£   adresu
+str nkov‚ho r mu sa takmer u  vçetkìch procesorov pou§¡va asociat¡vna pam„œ.
+Asociat¡vna pam„t obsahuje polo§ky v  tvare (str nka, str nkovì r m), priŸom
+k–£Ÿom pre vyhlad vanie je str nka.  Adresovac¡ hardv‚r h–ad  adresu str nky
+vo vçetkìch polo§k ch  paralelne, Ÿo je ve–mi rìchle.
+Iba  ak  nen jde  spr vnu  polo§ku,  mus¡  zisœovaœ  adresu str nkov‚ho r mu
+pomocou tabu–ky str nok, Ÿo trv  ove–a dlhçie.
+U 80386  sa  asociat¡vna  pam„œ  vol   TLB  (Translation  Look-aside Buffer)
+a obsahuje  4x8 polo§iek.  Ak je  v  nej  spr vna adresa,  preklad je  ve–mi
+rìchly. Inak mus¡ z CR3 zobraœ  adresu adres ra, pripoŸ¡taœ k nej hornìch 12
+bitov  adresy,  odtia–  preŸ¡taœ  4  bajty,  zobraœ  z  nich adresu tabu–ky,
+pripoŸ¡taœ  k nej  strednìch 12  bitov,  preŸ¡taœ  4 bajty  a z  nich zobraœ
+fyzick£  adresu  r mca.  Naçœastie,  programy  s£  p¡san‚ rozumne a v„Ÿçinou
+pou§¡vaj£ susedn‚ adresy, ktor‚ s£ v tom istom r mci. A keÔ§e v TLB m“§e byœ
+32 adries r mcov, zrìchlenie je poriadne.
+TLB  sa mus¡  vypr zdniœ po  ka§dej zmene  v tabu–k ch  str nok, po prepnut¡
+procesu a podobne.

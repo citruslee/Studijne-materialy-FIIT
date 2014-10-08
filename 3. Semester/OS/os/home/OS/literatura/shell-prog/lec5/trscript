@@ -1,0 +1,24 @@
+#!/bin/sh
+#####################################################################
+# Program:           trscript                                       #
+# Author:            Erich Franz Stocker (c)                        #
+# Date-Written:      02/02/98                                       #
+# System:            CSI235 Unix Shell - pipes and filters          #
+# Synopsis:                                                         #
+#    This script demonstrates the basic replacement capabilities of #
+#    the tr filter.  It reads the fixedfile first via pipeline and  #
+#    then via redirection and changes one "string" to another.      #
+#####################################################################
+echo "Using pipeline use tr to change all e to X"
+echo "------------------------------------------"
+cat fixedfile|tr 'e' 'X'
+echo "Use redirection to to the same thing"
+echo "-------------------------------------"
+tr 'e' 'X' <fixedfile
+echo "Using pipeline change a group of chars rather than just one"
+echo "Replaces Je with QJ, J with Q and e with J and n with Z"
+echo "-----------------------------------------------------------"
+cat fixedfile |tr "Jen" "QJZ"
+echo "Replace colon with comma and at same time squeeze out multiple commas"
+echo "---------------------------------------------------------------------"
+tr -s ':' ','<trfile

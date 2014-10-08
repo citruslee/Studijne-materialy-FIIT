@@ -1,0 +1,61 @@
+1. Porovnajte techniku DFD a diagram pripadov pouzitia; uvazujte aspon 3 hladiska
+ na zaklade ktorych ich porovnate
+
+DFD:
+Modeluju sa zakladne funkcie softveru: prenos informaci, uchovavanie informacii, transformacia informacii. Podstata: Opis procesov v systeme a toku udajov medzi nimi. DFD zobrazuje system ako siet procesov. Vrchol = Proces/ulozisko/externa entita
+hrana = tok udajov
+
+USE CASE:
+Zachytenie funkcionality z pohladu pouzivatela. Opisuje CO system robi, uvazuju sa vsetky sposoby pouzitia systemu. Pripady pouzitia opisuju interakciu pouzivatela so systemom. Vrchol = Hrac/Pripad pouzitia, hrana = vztah
+
+3. Vysvetlite princip mutacneho testovania.
+
+Testoavcie vstupy musia byt take, aby rozlisili medzi originalnym programom a mutovanym(zmenenym) programom. Chyby urceneho typu sa zavedu do programu, testuje sa s cielom identifikacie zavedenych chyb, ak sa identifikuju vsetky zavedene chyby, povodny program by nemal mat tieto chyby.
+
+
+4. Uvedte dolezite principy spiraloveho modelu zivotneho cyklu. Aky je vztah s vodopadnym,
+s evolucnym, iskr. modelom?
+
+kazde kolo spiraly = etapa procesu tvorby softveru. dobra viditelnost procesu vyvoja, kazdy segment spiraly v kazdom kole => dokument.
+
+
+5. Uvedte ake modely umoznuje vytvarat jazyk UML (priradte aj jednotlive techniky). Uvazujte
+viacere dimenzie modelu.
+
+Funkcionalny: Diagram pripadov pouzitia, 
+Objektovy: Diagram tied, objektov
+Spravania: sekvencny diagram, diagram spoluprace, stavovy diagram, diagram aktivit
+Implementacny: Diagram suciastok, diagram rozmiestnenia
+
+6. Co je to RUP?
+
+Rational Unified Process - metoda objektovo orientovanej analyzy a navrhu. 
+
+7. Co je to regresne testovanie?
+testovanie v pripade ak uz existoval nejaky system.
+
+8. Co je to walkthrough testovanie?
+Je to metoda statickeho overovania, neformalna prehliadka systemu. Zaklada sa na statickej prehliadke vytvorenych dokumentov a textov programu
+
+9. Co je to inspection testovanie?
+Je to metoda statickeho overovania, formalna prehliadka systemu. Zahrna obycajne aj moderatora, citatela a zapisovatela poznamok, prebieha podla stanovenych krokov. 
+
+http://www.geocities.com/pammal_sureshbabu/software_testing/qa6.html
+
+10. Co je visual modeling?
+Je to sposob ako sa pozerat na problemy pouzitim modelov organizoavanych okolo skutocnych napadov
+
+11. Na co je visual modeling?
+Na lepsie pochopenie poziadavok, jasnejsie navrhy a lepsie udrziavatelne systemy.
+
+12. Zakony
+Kontinualnej zmeny: Pokial sa systemy priebezne neupravuju, klesa ich pouzitelnost
+Zvysujucej zlozitosti: Zlozitost systemu pocas vyvoja rastie, ak nie je vynalozena praca na jej udrzanie alebo znizenie
+Samoregulacie: Gloablne procesy vyvoja systemov su samoregulujuce
+Zachovania organizacnej stability:Pokial spetnovazobne mechanizmy nie su spravne nastavene, priemerna miera globalnej aktivity vo vyvijajucom sa systeme ma tendenciu ostat konstantna
+Zachovania poznania: V zasade inkrementalny rast a dlhodoby rast systemov ma tendenciu klesat
+Kontinualneho rastu: Funkcionalita systemu musi byt stale zvysovana aby udrzala spokojnost pouzivatela.
+Klesajucej kvality: Kvalita systemov sa bude javit klesajuca, pokial nie je system upravovany
+Vplyvu spatnej vazby: Vyvojove systemy su multi-urovnove, multiokruhove, multiagentove spetnovazobne systemy
+
+system = E-type system

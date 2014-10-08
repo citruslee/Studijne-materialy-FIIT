@@ -1,0 +1,309 @@
+PIKT / Prednáška 7 / 8.4.2013
+Písomka – 15.4.2013
+	začína vraj naozaj 7:15 (aby sme si pospali)
+	Trvá celú prednášku
+DÚ 
+	Písomná nespomínala nič nové
+	Pozrieť si Vyhláška NBU č. 136/2009 Z. z. (pozrieť si)
+Autorské práva
+Autorské práva zahŕňajú:
+	Výhradné osobnostné práva
+	Výhradné majetkové práva
+
+Osobnostné právo
+	Autor ma právo označiť svoje dielo menom alebo pseudonymom
+	Neoznačiť...
+	Rozhodnúť sa o zverejnení svojho diela
+	Na nedotknuteľnosť svojho diela - najmä na ochranu pred akoukoľvek nedovolenou zmenou alebo iným nedovoleným zásahom do svojho diela
+	Osobnostnej zložky práva sa autor nemôže vzdať - práva sú neprevoditeľné a smrťou autora zanikajú
+Po smrti autora vzniká na základe autorského zákona
+	autorovým blízkym osobám v zmysle Občianskeho zákonníka
+	autorským zväzom
+	profesiným komorám, organizáciám kolektívnej správy
+	Právo na to, aby si nikto neosvojil autorstvo k dielu ( označenie diela menom, alebo pseudo )
+	a aby bolo dielo používané spôsobom neznižujúcim jeho hodnotu
+Výhradné majetkové práva (autora)
+	Sú to napríklad:
+	Právo použiť počítačový program
+	Právo udeliť inému súhlas na použitie
+	Vyhotovenie rozmnoženiny
+	Verejné rozširovanie rozmnoženiny
+	Spracovanie, preklad a adaptácia počítačového programu
+	Zaradenie počítačového programu do súborného diela
+	Verejné vystavenie diela
+	Verejné vykonanie diela
+	Verejný prenos diel
+	Udelením súhlasu inej osobe autorovi tieto práva nezanikajú
+	Trvajú počas autorovho života a 70 rokov po jeho smrti (jeho dedičia, potom je dielo voľné)
+	Pri diele spoluautorov pri spojených dielach trvajú počas života posledného z autorov a 70 rokov po jeho smrti 
+Majetkové práva
+1. Autor má právo použiť svoje dielo
+2. Autor má právo udeľovať súhlas na každé použitie diela, najmä na:
+	vyhotovenie kópie
+	 verejné rozširovanie originálu diela, predajom alebo inou formou
+	 verejné rozširovanie jeho nájmom, alebo vypožičaním
+	spracovanie, preklad a adaptáciu diela
+	zaradenie diela do súborného diela
+	verejné vystavenie diela
+	verejné vykonanie diela
+	 verejný prenos diela
+Práva podľa odsekov 1 2 udelením súhlasu autora podľa odseku 2 nezanikajú
+Autor je len povinný strpieť použitie diela inou osobou v rozsahu udeleného súhlasu
+Trvanie majetkových práv
+	Majetkové práva trvajú, ak nie je v tomto zákone ustanovené inak, počas autorovho života a 70 rokokv po jeho smrti
+	Pri diele spoluautorov a pri spojení diela, práva trvajú počas života posledného z autorov a 70 rokov po jeho smrti
+	Pri spoločnom diele trvajú 70 rokov po jeho zverejnení
+Ak bolo dielo označené menami autorov, ktorí dielo vytvorili, majetkové práva trvajú počas života posledhéno z autorov a 70 rokov po jeho smrti
+	Pri diele zverejnenom pod pseudonymom alebo pri anonymnom diele
+70 rokov po jeho zverejnení
+
+Záväzkové právo autorské právo
+	Zmluva o vytvorení diela
+	Licenčná zmluva
+Zmluva o vytvorení diela
+	Zmluvou sa autor zaväzuje vytvoriť pre objednávateľa dielo
+	Môže sa dohodnúť odmena
+	Autor je povinný vytvoriť dielo osobne
+	Ak má dielo nedostatky, objednávateľ môže od zmluvy odstúpiť
+Právo použiť dielo
+Zmluvou o vytvorení diela ani odovzdaním veci, ktorej prostredníctvom je dielo vytvorené:
+
+	Nenadobudne objednávateľ právo použiť toto dielo ak nie je uvedené inak
+	Súčasne so zmluvou musí uzatvoriť objednávateľ s autorom licenčnú zmluvu
+Zmluva o vytvorení počítačového programu obsahuje:
+1. Zmluvné strany 
+	Autor: FO, programátor
+	 Objednávateľ: FO, PO
+2. Predmet zmluvy - podrobná špecifikácia
+3. Autorská odmena za vytvorené dielo
+	termín dokončenia
+	splatnosť autorskej odmeny
+4. čas plnenia
+	Stanovenie termínu dokončenia diela
+	Dodatočná lehota plnenia
+5. Povinnosti autora
+	Vytvoriť program osobne
+	... v stanovenom termíne
+	 odstrániť nedostatky v lehote
+6. Práva a povinnosti objednávateľa 
+	Možnosť odstúpiť od zmluvy
+	 Povinnosť predložiť autorovi potrebné podklady/súčinnosť objednávateľa
+7. Prechod vlastníckeho práva k predmetu zmluvy
+8. Právo použiť dielo - povinnosť uzatvorenia licenčnej zmluvy
+9. Podpisy zmluvných strán
+
+Licenčná zmluva
+
+Predmet licenčnej zmluvy
+	súhlas použitia diela
+	Licenčnou zmluvou udeľuje autor nadobúdateľovi súhlas na použitie diela
+Pojem licenčná zmluva
+	Licencia – sloboda, dovoliť niečo, udeliť súhlas, oprávnenie k využitiu nehmotného statku inou osobou bez toho, aby došlo k jeho scudzeniu
+	V právnom jazyku – oblasť práva duševného vlastníctva – vo význame povolenia (súhlasu)
+Druhy licencií
+	Zmluvné
+	Odplatné
+	Bezodplatné
+	Zákonné
+	 Odplatné
+	 Bezodplatné
+
+	Nútené – nedobrovoľné, ktoré sú odplatné a ktoré sú typické pre väčšinu priemyselných práv
+Predmetom licencie
+	majetkové dispozičné právo
+	Poskytovateľovi ostáva majetkové právo, len musí strpieť zásah do svojho práva v rozsahu ako vyplýva z licenčnej zmluvy
+Obligátorné náležitosti licenčnej zmluvy
+Licencia obsahuje:
+	Spôsob použitia
+	Rozsah použitia
+	Čas použitia
+	Odmena za použitie
+Forma licenčnej zmluvy
+	Licenčná zmluva je v autorskom zákone postavená na zásade formálnosti
+	Vyžaduje uzavretie v písomnej forme
+	Nedodržanie v písomnej forme má za následok absolútnu neplatnosť právneho úkonu §40 Autorského zákona
+Výhradná a nevýhradná licencia
+Ak autor udelil licenciu
+	Nesmie udeliť tretej osobe licenciu na spôsob použitia diela udelený výhradnou licenciou
+	Autor je povinný ak nie je dohodnuté inak zdržať sa použitia diela spôsobom na ktorý udelil výhradnú licenciu
+Ak autor neudelil výhradnú licenciu
+	Nie je dotknuté právo autora použiť dielo spôsobom, na ktorý nevýhradnú licenciu udelil
+	Nie je dotknuté právo autora udeliť licenciu tretej osobe
+Odmena
+	Pevná
+	Výnosová
+	Kombinovaná
+Prechod a zánik licencie
+	Zánik právnickej osoby, ktorej bola licencia udelená prechádzajú práva a povinnosti na jej právneho spôsobu
+	Smrťou fyzickej osoby, na ktorú bola licencia udelená prechádzajú práva a povinnosti na dedičov
+	Ak niet právneho zástupcu, licencia zaniká
+
+Tvorba počítačoých programov v zamestnaneckom diele
+Zamestnanecké dielo
+Majetkové práva k zamestnaneckému dielu vykonáva zamestnávateľ
+	Vo svojom mene
+	Na svoj účet (ak nie je uvedené inak)
+Zamestnávateľ môže právo výkonu majetkových práv autora
+	Podstúpiť tretej osobe len so súhlasom autora
+	Neplatí ak ide o predaj podniku alebo samostatnej organizačnej zložky podniku
+Ak zamestnávateľ vykonáva majetkové práva autora k zamestnaneckému dielu, platí že
+	Autor udelil súhlas na zverejnenie tohto diela
+	Aby zamestnávateľ toto dielo uvádzal na verejnosti pod svojím menom (ak nie je uvedené inak)
+	Osobnostné práva autora k zamestnaneckému dielu nie sú dotknuté
+Skončením pracovno-právneho vzťahu ostávajú majetkové práva nedotknuté
+Osobnostné práva zamestnancovi
+Majetkové práva zamestnávateľovi
+
+Elektronický obchod
+Legistlatíva
+	Obchodný zákonník
+	Občiansky zákonník (opačne tieto dva)
+	Zákon o elektronickom obchode 22/2004
+	Zákon o štátnej kontrole vnútorného trhu vo veciach ochrany spotrebiteľa 
+	ďalšie vybrané právne predpisy z oblasti obchodného práva
+
+Služby informačnej spoločnosti
+Sú to:
+	Služby poskytujúce on-line informácie
+	Komerčná komunikácia
+	Služby poskytujúce nástroje na vyhľadávanie, prístup a získavanie údajom
+	Služby pozostávajúce z prenosu informácií prostredníctvom komunikačnej siete
+Nie sú: 
+	Televízne a rozhlasové vysielanie
+	Použitie elektronickej pošty alebo rovnocennej individuálnej komunikácie na uzatvorenie zmlúv
+	Zmluvný vzťah medzi zamestnancom a zamestnávateľom
+	Činnosti ktoré kvôli svojej povahe nemôžu byť vykonávane na diaľku (napríklad lekárske poradenstvo)
+Môže poskytovať:
+	Každá fyzická alebo právnická osoba
+	Nie je potrebné povolenie ani registrácia
+Podnikanie
+	Sústavná činnosť vykonávaná podnikateľom vo vlastnom mene na vlastnú zodpovednosť za účelom dosiahnutia zisku
+Podnikateľ a elektronický podnikateľ
+	Osoba zamestnaná v obchodnom registri
+	Osoba ktorá podniká na základe živnostenského oprávnenia
+	Osoba, ktorá podniká na základe iného oprávnenia podľa osobných predpisov
+	Fyzická osoba, ktorá vykonáva poľnohospodárku výrobu a je zapísaná do evidencie podľa osobitného predpisu
+Tento zákon upravuje 22/2004 Z. z.
+	Vzťahy medzi poskytovateľom služieb a ich príjemcom, ktoré vznikajú pri ich komunikácií na diaľku alebo počas spojenia elektronických zariadení elektronickou komunikačnou sieťou
+	Dohľad na dodržiavaním zákona
+	Medzinárodnú spoluprácu v elektronickom obchode
+Zákon o e-obchode
+	Smernica o e-obchode (Smernica č. 2000/31/ES z 8. júna 2000 o určitých právnych aspektoch služieb IS na vnútornom trhu)
+	Občiansky zákonník
+	Zákon o ochrane spotrebiteľa
+	Vyhláška NBU č. 136/2009 Z. z. (pozrieť si)
+Služba informačnej spoločnosti
+	Služba poskytovaná na diaľku počas spojenia elektronických zariadení na diaľku 
+	Nepatrí sem rozhlasové, televízne, hlasové telefonické, telefaxové služby, ktorých obsah vylučuje ich poskytovanie na diaľku
+	služba poskytovaná na diaľku počas spojenia elektr. zariadeniami elekt. komunikačnou sieťou spravidla za úhradu na žiadosť príjemncu služby informačnej spoločnosti, najmä komerčná komunikácia, spracovanie, prenos, uchovávanie, vyhľadávanie alebo zhromažďovanie dát a elektronická pošta okrem osobnej elektronickej pošty. Službou informačnej spoločnosti nie sú rozhlasové a TV vysielanie vrátane teletextu, hlasové telefonické služby, telefaxové služby, ktorých obsah vylučuje ich poskytovanie na diaľku
+Poskytovateľ služieb IS
+	fyzická alebo právnická osoba, ktorá na účely podnikania, alebo iné na iné účely poskytuje služby IS
+	umiestnenie elektronických zariadení nie je nutné aby boli tam kde je sídlo spoločnosti
+	FO alebo PO, ktorá na účely podnikania alebo na iné účely posyktuje služby informačnej spoločnosti. Ak je poskytovateľ služieb podnikateľom, umiestnenia elektronických zariadení potrebných na poskytovanie služieb informačnej spoločnosti nie je pre určenie sídla alebo miesta podnikania rozhodujúce
+Príjemca služieb IS
+	fyzická alebo právnická osoba, ktorá využíva IS
+	ak fyzická osoba nevyužíva služby za účelom podnikania, považuje sa za spotrebiteľa
+	FO alebo PO, ktorá využíva služby informačnej spoločnosti, najmä vyhľadáva alebo poskytuje informácie. Ak je príjemcom služieb FO, ktorá využíva služby informačnej spoločnosti na iný účel ako na podnikanie alebo výkon svojho povolania, považuje sa za spotrebiteľa
+Komerčná komunikácia
+	informácia o tovare, službe, reklama, ponuky z predaja
+	informácie o tovare, službe, podnikateľovi vrátane reklamy, ponuky a predaja tovaru okrem:
+	informácií umožňujúcich priamy styk s poskytovateľom služieb prostredníctvom elektronického zariadenia
+
+Všeobecné informačné povinnosti
+	Poskytovateľ služby je povinný príjemcovi služby poskytnúť na elektronickom zariadení poskytnúť najmä tieto informácie
+	 názov, obchodné meno, sídlo poskytovateľa v prípade právnickej osoby a v prípade fyzickej osoby meno, priezvisko, miesto podnikania, bydlisko
+	 Daňové identifikačné číslo
+	 adresu a elektronickej pošty a telefónne číslo
+	 označenie registra, číslo zápisu
+	 názov a adresu organu dozoru alebo dohľadu, ktorému činnosť poskytovania podlieha
+	Zľava, odmena, dar, spotrebiteľská hra alebo súťaž musí byť od základnej ponuky rozlíšiteľná a podmienky na jej získanie musia byť ľahko prístupné, zrozumiteľné a jednoznačné
+	Poskytovateľ služby nesmie doručovať informácie komerčnej komunikácie elektronickou poštou, ak ich príjemca služby vopred nevyžiadal
+Ak je pri komerčnej komunikácii súčasťou ponuky tovaru a služieb osobitná ponuka, napríklad zľava, odmena, dar, spotrebiteľská hra alebo súťaž, musí byť od základnej ponuky pre príjemcu služieb rozlíšiteľná, a podmienky, ktoré musia byť splnené na jej získanie alebo na účasť v nej, musia byť ľahko prístupné, zrozumiteľné a jednoznačné.
+
+Poskytovateľ služieb nesmie doručovať informácie komerčnej komunikácie elektronickou poštou, ak si ich príjemca služby vopred nevyžiadal !! SPAM
+Na uzatváranie zmlúv prostredníctvom elektronických zariadení sa vzťahujú osobitné predpisy, ak tento zákon neustanovuje inak. Ak sa vyžaduje aby písomný právny úkon bol uchovaný v origináli, elektronický dokument túto požiadavku spĺňa ak sú vytvorené podmienky nezameniteľnosti a spoľahlivosti od jeho prvého prezentovania
+
+Zmluvy uzatvorené prostredníctvom elektronických zariadení
+
+Na uzatváranie zmlúv prostredníctvom elektr. zariadení sa vzťahujú osobitné predpisy, ak tento zákon neustanovuje inak. Ak sa vyžaduje, aby písomný právny úkon bol prezentovaný alebo uchovaný v origináli, elektronický dokument túto požiadavku spĺňa, ak sú vytvorené podmienky jeho nezmeniteľnosti a spoľahlivosti od jeho prvého prezentovania v konečnej podobe a možno ho v tejto podobe vždy prezentovať osobe, ktorej je určený
+Poskytovateľ služby je povinný
+	Príjemcovi služieb vytvoriť také podmienky, ktoré umožnia zistiť a opraviť chyby jeho úkonov na elektronickom zariadení pred odoslaním objednávky
+	Príjemcu služieb pred odoslaním jeho objednávky jednoznačne a zrozumiteľne informovať o 
+	úkonoch potrebných na uzavretie zmluvy
+	technických prostriedkoch na zistenie a opravu chýb
+	jazyku ponúkanom na uzatvorenie zmluvy
+	zmluvných lehotách a zmluvných podmienkach,
+	osobitných spravovacích poriadkoch ak sú na poskytovanie služby ustanovené
+	Poskytovateľ služby je povinný elektronicky potvrdiť objednávku bezodkladne po jej doručení, objednávka a potvrdenie o prijatí sa považujú ak zúčastnené osoby majú k nim priamy elektronický prístup
+	Prostredníctvom elektronických zariadení nie je možno uzatvoriť zmluvu
+	 na ktorú je potrebné rozhodnutie súdu, orgánu, verejnej správy alebo notára
+	 o zabezpečení záväzkov
+Vylúčenie zodpovednosti poskytovaní služieb
+	Poskytovateľ služby nezodpovedá za prenášané informácie  ak služby IS pozostávajú výlučne z prenosu informácií v elektronickej komunikačnej sieti a poskytovateľ
+	 Nedal podnet na prenos informácií
+	 nevybral príjemcu informácií
+	 nezostavil ani neupravil informácie
+	Ak poskytovateľ služieb dozvie o protiprávnosti takých informácií, je povinný ich odstrániť z elektronickej komunikačnej siete
+Ak sa poskytovateľ dozvie o protiprávnosti informácie, je povinný odstrániť ich z elektr. komunikačnej siete, alebo aspoň zamedziť k nim prístup. Súd môže nariadiť poskytovateľovi služieb ich odstránenie z elektronickej kom. siete aj vtedy, ak sa poskytovateľ služieb o ich protiprávnosti nedozvedel.
+
+Dohľad
+	Dohľad vykonáva Slovenská obchodná inšpekcia
+Medzinárodnú spoluprácu v elektr. obchode
+Poskytuje Ministerstvo hospodárstva SR: 
+	poskyutje pomoc a informácie komisii a št. orgánom členských štávo a to najmä prostr. elektr. zariadení na určené kontaktné adresy
+	poskytuje pomoc a informácie poskytovateľom služieb a príjemcom služieb o právach a povinnostiach podľa tohto zákona, najmä o:
+1. zmluvných právach a povinnostiach, vybavovaní sťažností, reklamácií, uplatnení nárokov na náhradu škody a riešení sporov
+2. inštitúciách, združeniach alebo orgánoch verejnej správy, od ktorých môžu získať ďalšie informácie alebo pomoc
+
+Slovenská obchodná inšpekcia a samosprávne stavovské organizácie sú kontaktným miestom pre príslušné orgány a stavovské organizácie
+
+Vymedzenie o zákona o e-obchode
+	Tento zákon sa nevzťahuje na služby IS, ktorých predmetom sú
+	 dane a poplatky
+	 lotérie a iné podobné hry
+	 chránené osobné údaje
+	 služby notárov v rozsahu ich verejnej právomoci
+	 služby advokátov
+	 úkony súdnych exekútorov
+Pojem Elektronický obchod
+	Nákup a predaj tovarov a služieb prostredníctvom internetu a ďalších počítačových sietí
+	Obchod uskutočňovaní elektronickými prostriedkami
+	Uskutočňovanie marketingu, predaja, nákupu tovaru alebo služieb
+	Tradičný obchod iba uskutočňovaný elektronickými zariadeniami
+Elektronický obchod z  hľadiska práva
+	Prejav vôle medzi dvoma alebo viacerými subjektmi
+	vykonaný prostredníctvom elektronických prostriedkov
+	súvisiaci s konaním určenom o obchode, pričom obchod je z časti alebo úplne prenášaný prostredníctvom elektronických komunikácií, ktoré umožňujú subjektom vzájomnú komunikáciu
+Druhy elektronického obchodu
+	B2B – medzi podnikateľmi
+	B2C – medzi podnikateľom a spotrebiteľom
+	B2A – medzi podnikateľom a štátnou správou
+	C2A – medzi spotrebiteľnom a štátnou správou
+	B2E – medzi podnikateľom a zamestnancom
+Z hľadiska všeobecného vymedzenia e-obchodu
+ - 2 Základné klasifikácie:
+1. elektr. obchod priamy - všetky procesy sa realizujú v prostredí siete a to vrátane objednávky, platby a dodania tovaru al. služby
+2. elektr. obchod nepriamy - elektr. objednávatnie hm. tovarov, ktoré musia byť doručené fyzicky t. j. tradičnými prostriedkami
+
+Smernica o elektronickom obchode
+1. Pojem "služby informačnej spoločnosti"
+ - služby poskytujúce on-line informácie
+ - komerčná komunikácia
+ - služby, ktoré poskytujú nástroje umožňujúce vyhľadávanie, prístup  a získavanie údajov
+ - služby pozostávajúce z prenosu informácií prostrd. kom. siete
+ - služby počívajúce v ukladaní informácií poskytnutých príjemcom služby na hosťovskom počítači
+
+Čo nie je službou informačnej spoločnosti:
+ - televízne, rozhlasové vysielanie, pretože sa neposkytuje na žiadosť jednotlivca
+ - použitie elektr. pošty alebo rovnocennej individuálnej komunikácie na uzatváranie zmlúv medzi takýmito osobami
+ - zmluvný vzťah medzi zamestnanco ma zamestnávateľom
+ - činnosti, ktoré kvôli svojej povahe nemôžu byť vykonávatné na diaľku a elektronicky
+
+Sloboda poskytovania služieb informačnej spoločnosti
+Služby informačnej spoločnosti môže poskytovať:
+ - každá FO a PO
+ - na poskyt. služieb inf. spoločnosti nie je potrebné povolenie ani registrácia
+
+Vyhláška NBÚ 136/2009 o spôsobe a postupe používania elektr. podpisu v obchodnom styku a administratívneho styku
+POZRIE SI KAŽDÝ DOMA !!! :-)
+PIKT 7 – 8.4.2013	10

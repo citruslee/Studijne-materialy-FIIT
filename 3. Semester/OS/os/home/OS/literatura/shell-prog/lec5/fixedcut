@@ -1,0 +1,23 @@
+#!/bin/sh
+#####################################################################
+# Program:           fixedcut                                       #
+# Author:            Erich Franz Stocker (c)                        #
+# Date-Written:      02/02/98                                       #
+# System:            CSI235 Unix Shell - pipes and filters          #
+# Synopsis:                                                         #
+#    This bourne script demonstrates the output of cut commands when#
+#    characters are cut from a field with information in fixed char #
+#    positions.                                                     #
+#####################################################################
+echo "cut out just the fixed occupation characters"
+echo "--------------------------------------------"
+cut -c24-33 fixedfile
+echo "cut out just the 35th char"
+echo "--------------------------"
+cut -c35 fixedfile
+echo "cut out just the fixed name characters"
+echo "--------------------------------------"
+cut -c1-23 fixedfile
+echo "cut out just the fixed age characters"
+echo "--------------------------------------"
+cut -c35- fixedfile

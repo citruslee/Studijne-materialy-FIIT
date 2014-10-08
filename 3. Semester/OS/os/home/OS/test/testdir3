@@ -1,0 +1,1137 @@
+#! /bin/tcsh
+#  testdir3 - skript vytvori sadu adresarov na testovanie skriptov
+#
+#  pouzitie: testdir3
+#
+#  Branislav Steinmuller, marec 2001 (steinmul@dcs.elf.stuba.sk)
+#
+
+#set histchars = ""
+
+if (! $?progfile) then
+	if ("$0" =~ /*) then
+        	set progfile = "$0"
+	else
+	        set progfile = "$cwd/$0"
+	endif
+endif
+
+
+
+#alias call      "source $progfile -c \!*"
+alias call      "source $progfile -c"
+alias return    "exit 0"
+
+
+
+if ("$1" == "-h") then
+  echo "Usage: testdir2 [-h]"
+  exit 0
+endif
+
+if ("$1" == "-c") then
+	shift
+	goto $1
+endif
+
+
+
+set tmpfile = /tmp/$0:t.$$
+
+
+
+set filenames = "`cat names1`"
+set dirnames  = "`cat names1`"
+set wordlist  = "`cat names1`"
+#@ namescnt = $#wordlist
+
+set separators = (" "  "" "   " \! \$ \* \( \) \- \_ \[ \] \' \: \" \. \?)
+
+set dirperms = ( \
+#	755	# rwxr-xr-x \
+#	754	# rwxr-xr-- \
+#	751	# rwxr-x--x \
+#	750	# rwxr-x--- \
+	755	# rwxr-xr-x \
+	744	# rwxr--r-- \
+	711	# rwx--x--x \
+	700	# rwx------ \
+#	740	# rwxr----- \
+#	710	# rwx--x--- \
+#	700	# rwx------ \
+#	500	# r-x------ \
+#	400	# r-------- \
+#	100	# --x------ \
+#	000	# --------- \
+)
+
+set fileperms = ( \
+#	644	# rw-r--r-- \
+#	640	# rw-r----- \
+	644	# rw-r--r-- \
+	600	# rw------- \
+#	600	# rw------- \
+#	400	# r-------- \
+#	000	# --------- \
+)
+
+
+
+@ defaultcnt	= 200			# pocet, ktory sa pouzije, ked nie je zname, kolko bude treba ...
+
+# toto sa nepouziva - strom sa uz generuje inak
+#@ minfiles	= 0
+#@ maxfiles	= 0
+#@ mindirs	= 0
+#@ maxdirs	= 0
+
+@ minsymlinks	= 0			# minimalny pocet symbolickych liniek v strome
+@ maxsymlinks	= 0			# maximalny
+set relsymlinkratio	= (1 1)		# pomer relativnych a absolutnych symbolickych liniek
+set exsymlinkratio	= (2 1)		# pomer symbolickych liniek na existujuce a neexistujuce ciele
+set dirsymlinkratio	= (1 2)		# pomer symbolickych liniek na adresare a subory
+@ minhardlinks	= 0			# minimalny pocet hard liniek v strome
+@ maxhardlinks	= 0			# maximalny
+
+set dotratio	= (1 4)			# pomer bodkovych a nebodkovych mien
+set emptyratio	= (1 7)			# pomer prazdnych suborov
+set textratio	= (4 1)			# pomer textovych a binarnych suborov
+set permratio	= (1 7)			# pomer suborov so zmenenymi permissions a beznymi
+set scriptratio	= (1 7)			# pomer skriptov a obycajnych suborov
+set minmodtime	= -365			# minimalny cas modifikacie suborov (moze by zadany aj relativne)
+set maxmodtime	= `date +%Y%m%d`	# maximalny cas modifikacie suborov
+
+@ minpath	= 13			# minimalny pocet ciest v strome
+@ maxpath	= 27			# maximalny
+@ mindepth	= 1			# minimalna dlzka cesty v strome (v pocte adresarov)
+@ maxdepth	= 5			# maximalna
+
+# toto sa zatial nepouziva
+#@ minsame	= 0
+#@ maxsame	= 5
+
+@ minlines	= 0			# minimalny pocet riadkov v subore
+@ maxlines	= 100			# maximalny
+@ minwords	= 0			# minimalny pocet slov na riadku
+@ maxwords	= 20			# maximalny
+set spaceratio	= (7 1)			# pomer medzier a ostatnych separatorov v subore
+@ blocksize	= 1024			# velkost bloku v binarnom subore
+@ minlength	= 0			# minimalna dlzka binarneho suboru (v blokoch)
+@ maxlength	= 10			# maximalna
+
+
+
+#@ cnt = $defaultcnt
+#@ min = 1
+#@ max = $namescnt
+#call RandomList
+#set shuffle = ($rand)			# pouziva sa na zamiesanie zoznamu zoznamu slov
+
+#alias PrepareShuffle 'echo -n X; @ cnt = $defaultcnt; @ min = 1; @ max = \!^; call RandomList; set shuffle = ($rand);'
+
+call PrepareShuffle $#wordlist
+call PrepareShuffle $#wordlist wordshuffle
+
+
+
+#===========================================================
+# RUN STAGES
+#===========================================================
+
+set stage = 1
+echo "stage ${stage}: creating basic tree"
+
+set dotratio	= (0 1)		# nechcem .meno
+set textratio	= (1 0)		# nechcem binarne
+set permratio	= (0 1)		# nechcem permission
+
+call Stage
+
+#-----------------------------------------------------------
+
+set stage = 2
+echo "stage ${stage}: creating basic tree with symlinks"
+
+set permratio	= (0 1)
+@ minsymlinks   = 10
+@ maxsymlinks   = 15
+
+call Stage
+
+#-----------------------------------------------------------
+
+set stage = 3
+echo "stage ${stage}: creating standard tree with symlinks & hardlinks"
+
+set dotratio	= (1 5)
+set textratio	= (4 1)
+set permratio	= (1 7)
+@ minsymlinks   = 10
+@ maxsymlinks   = 15
+@ minhardlinks   = 10
+@ maxhardlinks   = 15
+
+set filenames = "`cat names2`"
+set dirnames  = "`cat names2`"
+
+call Stage
+
+#-----------------------------------------------------------
+
+set stage = 4
+echo "stage ${stage}: creating special tree"
+
+@ minpath	= 19
+@ maxpath	= 31
+@ mindepth	= 1
+@ maxdepth	= 6
+set filenames = "`cat names3`"
+set dirnames  = "`cat names3`"
+
+call Stage
+
+#-----------------------------------------------------------
+
+exit
+
+set stage = 9
+echo "stage ${stage}: creating traps"
+
+mkdir traps
+cd traps
+
+mkdir "empty"
+mkdir "star";		touch "star/*"
+mkdir "empty_file";	touch "empty_file/empty_file"
+mkdir "space";		touch "space/ "
+mkdir "total";		touch "total/total"
+mkdir "perm";		touch "perm/-rw-r--r--";	touch "perm/drwxr-xr-x"
+mkdir "find";		touch "find/-type";		touch "find/find:"
+mkdir "loop";		ln -s "loop" "loop/loop"
+mkdir "longname"
+	@ NAME_MAX = `grep NAME_MAX /usr/include/sys/syslimits.h | awk '{print $3}'`
+	touch "longname/`yes verylongname | tr -d '\n' | head -c $NAME_MAX`"
+mkdir "longpath"
+	@ PATH_MAX = `grep PATH_MAX /usr/include/sys/syslimits.h | awk '{print $3}'` - 10
+	mkdir -p "longpath/`yes verylongpath | tr '\n' '/' | head -c $PATH_MAX`"
+mkdir "manyfiles"
+	@ PATH_MAX = `grep PATH_MAX /usr/include/sys/syslimits.h | awk '{print $3}'` - 100
+	foreach p (0 1 2 3 4 5 6 7 8 9)
+		mkdir -p "manyfiles/`yes pathwithmanyfiles$p | tr '\n' '/' | head -c $PATH_MAX`"
+	end
+	find manyfiles -type d -exec touch "{}/onefile" \;
+
+#mkdir "largefile"
+#	set filename = "largefile/largefile"
+#	call GenerSparseFile
+#	echo "Small file" > "largefile/smallfile"
+#	echo "Another small file" > "largefile/smallfile2"
+
+mkdir "widefile"
+	set filename = "widefile/widefile"
+	yes verylongline | tr -d '\n' | head -c 1018 > $filename; echo "" >> $filename
+	yes evenlongerline | tr -d '\n' | head -c 2000 >> $filename; echo "" >> $filename
+	yes unbelievablylongline | tr -d '\n' | head -c 20000 >> $filename; echo "" >> $filename
+	echo "Wowbagger the Infinitely Prolonged" >> $filename
+
+mkdir "startdirs"
+	cd "startdirs"
+	mkdir -- "`cat ../../names[23]`"
+	cd ..
+
+mkdir "startfiles"
+	cd "startfiles"
+	touch -- "`cat ../../names[23]`"
+	cd ..
+
+
+# maximalna dlzka slova v csh je 1018 znakov (1024 - 6)
+# maximalna dlzka slova v tcsh je 10234 znakov (10240 - 6)
+# (tolko sa da priradit cez ``) ale zobrazit mozno len 1019
+
+
+
+cd ..
+
+#-----------------------------------------------------------
+
+
+
+
+exit
+
+#===========================================================
+# STAGE X
+#===========================================================
+
+Stage:
+
+set testdir = test$stage
+
+mkdir $testdir
+cd $testdir
+
+#-----------------------------------------------------------
+
+echo "stage $stage.1: creating directories"
+
+call GenerTree
+
+set treedirs = "`find . -type d -print`"	# poznacim si vytvorene adresare
+
+#-----------------------------------------------------------
+
+echo "stage $stage.2: creating files"
+
+@ filecnt = $#treedirs * 3	# pocet suborov
+set action = (call GenerFile)
+call CreateFiles
+
+#-----------------------------------------------------------
+
+echo "stage $stage.3: creating scripts"
+
+if ($scriptratio[1] > 0) then
+	# pocet skriptov
+	@ filecnt = (`find . -type f -print | wc -l` * $scriptratio[1]) / ($scriptratio[1] + $scriptratio[2])
+	set action = (call GenerScript)
+	call CreateFiles
+else
+	echo "	no scripts"
+endif
+
+#-----------------------------------------------------------
+
+echo "stage $stage.4: creating more maximal files"
+
+# najvacsie (v bajtoch)
+echo "	najvacsie (v bajtoch)"
+find . -type f -printf "%s %p\n"  | sort -rn | head -1 | awk '{print substr($0, index($0, " ") + 1)}' > $tmpfile
+echo "	`cat $tmpfile`"
+@ filecnt = 2
+#set action = "cp '`cat $tmpfile`'"		# takto to bolo, ked sa pouzival na spustenbie akcie eval
+set action = (cp "`cat $tmpfile`")
+call CreateFiles
+
+#----------
+
+# najvacsie (v pocte riadkov)
+echo "	najvacsie (v pocte riadkov)"
+#find . -type f -exec csh -c "cat '{}' | wc -l | tr -d ' \n'" \; -printf " %p\n"  | sort -rn | head -1 | awk '{print substr($0, index($0, " ") + 1)}' > $tmpfile
+find . -type f -exec csh -c "cat "\"\$1\"" | wc -l | tr -d ' \n'" "{}" \; -printf " %p\n"  | sort -rn | head -1 | awk '{print substr($0, index($0, " ") + 1)}' > $tmpfile
+echo "	`cat $tmpfile`"
+@ filecnt = 1
+set action = (cp "`cat $tmpfile`")
+call CreateFiles
+
+#----------
+
+# najvacsie (v pocte slov)
+echo "	najvacsie (v pocte slov)"
+find . -type f -exec csh -c "cat "\"\$1\"" | wc -w | tr -d ' \n'" "{}" \; -printf " %p\n"  | sort -rn | head -1 | awk '{print substr($0, index($0, " ") + 1)}' > $tmpfile
+echo "	`cat $tmpfile`"
+@ filecnt = 1
+set action = (cp "`cat $tmpfile`")
+call CreateFiles
+
+#----------
+
+# najnovsie
+echo "	najnovsie"
+find . -type f -printf "%T@ %p\n" | sort -rn | head -1 | awk '{print substr($0, index($0, " ") + 1)}' > $tmpfile
+echo "	`cat $tmpfile`"
+@ filecnt = 2
+set action = (cp -p "`cat $tmpfile`")
+call CreateFiles
+
+#----------
+
+# najstarsie
+echo "	najstarsie"
+find . -type f -printf "%T@ %p\n" | sort -n  | head -1 | awk '{print substr($0, index($0, " ") + 1)}' > $tmpfile
+echo "	`cat $tmpfile`"
+@ filecnt = 2
+set action = (cp -p "`cat $tmpfile`")
+call CreateFiles
+
+rm -f $tmpfile
+
+#-----------------------------------------------------------
+
+echo "stage $stage.5: creating hard links"
+
+if ($maxhardlinks > $minhardlinks) then
+	@ min = $minhardlinks
+	@ max = $maxhardlinks
+	call Random
+	set cnthardlinks = ($rand)		# pocet hard liniek
+
+	@ filecnt = $cnthardlinks
+	set action = (call GenerHardlink)
+	call CreateFiles
+else
+	echo "	no hardlinks"
+endif
+
+#-----------------------------------------------------------
+
+echo "stage $stage.6: creating symbolic links"
+
+if ($maxsymlinks > $minsymlinks) then
+	@ min = $minsymlinks
+	@ max = $maxsymlinks
+	call Random
+	set cntsymlinks = ($rand)		# pocet symbolickych liniek
+
+	@ filecnt = $cntsymlinks
+	set action = (call GenerSymlink)
+	call CreateFiles
+else
+	echo "	no symlinks"
+endif
+
+#-----------------------------------------------------------
+
+echo "stage $stage.7: creating empty directories"
+
+@ filecnt = 10		# pocet prazdnych adresarov
+set action = "mkdir"
+call CreateFiles
+
+#-----------------------------------------------------------
+
+echo "stage $stage.8: setting file permissions"
+
+if ($permratio[1] > 0) then
+	set permtype = f
+	call SetPermissions
+else
+	echo "  no permissions"
+endif
+
+
+#-----------------------------------------------------------
+
+echo "stage $stage.9: setting directory permissions"
+
+if ($permratio[1] > 0) then
+	set permtype = d
+	call SetPermissions
+else
+	echo "  no permissions"
+endif
+
+#-----------------------------------------------------------
+
+
+
+
+
+
+
+
+# nastavim casy adresarov
+
+@ cnt = $#treedirs		# == pocet adresarov
+set mindate = $minmodtime	# == datum od (relativne)
+set maxdate = $maxmodtime	# == datum do
+call RandomDateList
+set rand2 = ($randdate)			# zoznam casov modifikacie
+
+foreach d ($treedirs:q)
+	set n2 = $rand2[1]		# rand2 urcuje cas modifikacie adresara
+	shift rand2
+
+	touch -t $n2 "$d"		# nastavim cas adresara
+end
+
+
+
+
+
+
+
+
+
+cd ..
+
+return
+
+exit
+
+
+
+
+
+
+
+
+
+
+
+#===========================================================
+# PROCEDURES
+#===========================================================
+
+#===========================================================
+# GenerTree
+#    in: $minpath (global)  - minimalny pocet listovych ciest
+#        $maxpath (global)  - max.
+#        $mindepth (global) - min.      hlbka
+#        $maxdepth (global) - max.
+#        $shuffle (global)  - nahodny miesaci vektor
+#        $dotratio (global) - pomer bodkovych a nebodkovych adresarov
+#===========================================================
+
+GenerTree:
+
+call PrepareShuffle $#dirnames
+
+@ min = $minpath
+@ max = $maxpath
+call Random
+set cntpath = ($rand)			# pocet ciest v strome
+
+@ cnt = $cntpath
+@ min = $mindepth
+@ max = $maxdepth
+call RandomList
+set list = ($rand)			# zoznam dlzok ciest v strome (v pocte adresarov)
+
+#@ cnt = $defaultcnt
+@ cnt = $#shuffle
+set ratio = ($dotratio)
+call RandomRatioList
+set dot = ($ratiolist)			# bude alebo nebude .meno
+
+@ i = 1
+@ level = 0
+set dir = "."
+while ($#list > 0)
+	@ cur = $list[1]
+	while ($level >= $cur)
+		set dir = "$dir:h"
+		@ level --
+	end
+	while ($level < $cur)
+		if ($dot[$i] == 1) then
+			set dir = "$dir/.$dirnames[$shuffle[$i]]"
+		else
+			set dir = "$dir/$dirnames[$shuffle[$i]]"
+		endif
+		@ i++; if ($i > $#shuffle) @ i = 1
+		@ level ++
+		if (-Le "$dir") then
+			@ j = 1
+			while (-Le "${dir}_$j")
+				@ j ++
+			end
+			set dir = "${dir}_$j"
+		endif
+#echo "$dir"
+		mkdir "$dir"
+	end
+	set dir = "$dir:h"
+	@ level --
+	shift list
+
+	echo -n .
+end
+echo ""
+
+return
+
+#===========================================================
+# CreateFiles
+#    in: $filecnt             - pocet suborov
+#        $minmodtime (global) - 
+#        $maxmodtime (global) - 
+#        $shuffle (global)    - nahodny miesaci vektor
+#        $dotratio (global)   - pomer bodkovych a nebodkovych adresarov
+#        $action              - ako bude subor vytvoreny
+#===========================================================
+
+CreateFiles:
+
+call PrepareShuffle $#filenames
+
+set dirs = "`find . -type d -print`"
+set files = "`find . -type f -print`"
+
+@ cnt = $filecnt		# == pocet suborov
+@ min = 1					# preco tu nebolo ???
+@ max = $#dirs		# == pocet adresarov
+call RandomList
+set rand1 = ($rand)			# zoznam cisel, ktore urcia, v ktorych adresaroch budu subory vytvarane
+
+#echo $#dirs
+#echo "$rand"
+
+@ cnt = $#shuffle
+set ratio = ($dotratio)
+call RandomRatioList
+set dot = ($ratiolist)			# bude alebo nebude .meno
+
+@ cnt = $#rand1		# == pocet suborov
+set mindate = $minmodtime	# == datum od (relativne)
+set maxdate = $maxmodtime	# == datum do
+call RandomDateList
+set rand2 = ($randdate)			# zoznam casov modifikacie
+
+@ i = 1
+while ($#rand1 > 0)
+	@ n1 = $rand1[1]		# rand1 vybera adresar, v ktorom bude subor
+	shift rand1
+	set n2 = $rand2[1]		# rand2 urcuje cas modifikacie suboru
+	shift rand2
+
+# vytvorim meno suboru
+#echo $n1, $#dirs
+	if ($dot[$i] == 1) then
+		set filename = "$dirs[$n1]/.$filenames[$shuffle[$i]]"
+	else
+		set filename = "$dirs[$n1]/$filenames[$shuffle[$i]]"
+	endif
+	@ i++; if ($i > $#shuffle) @ i = 1
+	if (-Le "$filename") then
+		@ j = 1
+		while (-Le "${filename}_$j")
+			@ j ++
+		end
+		set filename = "${filename}_$j"
+	endif
+#set noglob
+#if ("$action" !~ call*) then
+#	set echo; set verbose
+#endif
+
+#	eval "$action" "'$filename'"	# spustim akciu
+
+#	toto treba doriesit - alias ide spustit len cez eval ...
+#	eval "$action[1]" $action[2-]:q "$filename"		# spustim akciu
+
+	if ("$action[1]" == call) then
+		call $action[2-]:q "$filename"		# spustim akciu
+	else
+		$action:q "$filename"		# spustim akciu
+	endif
+
+#if ("$action" !~ call*) then
+#	unset echo; unset verbose
+#endif
+#unset noglob
+
+	if ("$action" !~ "cp -p "* && \
+	    "$action" != "call GenerSymlink") then
+		touch -t $n2 "$filename"		# nastavim cas modifikacie suboru
+	endif
+
+	echo -n .
+end
+echo ""
+
+return
+
+#===========================================================
+# GenerFile
+#    in: $minlines (global)   - minimalny pocet riadkov suboru
+#        $maxlines (global)   - max.
+#        $minwords (global)   - min.            slov na riadku
+#        $maxwords (global)   - max.
+#        $minlength (global)  - min. velkost binarneho suboru
+#        $maxlength (global)  - max.
+#        $emptyratio (global) - 
+#        $textratio (global)  - 
+#        $shuffle (global)    - nahodny miesaci vektor
+#        $separators (global) - 
+#        $filename            - meno suboru
+#===========================================================
+
+GenerFile:
+
+#set echo_style_prev = $echo_style
+#set echo_style = both
+#echo -n '\bo'
+#set echo_style = $echo_style_prev
+##echo -n o
+
+call PrepareShuffle $#wordlist wordshuffle
+
+@ min = $minlines
+@ max = $maxlines
+call Random
+@ lines = $rand				# pocet riadkov v subore
+
+set ratio = ($emptyratio)
+call RandomRatio
+unset empty
+if ($yes) then
+	set empty
+	@ lines = 0
+endif					# ci bude subor prazdny
+
+set ratio = ($textratio)
+call RandomRatio
+unset text
+if ($yes) set text			# ci bude subor textovy
+
+if (! $?text) then
+	@ min = $minlength
+	@ max = $maxlength
+	call Random
+	@ length = $rand		# dlzka suboru (v blokoch)
+
+	if ($?empty) @ length = 0
+
+	dd if=/dev/urandom of="$filename" bs=$blocksize count=$length >& /dev/null
+
+	return
+endif
+
+@ cnt = $lines
+@ min = $minwords
+@ max = $maxwords
+call RandomList
+set words = ($rand)			# zoznam poctov slov na riadkoch
+
+@ cnt = $defaultcnt
+@ min = 1
+@ max = ($#separators - 1) * $spaceratio[1] / $spaceratio[2]
+call RandomList
+set sepshuffle = ($rand)
+@ j = 1
+while ($j <= $#sepshuffle)
+	if ($sepshuffle[$j] > $#separators) set sepshuffle[$j] = 1
+	@ j ++
+end
+
+@ i = 1
+@ j = 1
+while ($lines > 0)
+	while ($words[1] > 0)
+		if ($words[1] == 1) then
+			echo -n "$wordlist[$wordshuffle[$i]]" >> "$filename"
+		else
+			echo -n "$wordlist[$wordshuffle[$i]]$separators[$sepshuffle[$j]]" >> "$filename"
+		endif
+		@ i++; if ($i > $#wordshuffle) @ i = 1
+		@ j++; if ($j > $#sepshuffle) @ j = 1
+		@ words[1] --
+	end
+	echo "" >> "$filename"
+	@ lines --
+	shift words
+end
+
+return
+
+#===========================================================
+# GenerScript
+#    in: $filename            - meno suboru
+#===========================================================
+
+GenerScript:
+
+@ min = 1
+@ max = 13
+call Random
+set scripttype = $rand
+
+switch ($scripttype)
+	case  1:
+	case  2:
+	case 10:
+		echo "#" >> "$filename"
+		breaksw
+	case  3:
+	case  4:
+	case 11:
+		echo "#! /bin/csh" >> "$filename"
+		breaksw
+	case  5:
+	case  6:
+	case 12:
+		echo "#! /bin/sh" >> "$filename"
+		breaksw
+	case  7:
+		echo "main(){}" > $tmpfile.c
+		cc $tmpfile.c -o "$filename"
+		rm $tmpfile.c
+	default:
+endsw
+
+if ($scripttype != 7) echo 'echo "Skript pre testovaci adresar"' >> "$filename"
+
+if ($scripttype < 10) chmod 755 "$filename"
+
+return
+
+#===========================================================
+# GenerSparseFile
+#    in: $filename            - meno suboru
+#===========================================================
+
+GenerSparseFile:
+
+cat << END > $tmpfile.c
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+main(int argc, char *argv[]) {
+	int f = open(argv[1], O_CREAT | O_WRONLY);
+	lseek(f, 1234567890L, SEEK_SET);
+	write(f, &f, 1);
+}
+END
+cc $tmpfile.c -o $tmpfile.out
+$tmpfile.out "$filename"
+rm $tmpfile.c
+rm $tmpfile.out
+
+return
+
+#===========================================================
+# GenerHardlink
+#    in: $files                    - zoznam suborov, na ktore bude robit hardlinku
+#        $filename                 - meno hardlinky
+#===========================================================
+
+GenerHardlink:
+
+@ min = 1
+@ max = $#files
+call Random
+@ f = $rand				# ktory subor ?
+
+set linkedfile = "$files[$f]"
+
+ln "$linkedfile" "$filename"
+
+return
+
+#===========================================================
+# GenerSymlink
+#    in: $relsymlinkratio (global) -
+#        $exsymlinkratio (global)  -
+#        $dirsymlinkratio (global) -
+#        $dirs                     - zoznam adresarov, na ktore bude robit symlinku
+#        $files                    - zoznam suborov, na ktore bude robit symlinku
+#        $filename                 - meno symlinky
+#===========================================================
+
+GenerSymlink:
+
+set ratio = ($relsymlinkratio)
+call RandomRatio
+set relative = $yes
+
+set ratio = ($exsymlinkratio)
+call RandomRatio
+set exist = $yes
+
+set ratio = ($dirsymlinkratio)
+call RandomRatio
+set todir = $yes
+
+if ($todir) then
+	@ min = 1
+	@ max = $#dirs
+	call Random
+	@ d = $rand				# ktory adresar ?
+
+	set linkedfile = "$dirs[$d]"
+else
+	@ min = 1
+	@ max = $#files
+	call Random
+	@ f = $rand				# ktory subor ?
+
+	set linkedfile = "$files[$f]"
+endif
+if ($relative) then
+	set src = "$linkedfile"
+	set dest = "$filename:h"
+
+#echo "src = $src, dest = $dest"
+
+	set prefix = "$dest"
+	set p = ""
+	while ("$src"/ !~ "$prefix"/*)
+		if ("$p" == "") then
+			set p = ".."
+		else
+			set p = "../$p"
+		endif
+		if ("$prefix:h" == "$prefix") then	# ked tam uz nie je ziadne /
+			set prefix = ""
+		else
+			set prefix = "$prefix:h"
+		endif
+	end
+
+	set pp = ""
+	while ("$src/" != "$prefix/")
+		if ("$pp" == "") then
+			set pp = "$src:t"
+		else
+			set pp = "$src:t/$pp"
+		endif
+		if ("$src:h" == "$src") break
+		set src = "$src:h"
+	end
+
+	if ("$p" != "" && "$pp" != "") then
+		set src = "$p/$pp"
+	else
+		set src = "$p$pp"
+	endif
+	if ("$src" == "") set src = "."
+	set symlink = "$src"
+else
+#	if ("$linkedfile" =~ ./*) set linkedfile = "`echo '$linkedfile' | cut -c 3-`"	# ked mozu byt v menach ', musim inac
+	if ("$linkedfile" =~ ./*) then
+		echo "$linkedfile" | cut -c 3- > $tmpfile
+		set linkedfile = "`cat $tmpfile`"
+		rm $tmpfile
+	endif
+	set symlink = "$cwd/$linkedfile"
+endif
+
+if (! $exist) then
+#	set symlink = "`echo '$symlink' | tr a-zA-Z A-Za-z`"	# ked mozu byt v menach ', musim inac
+	echo "$symlink" | tr a-zA-Z A-Za-z > $tmpfile
+	set symlink = "`cat $tmpfile`"
+	rm $tmpfile
+endif
+
+ln -s "$symlink" "$filename"
+
+return
+
+#===========================================================
+# SetPermissions
+#    in: $permtype           - d alebo f
+#        $permratio (global) -
+#        $dirperms (global)  -
+#        $fileperms (global) -
+#===========================================================
+
+SetPermissions:
+
+if ($permtype == "d") then
+	set filetype = d
+	set addflags = "-mindepth 2"
+	set perms = ($dirperms[2-])
+else
+	set filetype = f
+	set addflags = "! -perm +111"		# tie co maju x uz nezmenim ...
+						# kedze uz mam histchars = "", nemusim eskejpovat !
+	set perms = ($fileperms[2-])
+endif
+
+@ cnt = (`find . -type $filetype -print | wc -l` * $permratio[1]) / ($permratio[1] + $permratio[2])
+
+set modesetup = "max = $#perms;"
+@ mi = 1
+foreach m ($perms)
+	set modesetup = "$modesetup m[$mi] = $m;"
+	@ mi ++
+end
+
+#echo "$modesetup"
+
+find . -type $filetype $addflags -print | \
+	awk '{srand(); print int(rand() * 10000), $0}' | \
+	sort -n | \
+	awk '{print substr($0, index($0, " ") + 1)}' | \
+	head -n $cnt | \
+	awk 'BEGIN {'"$modesetup"'} {printf "%s%c%s%c", m[1 + (NR % max)], 0, $0, 0; printf "." >"/dev/stderr"} END {printf "\n" >"/dev/stderr"}' | \
+	xargs -0 -n 2 chmod
+#	awk 'BEGIN {'"$modesetup"'} {system("chmod "m[1 + (NR % max)]" '\''"$0"'\''"); printf "."} END {printf "\n"}'
+
+return
+
+#===========================================================
+# PrepareShuffle
+#    in: $1       - max
+#        $2       - shuffle variable (optional)
+#   out: $shuffle - 
+#===========================================================
+
+PrepareShuffle:
+
+shift
+@ param = $1
+if ("$2" != "") then
+	set shufflevar = $2
+	set maxshufflevar = max$2
+else
+	set shufflevar = shuffle
+	set maxshufflevar = maxshuffle
+endif
+
+
+if (! `eval echo \$\?$maxshufflevar`) @ $maxshufflevar = 0
+
+if ($param != `eval echo \$$maxshufflevar`) then
+	if (`eval echo \$$maxshufflevar` != 0) echo -n X		# prvy krat to nevypisem ...
+	@ cnt = $defaultcnt
+	@ min = 1
+	@ max = $param
+	call RandomList
+
+	set $shufflevar = ($rand)
+
+	set $maxshufflevar = $param
+endif
+
+return
+
+
+
+#===========================================================
+# RANDOM PROCEDURES
+#===========================================================
+
+#===========================================================
+# Random
+#    in: $min - minimalna hodnota cisla
+#        $max - maximalna hodnota cisla ($min <= cislo <= $max)
+#   out: $rand - cislo
+#===========================================================
+
+Random:
+
+#echo "Random: min=$min max=$max"
+
+set rand = `awk -v min=$min -v max=$max \\
+                'END { srand(); \\
+                       print int(min + (rand() * 10000) % max); \\
+#                       print int(min + (rand() * max)); \\
+                     }' /dev/null`
+
+return
+
+#===========================================================
+# RandomList
+#    in: $cnt - pocet nahodnych cisel
+#        $min - minimalna hodnota cisla
+#        $max - maximalna hodnota cisla ($min <= cislo <= $max)
+#   out: $rand - zoznam cisel
+#===========================================================
+
+RandomList:
+
+set rand = `awk -v cnt=$cnt -v min=$min -v max=$max \\
+                'END { srand(); \\
+                       for (i = 0; i < cnt; i ++) { \\
+                         print int(min + (rand() * 10000) % max); \\
+#                         print int(min + (rand() * max)); \\
+                       } \\
+                     }' /dev/null`
+
+return
+
+#===========================================================
+# RandomDateList
+#    in: $cnt - pocet nahodnych cisel (casov)
+#        $mindate - minimalny datum
+#        $maxdate - maximalny datum (su v tvare YYYYMMDD)
+#   out: zoznam casov (v tvare YYYYMMDDhhmm alebo MMDDhhmmYY)
+#===========================================================
+
+RandomDateList:
+
+awk -v cnt=$cnt -v mindate=$mindate -v maxdate=$maxdate -f - /dev/null << ENDPROG > $tmpfile
+END {
+	srand();
+
+	m[1]  =       0; m[2]  = m[1]+31;  m[3]  = m[2]+28;
+	m[4]  = m[3]+31; m[5]  = m[4]+30;  m[6]  = m[5]+31;
+	m[7]  = m[6]+30; m[8]  = m[7]+31;  m[9]  = m[8]+31;
+	m[10] = m[9]+30; m[11] = m[10]+31; m[12] = m[11]+30;
+
+	maxd = substr(maxdate, 1, 4) * 365 + m[substr(maxdate, 5, 2)+0] + substr(maxdate, 7, 2);
+
+	if (mindate+0 < 0)
+		mind = maxd + mindate;
+	else
+		mind = substr(mindate, 1, 4) * 365 + m[substr(mindate, 5, 2)+0] + substr(mindate, 7, 2);
+
+	for(i = 0; i < cnt; i ++) {
+		d = int(mind + rand() * (maxd - mind));
+		year = int(d / 365);
+		d = d % 365;
+		if (d == 0) {
+			year --;
+			month = 12;
+			day = 31;
+		}
+		else {
+			for (j = 1; j <= 12; j ++) if (d - m[j] <= 0) break;
+			month = j - 1;
+			day = d - m[j-1];
+		}
+
+a = year * 10000 + month * 100 + day;
+if (a < mindate || a > maxdate) print "date",a,"out of bounds" >"/dev/stderr";
+
+		hour = int(rand() * 24);
+		min  = int(rand() * 60);
+
+		printf "%04d%02d%02d%02d%02d\n", year, month, day, hour, min;
+	}
+}
+ENDPROG
+
+set randdate = `cat $tmpfile`
+rm -f $tmpfile
+
+return
+
+#===========================================================
+# RandomRatio
+#    in: $ratio - pomer pravdepodobnosti 1 a 0
+#   out: $yes   - 1 alebo 0
+#===========================================================
+
+RandomRatio:
+
+@ min = 1
+@ max = $ratio[1] + $ratio[2]
+call Random
+if ($rand <= $ratio[1]) then
+	set yes = 1
+else
+	set yes = 0
+endif
+
+return
+
+#===========================================================
+# RandomRatioList
+#    in: $cnt - pocet hodnot
+#        $ratio - pomer 1 a 0
+#   out: $ratiolist - zoznam 1, 0
+#===========================================================
+
+RandomRatioList:
+
+#@ cnt = $cnt
+@ min = 1
+@ max = $ratio[1] + $ratio[2]
+call RandomList
+set ratiolist = ()
+foreach r ($rand)
+	if ($r <= $ratio[1]) then
+		set ratiolist = ($ratiolist 1)
+	else
+		set ratiolist = ($ratiolist 0)
+	endif
+end
+
+return
+
+#===========================================================

@@ -1,0 +1,5 @@
+toto je text dopisu
+na obsahu nezalezi
+
+muze obsahovat i prazdnou radku
+posledni radka neukoncena <Enter>

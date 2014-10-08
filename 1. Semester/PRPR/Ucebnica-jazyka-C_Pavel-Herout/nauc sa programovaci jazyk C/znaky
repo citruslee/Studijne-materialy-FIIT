@@ -1,0 +1,25 @@
+celé čísla: 	
+%d 	celé dekadické číslo typu signed int
+%i 	celé dekadické číslo typu signed int
+%u 	celé dekadické číslo typu unsigned int
+%o 	celé oktálové číslo typu unsigned int
+%x 	celé hexadecimálne číslo typu unsigned int (malé písmo)
+%X 	celé hexadecimálne číslo typu unsigned int (veľké písmo)
+ 
+čísla v pohyblivej rádovej čiarke: 	
+%f 	číslo v desatinnom tvare typu float i double
+%e 	číslo v semilogaritmickom tvare typu float i  double
+%E 	číslo v semilogaritmickom tvare typu float i double (s veľkým E)
+%g 	použije sa jedna z konverzií f, e. Výstupný tvar sa volí podľa hodnoty exponentu (ak je menší ako -4 alebo väčší ako presnosť, použije sa e, inak f)
+%G 	ako konverzia g, len sa použije konverzia E
+ 
+znaky a reťazce: 	
+%c 	jeden znak typu char
+%s 	reťazec ukončený znakom '\0' (netlačí sa)
+%% 	tlač znaku %
+ 
+smerníky: 	
+%p 	adresa argumentu - smerník
+%n 	argument musí byť typu smerník na int; na adresu, na ktorú ukazuje, ukladá počet doteraz vytlačených znakov
+
+g++ program.cpp -o program.out

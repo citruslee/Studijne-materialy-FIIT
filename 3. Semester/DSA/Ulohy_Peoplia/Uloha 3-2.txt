@@ -1,0 +1,10 @@
+Písmenkovı strom je stromová dátová štruktúra, v ktorej kadı uzol má práve jedného rodièa a viacero dcérskych uzlov pod¾a poètu písmen v abecede.
+
+Zaujímavá a uitoèná vlastnos písmenkového stromu je, e slová so spoloènım prefixom zdie¾ajú spoloènú cestu v strome od koreòa po posledné spoloèné písmeno v spoloènom prefixe.
+
+Špecifikácia vstupu: Na vstupe je nieko¾ko slov (najviac 10000), ktoré majú dåku najviac 20. Kadé slovo obsahuje iba ve¾ké písmená anglickej abecedy.
+
+Špecifikácia vıstupu: Zistite, akı najdlhší spoloènı prefix má ¾ubovo¾ná dvojica tıchto slov a toto èíslo vypíšte na vıstup.
+
+Implementaèná pomôcka:
+Definujete si štruktúru uzol tak isto ako v prípade spájaného zoznamu. Na rozdiel od uzlu v spájanom zozname, ktorı má jediného nasledovníka - ïalší uzol v zozname, uzol v písmenkovom strome má 26 nasledovníkov (26 je poèet písmen v anglickej abecede, v špeciálnych prípadoch môe by inı). V písmenkovom strome sa posúvate na nasledovníka pod¾a toho, aké písmeno nasleduje v h¾adanom slove.

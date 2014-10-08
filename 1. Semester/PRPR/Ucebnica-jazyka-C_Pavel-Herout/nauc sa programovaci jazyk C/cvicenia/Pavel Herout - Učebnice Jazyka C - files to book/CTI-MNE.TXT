@@ -1,0 +1,147 @@
+                    Organizace souborù ke knize 
+
+                   Uèebnice jazyka C, 1. a 2. díl
+
+                         autor Pavel Herout
+
+                        Nakladatelství KOPP, 
+
+                      ISBN 80-7232-220-6 1. díl
+                      ISBN 80-7232-221-4 2. díl
+
+
+
+======================================================================
+
+          Milá ètenáøko, váenı ètenáøi,
+
+jsem rád, e jste si ke knihám "Uèebnice jazyka C, 1. a 2. díl"
+stáhl(a) i zdrojové soubory - celkem 346 zdrojovıch .c souborù.
+
+Pøeji Vám, aby tyto soubory pøispìly k Vašemu lepšímu pochopení jazyka C.
+
+
+                                            Pavel Herout
+
+
+DÙLEITÉ UPOZORNÌNÍ:
+-------------------
+Všechny programy, které se nalézají v tomto balíku programù jsou urèeny 
+pouze pro vìtší uivatelskı komfort pøi studiu knih 
+"Uèebnice jazyka C, 1. a 2. díl" vydané nakladatelstvím KOPP.   
+
+Mùete pouít kód programù pøi vıuce nebo školení  za pøedpokladu,  e
+budete jako jejich zdroj citovat knihy
+"Uèebnice jazyka C, 1. a 2. díl".
+
+Pro vlastní studijní úèely mùe bıt kód programù libovolnì modifikován, 
+ale tyto modifikované verze nesmìjí bıt dále šíøeny.
+
+Jakékoliv jiné  -  zejména komerèní  -  vyuívání tìchto programù NENÍ
+DOVOLENO  bez pøedchozího písemného svolení autora.
+
+Vzhledem k tomu, e je moné získat všechny tyto soubory zdarma z WWW,
+se na  všechny uvedené programy nevztahuje  ádná záruka, a to  v míøe
+povolené  zákonem.  Pokud  není  písemnì  stanoveno  jinak,  poskytují
+dritelé  autorskıch práv  popøípadì jiné  strany programy   "tak, jak
+jsou",  bez  záruky jakéhokoliv druhu,  a vıslovné nebo  vyplıvající,
+vèetnì, ale nikoli jen, záruk prodejnosti a vhodnosti pro urèitı úèel.
+Pokud jde o kvalitu a vıkonnost  programù, leí veškeré riziko na Vás.
+Pokud  by se  u programù  projevily závady,  padají náklady za všechnu
+potøebnou údrbu, opravy èi nápravu na váš vrub.
+
+V ádném  pøípadì, s  vıjimkou toho,  kdy to  vyaduje platnı  zákon,
+anebo kdy to  bylo písemnì odsouhlaseno, Vám nebude  ádnı z dritelù
+autorskıch  práv  ani  ádná  jiná  strana,  která smí šíøit programy,
+odpovìdnı  za škody,  vèetnì všech  obecnıch, speciálních,  nahodilıch
+nebo následnıch škod vyplıvajících z uívání anebo neschopnosti uívat
+programù  (vèetnì  ale  nikoli  jen,  ztráty  nebo zkreslení dat, nebo
+trvalıch škod zpùsobenıch vám nebo tøetím stranám, nebo selhání funkce
+programù v souèinnosti s jinımi programy), a to i v pøípadì, e takovı
+dritel autorskıch  práv nebo jiná  strana byli upozornìni  na monost
+takovıch škod.
+
+
+======================================================================
+
+
+Podrobnìjší informace o jednotlivıch souborech.
+===============================================
+
+Všechny zdrojové soubory jsou uloeny v adresáøi
+UCEBNICE-C v podadresáøích:
+   a) PRIKLADY - jedná se o kompletní pøíklady programù uvedené
+                 v obou dílech knihy
+   b) CVICENI  - jsou to vyøešená všechna cvièení z 1. dílu uèebnice
+
+   c) GETCH    - soubory pro práci s klávesnicí v operaèním systému UNIX
+                 jejich autorem je pøevánì Ing. Václav Broík 
+
+
+Pro vìtší pøehlednost jsou podadresáøe PRIKLADY a CVICENI ještì
+rozdìleny na další podadresáøe oznaèené vdy KAPxy, co samozøejmì
+odpovídá èíslování kapitol obou dílù. Tak je moné velmi rychle
+vyhledat potøebnı soubor.
+
+Názvy byly voleny podle tohoto klíèe:
+a) u PRIKLADY - soubor zaèíná vdy písmenem "s" (jako Strana) a
+                pak je uvedeno èíslo strany v knize.
+                Napøíklad oznaèení  s32.c  znamená, e se jedná o
+                pøíklad ze strany 32
+
+            POZOR:
+             1) Soubor má vdy oznaèení té strany, na které leí
+                jeho první øádka, by by tam byla pouze jedna jediná.
+
+             2) Pokud je na jedné stránce knihy více pøíkladù, pak jsou
+                soubory odlišeny posledním znakem jména v poøadí
+                "a" nebo "b".
+                Napøíklad oznaèení  s42b.c   znamená, e se jedná
+                o druhı pøíklad ze strany 42
+
+             3) V podadresáøích kap09, kap14, kap17, kap19, kap21 a kap22
+                mùete nalézt vıjimky z pravidla pro pojmenování.
+                Jedná se o soubory, jejich jméno je buï zmiòované v textu
+                nebo jsou to programy navíc v knize neuvedené.
+                Napøíklad   kap09\kru_main.c  je hlavní soubor popisovaného 
+                projektu
+                a  kap19\signal-ctrl-c.c  je ukázka, jak reagovat na stisk Ctrl-C
+                pøièem kód tohoto programu není v knize uveden.
+
+             4) V nìkterıch podadresáøích naleznete i pøíslušné soubory .h.
+                Napøíklad   kap09\kru_main.h  je hlavièkovı soubor k souboru
+                kap09\kru_main.c
+
+             5) V podadresáøi mohou bıt také pomocné datové soubory,
+                které budou programem èteny. Jejich jméno je uvedeno
+                velkımi písmeny a pøípona je nejèastìji .TXT nebo .DAT nebo .BIN.
+                Napøíklad soubor  kap06\CISLA.TXT
+
+             6) Poslední typ souborù má pøíponu .dev. Jedná se o popis projektu
+                z mnou nejèastìji pouívaného vıvojového prostøedí Dev-C++.
+                Tyto soubory pravdìpodobnì nebudete moci pøímo pouít, ale
+                pokud je otevøete textovım editorem, naleznete v nich názvy
+                všech zdrojovıch .c souborù, které musíte pøipojit do projektu
+                ve Vámi pouívaném vıvojovém prostøedí.   
+                Napøíklad   kap09\vzor.dev  popisuje projekt pro vzorovı pøíklad.
+
+V podadresáøi PRIKLADY se nalézá celkem 244 souborù z toho 221 .c souborù.
+
+
+b) u CVICENI  - soubor zaèíná vdy písmeny  "cv" (jako CViceni),
+                a dále následuje dvouciferné èíslo cvièení
+                Napøíklad oznaèení  kap04\cv03.c  znamená, e se jedná
+                o tøetí cvièení z kapitoly 4
+
+            POZOR:
+             1) Zejména v  kap09  se setkáte s vıjimkou z tohoto pravidla.
+                Jedná se o cvièení, které je nutné øešit za pouití více zdrojovıch
+                souborù vytvoøením projektu. 
+                Opìt zde najdete i soubory s pøíponou .dev.
+                Napøíklad pro jedenácté cvièení z kapitoly 9 byly pouity soubory
+                             cv11.dev
+                             cv11-fce.c
+                             cv11-hlavni.c
+
+V podadresáøi CVICENI se nalézá celkem 142 souborù z toho 123 .c souborù.
+

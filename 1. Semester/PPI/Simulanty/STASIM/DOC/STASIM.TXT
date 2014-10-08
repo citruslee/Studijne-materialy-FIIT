@@ -1,0 +1,679 @@
+                              STASIM
+
+0. UVOD.
+
+STASIM
+STARTLE
+     Program  STASIM integruje  simulacne programove  prostriedky
+pre  cvicenia   z  predmetu  ARCHITEKTURA   POCITACOV,  ktory  je
+prednasany  na  Katedre  informatiky  a  vypoctovej  techniky  na
+Elektrotechnickej  falkulte   STU  v  Bratislave   pre  studentov
+tretieho rocnika v odbore Informatika.
+     Pre  realizaciu  cviceni  z  tohto  predmetu  bol  privezeny
+simulator  STARTLE   (Simulator  for  Teaching   computer  system
+Architecture  at the  Register  Transfer  LEvel) z  University of
+Sheffield  vo  Velkej  Britanii.   Tento  simulator  tvori  jadro
+integrovaneho systemu STASIM.
+
+1. POPIS PROBLEMU A SPOSOBU JEHO RIESENIA.
+
+1.1 Hlavne komponenty systemu ASM, COMPILER, STARTLE
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+ASM
+COMPILER
+STARTLE
+Pre simulaciu programom STARTLE je potrebne: (kap. 6 v [1])
+  A) Definovat  model  pocitaca  na  urovni  registrov  a  medzi-
+     registrovych prenosov.  Registre su typickym  pripadom tech-
+     nickych modulov (kap. 1 v  [1]) a medziregistrove prenosy su
+     najcastejsie pouzivanou mikroinstrukciou (kap. 2 v [1]).
+  B) Napisat  program  v strojovom  kode  modelovaneho  pocitaca,
+     ktoreho cinnost bude simulovana.
+Simulator zaznamenava protokol  o simulacii do vystupneho suboru,
+obsah a moznosti vystupu su popisane v kapitole 5 v [1].
+
+     Bod A je rieseny opisom modelu v ASCII subore, tento opis je
+vsak  znacne neprehladny  a pritom  citlivy na  syntax. Z  tychto
+dovodov bol definovany jednoduchy  jazyk pre opis modelu pocitaca
+a naprogramovany  jeho  prekladac,   ktoreho  hlavnou  ulohou  je
+vytvorit povodny definicny subor  (*.DEF) pre STARTLE. Okrem toho
+generuje  subor (*.SUB)  obsahujuci popis  instrukcii pre program
+ASM.  Priebezne je  tvoreny protokol  o preklade  modelu (*.PTC),
+subor s indexom mikroinstrukcii  (*.IDX) a pomocny subor (*.MAC).
+Tento program sa vola COMPILER.
+     Bod  B je  rieseny  tiez  ASCII suborom  obsahujucim program
+v strojovom  kode. Tento  problem velmi  efektivne riesi  program
+ASM,   co  je   vlastne  jednoduchy   assembler,  ktory  umoznuje
+programovanie  pomocou symbolov  (kap. 8  v [1]).  Program ASM ma
+vsak malu  chybicku, nekompiluje zaporne konstanty  a tieto treba
+do vystupneho suboru (*.PRG) dostat preeditovanim.
+
+
+1.2 Podporne programy
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+1.3 Vz jomne vazby modulov a suborov
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+1.4 Zoznam dodavanych suborov:
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+STASIM  .BAT - integrator podpornych prostriedkov
+STASIM  .DOC - ASCII export manualu k programu
+EXECUTE\
+STARTLE .COM - simulator pocitaca
+ASM     .EXE - jednoduchy assembler
+COMPILER.EXE - hlavny program pre generovanie podpornych suborov
+ASK     .EXE - program pre interaktivne vetvenie BATCH suborov
+UPGRADE .EXE - program pre upravu protokolu o simulacii
+CHKTIME .EXE - kontrolny program pre cas simulacie
+FINDERR .EXE - program pre zistenie chyby prekladu ASM
+EDIT    .EXE - textovy editor
+VIEW    .EXE - textovy prezerac (ASCII viewer)
+DEMO\
+DEMO    .SRC - opis modelu demonstracneho pocitaca
+DEMO    .STA - program pre demonstracnì pocitac
+
+1.5 Zoznam suborov pre rieseny projekt podla pripon suborov:
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Vstupne:
+
+SRC - zdrojovy opis modelu pre COMPILER
+STA - zdrojovy text programu pre ASM
+
+Vystupny:
+
+TXT - protokol o simulacii modelu s programom,
+      ako vystup programu UPGRADE.EXE
+
+Transportne subory:
+
+Generovane programom COMPILER.EXE:
+DEF - opis modelu v syntaxi pre STARTLE.COM
+IDX - zoznam mikroinstrukcii pre UPGRADE.EXE
+SUB - zoznam instrukcii pre program ASM.EXE
+PTC - protokol o preklade opisu modelu (SRC)
+MAC - pomocny subor pre nahradu vstupov do programu ASM.EXE
+
+Ostatne subory:
+PRG - strojovy kod programu po preklade programom ASM.EXE
+SAP - "protokol" o preklade programom ASM.EXE
+LST - protokol o simulacii generovany programom STARTLE.EXE
+
+
+2. POPIS INTEGROVANEHO PROSTREDIA.
+
+Hlavne menu programu STASIM:
+                                             SUBORY ÄÄ¿
+                                                      ³
+ POPIS                                       KLAVESA  ³
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄ¿
+³ Editovanie zdrojoveho suboru modelu        ³  M  ³ SRC
+³ Editovanie zdrojoveho suboru programu      ³  P  ³ STA
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄ´
+³ Prezeranie protokolu o generovani modelu   ³  V  ³ PTC
+³ Prezeranie protokolu o preklade programu   ³  L  ³ SAP
+³ Prezeranie protokolu o simulacii           ³  T  ³ TXT
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄ´
+³ Kompilacia zdrojoveho suboru programu      ³  A  ³ STA->PRG
+³ Generovanie definicneho suboru modelu      ³  C  ³ SRC->DEF
+³ Simulacia vytvoreneho modelu               ³  S  ³ DEF&PRG->TXT
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄ´
+³ Kompletny prechod simulaciou               ³  G  ³ SRC&STA->TXT
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄ´
+³ Vymazanie nadbytocnych suborov             ³  D  ³ SRC,STA,TXT+
+³ Koniec prace s programom                   ³  Q  ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÙ
+
+ + budu vymazane vsetky transportne subory (okrem uvedenych).
+
+2.1 Editor
+ÄÄÄÄÄÄÄÄÄÄ
+Editor
+
+2.2 Viewer (Prezerac)
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Viewer
+Prezerac
+
+2.3 Assembler
+ÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Assembler
+ASM.EXE
+
+2.4 Compiler
+ÄÄÄÄÄÄÄÄÄÄÄÄ
+Compiler
+COMPILER.EXE
+
+2.5 Simulator
+ÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Simulator
+STARTLE.COM
+
+2.6 Ostatne moznosti
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+3. SYNTAX A SEMANTIKA JAZYKA PRE OPIS MODELU (s£bor *.SRC).
+
+3.1 Definicie klucovych pojmov:
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Zdrojovì text
+     Zdrojovy  text je  cely subor  pre opis  modelu simulovaneho
+pocitaca.
+Technicky modul
+     Technicky  modul  je  komponent,  ktory  sa moze  vyskytovat
+v simulovanom pocitaci. STARTLE definuje nasledovne komponenty:
+registre, preklapacie obvody, kanaly, pamate a  zasobniky.
+Element
+     Element je konstanta, technicky modul, definovane vlastnosti
+simulovaneho  a  hostitelskeho  pocitaca  a  tiez  vsetky  mikro-
+instrukcie a instrukcie simulovaneho pocitaca.
+Identifikator
+     Identifikator je  retazec pismen a  cislic zacinajuci pisme-
+nom. Maximalna dlzka  identifikatora oznacujuceho technicky modul
+alebo  instrukciu je  10 pre  ostatne identifikatory  je povolena
+maximalna dlzka 32.
+Vyhradene slovo
+     Vyhradene  slovo  je  slovo  (identifikator), ktore definuje
+vlastnost  hostitelskeho  alebo  simulovaneho  pocitaca  pripadne
+uvadza cast zoznamu definovanych konstant,  mikroinstrukcii alebo
+instrukcii.
+Oddelovac
+     Oddelovac je znak medzery alebo znak tabelatora.
+     Poznamka je cast riadku zacinajuc od znaku bodkociarky (';')
+az do konca riadku.
+Nahradny parameter
+     Nahradny parameter je uvadzany v texte znakom bodky ('.').
+
+
+3.2 Zakladne syntakticke pravidla jazyka:
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+- Kazdy definovany element sa opisuje jednym riadkom textu,
+  ako v assembleri (vynimku tvori iba opis inçtrukcie).
+- Maximalna akceptovatelna dlzka riadku je 254 znakov.
+- V prave definovanom elemente je mozne pre jeho opis pouzit iba
+  uz definovane elementy (nepodporuju sa dopredne odkazy).
+- Jazyk ma mnozinu vyhradenych slov, ktore nesmu byt pouzite
+  pre identifikatory.
+- Jazyk povoluje prazdne riadky aj poznamky.
+- Ak su pozadovane parametre, potom musia byt uvedene vsetky.
+  Je  vsak  povoleny  symbol  nahradneho parametra,
+  ktory je v case prekladu nahradeny preddefinovanou hodnotou.
+- Jazyk nepodporuje vyrazy.
+- Opis modelu v zdrojovom texte zacina prvym riadkom suboru.
+- Zdrojovy text musi byt ukonceny vyhradenym slovom ENDDEF,
+  n sledujuce riadky zdrojoveho textu su ignorovane.
+
+
+3.3 Zoznam vyhradenych slov a pravidla pre ich zapis:
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+BITFIELDS
+HOSTBITS
+BITFIELDS        HOSTBITS
+
+CHANNELS
+INSTRUCTIONS
+CHANNELS         INSTRUCTIONS
+
+COMPUTER
+MEMORIES
+COMPUTER         MEMORIES
+
+CONSTS
+MICROINS
+CONSTS           MICROINS
+
+ENDDEF
+REGISTERS
+ENDDEF           REGISTERS
+
+FETCHSEQ
+STACKS
+FETCHSEQ         STACKS
+
+FLIPFLOPS
+USESCODE
+FLIPFLOPS        USESCODE
+
+     Kazde vyhradene  slovo musi byt zapisane  v riadku ako prve,
+pricom nezalezi na velkosti  pouzitych pismen. Existuju dva druhy
+vyhradenych slov: parametricke a bezparametricke. Bezparametricke
+vyhradene slova  zvycajne uvadzaju cast  zoznamu elementov (okrem
+ENDDEF).  V  parametrickych  vyhradenych  slovach  musia byt vzdy
+uvedene  vsetky parametre  (nie je  povolene pouzitie  nahradnych
+parametrov), mnoh‚ parametricke vyhradene  slova vsak nemusia byt
+uvedene v zdrojovom texte vobec lebo kompilator ma preddefinovane
+ich hodnoty ktore su automaticky vlozene do vystupu.
+
+Bezparametricke vyhradene slova
+Bezparametricke vyhradene slova:
+
+CHANNELS         INSTRUCTIONS
+COMPUTER /1      MEMORIES
+CONSTS           MICROINS
+ENDDEF           REGISTERS
+FETCHSEQ         STACKS
+FLIPFLOPS
+
+/1 vyhradene slovo ma zvlastnu syntax
+
+Parametricke vyhradene slova
+Parametricke vyhradene slova:
+
+BITFIELDS, HOSTBITS, USESCODE
+
+
+3.4 Syntax a semantika vyhradenych slov:
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Konvencie:
+     Nepovinne parametre su uvedene v hranatych zatvorkach '[x]'.
+     Nahradne hodnoty su uvedene v krutenìch zatvorkach '{x}'.
+
+BITFIELDS
+BITFIELDS par1 [par2 par3 ... parN]
+
+     par1 az parN  -  sirky  jednotlivych bitovych  poli  formatu
+strojovej instrukcie, kde par2 az parN su nepovinne.
+
+Obmedzenia:
+     Sucet sirok jednotlivych bitovych  poli nesmie byt vacsi ako
+hodnota uvedena v HOSTBITS.
+
+
+CHANNELS
+CHANNELS
+
+     Uvadza cast zoznamu definovanych kanalov.
+
+Syntax zapisu kanala:
+
+NAME width time DIRECTION
+
+NAME  - specifikuje meno kanala
+width - pocet bitov kanala
+time  - cas zapisu/citania udajov do/z kanala
+DIRECTION - typ kanala:  INP  resp. I = vstupny kanal
+                         OUT  resp. O = vìstupny kanal
+                         BOTH resp. B = obojsmerny kanal
+
+
+COMPUTER
+COMPUTER
+
+     Definuje nasledovne moduly pocitaca:
+           - preklapaci obvod, ktory zastavuje cinnost pocitaca
+           - register, ktory je pouzity ako programove pocitadlo
+           - pamat, v ktorej je ulo§eny simulovany program
+
+Toto vyhradene slovo ma zvlastnu syntax pre zapis:
+
+COMPUTER
+HF: par1
+PC: par2
+PM: par3
+
+par1 = meno preklapacieho obvodu {HALT}
+par2 = meno registra             {PC}
+par3 = meno pamate               {MEMORY}
+
+Poznamky:
+     Na poradi  riadkov HF:, PC:  a PM: nezalezi,  pricom nemusia
+byt uvedene vsetky, dokonca nemusi  byt uvedeny ziaden riadok ani
+vyhradene slovo  COMPUTER. Ak urcity  riadok chyba, parameter  je
+nahradeny preddefinovanou hodnotou v {xxx}.
+
+
+CONSTS
+CONSTS
+
+     Uvadza cast zoznamu konstant.
+Syntax zapisu konstanty:
+
+NAME VALUE
+
+NAME  - specifikuje symbolicke meno konstanty (max. 32 znakov)
+VALUE - ordinarne (cele) cislo alebo uz definovana konstanta.
+
+
+ENDDEF
+ENDDEF
+
+     Oznamuje kompilatoru koniec definicie modelu.
+
+
+FETCHSEQ
+FETCHSEQ
+
+     Definuje  vyberovu  sekvenciu  mikroinstrukcii,  ktora  bude
+vykonana pred  vykonanim instrukcie. Posledna  mikroinstrukcia by
+mala byt  typu DECODE, inak bude  kompilatorom hlasene varovanie.
+Sekvencia   sa   zadava   ako   zoznam   mien   u§   definovanych
+mikroinstrukcii.
+
+Syntax:
+
+FETCHSEQ
+name1
+name2
+  :
+  :
+nameN
+
+
+FLIPFLOPS
+FLIPFLOPS
+
+     Uvadza cast zoznamu definovanych preklapacich obvodov.
+
+Syntax zapisu preklapacieho obvodu:
+
+NAME time
+
+NAME - specifikuje meno preklapacieho obvodu
+time - cas nastavenia/nulovania preklapacieho obvodu.
+
+
+HOSTBITS
+HOSTBITS par
+
+     par - pocet bitov hostitelskeho pocitaca
+
+Obmedzenia:
+     Maximalna hodnota  je 32.
+
+Poznamky:
+     Ak  nie je  toto vyhradene  slovo uvedene,  nahradna hodnota
+je HOSTBITS 16.
+
+
+INSTRUCTIONS
+INSTRUCTIONS
+
+     Uvadza cast zoznamu instrukcii simulovaneho pocitaca.
+
+Syntax zapisu instrukcie:
+
+NAME: n_par mi [mi ... mi] [*]
+[NAME:      mi [mi ... mi]
+
+NAME  - specifikuje meno instrukcie, musi koncit dvojbodkou
+n_par - specifikuje pocet parametrov instrukcie
+mi    - je meno mikroinstrukcie
+*     - je znak, ktory upovedomuje kompilator o tom, ze definicia
+        instrukcie  este  nebola  dokoncena a pokracuje na dalsom
+        riadku, ktory vsak musi tiez zacinat menom instrukcie.
+
+
+MEMORIES
+MEMORIES
+
+     Uvadza cast zonamu definovanych pamati.
+
+Syntax zapisu pamate:
+
+NAME ADDRESS-REGISTER BUFFER-REGISTER width length time
+
+NAME   - specifikacia mena pamati
+ADDRESS-REGISTER  a  BUFFER-REGISTER  su  specifikacie mien vyssie
+uvedenych   registrov  MAR   (adresovy  register   pamati)  a  MBR
+(vyrovnavaci udajovy register)
+width  -  pocet  bitov   slova,  ktore  sa  nacita/zapise  jednym
+          pristupom k pamati (s¡rka ulozenych slov)
+length - pocet slov v pamati. Slova sa adresuju od 0 po lenght-1
+time   - cas pristupu k pamati.
+
+
+mikroinstrukcie
+MICROINS
+MICROINS
+
+     Uvadza cast zoznamu definovanych mikroinstrukcii.
+
+Syntax zapisu mikroinstrukcie zavisi od  jej typu, preto na tomto
+mieste  budu uvedene  iba syntaxe  vsetkych typov mikroinstrukcii
+bez  vysvetlenia jednotlivych  parametrov. Pri mikroinstrukciach,
+kde je podporovanych viac foriem  zapisu su uvedene vsetky formy.
+Podrobny  opis vyznamu  parametrov mikroinstrukcii  je v kapitole
+2, v literature [1].
+
+MI  - meno mikroinstrukcie (to, ktore sa pouziva v definicii
+      instrukcie a ma maximalne 32 znakov).
+
+CURRENCY
+CURRENCY - moze sa uvadzat EXCLUSIVE  alebo EX,
+                           CONCURRENT alebo CC,
+           pricom nahradna hodnota je EXCLUSIVE.
+
+Nahradne hodnoty P1 a P2 s£ -1.
+
+Vyssie spomenute fakty platia pre vsetky mikroinstrukcie.
+
+mikroinstrukcia, TRANSFER, TRANS
+MI TRANSFER FROM-NAME P1 P2 TO-NAME P1 P2 constant CURRENCY
+MI TRANS    FROM-NAME P1 P2 TO-NAME P1 P2 constant CURRENCY
+
+Nahradna hodnota constant = 0.
+
+mikroinstrukcia, READ
+MI READ STORE-NAME CURRENCY
+MI RD   STORE-NAME CURRENCY
+
+mikroinstrukcia, WRITE
+MI WRITE STORE-NAME CURRENCY
+MI WR    STORE-NAME CURRENCY
+
+mikroinstrukcia, PUSH
+MI PUSH STACK-NAME CURRENCY
+
+mikroinstrukcia, POP
+MI POP  STACK-NAME CURRENCY
+
+mikroinstrukcia, CLEAR
+MI CLEAR NAME CURRENCY
+MI CLR   NAME CURRENCY
+
+mikroinstrukcia, ENDS
+MI ENDS
+
+mikroinstrukcia, ADD
+mikroinstrukcia, SUBTRACT
+mikroinstrukcia, MULTIPLY
+mikroinstrukcia, DIVIDE
+MI ADD REG-A REG-B REG-C OVERFLOW time CURRENCY
+
+Rovnaku syntax maju aj mikroinstrukcie:  SUBTRACT resp. SUB
+                                         MULTIPLY resp. MUL
+                                         DIVIDE   resp. DIV
+
+mikroinstrukcia, INCREMENT
+MI INCREMENT NAME constant OVERFLOW time CURRENCY
+MI INC       NAME constant OVERFLOW time CURRENCY
+mikroinstrukcia, DECREMENT
+MI DECREMENT NAME constant OVERFLOW time CURRENCY
+MI DEC       NAME constant OVERFLOW time CURRENCY
+
+Nahradna hodnota constant = 1.
+POZOR !
+     Parametre OVERFLOW a time mali  v povodnom definicnom subore
+(*.DEF) opacne poradie.
+
+mikroinstrukcia, OVERWRITE
+MI OVERWRITE REGISTER-A P1 P2 REGISTER-B P1 P2 CURRENCY
+MI OWR       REGISTER-A P1 P2 REGISTER-B P1 P2 CURRENCY
+
+mikroinstrukcia, DECODE
+MI DECODE REGISTER P1 P2 CURRENCY
+MI DCD    REGISTER P1 P2 CURRENCY
+
+mikroinstrukcia, TEST
+MI TEST NAME P1 P2 COMPARE constant omit time CURRENCY
+MI TST  NAME P1 P2 COMPARE constant omit time CURRENCY
+
+Nahradna hodnota constant = 0.
+Parameter COMPARE moze mat hotnoty: LT resp. <
+                              alebo LE resp. <=
+                              alebo EQ resp. =
+                              alebo NE resp. <>
+                              alebo GE resp. >=
+                              alebo GT resp. >.
+
+MI LOGICAL REG-A REG-B REG-C operation time CURRENCY
+MI LOG     REG-A REG-B REG-C operation time CURRENCY
+
+MI SHIFT NAME TYPE DIRECTION number time CURRENCY
+MI SHF   NAME TYPE DIRECTION number time CURRENCY
+
+Nahradna hodnota number = 1.
+Parameter DIRECTION moze mat hodnoty LEFT  resp. L
+                               alebo RIGHT resp. R.
+
+MI BRANCH number
+MI JMP    number
+
+Nahradna hodnota number = 1.
+
+
+REGISTERS
+REGISTERS
+
+     Uvadza cast zoznamu definovanych registrov.
+
+Syntax zapisu registra:
+
+NAME width time
+
+NAME  - specifikuje meno registra (maximalne 10 znakov)
+width - pocet bitov registra (bity sa cisluju zlava doprava
+        od 0 do width-1)
+time  - cas pristupu k registru.
+
+
+STACKS
+STACKS
+
+     Uvadza cast zoznamu definovanych zasobnikov.
+
+Syntax z pisu zasobnika:
+
+NAME TOP-POINTER BUFFER-REGISTER width lenght time
+
+Vyznam  jednotlivych parametrov  je rovnaky ako pri pamati okrem
+TOP-POINTER co je register,  ktory ukazuje na prvu volnu polozku
+v zasobniku.
+
+USESCODE
+USESCODE par
+
+     par - typ pouziteho kodu v simulovanom pocitaci.
+
+Povolene hodnoty:
+     par = SANDM pre priamy kod
+     par = ONES  pre inverzny kod
+     par = TWOS  pre dvojkovy doplnkovy kod
+
+Poznamka:
+     Ak nie je toto vyhradene slovo uvedene,  nahradna hodnota je
+USESCODE TWOS.
+
+
+Literatura:
+[1] Popis simulatora STARTLE v subore STARTLE.TXT
+[2] Pomocny subor QUICK.TXT
+
+
+Vela uspechov  pri praci s  programom STASIM Vam  zela autor Jaro
+Popluhar.
+
+
+
+
+
+
+
+
+ASM 1
+ASM.EXE 3
+Assembler 3
+Bezparametricke vyhradene slova 4
+BITFIELDS 4, 5
+COMPILER 1
+Compiler 3
+COMPILER.EXE 3
+COMPUTER 4, 5
+CONSTS 4, 6
+CURRENCY 7
+Editor 3
+Element 3
+ENDDEF 4, 6
+FETCHSEQ 4, 6
+FLIPFLOPS 4, 6
+Hlavne menu programu STASIM 2
+HOSTBITS 4, 6
+CHANNELS 4, 5
+Identifikator 3
+INSTRUCTIONS 4, 7
+MEMORIES 4, 7
+MICROINS 4, 7
+mikroinstrukcia 8
+  ADD 8
+  CLEAR 8
+  DECODE 8
+  DECREMENT 8
+  DIVIDE 8
+  ENDS 8
+  INCREMENT 8
+  MULTIPLY 8
+  OVERWRITE 8
+  POP 8
+  PUSH 8
+  READ 8
+  SUBTRACT 8
+  TEST 8
+  TRANSFER, TRANS 8
+  WRITE 8
+mikroinstrukcie 7
+Nahradny parameter 3
+Oddelovac 3
+Parametricke vyhradene slova 4
+Prezerac 3
+REGISTERS 4, 9
+Simulator 3
+STACKS 4, 9
+STARTLE 1, 1
+STARTLE.COM 3
+STASIM 1
+Technicky modul 3
+USESCODE 4, 9
+Viewer 3
+Vyhradene slovo 3
+Zdrojovy text 3
+
+
+0. UVOD.                                                        1
+1. POPIS PROBLEMU A SPOSOBU JEHO RIESENIA.                      1
+1.1 Hlavne komponenty systemu ASM, COMPILER, STARTLE            1
+1.2 Podporne programy                                           1
+1.3 Vz jomne vazby modulov a suborov                            1
+1.4 Zoznam dodavanych suborov:                                  1
+1.5 Zoznam suborov pre rieseny projekt podla pripon suborov:    2
+2. POPIS INTEGROVANEHO PROSTREDIA.                              2
+2.1 Editor                                                      3
+2.2 Viewer (Prezerac)                                           3
+2.3 Assembler                                                   3
+2.4 Compiler                                                    3
+2.5 Simulator                                                   3
+2.6 Ostatne moznosti                                            3
+3. SYNTAX A SEMANTIKA JAZYKA PRE OPIS MODELU (subor *.SRC).     3
+3.1 Definicie klucovych pojmov:                                 3
+3.2 Zakladne syntakticke pravidla jazyka:                       4
+3.3 Zoznam vyhradenych slov a pravidla pre ich zapis:           4
+3.4 Syntax a samantika vyhradenych slov:                        5

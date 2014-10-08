@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Example of Filters in Pipelines</title>
+</head>
+
+<body>
+
+<h1>Example of Filters in Pipelines</h1>
+
+<ul>
+  <h2>$ who | grep &#147;^stocker&#148;|more </h2>
+  <li><br>
+  </li>
+</ul>
+
+<ul>
+  <h2>execute who, sends its output to grep and look for stocker at the beginning of line in
+  that output, send it to more to display a screenful at a time </h2>
+</ul>
+
+<ul>
+  <h2>$cat mailmsg|mailx -s &#147;`date` messages&#148; stocker </h2>
+</ul>
+
+<ul>
+  <h2>display mailmsg to stdin, have mail read stdin and compose a mail message with its
+  contents, put the date in the subject of message </h2>
+</ul>
+
+<ul>
+  <h2>$mailx -s &#147;`date` messages&#148; stocker&lt; </h2>
+</ul>
+
+<ul>
+  <h2>same as above but uses input redirection </h2>
+</ul>
+
+<ul>
+  <h2>$ls *.c |wc -l|sed -n &#145;/Total$/p&#146; </h2>
+</ul>
+
+<ul>
+  <h2>list all *.c files, count lines in file, use sed to find the total </h2>
+</ul>
+
+<ul>
+  <h2>line and display it</h2>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld004.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld006.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

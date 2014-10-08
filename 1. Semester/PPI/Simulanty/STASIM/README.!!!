@@ -1,0 +1,4 @@
+Spustanie celeho BATCH "STASIM.BAT" sa robi s parametrom,
+ktory oznacuje meno modelu bez pripony !
+
+Napr.: stasim[.bat] zad1

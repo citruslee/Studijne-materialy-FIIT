@@ -1,0 +1,2 @@
+        Ahoj lidi,
+jazyk C to je ono!

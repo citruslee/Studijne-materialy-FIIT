@@ -1,0 +1,35 @@
+Úloha 9 - Nasledovník (max. 1 bod)
+
+Daný je binárny vyhľadávací strom, vašou úlohou je implementovať
+operáciu ‘nasledovnik’, teda pre vrchol stromu na vstupe určiť taký vrchol
+stromu, ktorý má najmenšiu väšľiu hodnotu ako vstupný vrchol. V strome sú
+mená, každé iné, používa sa lexikografické usporiadanie (teda napr. Adam
+je v tomto usporiadaní pred menom Juraj; a tiež napr. Jana je pred menom Juraj) .
+Napr. ak sú v strome hodnoty Adam, Boris, Cyril, Jana, Jozef, Juraj, tak
+nasledovnik vrcholu obsahujúceho hodnotu Jana je vrchol obsahujúci hodnotu Jozef.
+Pokiaľ takýto vrchol neexistuje, operácia vráti NULL. Hodnoty vo vrcholoch
+stromu sú rôzne mená.
+
+V programe môžete predpokladať, že strom je reprezentovaný nasledovne:
+
+struct Node // vrchol stromu
+{
+  struct Node *parent; // rodic vrcholu; pre koren stromu to je NULL
+  struct Node *left, *right; // ak vetva nepokracuje je to NULL
+  char *name; // meno vo vrchole
+};
+
+struct Tree // strom
+{
+  struct Node *root; // koren stromu
+};
+
+
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+// vrati vrchol stromu,ktoreho hodnota je najblizsia vacsia ako v 'node'
+struct Node *nasledovnik(struct Node *node)
+{
+  // ...
+}

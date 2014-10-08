@@ -1,0 +1,24 @@
+2009/2010 - Opravny termín
+
+1.zaradit gramatiku do chromskho cca: L = { (w4w)+ , w ∈ {1,2,3} }
+
+2. 13.1.2006 pr.2| 02/03 pr.6 18b
+
+3. 16.1.2009 pr.3| 07/08 pr.3 6b
+
+4. 7.1.2008(pdf) | 07/08 pr.2 3b
+
+5. 7.1.2008(pdf) | 07/08 pr.5 10b/8b
+
+6. 7.1.2008(pdf) | 07/07 pr.4 10b/8b
+
+pozn:znenie je presne rovnke okrem 1. poprehadzovane poradie uloh, spolu len 50 b (neviem kde je chyba)
+
+
+7. 16.1. 2009 9-chytak (tie iste moznosti ale z velkim pismenom) 1b
+
+8. 16.1. 2009 7 rovnake len poprehadzovane 1b
+
+9. nieco typu zaskrki spravne (automat popisany je kontex/bezkontex/fraz/regul) 1b
+
+10. je automat ne/derministycky ano/nie 1b

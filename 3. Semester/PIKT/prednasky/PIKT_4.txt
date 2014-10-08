@@ -1,0 +1,212 @@
+PIKT / Prednáška 4 / 11.3.2013
+Zák. č. 215/2004 Z.z. o ochrane utajovaných skutočností a o zmene a doplnení niektorých zákonov
+Predmet úpravy
+Upravuje podmienky na ochranu:
+	utajovaných skutočností, práva a povinnosti právnických osôb a fyzických osôb pri tejto ochrane, 
+	pôsobnosť Národného bezpečnostného úradu (ďalej len „úrad“) a pôsobnosť ďalších štátnych orgánov vo vzťahu k utajovaným skutočnostiam a 
+	zodpovednosť za porušenie povinností ustanovených týmto zákonom. 
+Tento zákon sa nevzťahuje na ochranu tajomstva upraveného v osobitných predpisoch.
+Základné pojmy
+	utajovanou skutočnosťou informácia alebo vec určená pôvodcom utajovanej skutočnosti, ktorú vzhľadom na záujem Slovenskej republiky treba chrániť pred vyzradením, zneužitím, poškodením, neoprávneným rozmnožením, zničením, stratou alebo odcudzením (ďalej len „neoprávnená manipulácia“) a ktorá môže vznikať len v oblastiach, ktoré ustanoví vláda Slovenskej republiky svojím nariadením .
+	Informácia: 
+	obsah písomnosti, nákresu, výkresu, mapy, fotografie, grafu alebo iného záznamu,
+	obsah ústneho vyjadrenia,
+	obsah elektrického, elektromagnetického, elektronického alebo iného fyzikálneho transportného média.
+	Vec: 
+	hmotný nosič so záznamom informácií,
+	výrobok,
+	zariadenie,
+	nehnuteľnosť (stavba alebo pozemok pevne spojený so zemou).
+	Ujma
+	také ohrozenie alebo poškodenie záujmov Slovenskej republiky alebo záujmu, ku ktorého ochrane sa Slovenská republika zaviazala, ktorého následky nemožno odstrániť alebo možno ich zmierniť iba následným opatrením; 
+	podľa významu záujmu a závažnosti spôsobenej ujmy sa ujma člení na (nie je potrebné vedieť): 
+	mimoriadne vážnu ujmu, vážnu ujmu, jednoduchú ujmu a nevýhodnosť pre záujmy Slovenskej republiky
+	Oprávnená osoba:
+	právnická osoba alebo fyzická osoba, ktorá je určená na oboznamovanie sa s utajovanými skutočnosťami alebo ktorej oprávnenie na oboznamovanie sa s utajovanými skutočnosťami vzniklo zo zákona.
+	Nepovolaná osoba:
+	fyzická osoba, ktorá nie je oprávnená oboznamovať sa s utajovanými skutočnosťami alebo ktorá nie je oprávnená oboznamovať sa s utajovanými skutočnosťami nad rozsah, ktorý jej je určený.
+	Technický prostriedok:
+	zariadenie alebo systém určený na vytváranie, spracúvanie, prenos, ukladanie a ochranu utajovaných skutočností.
+Utajovanou skutočnosťou nemôže byť informácia o
+	a) nezákonnom alebo nesprávnom postupe alebo nezákonnom rozhodnutí verejných činiteľov a orgánov verejnej moci,
+	b) trestnej činnosti verejných činiteľov,
+	c) nehospodárnom, neefektívnom a neúčelnom nakladaní s verejnými prostriedkami,
+	d) závažnom ohrození alebo poškodení životného prostredia, života a zdravia,
+	e) platových náležitostiach, hmotnom zabezpečení a hmotných výhodách verejných činiteľov.
+Koncepcia ochrany utajovaných skutočností Slovenskej republiky je súbor cieľov, obmedzení, požiadaviek, pravidiel a postupov, ktoré určujú spôsob a rozvoj ochrany utajovaných skutočností. 
+Koncepciu ochrany utajovaných skutočností Slovenskej republiky schvaľuje vláda Slovenskej republiky na návrh riaditeľa úradu.
+Utajovaná skutočnosť musí byť chránená pred nepovolanou osobou a cudzou mocou spôsobom stanoveným v tomto zákone, v predpisoch vydaných na jeho vykonanie a v ďalších osobitných predpisoch.
+ČLenenie bezpečnosti
+Všetky druhy sú dôležité a musia byť zabezpečené súčasne.
+Personálna bezpečnosť je systém opatrení súvisiacich s výberom, určením a kontrolou osôb, ktoré sa môžu v určenom rozsahu oboznamovať s utajovanými skutočnosťami.
+Administratívna bezpečnosť je systém opatrení, ktorých cieľom je ochrana utajovaných skutočností pri ich tvorbe, príjme, evidencii, preprave, ukladaní, rozmnožovaní, vyraďovaní a uchovávaní alebo pri inej manipulácii.
+Fyzická bezpečnosť a objektová bezpečnosť je systém opatrení slúžiaci na ochranu utajovaných skutočností pred nepovolanými osobami a pred neoprávnenou manipuláciou v objektoch a chránených priestoroch.
+Bezpečnosť technických prostriedkov je systém opatrení na zabezpečenie ochrany utajovaných skutočností, ktoré sa tvoria, spracúvajú, prenášajú alebo ukladajú na technických prostriedkoch.
+Predpoklady na vznik oprávnenia
+Oprávnenie na oboznamovanie sa s utajovanými skutočnosťami pre stupne utajenia: Prísne tajné, Tajné, Dôverné alebo Vyhradené. Môže vzniknúť, ak tento zákon neustanovuje inak, iba navrhovanej osobe, ktorá
+	je občanom Slovenskej republiky,
+	má spôsobilosť na právne úkony v plnom rozsahu.
+	dovŕšila ustanovený vek,
+	súhlasí, aby bola oprávnená oboznamovať sa s utajovanými skutočnosťami a s vykonaním bezpečnostnej previerky,
+	je bezúhonná,
+	svojím správaním zaručuje, že zabezpečí ochranu utajovaných skutočností,
+	je bezpečnostne spoľahlivá, 
+	má platné osvedčenie úradu, podľa ktorého sa môže oboznamovať s utajovanými skutočnosťami stupňa Prísne tajné, Tajné alebo Dôverné,
+	je na to určená,
+	podpíše vyhlásenie o mlčanlivosti.
+Vek navrhovanej osoby
+Veková hranica navrhovanej osoby pre stupeň utajenia 
+	Prísne tajné je dovŕšenie najmenej 21 rokov,
+	Tajné, Dôverné a Vyhradené je dovŕšenie najmenej 18 rokov.
+Platnosť osvedčenia
+Platnosť osvedčenia pre utajované skutočnosti stupňa utajenia Prísne tajné je 5 rokov, pre utajované skutočnosti stupňa utajenia Tajné je 7 rokov a pre utajované skutočnosti stupňa utajenia Dôverné je 10 rokov.
+
+Zák. č. 211/2000 Z.z. o slobodnom prístupe k informáciám v znení neskorších predpisov
+Ústava SR, čl. 26 polické práva
+(1) Sloboda prejavu a právo na informácie sú zaručené.
+ 
+(2) Každý má právo vyjadrovať svoje názory slovom, písmom, tlačou, obrazom alebo iným spôsobom, ako aj slobodne vyhľadávať, prijímať a rozširovať idey a informácie bez ohľadu na hranice štátu. 
+	Vydávanie tlače nepodlieha povoľovaciemu konaniu (zákon o periodickej tlači).
+	Podnikanie v odbore rozhlasu a televízie sa môže viazať na povolenie štátu. Podmienky ustanoví zákon. (zákon o vysielaní a retransmisii).
+(3) Cenzúra sa zakazuje.
+(4) Slobodu prejavu a právo vyhľadávať a šíriť informácie možno obmedziť zákonom, ak ide o opatrenia v demokratickej spoločnosti nevyhnutné na ochranu práv a slobôd iných, bezpečnosť štátu, verejného poriadku, ochranu verejného zdravia a mravnosti.
+(5) Orgány verejnej moci majú povinnosť primeraným spôsobom poskytovať informácie o svojej činnosti v štátnom jazyku. Podmienky a spôsob vykonania ustanoví zákon (zákon o slobodnom šírení informácií).
+Tento zákon upravuje:
+	podmienky, 
+	postup,
+	a rozsah
+slobodného prístupu k informáciám.
+Povinné osoby podľa zákona o slobodnom prístupe k informáciám: (aspoň 4 vedieť)
+	štátne orgány,
+	obce,
+	právnické osoby a fyzické osoby, ktorým zákon zveruje právomoc rozhodovať o právach a povinnostiach fyzických osôb alebo právnických osôb v oblasti verejnej správy, a to iba v rozsahu tejto ich rozhodovacej činnosti,
+	právnické osoby zriadené zákonom,
+	právnické osoby zriadené štátnym orgánom, vyšším územným celkom alebo obcou podľa osobitného zákona,
+	právnické osoby založené povinnými osobami,
+	osobitný zákon môže ustanoviť povinnosť sprístupňovať informácie aj inej právnickej osobe alebo fyzickej osobe.
+Povinnosti povinných osôb
+Povinná osoba sprístupní iba informácie o:
+	hospodárení s verejnými prostriedkami,
+	nakladaní s majetkom štátu,
+	majetkom vyššieho územného celku,
+	majetkom obce,
+	životnom prostredí,
+	úlohách alebo odborných službách týkajúcich sa životného prostredia,
+	obsahu, plnení a činnostiach vykonávaných na základe uzatvorenej zmluvy.
+Informácie sa sprístupňujú bez preukázania právneho alebo iného dôvodu alebo záujmu, pre ktorý sa informácia požaduje.
+Povinné zverejňovanie informácií (§ 5)
+Každá povinná osoba podľa tohto zákona je povinná zverejniť tieto informácie:
+	spôsob zriadenia povinnej osoby, jej právomoci a kompetencie a popis organizačnej štruktúry,
+	miesto, čas a spôsob, akým možno získavať informácie; informácie o tom, kde možno podať žiadosť, návrh, podnet, sťažnosť alebo iné podanie,
+	miesto, lehota a spôsob podania opravného prostriedku a možnosti súdneho preskúmania rozhodnutia povinnej osoby vrátane výslovného uvedenia požiadaviek, ktoré musia byť splnené,
+	postup, ktorý musí povinná osoba dodržiavať pri vybavovaní všetkých žiadostí, návrhov a iných podaní, vrátane príslušných lehôt, ktoré je nutné dodržať,
+	sadzobník správnych poplatkov, ktoré povinná osoba vyberá za správne úkony, a sadzobník úhrad za sprístupňovanie informácií.
+Národná rada SLovenskej republiky
+Je povinná zverejniť:
+	termíny jej schôdzí a zasadaní výborov a návrh programu rokovania,
+	zápisnice z verejných schôdzí,
+	texty predložených návrhov zákonov do troch dní po ich podaní do Kancelárie Národnej rady Slovenskej republiky,
+	texty schválených zákonov do troch dní po ich schválení v treťom čítaní,
+	údaje o dochádzke poslancov Národnej rady Slovenskej republiky na jej schôdze a na zasadnutia jej výborov do troch dní po skončení každej schôdze Národnej rady Slovenskej republiky,
+	výpisy o hlasovaní poslancov po každej schôdzi Národnej rady Slovenskej republiky okrem prípadov tajného hlasovania a hlasovania na neverejnej schôdzi.
+Kancelária prezidenta Slovenskej republiky
+je povinná zverejniť
+	program a výsledky pracovných ciest a prijatí prezidenta Slovenskej republiky a miesto jeho pobytu,
+	podpísanie zákona alebo jeho vrátenie Národnej rade Slovenskej republiky,
+	prepožičanie vyznamenania,
+	vymenovanie a odvolanie štátneho funkcionára a prijatie demisie,
+	odpustenie, zmiernenie alebo zahladenie trestu a nariadenie nezačínať alebo nepokračovať v trestnom konaní,
+	organizačnú štruktúru a počty zamestnancov Kancelárie prezidenta Slovenskej republiky.
+Vláda slovenskej republiky
+je povinná zverejniť:
+	texty materiálov (návrhy, správy, rozbory) predložených na rokovanie vlády,
+	prijaté uznesenia vrátane ich príloh.
+Ministerstvá, ostatné ústredné orgány štátnej správy. Orgány miestnej štátnej správy
+	zverejňujú materiály programového, koncepčného a strategického charakteru,
+	texty navrhovaných právnych noriem (po ich uvoľnení na medzirezortné pripomienkové konanie).
+Odkaz na zverejnenú informáciu
+Ak predmetom žiadosti je získanie informácií, ktoré už boli zverejnené, povinná osoba môže bez zbytočného odkladu, najneskôr však do piatich dní od podania žiadosti, namiesto sprístupnenia informácií žiadateľovi oznámiť údaje, ktoré umožňujú vyhľadanie a získanie zverejnenej informácie.
+Ak žiadateľ trvá na sprístupnení zverejnených informácií, povinná osoba mu ich sprístupní. V takom prípade začína lehota na sprístupnenie plynúť dňom, keď žiadateľ oznámil, že trvá na priamom sprístupnení informácie.
+Ochrana utajovaných skutočností
+Ak požadovaná informácia
+	tvorí utajovanú skutočnosť podľa osobitného zákona,
+	alebo je predmetom bankového tajomstva,
+	alebo daňového tajomstva (podľa osobitného zákona, ku ktorým žiadateľ nemá oprávnený prístup),
+	povinná osoba ju nesprístupní s uvedením odkazu na príslušný právny predpis.
+Ochrana osobnosti a osobných údajov
+Informácie, 
+	ktoré sa dotýkajú osobnosti a súkromia fyzickej osoby, 
+	písomnosti osobnej povahy, 
+	podobizne, obrazové snímky a obrazové a zvukové záznamy týkajúce sa fyzickej osoby 
+	alebo jej prejavov osobnej povahy 
+povinná osoba sprístupní len vtedy, ak to ustanovuje osobitný zákon, 
+alebo s predchádzajúcim písomným súhlasom dotknutej osoby 
+ak dotknutá osoba nežije, taký súhlas môže poskytnúť jej blízka osoba.
+Blízka osoba (§ 116)
+Blízkou osobou je 
+	príbuzný v priamom rade,
+	súrodenec a manžel.
+
+Iné osoby v pomere rodinnom alebo obdobnom sa pokladajú za osoby sebe navzájom blízke, ak by ujmu, ktorú utrpela jedna z nich, druhá dôvodne pociťovala ako vlastnú ujmu.
+Stupeň príbuzenstva dvoch osôb sa určuje podľa:
+	počtu zrodení, ktorými v priamom rade pochádza jedna od druhej,
+	a v pobočnom rade obidve od najbližšieho spoločného predka.
+Ochrana obchodného tajomstva
+Informácie označené ako obchodné tajomstvo povinná osoba nesprístupní.
+Porušením alebo ohrozením obchodného tajomstva nie je najmä sprístupnenie informácie.
+	týkajúcej sa závažného vplyvu na zdravie ľudí, svetové kultúrne a prírodné dedičstvo,  životné prostredie  a ekologickú stabilitu, 
+	o znečisťovaní životného prostredia, 
+	ktorá sa získala za verejné financie alebo sa týka používania verejných financií alebo nakladania s majetkom štátu alebo majetkom obce, 
+	o štátnej pomoci.
+Podmienky obmedzenia
+Všetky obmedzenia práva na informácie vykonáva povinná osoba tak, že sprístupní požadované informácie vrátane sprievodných informácií po vylúčení tých informácií, pri ktorých to ustanovuje zákon. Oprávnenie odmietnuť sprístupnenie informácie trvá iba dovtedy, kým trvá dôvod nesprístupnenia.
+Žiadosť o sprístupnenie informácií
+Žiadosť možno podať:
+	písomne, ústne, faxom, elektronickou poštou alebo iným technicky vykonateľným spôsobom
+Zo žiadosti musí byť zrejmé:
+	ktorej povinnej osobe je určená, 
+	meno, priezvisko, názov alebo obchodné meno žiadateľa, jeho adresa pobytu alebo sídlo, ktorých informácií sa žiadosť týka,
+	aký spôsob sprístupnenia informácií žiadateľ navrhuje.
+Ak žiadosť nemá predpísané náležitosti:
+	povinná osoba bezodkladne vyzve žiadateľa, aby v určenej lehote, ktorá nesmie byť kratšia ako sedem dní, neúplnú žiadosť doplnil. 
+	Poučí žiadateľa aj o tom, ako treba doplnenie urobiť. 
+	Ak napriek výzve povinnej osoby žiadateľ žiadosť nedoplní a informáciu nemožno pre tento nedostatok sprístupniť, povinná osoba žiadosť odloží.
+Žiadosť je podaná dňom, keď bola oznámená povinnej osobe príslušnej vo veci konať.
+Na žiadosť povinná osoba písomne potvrdí podanie žiadosti a oznámi predpokladanú výšku úhrady za sprístupnenie informácie.
+Postúpenie žiadosti
+Ak povinná osoba, ku ktorej žiadosť smeruje, nemá požadované informácie k dispozícii a ak má vedomosť o tom, kde možno požadovanú informáciu získať, postúpi žiadosť do piatich dní odo dňa doručenia žiadosti povinnej osobe, ktorá má požadované informácie k dispozícii, inak žiadosť odmietne rozhodnutím
+Postúpenie žiadosti povinná osoba bezodkladne oznámi žiadateľovi.
+Lehota na vybavenie žiadosti začína plynúť znovu dňom, keď povinná osoba dostala postúpenú žiadosť.
+Spôsob sprístupnenia informácií na žiadosť
+Informácie sa sprístupňujú najmä ústne, nahliadnutím do spisu vrátane možnosti vyhotoviť si odpis alebo výpis, odkopírovaním informácií na technický nosič dát, sprístupnením kópií predlôh s požadovanými informáciami, telefonicky, faxom, poštou, elektronickou poštou. Ak informáciu nemožno sprístupniť spôsobom určeným žiadateľom, dohodne povinná osoba so žiadateľom iný spôsob sprístupnenia informácie.
+Za prístupnú formu sprístupnenia informácie žiadateľovi, ktorý je osobou nevidiacou alebo slabozrakou, sa podľa tohto zákona považuje informácia napísaná
+	slepeckým (Braillovým) písmom alebo
+	zväčšeným typom písma.
+Pri podaní žiadosti predloží kópiu preukazu občana s ťažkým zdravotným postihnutím s červeným pásom, na ktorého zadnej strane je vyznačený druh zdravotného postihnutia "Nevidiaci - Blind".
+Ak je žiadateľom osoba nepočujúca alebo nedoslýchavá v žiadosti uvedie, akým spôsobom podľa § 16 ods. 1 požaduje sprístupnenie informácie. 
+Povinná osoba umožní každému bez preukázania právneho alebo iného dôvodu alebo záujmu nahliadnuť, robiť si výpisy alebo odpisy alebo kópie zo spisov a z dokumentácie.
+Lehoty na vybavenie žiadosti
+Žiadosť o sprístupnenie informácií povinná osoba vybaví bez zbytočného odkladu, najneskôr do ôsmich pracovných dní odo dňa podania žiadosti alebo odo dňa odstránenia nedostatkov žiadosti podľa a do 15 pracovných dní, ak sa sprístupňuje informácia nevidiacej osobe v prístupnej forme, ak tento zákon neustanovuje inak.
+Opravné prostriedky
+Proti rozhodnutiu povinnej osoby o odmietnutí požadovanej informácie možno podať odvolanie v lehote 15 dní od doručenia rozhodnutia alebo márneho uplynutia lehoty na rozhodnutie o žiadosti. Odvolanie sa podáva povinnej osobe, ktorá rozhodnutie vydala alebo mala vydať.
+evidencia žiadostí
+Povinná osoba vedie evidenciu žiadostí tak, aby poskytovala údaje potrebné na kontrolu vybavovania žiadostí a údaje o najčastejšie vyžiadaných informáciách.
+Evidencia musí obsahovať najmä tieto údaje:
+	dátum podania žiadosti, 
+	vyžiadanú informáciu a navrhovaný spôsob poskytnutia informácie, 
+	výsledok vybavenia žiadosti (poskytnutie informácií, vydanie rozhodnutia alebo postúpenie žiadosti), 
+	podanie opravného prostriedku.
+Úhrada nákladov
+Informácie sa sprístupňujú bezplatne s výnimkou úhrady vo výške, ktorá nesmie prekročiť výšku materiálnych nákladov spojených so zhotovením kópií, so zadovážením technických nosičov a s odoslaním informácie žiadateľovi. Náklady na sprístupnenie informácie prístupnou formou osobe so zmyslovým postihnutím znáša povinná osoba.
+Povinná osoba môže (ale nemusí) zaplatenie úhrady odpustiť.
+Podrobnosti o úhrade nákladov za sprístupnenie ustanoví všeobecne záväzný právny predpis, ktorý vydá Ministerstvo financií Slovenskej republiky.
+Úhrady sú príjmami povinnej osoby. Suma nesmie presiahnuť cenu materiálnych nákladov.
+Priestupky (Sankcie)
+Priestupku sa dopustí ten, kto:
+	vedome vydá a zverejní nepravdivé alebo neúplné informácie,
+	vydaním rozhodnutia alebo vydaním príkazu, alebo iným opatrením zapríčiní porušenie práva na sprístupnenie informácií,
+	poruší inú povinnosť ustanovenú týmto zákonom.
+Za takýto priestupok možno:
+	uložiť pokutu do 1 650 eur (informatívne),
+	a zákaz činnosti až na dva roky.
+PIKT 4 – 11.3.2013	7

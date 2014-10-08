@@ -1,0 +1,29 @@
+A.skupina
+
+1. Nech A, B, C sú náhodné udalosti. Zapíšte množinovými operáciami udalosti spoèívajúce v tom, že spomedzi A, B a C
+a) nastala A alebo B
+b) nastane len A a B (teda nie C)
+c) nastane aspon jedna znich (t.j. aspon jedna spomedzi A, B, C)
+d) nastali prave jedna z nich
+(každá z otázok a) – d) je 0,5 bodová)
+
+Ïalej nech P(A)=0,4, P(B)=0,4, P(C)=0,45, P(A/B)=5/8, P(B/C)=4/9, P(C/A)=5/8 a P(A prienik B prienik C)=0,15
+Urète pravdepodobnosti (každá za 2 body)
+
+e) P(A prienik B)
+f) P(A prienik B prienik C')
+g) P(A prienik B' prienik C')
+h) P(nastane prave jedna z A, B, C)
+
+2. (5 b)
+Škatu¾a obsahuje 15 výrobkov – 10 je prvej, 3 druhej a 2 tretej kvality.
+Predpokladajme ze vyberieme naraz 5 vyrobkov.
+(2 b) Vycislte pravdepodobnost udalosti, ze medzi vybranymi budu 3 vyrobky prvej kvality a 2 druhej kvality.
+(3 b) Vycislte pravdepodobnost toho, ze medzi vybranymi budu aspon 3 prvej kvality a pritom najviac 
+      1 vyrobok tretej kvality.
+
+
+Spracoval:
+
+       Michal Krchnavy
+(c) http://fei.toxicwaste.sk

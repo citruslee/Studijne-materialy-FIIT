@@ -1,0 +1,239 @@
+
+     *********   ZADANIA PRE  PREDMET  ASEMBLERY   **********
+                                                          
+
+  PODMIENKY ZISKANIA ZAPOCTU
+
+100% aktivna ucast na cviceni.
+Ustna prezentacia vsetkych zadani a elektronicke  odovzdanie zadani do daneho terminu do systemu AIS.
+Dosiahnuty  minimalny pocet bodov. 
+
+
+  FORMA ODOVZDANEJ DOKUMENTACIE   
+
+Hotove zadanie sa odovzdava v elektronickej forme v danom termine a  v nasledujucom tvare:
+Cislo zadania a nazov zadania
+text konkretneho zadania, ktore riesil autor
+Autor:
+rocnik, studij.program:
+ak.rok.
+
+            nasleduje podrobne a zmysluplne okomentovany zdrojovy program (netreba kazdy riadok)
+
+Na konci programu uvedieme zhodnotenie.
+Nasledujuci priklad zhodnotenia  sluzi ako navod, co by sa malo v zhodnoteni nachadzat. Nekopirujte obsah ani ciselne poradie, ale pouzite to, co je podstatne, pravdive a vhodne pre vase konkretne zadanie.
+ 1. Program je funkcny  (alebo nie je funkcny z nasled. dovodov....)
+ 2. Bol vypracovany v prostredi Windovs ako  MSDOS aplikacia za pouzitia kompilatora TASM v. 2.01 a TLINK v. 3.01. 
+ 3. Pre spustenie tohoto programu potrebujeme PC s procesorom architektury  x86 najmenej vsak 80286 s nainstalovanym operacnym systemom MsDOS alebo  Win9x/WinNT/WinME/WinXP alebo nejaky OS umoznujuci spustat   DOSovske programy.
+ 4. Pamatove naroky su minimalne, kedze ide o program typu COM, ktory  nealokuje ziadnu dalsiu pamat.
+ 5. Uvedieme opis zvoleneho algoritmu. Opiseme osobitosti riesenia
+ 6. Uvedieme prevzate algoritmy, myslienky, navody a pouzite zdroje
+ 7. Vstupy a vystupy programu boli uskutocnene pomocou standartnych funkcii DOS, BIOS (konkretne akych)....
+ 8. Program ma nasledujuce obmedzenia...., mohol by zlyhat pri nesplneni tejto podmienky.....
+ 9. Chovanie programu bolo otestovane nasledujucim sposobom...
+10. Program by sa dal vylepsit  napr. farbou pisma, pozadia, umiestnenim vysledkov na zvolenom mieste obrazovky, inym algoritmom a pod.
+11. Efektivnejsi kod by sme  dosiahli tymto sposobom...uviest konkretne
+ 
+           1. ZADANIE :   MANIPULACIA  S  TEXTOM  
+
+Rozne institucie  ponukaju prostrednictvom terminalu svoje produkty  (napr.banky- financne produkty, restauracie- jedla, autobazar-auta, realitky-nehnutelnosti, obchod-zlavnene tovary, vystavy-zoznam vystavovatelov).
+Napiste program, ktory ponukne zoznam produktov danej institucie umiesteny v strede obrazovky.
+Vypis zabezpecte vhodnou volbou funkcii, ktore manipuluju na obrazovke s kurzorom, s textom resp. znakom.
+Po vybere kazdeho produktu zo zoznamu  ponuk sa vypise dalsia podrobnejsia informacia, napr. cena produktu.
+Nedovolte, aby program zlyhal, pri stlaceni nespravnej klavesy pri vybere produktu  z ponuky .
+  Vykonanie vasho programu ukoncite vyberom ponuky  EXIT , ktora bude  posledna v ponuke produktov.
+Pouzite makro s parametrom.
+Zdrojovy program musi byt  vhodne okomentovany.
+
+Hodnotenie: 4 body
+Odovzdany program sa obhajuje ustne na cviceni.
+Pri obhajobe hodnotime znalost a kvalitu predvedeneho riesenia.
+Za tyzden omeskania prezentacie je strata polovicneho poctu bodov . 
+Za neodovzdanie zadania do systemu AIS v urcenom termine je strata polovicneho poctu  bodov. 
+Za neautorsky program je nula bodov.
+Termin odovzdania: 4.tyzden semestra
+
+
+        2. ZADANIE :   PRACA SO ZNAKMI  NA  OBRAZOVKE
+
+Naprogramujte jednu ulohu z uvedeneho zoznamu uloh. Ulohu naprogramujte ako proceduru.  Pouzite najvhodnejsim sposobom funkcie na pracu so znakmi. 
+Zvolte vhodny sposob naprogramovania oneskorenia zobrazovania. Mozete vyuzit existujuce standartne  funkcie a procedury.  Po vykonani ulohy program ukoncite stlacenim lubovolnej klavesy.
+
+1.  Zobrazte niekde v strede obrazovky  text AHOJ. Ulozte tento text postupne do siedmich  nasledujucich riadkov, ale v kazdom riadku 
+     posunuty o jeden stlpec vpravo.  Predchadzajuci vypis na riadku zmizne z obrazovky. Na obrazovke ostane iba posledny vypis textu AHOJ,   ktory po  case
+     urcenom pouzivatelom  tiez zmizne.
+ 
+2. Zobrazte zvoleny znak  v strede  obrazovky.
+    Naprogramujte postupny pohyb kurzora v riadku, kde sa nachadza uvedeny znak. Ak sa kurzor dostane na miesto znaku, tento znak zmizne z obrazovky  a za
+    urcity cas sa opet zobrazi . Blikanie znaku vykonajte este 4-krat s viditelnym oneskorenim.
+ 
+3. Nech program zobrazi na zvolene miesto obrazovky  ramcek vhodnej velkosti. Do ramceka umiestnite postupne jednotlive pismena vaseho priezviska.
+    Potom zobrazene priezvisko zhasne a s oneskorenim sa zobrazi zase po jednom pismene.
+
+4. Zobrazte niekde v strede obrazovky  hviezdicku. Ulozte ju postupne este 5-krat  po kazdom druhom nasledujucom riadku posunutu o 1 miesto vpravo.
+     Potom  postupne vsetky zmiznu od naposledy zobrazenej hviezdicky . V dalsom cykle sa opet vsetkych sest hviezdiciek po jednej  zobrazi a znovu od posledne zobrazenej
+     hviezdicky postupne zmiznu. Cyklus zobrazenia a zmiznutia sa opakuje 4-krat
+
+5.  Zobrazte niekde v strede obrazovky zvoleny znak. Ulozte ho postupne este 5-krat  do kazdeho druheho predchadzajuceho riadku ale kazdykrat posunuty o 1 miesto vpravo.
+    Velmi pomaly kazdy znak zmizne od naposledy zobrazeneho znaku, ale potom sa znovu co najrychlejsie jednotlivo  vsetky znaky postupne  objavia a zase velmi pomaly "zhasnu". 
+    Cyklus   rozsvietenia a zhasania znaku opakujte 4x.
+
+6. Zobrazte na zvolene miesto obrazovky postupne dva rozne znaky. Potom ich striedavo zobrazte do dvoch stlpcov v  nasledujucich 10-tich riadkoch  Po skonceni programu
+    ostanu vsetky znaky  viditelne. 
+
+7. Zobrazte niekde v strede obrazovky  velke pismeno A. Ulozte toto pismeno postupne s oneskorenim
+    na nasledujuci riadok a nasledujuci stlpec este 8-krat jednotlivo na kazdy riadok aj stlpec.
+
+8. Zabezpecte postupny  vypis textu AHOJ od zvolenej pozicie kurzora na obrazovke na novy riadok v tom istom stlpci. Vypis opakujte s oneskorenim az po spodny
+    okraj  obrazovky. Vsetky vypisy ostanu viditelne. 
+
+9. Vypiste postupne text AHOJ od konca zvoleneho  riadku na zaciatok toho isteho riadku (nie obrateny text, nie neuplny) posunuty o svoju dlzku. Po poslednom 
+    vypise textu AHOJ  cely zaplneny riadok zmizne.
+
+10.Posuvajte postupne text AHOJ od konca riadku na zaciatok riadku o jedno miesto vlavo (nie o celu dlzku textu).  Po kazdom posune bude viditelny iba jeden retazec AHOJ.
+     Po poslednom posunuti k zaciatku riadku ostane retazec AHOJ viditelny.
+
+11. Nakreslite postupne po jednom znaku od zaciatku  zvoleneho riadku "zubkovanu" vlnovku  az po okraj obrazovky . Vo vlnovke sa vyskytuje ten isty znak, pricom 
+      rameno vlnovky tvori viacero tych istych znakov.
+
+12. Zobrazte na zvolenom miete obrazovky znak / a na tom istom mieste s velkym oneskorenim znak \. Striedajte zobrazovanie oboch znakov zvoleny pocetkrat.
+      Zobrazovanie kazdeho znaku zrychlujte.
+
+13. Zobrazte na zvolene miesta obrazovky styri znaky. Pohybujte postupne kurzorom po celej obrazovke. Zvolte smer pohybu.  Ak kurzor narazi na niektory z tychto znakov, znak zmizne. Osetrite krajne body obrazovky.
+
+14. Zobrazte na zvolene miesta obrazovky tri znaky. Pohybujte postupne kurzorom po celej obrazovke. Ak kurzor narazi na znak, zmeni ho na iny. Osetrite krajne body obrazovky.
+
+15. Zobrazte na zvolene miesta obrazovky styri znaky.  Pohybujte postupne kurzorom po celej obrazovke. Ak kurzor narazi na znak, prida k nemu ten isty znak. Osetrite krajne body obrazovky.
+
+16. Striedavo zobrazte dva rozne znaky  na sest miest obrazovky . Pohybujte postupne kurzorom po celej obrazovke. Ak kurzor narazi na prvy znak, tento zmizne.
+      Ak kurzor  pride k dalsiemu znaku a je iny ako bol prvy, tento necha na obrazovke. Vysledkom bude   zobrazenie vsetkych "druhych" znakov.
+
+17.  Nakreslite postupne od  zvoleneho riadku a stlpca zubkovanu vlnovku  vertikalne v stlpci. Vo vlnovke sa vyskytuje ten isty znak, pricom rameno vlnovky ich obsahuje viacero. Po jej vykresleni za urcity cas
+      vlnovka z obrazovky zmizne.   Osetrite okraje obrazovky. 
+
+18. Nakreslite postupne od  zvoleneho riadku a stlpca zubkovanu vlnovku  vertikalne v stlpci. Vo vlnovke sa vyskytuju dva znaky. Prvy sa bude pomaly postupne zobrazovat v pravom "ramene" vlnovky,
+     druhy sa bude postupne zobrazovat v lavom  "ramene" vlnovky.  Vlnovka po jej vykresleni ostane cela viditelna.
+
+19. Zobrazte v danom riadku na zvolenych poziciach tri  znaky.  Spojte tieto tri znaky postupne ciarou od najlavejsieho znaku k najpravejsiemu znaku. Vsetky znaky ostanu viditelne.
+
+20. Naprogramujte postupny pohyb zvolenych  znakov  v smere hodinovych ruciciek tak, ze budu vytvarat mysleny kruh.
+
+21. Zobrazte postupne do stredu obrazovky dva sustredne stvorce zvolenej velkosti.
+
+22. Postupnym pohybom kurzora vykreslite rovnostranny trojuholnik .
+
+23. Postupnym pohybom kurzora vykreslite spojnicu dvoch bodov X, Y, ktore su zobrazene v strede obrazovky v jednom stlpci. Vzdialenost medzi bodmi predstavuje 7 riadkov.
+
+24. Na zvolene miesto obrazovky postupne  vykreslite notovu osnovu, na ktorej budu znazornene dve lubovolne  noty.
+25. Postupnym pohybom kurzora vykreslite rovnoramenny trojuholnik .
+
+Narocnejsie modifikacie:
+  generujte nahodny pohyb kurzora, znak alebo text moze byt farebny, pohyb kurzora moze byt farebny,  pohyb je sprevadzany blikanim v danom casovom intervale,
+   kurzor ma  inu velkost  a tvar
+
+
+Hodnotenie: 8 bodov
+Odovzdany program sa obhajuje ustne na cviceni.
+Pri obhajobe hodnotime znalost a kvalitu predvedeneho riesenia.
+Za tyzden  omeskania prezentacie je strata polovicneho poctu bodov . 
+Za neodovzdanie zadania do systemu AIS v urcenom termine  je strata polovicneho poctu bodov .
+Za neautorsky program je nula bodov.
+Program musi byt dobre zdokumentovany  (inak strata 1 bodu ).  
+Termin odovzdania: 6.tyzden semestra
+
+
+             3. ZADANIE  :   TESTOVANIE   BITOV    
+
+Vytvorte program, ktory najskor precita s klavesnice lubovolny znak  a vypise ho na obrazovku v binarnom tvare. 
+Potom  otestujte prislusne bity precitaneho znaku a podla vysledku testu spustite vykonanie pridelenej ulohy.
+Vstupy aj vystupy patricne okomentujte, pripadne podla povahy ulohy vypiste na obrazovku   vysledok  v  binarnom tvare.
+Vyberte a pouzite najvhodnejsie instrukcie zo skupiny logickych instrukcii daneho procesora.
+Zdovodnite vyber instrukcie.
+Program opakujte pre viacero vstupnych hodnot.
+Zvolte sposob ukoncenia  vykonavania programu.
+Zoznam uloh:
+1)  ak je  6. bit  jednotkovy, vynulujte vsetky ostavajuce bity
+2)  ak su horne styri  bity nulove, potom nastavte priznak ZF v stavovom registri na 1 (ZF sa nachadza v 6.bite stavoveho registra)
+3)  ak  su    2.  a  3. bit  jednotkove , potom nastavte vsetky ostavajuce bity na 1
+4)  ak je v 2. bite 1, potom vytvorte inverziu vsetkych ostatnych bitov
+5)   ak  je v 6.bite 1, potom nastavte priznak SF v stavovom registri na 1 (SF sa nachadza v 7.bite)
+6)   testujte  4. a 6. bit. Zmente ich na opacnu hodnotu.
+7)   ak su hodnoty bitov 0 aj 1  nulove, spocitajte ostatne jednotkove bity
+8)   ak je pocet jednotiek parny , vypiste ich pocet
+9)   nastavte bity  6 a 7 registra AL na 1, ak vstupna hodnota predstavovala cislicu
+10)  nastavte bity 6 a 7 registra AL   na 0, ak  bity 0 a 1 boli jednotkove
+11)  ak je 3. bit nula, spusti sa dlhsietrvajuci alarm ( zvoncek, alebo iny zvuk pripadne blikanie na obrazovke)
+12)  vypiste  pocet vsetkych jednotkovych bitov a ich poradove cislo
+13)  vypiste pocet vsetkych nulovych bitov  a ich poradove cislo
+14)   ak je 7.bit nula, potom vynasobte dve vstupne  cislice (nie v ascii tvare)
+15)   ak su nizsie 4 bity  nulove, vymente navzajom vyssie styri bity s nizsimi styrmi bitmi 
+16)  ak su spodne 4 bity  nulove, potom kazdy bit z tychto styroch bitov  nastavte na 1 
+17)  ak je niektory bit z hornych 4 bitov  jednotkovy, potom vynulujte styri spodne bity
+18)  ak je 7.bit nula ,potom  vytvorte  dvojnasobok danej hodnoty
+19)  ak je 6.bit 1 , potom  vydelte danu vstupnu hodnotu dvomi
+20)  najdite  prvy jednotkovy bit zlava, potom ho vynulujte
+21)  ak je 4.bit 1, potom vydelte danu vstupnu hodnotu styrmi
+22)  ak je 0.bit  jednotkovy, vynasobte  danu vstupnu hodnotu styrmi
+23)  ak by 8-bitova hodnota predstavovala kladne cislo, skonvertujte ho na zaporne v priamom kode
+24)  ak je pocet nul parny, vypiste ich pocet
+25)  ak je vstupna hodnota ASCII cislica, potom ju transformujte na  zodpovedajucu binarnu cislicu a zobrazte ju ako zaporne cislo v priamom kode
+26)   ak precitany znak predstavuje male pismeno, potom ho zmente na velke
+27)   k danej hodnote vytvorte cislo v doplnkovom kode
+28)  ak  su spodne styri bity nulove, nastavte priznak PF v stavovom registri  na 1 ( PF sa nachadza v 2.bite stavoveho registra)
+
+Hodnotenie: 6 bodov
+Odovzdany program sa obhajuje ustne na cviceni.
+Pri obhajobe hodnotime znalost a kvalitu  predvedeneho riesenia.
+Za tyzden  omeskania prezentacie  je strata polovicneho poctu bodov . 
+Za neodovzdanie zadania do systemu AIS  v  urcenom  termine je strata polovicneho poctu bodov . 
+Za neautorsky program je nula bodov.
+Program musi byt dobre zdokumentovany   (inak strata 1 bodu )
+Termin odovzdania: 8.tyzden semestra
+
+
+         4. ZADANIE :   SPRACOVANIE  POLA  ZNAKOV   ZO SUBORU
+
+ Napiste program, ktory nacita obsah  suboru , spravi kontrolny vypis obsahu suboru na obrazovku  a vypise jeho dlzku.  Potom sa vykona jedna uloha.
+ Pridelenu ulohu zo zoznamu uloh realizujte ako externu proceduru. Na spracovanie pola znakov pouzite retazcove instrukcie. Prislusne sprievodne spravy a vysledky
+ vypiste na obrazovku. 
+Ponuka uloh :
+   1)  poradove cislo prvej medzery
+   2)  poradove cislo prveho velkeho pismena
+   3)  poradove cislo prvej cislice
+   4)  poradove cislo poslednej medzery
+   5)  poradove cislo posledneho velkeho pismena
+   6) nacita znak a vypise pocet jeho vyskytov v retazci
+   7) vymaze z retazca vsetky medzery a vypise pocet zmazanych medzier
+   8)  pocet malych pismen
+   9)  pocet cislic
+  10) nacita znak a vypise poziciu jeho prveho vyskytu v danom retazci
+  11) pocet velkych pismen
+  12) pocty cislic, malych pismen, velkych pismen a ostatnych znakov
+  13) pocet viet 
+  14) pocet slov vo vete
+  15) pocet vyskytov daneho podretazca
+  16) pocet vyskytov daneho znaku a vsetky najdene znaky umiestni na zaciatok retazca
+  17) za kazdy znak ( okrem posledneho)  vlozi medzeru a vypise pocet vlozenych medzier
+  18) vypise obrateny retazec 
+  19)  pozicie prvych dvoch velkych pismen v retazci
+  20)  pozicie poslednych dvoch velkych pismen v retazci
+  21)  pocet oddelovacov v texte
+  22) najde znak s maximalnou hodnotou a vypise jeho poziciu
+  23) najde znak s minimalnou hodnotou a vypise jeho poziciu
+  24) vymeni navzajom prvy a posledny znak v retazci 
+  25) suvisly text minimalne o 100 znakoch  rozdeli na riadky po 5 znakoch ukoncenych ciarkou a vypise pocet riadkov
+  26) vyberie z retazca cislice a umiestni ich na zaciatok retazca a vypise pocet cislic
+  27) )vyberie z retazca specialne znaky a umiestni ich na koniec retazca a vypise pocet specialnych znakov
+  28) presunie v danom retazci dva znaky s najmensou hodnotou na zaciatok retazca
+  29) nacita znak a vypise pozicie vsetkych jeho vyskytov v retazci
+  30) z retazca vyberie cislice, vypise ich na obrazovku, potom z retazca vyberie velke pismena a vypise ich na novy riadok obrazovky
+
+Hodnotenie: 12 bodov
+Odovzdany program sa obhajuje ustne na cviceni.
+Pri obhajobe hodnotime znalost a kvalitu predvedeneho riesenia a ovladanie prace s debuggerom.
+Za tyzden omeskania prezentacie  je strata polovicneho poctu bodov .
+Za neodovzdanie zadania do systemu AIS v urcenom termine je strata polovicneho poctu bodov .
+Za neautorsky program je nula bodov.
+Program musi byt dobre zdokumentovany  ( inak strata 1 bodu )
+Termin odovzdania: 10.tyzden semestra
+

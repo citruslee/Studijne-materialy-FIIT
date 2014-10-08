@@ -1,0 +1,13 @@
+Úloha 12 - Veľkosť hashovacej tabuľky (max. 1 bod)
+
+Pri hašovaní je výhodné, aby veľkosť hašovacej tabuľky bola prvočíselná.
+Pre dané číslo N, nájdite najbližšie prvočíslo väčšie ako N. Toto
+prvočíslo sa potom dá použiť ako veľkosť hašovacej tabuľky pre N prvkov.
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+// urci najblizsie vacsie prvocislo od cisla n
+int table_size(int n)
+{
+  ...
+}

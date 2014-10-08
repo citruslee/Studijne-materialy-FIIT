@@ -1,0 +1,28 @@
+Úloha 2 - Reverzná poľská notácia (max. 1 bod)
+
+Aritmetické výrazy môžeme reprezentovať v prefixovej, infixovej a postfixovej notácii.
+Postfixová notácia, nazývaná tiež reverzná poľská notácia, sa vyznačuje usporiadaním
+operátorov a operandov - operátory (aritmetické operácie nad operandami) sa nachádzaju
+napravo od operandov. Prevod výrazu z jednej notácie do inej vyžaduje použitie zásobníku.
+Napr. výpočet ((1 + 2) * 4) + 3 zapíšeme v reverznej poľskej notácii ako 1 2 + 4 * 3 +.
+Výhoda takéhoto alternatívneho zápisu okrem iného spočíva v nepotrebnosti použitia zátvoriek
+pre jednoznačný zápis ľubovoľného výrazu.
+
+Napíšte program v jazyku C, ktorý na štandardnom vstupe dostane výraz v reverznej poľskej
+notácii a na štandardnom výstupe vypíše jeho výslednú hodnotu. Výraz na vstupe je neprázdna
+postupnosť čísel a operácii + (sčítanie) a * (násobenie) oddelená medzerami.
+Zásobník implementujte dynamickou alokáciou pamäti (spájaným zoznamom), pretože vstup
+môže byť naozaj dlhý (resp. dlhší ako statické polia, ktoré by ste použili).
+
+Príklad vstupu (č.1):
+1 2 + 4 * 3 +
+
+Príklad výstupu (č.1):
+15
+
+Príklad vstupu (č.2):
+90 30 *
+
+Príklad výstupu (č.2):
+2700
+`

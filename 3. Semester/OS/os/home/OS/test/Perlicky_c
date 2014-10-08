@@ -1,0 +1,56 @@
+char adresar[25][50];
+sscanf(argv[i],"%s",&adresar[i]);
+sscanf(".","%s",adresar[0]);                                   
+
+if ((strcmp(path,""))!=NULL)
+
+if ((dir->d_name) == "." || dir->d_name == "..") continue;
+
+char *odkaz;
+if(strcmp(odkaz[0],"/"))
+
+if(argc==3 && argv[1]=="-a")
+
+char hadres[500];
+memset(hadres,0,strlen(hadres));
+
+void main(int argc, char *argv[]) {
+int velkost;
+velkost=argv[2];
+
+while((poc1=read(rura1[0],buf1,5000))>0)
+write(rura1[1],buf1,poc1);
+
+if ( S_IRUSR && S_ISDIR(filestatus.st_mode) ) {   //vnor sa do adresara
+
+if(S_IFDIR && (sb->st_mode))
+
+strcpy(riadok, "");
+
+if (!(fs.st_mode && S_IFIFO && S_IRUSR))
+
+dup(pipa2[2]);
+
+if ((argc > 2) && ( argv[2] == "-p"))
+
+strcpy(prip,"argv[i+1]");
+
+vstup = fdopen(1,"r");
+
+if (!S_IRUSR) continue;
+
+if (pipe(fd == -1))
+
+
+
+
+
+close(1);
+if(dup(pajpa1[1])==-1)  //nasadenie pajpy1 na stdout
+
+fprintf(stderr, "Error: Nepodarylo sa vytvorit dcersky proces\n");
+
+perror("stat zlihal");                                                       
+
+printf("Error: neudali ste program\n");
+

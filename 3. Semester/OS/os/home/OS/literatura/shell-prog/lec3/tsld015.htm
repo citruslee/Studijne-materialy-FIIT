@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Save Pattern Examples</title>
+</head>
+
+<body>
+
+<h1>Save Pattern Examples</h1>
+
+<ul>
+  <li><h2>\(a\) matches the first a on the line wherever found and puts in register 1 </h2>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>\(a\)\1 - stores the first a in register 1 then adds the value in register one to
+    the match pattern so this expression would match aa </h2>
+    <ul>
+      <li>matches any two of the same characters </li>
+      <li>often used with \(.\) which would allow match of any two of the same character -remember
+        . Means any char </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>registers can be used on the subsitute part of the s command. Characters after the
+    second / </h2>
+    <ul>
+      <li>1,$s/\(.*\)tab_char_here\(.*\)/\2 \1/ </li>
+      <li>switch all characters before the tab with all the characters and the tab </li>
+      <li>characters before tab put in register 1, chars after tab put in reg. 2 </li>
+      <li>the subsitute part of s command: /\2 \1/ says to put what is in reg 2 first and what is
+        in reg. 1 second. So in effect swap </li>
+      <li>very useful for swapping fields in files if fields separated with tab </li>
+      <li>&nbsp;</li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li>&nbsp;</li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld014.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld016.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

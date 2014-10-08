@@ -1,0 +1,44 @@
+pages
++----------------+---------------+------+-----+---------+----------------+
+| Field          | Type          | Null | Key | Default | Extra          |
++----------------+---------------+------+-----+---------+----------------+
+| id             | int(11)       | NO   | PRI | NULL    | auto_increment |
+| url            | varchar(4000) | YES  |     | NULL    |                |
+| checksum       | varchar(32)   | YES  |     | NULL    |                |
+| content_length | int(11)       | YES  |     | NULL    |                |
+| keywords       | varchar(4000) | YES  |     | NULL    |                |
++----------------+---------------+------+-----+---------+----------------+
+
+terms
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| label     | varchar(255) | YES  | MUL | NULL    |                |
+| term_type | varchar(255) | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+
+access_logs
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| id           | int(11)     | NO   | PRI | NULL    | auto_increment |
+| userid       | varchar(32) | YES  | MUL | NULL    |                |
+| timestamp    | datetime    | YES  |     | NULL    |                |
+| time_on_page | int(11)     | YES  |     | NULL    |                |
+| page_id      | int(11)     | YES  |     | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+
+pages_terms
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| id         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| page_id    | int(11)     | YES  |     | NULL    |                |
+| term_id    | int(11)     | YES  |     | NULL    |                |
+| weight     | float       | YES  |     | NULL    |                |
+| created_at | datetime    | YES  |     | NULL    |                |
+| updated_at | datetime    | YES  |     | NULL    |                |
+| source     | varchar(20) | NO   |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+

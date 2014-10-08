@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Problémik pre 6. cvičenie z UI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+</head>
+<body>
+
+<h4>Problémik pre 6. cvičenie z UI</h4>
+
+<h2>Hranie hier - MiniMax</h2>
+<p>
+Uvažujte hru Tic-Tac-Toe pre dvoch hráčov na ploche 3x3 políčka. Hráč označený
+Max má krížiky (X), hráč označený Min má kolieska (O). Hra sa začína v stave
+s<sup>*</sup> a na ťahu je Max.
+</p><p>
+</p><table>
+<tbody><tr>
+<td>
+s<sup>*</sup> =
+</td>
+<td>
+<table border="1" cellpadding="10" cellspacing="0">
+<tbody><tr>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td><p align="center">O</p></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><p align="center">X</p></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+<ol>
+<li>Nakreslite strom hľadania generovaný algoritmom MiniMax, ktorý pôjde
+ len do hĺbky 2. Vrcholy stromu budú dvojice<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <b>&lt;stav hry</b> (obrázok); <b>označenie,
+ktorý hráč je na ťahu</b> (Min alebo Max)<b>&gt;</b>.<br>
+Stavy, ktoré sa od iného stavu líšia len otočením
+hracej plochy alebo sú zrkadlovo prevrátené, neuvažujte.
+Každému listu priraďte hodnotu statickej
+vyhodnocovacej funkcie
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp; <i>e(s) = (počet otvorených línií pre Max) -
+(počet otvorených línií pre Min).</i> <br>
+</p><p>
+Otvorená línia je každý riadok, stĺpec alebo diagonála, kde neleží značka
+protihráča, teda je stále možné dosiahnuť tam trojicu. Napr. pre stav
+s<sup>* </sup>je e(s<sup>*</sup>) = 6 - 4 = 2 (bez ohľadu, či je na ťahu Min
+alebo Max). </p><p>
+
+</p></li><li>Navrhnite jeden ťah, ktorý má Max urobiť a svoj návrh zdôvodnite.
+</li></ol>
+
+<p>
+Riešenia posielajte len počas cvičenia svojmu cvičiacemu na e-mailovú adresu meno@fiit.stuba.sk, kde meno je jedno z:
+</p><ul> 
+  <li> bartos
+  </li><li> kapustik
+  </li><li> kajsa
+</li></ul>
+<p>
+Nezabudnite uviesť Vaše meno!
+</p>
+</body>
+</html>

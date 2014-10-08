@@ -1,0 +1,43 @@
+Úloha 16 - Autobusové depá (max. 1 bod)
+
+Daný je popis cestnej siete v krajine. Medzi N (N ≤ 1,000) mestami
+vedie M (M ≤ 5,000) obojsmerných autobusových liniek. Na každej linke
+premáva práve jeden autobus, ktorý večer musí zostať v jednom z miest,
+ktoré obsluhuje, v depe. Depá ešte nie sú postavené a dopravný podnik
+zatiaľ nevie, či je možné depá postaviť do miest tak, aby neboli depá
+v oboch mestách nejakej linky – aby každý vodič presne vedel, kam má
+večer prísť odstaviť vozidlo. Pomôžte zúfalému dopravnému podniku,
+napíšte program, ktorý vyrieši tento problém.
+
+Prvý riadok vstupu obsahuje dve čísla N, M. Nasledujúcich M riadkov
+obsahuje každý popis jednej linky – dve rôzne čísla – čísla miest ktoré obsluhuje daná linka.
+
+Pre cestnú sieť na vstupe vypíšte jeden riadok na výstup so slovom
+„YES‟ ak je možné postaviť depá do miest tak, že na každej linke
+bude práve jedno depo, inak napíšte „NO‟.
+
+Príklad vstupu č.1: 6 6
+1 3
+4 3
+6 4
+6 5
+2 5
+1 6
+
+
+
+Výstup pre príklad č.1: YES
+
+
+
+Príklad vstupu č.2: 6 5
+3 1
+3 6
+6 1
+2 5
+3 4
+
+
+
+Výstup pre príklad č.2: NO
+

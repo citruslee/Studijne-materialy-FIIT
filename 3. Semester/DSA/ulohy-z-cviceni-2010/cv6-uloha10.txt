@@ -1,0 +1,33 @@
+Úloha 10 - Červeno-čierny strom (max. 1 bod)
+
+Daný je (binárny vyhľadávací) červeno-čierny strom, vašou úlohou je
+implementovať operáciu vyhľadania prvku ‘najdi’, teda určiť v strome vrchol,
+ktorý má hľadanú hodnotu, alebo vrátiť NULL, ak taký neexistuje.
+
+V strome sú reťazce (char*), každý iný, používa sa lexikografické usporiadanie.
+
+V programe môžete predpokladať, že strom je reprezentovaný nasledovne:
+
+#define BLACK 0
+#define RED 1
+#define is_red(x) (((x)!=NULL)&&(x)->color==1)
+
+struct Node
+{
+  char *key;
+  struct Node *left, *right;
+  int color; // 0 - BLACK, 1-RED
+};
+
+struct Tree
+{
+  struct Node *root;
+};
+
+
+
+Naprogramujte funkciu v nasledovnom tvare: // najdi hodnotu v strome
+struct Node *najdi(struct Tree *tree, char *value)
+{
+  ...
+}

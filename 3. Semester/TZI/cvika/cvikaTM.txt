@@ -1,0 +1,16 @@
+0. TM definícia, konfigurácia
+1. DTM formálne, delta funkcia aj konfigurácia: 0^n 1^n , n je z N+
+2. DTM formálne bol na prednáške, iba pripomenúť myšlienku: a^n b^n c^n; n je z N
+3. DTM neformálne: a^n b^3n c^n d^2n; n je z N
+4. DTM formálne, zdôrazniť zapamätanie symbolu v stave: ww^R  , w patrí {a,b}*
+5. DTM neformálne, zdôrazniť zapamätanie symbolu v stave: ww^R  , w patrí {a,b,c}*
+6. DTM formálne: #_a w = #_b w, w patrí {a,b}*
+7. DTM neformálne: ww, w patrí {a,b}*
+8. DÚ, premyslieť nápad DTM neformálne: www  , w patrí {a,b}*
+-------------------------------------------------------------------
+1. LBA neformálne: ww, w patrí {a,b}*
+2. LBA neformálne: www  , w patrí {a,b}*
+3. formálne T vypočítateľná funkcia: dolná_časť(a/2)+2*b
+4. neformálne T vypočítateľná funkcia: a*b
+5. formálne T vypočítateľná funkcia: (n nad dvomi)
+6. formálne T vypočítateľná funkcia: dolná_časť(log2n)+1

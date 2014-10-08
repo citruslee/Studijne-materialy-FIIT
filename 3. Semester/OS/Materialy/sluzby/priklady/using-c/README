@@ -1,0 +1,15 @@
+Subory v tomto adresari su ukazkove priklady z knihy
+	>>> Using C on the Unix System <<<
+Mali by ilustrovat pouzitie sluzieb jadra a niektorych
+kniznicnych funkcii. Vsetky priklady su okomentovane
+a mali by sa dat pochopit studiom zdrojoveho textu.
+Ak ich chcete vyskusat, skopirujte si ich do svojho
+adresara.
+Ak budete iba citat, mozte v ramci setrenia miesta 
+pouzit namiesto prikazu "cp" (copy file) prikaz "ln"
+(create link) a vyskusat si jeho funkciu.
+
+Nazov = cislo kapitoly v knihe, cislo prikladu 
+(vsetko v jazyku C)
+
+P.Menhart

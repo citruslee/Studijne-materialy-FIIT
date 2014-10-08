@@ -1,0 +1,19 @@
+Na cvičeniach boli 4 zadania. Prvé zadanie bolo iba teoretické, ostatné
+vyžadovali výrobu programu a dokumentáciu k nemu. Pri 2. a 3. boli zadania
+pridelene náhodne. Špeciálne zadania bolo treba konzultovať s cvičiacim. Zadania
+z roku 2010: Z1 – Špecifikácia znalostného konateľa (návrh vlastného konateľa a
+nejaké špecifikácie k nemu, iba dokument) Z2 – Riešenie problémov, využitie
+procedúr hľadania (zadanie na prehľadávanie stavového priestoru) Z2a, b -
+Bláznivá križovatka Z2c, d, e - 8-hlavolam Z2f, g - Eulerov kôň Z2s - Špeciálne
+zadanie, riešenie sokobanu Z3 - Strojové učenie sa – evolučný algoritmus a
+evolučné programovanie Z3a - Hľadanie predpisu funkcie na základe zadaných bodov
+Z3b - Programovanie virtuálneho stroja, evolúcia programu Z4 – Produkčný systém
+Namiesto zadaní 2, 3 a 4 sa dal riešiť RoboCup. Ďalšie linky: Ak je nejaký
+príklad už vyriešený a máte iné riešenie, tak ho pridajte ako ďalšie riešenie.
+Ak nájdete chybu v starom riešení, opravte ju (príp. na ňu upozornite červenou
+farbou, najmä ak je to chyba, kde má zmysel na ňu upozorňovať (napr. zdanlivo
+správny postup, kde je predpoklad, že by to mnohí takto riešili, hoci je
+nesprávny). Prípadné nejasnosti, alebo doplňujúce otázky, je vhodné písať modrou
+farbou. U problémikov je možné, že sa budú postupom času meniť, ak nastane zmena
+problémiku, tak stačí jednoducho doplniť ďalší problémik s označením
+akademického roku.

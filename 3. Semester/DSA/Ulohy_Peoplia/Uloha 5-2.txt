@@ -1,0 +1,27 @@
+Urèite ste to u zaili... veèer, diskotéka, pri vchode sympatickí vyhadzovaèi nekompromisne odmietajú vstup neplnoletım mládeníkom, ktorí sa u nedoèkavo tlaèia na parket. Mladí ale vedia by vynaliezaví, zaobstarali si obèiansky preukaz so “správnym” dátumom narodenia a po prekonaní poslednej prekáky si ho poza chrbát posunú spa a na vstupe je opä pouitı ïalším nedoèkavcom. Takto to ale nemôe ís ïalej!! Pomôte ochráni zdravı morálny vıvin našej mládee a pomôte vyhadzovaèom identifikova preukazy, ktoré boli na vstup u raz pouité.
+
+Na vstupe je daná postupnos èísel obèianskych preukazov, v poradí ako sa nimi návštevníci preukazujú. Vašou úlohou je zisti poèet, ko¾ko z nich sa pokúšali poui opakovane. Èíslo OP je reazec èísel a písmen, môu by rôzne dlhé. Riešenie musí pracova v optimálnej oèakávanej èasovej zloitosti O(N), kde N je poèet èísel obèianskych preukazov na vstupe.
+
+Naprogramujte funkciu v nasledovnom tvare:
+
+// spracuje cisla OP: vrati pocet najdenych duplikatov.
+int vyhadzovac(char *a[], int n)
+{
+  // ...
+}
+Poznámka: Všetky potrebné operácie by ste mali implementova vlastnımi silami. Pomalšie ako optimálne lineárne riešenie nesplní èasovı limit v testovaèi.
+
+Vedeli ste, e...
+V roku 1970 vymylel Burton Howard Bloom pamäovo efektívnu pravdepodobnostnú dátovú štruktúru, ktorú dnes poznáme ako Bloomov filter.
+
+Pomocou Bloomovho filtra vieme urèi, èi mnoina obsahuje element, vyuitím viacerıch hashovacích funkcií, ktorımi sa distribuuje informácia na viacero pozícií, èím vieme drasticky zníi pamäové nároky oproti klasickej hashovacej tabu¾ke.
+
+Bloomov filter dnes pouívajú viaceré distribuované databázy ako napr. Google BigTable a Apache Casandra, èím šetria zbytoèné a pomalé prístupy na disk.
+
+Podobne webovı prehliadaè Google Chrome vyuíva Bloomov filter na lokálnu kontrolu škodlivıch URL adries, èím šetrí poèet pomalıch úplnıch kontrol.
+
+V roku 1987 vymysleli Michael O. Rabin a Richard M. Karp algoritmus na vyh¾adávanie reazcov, dnes známy ako Rabin-Karpov algoritmus.
+
+Tento algoritmus vyuíva tzv. rolovací hash, ktorım najprv kontroluje moné zhody a filtruje tak väèšinu zbytoènıch porovnaní.
+
+Hoci v najhoršom prípade sa musia kontrolova zhody na všetkıch pozíciách, v prípade vyh¾adávania viacerıch reazcov, kedy sa kombinuje s Bloomovım filtrom, je tento algoritmus jasná vo¾ba.

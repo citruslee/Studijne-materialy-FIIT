@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Special Set and Match Syntax</title>
+</head>
+
+<body>
+
+<h1>Special Set and Match Syntax</h1>
+
+<ul>
+  <li><h2>If you want to match a hyphen this must be the first character in the set </h2>
+    <ul>
+      <li>[-A-z] this matches a hyphen and every character between captial Z and lower case z in
+        the ASCII set </li>
+      <li>hyphen first or assumption would be you are trying to specify a range </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>If you want to match every character but the ones specified in the set or range use
+    ^ right after the opening [ </h2>
+    <ul>
+      <li>[^A-Z] match any character except capital letters </li>
+      <li>if ^ not after the opening [, assumption is that you want to match the ^ character </li>
+      <li>[A-Z^a-z] match upper and lower alpha plus ^ char </li>
+    </ul>
+  </li>
+</ul>
+
+<ul>
+  <li><h2>If want to check for set or range at start of line ^ is outside [] - example
+    /^[A-Za-z] match alpha at begin of line</h2>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld011.htm">Previous slide</a> </td>
+    <td HEIGHT="100" WIDTH="100"><a HREF="tsld013.htm">Next slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"><a HREF="tsld001.htm">Back to first slide</a> </td>
+    <td HEIGHT="100" WIDTH="150"></td>
+  </tr>
+</table>
+
+<p><br>
+</p>
+</body>
+</html>

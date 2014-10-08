@@ -1,0 +1,38 @@
+Nájdite všetky prístupy na sme.sk v období od 1.1.2010 - 1.6.2010
+
+- SELECT url, timestamp FROM access_logs INNER JOIN pages ON page_id = pages.id
+	WHERE url LIKE '%sme.sk%' AND timestamp BETWEEN '2010-01-01 00:00:00' AND '2010-06-01 23:59:59';
+
+
+
+- Nájdite všetky prístupy na doménu sme.sk, ale nie na titulku v období od 1.1.2010 - 1.6.2010
+
+SELECT url, timestamp FROM access_logs INNER JOIN pages ON page_id = pages.id
+	WHERE url LIKE '%sme.sk%' AND NOT url like '%sme.sk/' AND timestamp BETWEEN '2010-01-01 00:00:00' AND '2010-06-01 23:59:59';
+
+
+
+- Nájdite všetky tagy (termy typu tag), ktoré začínajú na písmeno “a” a majú menej ako 5 písmen
+
+	SELECT label from terms WHERE label LIKE 'a%' AND term_type = 'tag' AND CHAR_LENGTH(label) < 5;
+
+
+- Nájdite všetky stránky, ktoré boli zobrazené iba raz
+
+	SELECT url FROM pages INNER JOIN access_logs ON pages.id = page_id GROUP BY page_id HAVING COUNT(page_id) = 1;
+
+
+
+- Niektoré termy obsahujú miesto medzier znaky +. Vyberte termy tak, aby názvy obsahovali miesto znaku ”+” medzery
+
+SELECT REPLACE(label,'+',' ') FROM terms;
+
+
+- Nájdite všetky stránky, ktoré videl používateľ práve raz
+
+	SELECT page_id FROM access_logs GROUP BY userid, page_id HAVING count(page_id) = 1
+
+
+Nájdite všetky termy, ktoré sú uložené s rovnakým menom viackrát, ale majú rôzny typ.
+
+	SELECT * from terms GROUP BY label HAVING COUNT(DISTINCT term_type) > 1;

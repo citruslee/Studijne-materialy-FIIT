@@ -1,0 +1,29 @@
+Zadanie 2011/2012
+Zadanie č. 1
+
+Prvé zadanie sa rieši vo dvojici. Výstupom je textový dokument, ktorého rozsah by mal byť aspoň tri strany A4. Nezabudnite uviesť mená oboch autorov a percentuálny podiel každého z nich.
+Dvojica bude mať aj krátku prezentáciu svojho riešenia.
+Zadanie by ste mali vypracovať na základe dostupnej literatúry. Tým sa myslí nielen kniha Umelá Intelingencia, ale aj nejaký text (článok, kapitola z knihy), kde sa píše o možnom alebo existujúcom nasadení rovnakého, podobného alebo aj všeobecného inteligentného konateľa. Použitú literatúru je samozrejme potrebné citovať a uviesť.
+
+Definícia projektu
+
+Špecifikácia inteligentného znalostného konateľa:
+Zvoľte problémové prostredie
+opíšte vlastnosti prostredia
+uveďte, prečo je potrebné inteligentné riešenie
+Pre znalostného konateľa špecifikujte:
+ciele
+vnemy
+typy akcií
+Uveďte, aké druhy znalostí by mal znalostný konateľ mať. Napíšte aj dva-tri konkrétne príklady znalosti.
+Opíšte (zhodnoťte) správanie sa vami špecifikovaného znalostného konateľa.
+Z pohľadu "novej" umelej inteligencie sa inteligencia hodnotí vždy z pohľadu vzťahu medzi konateľom a prostredím. Dobre spracovaný bod jedna je teda nevyhnutným predpokladom pre ďalšiu prácu. V bode dva sa potom opisujú vlastnosti konateľa ako celku, ako ho vidíme navonok. Vnútorný opis konateľa by mal byť urobený pomocou znalostí, na to je teda určený bod tri. Zaujímajú nás znalosti z problémovej oblasti, znalosti o riešení tohto typu úloh a vzťahy medzi situáciou a riešením. Zhodnotenie musí obsahovať vonkajšie správanie sa konateľa a môže obsahovať aj pohľad dnu – čo sa deje vo vnútri konateľa. Malo by to byť celkové správanie sa, ale môžete to opísať aj na nejakej zvolenej situácii.
+
+Nekopírujte toto zadanie do Vášho dokumentu!
+
+Ako pomôcku môžete použiť tabuľku z opisu rozumného konateľa (agenta).http://www2.fiit.stuba.sk/~kapustik/kontab2.html
+
+
+
+Zadanie 2
+http://www2.fiit.stuba.sk/~kapustik/z2c.html
