@@ -1,5 +1,6 @@
 Studijne materialy FIIT
 ==============================================
+Pre pripojenie do chat roomu kliknite na gitter obrazok pod tymto textom
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/citruslee/Studijne-materialy-FIIT?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
