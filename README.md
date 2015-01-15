@@ -10,3 +10,4 @@ Thanks for contributing:
 
 [@ok100](https://github.com/ok100) - shitload of files<br />
 [@pepies](https://github.com/pepies) - additional PPI files
+[@bludivec](https://github.com/bludivec) - for great markdown material and also for pull requests
