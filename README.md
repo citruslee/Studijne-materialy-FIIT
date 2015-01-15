@@ -9,5 +9,5 @@ Repozitar pre INFO a PKSS odbory
 Thanks for contributing:
 
 [@ok100](https://github.com/ok100) - shitload of files<br />
-[@pepies](https://github.com/pepies) - additional PPI files
+[@pepies](https://github.com/pepies) - additional PPI files<br />
 [@bludivec](https://github.com/bludivec) - for great markdown material and also for pull requests
