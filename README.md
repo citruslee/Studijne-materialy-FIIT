@@ -10,5 +10,5 @@ Thanks for contributing:
 
 [@ok100](https://github.com/ok100) - bunch of files<br />
 [@pepies](https://github.com/pepies) - additional PPI files<br />
-[@bludivec](https://github.com/bludivec) - for great markdown material and also for pull requests
-[@11th](https://github.com/11th) - additional files for Fyzika folder in 2nd semester
+[@bludivec](https://github.com/bludivec) - for great markdown material and also for pull requests<br />
+[@11th](https://github.com/11th) - additional files for Fyzika folder in 2nd semester<br />
