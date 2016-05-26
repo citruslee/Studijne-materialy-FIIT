@@ -1,0 +1,71 @@
+img { border: 0; }
+.center { text-align: center; }
+span.acc { background-color: #cfcfcf; }
+td.odsazena, th.zahlavi { padding-left: 5px; padding-right: 5px; }
+tr.zahlavi td, tr.zahlavi th { padding-left: 5px; padding-right: 5px; }
+tr.zahlavi, td.zahlavi, th.zahlavi { font-weight: bold; }
+td.strom { padding: 0; margin: 0; border: 0; line-height: 10px; }
+table.strom td:last-child { width: auto; }
+td.strom img { vertical-align: middle; }
+td.uzke,th.uzke { padding: 1px; margin: 1px; border: 0; }
+table { font-size: 15px; }
+table.strom { border-collapse: collapse; padding: 0; table-layout: auto;}
+table.strom a { padding: 0; margin: 0; border: 0; }
+table.strom a:hover { padding: 0; margin: 0; border: 0; }
+div.inpage { border: 1px solid black; }
+span.small { font-size: 13px; }
+div.small { font-size: 15px; text-align: justify; }
+.reqfields { background-color: #ffee99; }
+.skrtaci { text-decoration: line-through; padding-left: 5px; padding-right: 5px; }
+.skrtaci td { text-decoration: line-through; padding-left: 5px; padding-right: 5px; }
+.zasadky-info { background-color: #ffffcc; border: solid 1px black; }
+.zasadky-crit { background-color: #fff1dd; border: solid 1px black; }
+.rozvrh-pred { color:black; background-color: lightgreen; border: dashed 1px black; }
+.rozvrh-cvic { color:black; background-color: lightcyan; border: dashed 1px black; }
+.rozvrh-blok { color:black; background-color: lightgrey; border: dashed 1px black; }
+.rozvrh-akce { color:black; background-color: #ffffc5; border: dashed 1px black; }
+.rozvrh-sep { color:black; background-color: #808080; border: dashed 1px black; }
+.rozvrh-reze { color:black; background: rgb(255, 205, 197); border: dashed 1px black; }
+.rozvrh-zadost { color: black; background-color: #FFE788; border: dashed 1px black; }
+.rozvrh-volno { color:black; background: rgb(255, 255, 255); border: dashed 1px black; }
+.rozvrh-blok a, .rozvrh-reze a, .rozvrh-pred a, .rozvrh-cvic a, .rozvrh-volno a, .rozvrh-zadost a { color:blue; } 
+.nowrap { white-space: nowrap; }
+.radek-vyrazny { background-color: #ffe88a; }
+.radek-chyba { background-color: #FAA5A5; }
+table.velky_ramecek { border: 1px solid black; }
+table.detailni_ramecek td { border: 1px solid black; }
+.naseptavac { border: 1px solid #aaa; font: 11px sans-serif; position: absolute; margin: 0px; visibility: hidden; background-color: white; cursor: pointer; _cursor: hand; z-index: 1000; overflow: hidden; }
+.naseptavac ul { padding: 0px; margin: 2px; list-style-type: none; }
+.naseptavac ul li.sel { background-color: blue; color: white; }
+.naseptavac .naseptavac-more { text-align: right; _cursor: default; cursor: default; font: 10px sans-serif; color: black; }
+.kalendar-den_bez_akce { background-color: #EEEEEE; }
+.kalendar-tyden_zahlavi { background-color: #DDDDDD; }
+.kalendar-prac_doba { background-color: #CCCCCC; }
+.kalendar-dnes { background-color: #3399FF; }
+.kalendar-den { background-color: #99CCFF; }
+.kalendar-den_mimo_mesic { background-color: #DDDDDD; }
+.kalendar-den_vikend { background-color: #66CC66; }
+.kalendar-den_mimo_vikend { background-color: #BBBBBB; }
+.kalendar-den_zvyrazneny { background-color: #FFFF66; }
+.uni-fake-info { margin:10px;padding:15px 10px;background:#ffe992;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;width:900px;color:#000;font-size:16px; }
+.uni-devel-info { border: solid #392983 1px; color: #392983; background-color: silver; text-align: center; margin:5px 0; width:900px; }
+.uni-unusual-info { text-align:center;margin:0px 0px 15px 0px;padding:15px 10px;background:#c80000;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;width:900px;color:#fff;font-size:16px; }
+.uni-unusual-info a { color: orange; }
+.hider{border-top:1px solid #ccc; height:21px;}
+.hider a{ display:block; height:100%; position:relative; }
+.hider a span{ display:block; background-position:center center; background-repeat:no-repeat; background-color:#ccc; position:absolute; width:21px; height:21px; right:0px; top:-3px; -moz-border-radius:3px; -webkit-border-radius:3px; -ms-border-radius:3px; border-radius:3px; }
+.hider:hover { border-top:1px solid #aaa; }
+.hider:hover a span{ background-color:#aaa; }
+.hider.hider-s a span{ background-image: url(/img.pl?sysid=hider-s); }
+.hider.hider-h a span{ background-image: url(/img.pl?sysid=hider-h); }
+.zasadky-info ul li{ list-style:none; background:transparent; }
+.translatedebug { background-color: cyan; color: black; }
+.translatedebug_button { background-color: cyan; color: black; }
+.icon_small_button { display: block; background-repeat: no-repeat; background-position: 6px center; padding-left:27px; font-size: 13px; line-height: 13px; height: 25px; border-radius: 5px; border: solid 1px #777; cursor: pointer; }
+.icon_big_button { display: block; background-repeat: no-repeat; background-position: 6px center; padding-left: 45px; font-size: 16px; line-height: 16px; height: 43px; border-radius: 5px; border: solid 1px #777; cursor: pointer; }
+.highlightbox { border: 1px solid black; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; -moz-box-shadow: 0 0 5px #888; -webkit-boz-shadow: 0 0 5px #888; box-shadow: 0 0 5px #888; padding-left: 50px; padding-right: 50px; margin-top: 20px; margin-bottom: 20px; }
+.loginform, #loginform { width: 400px; margin-left: 150px; margin-top: 40px; margin-bottom: 40px; background-color: #f4f4f4; color: black; }
+.loginform input[type=submit], #loginform input[type=submit] { padding: 10px 20px 10px 20px; font-weight: bold; }
+.loginform input[type=textfield], #loginform input[type=textfield] { }
+.diskuze-svetly { background-color: #DAF1FF; color: black; }
+.diskuze-tmavy { background-color: #82CAFF; color: black; }
