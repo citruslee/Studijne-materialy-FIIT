@@ -1,0 +1,41 @@
+read 99	//nacitanie cisla, o ktorom overujeme, ci je prvoc.
+load 99	//nacitanie cisla do acc
+
+div =2	//nemame sqrt, tak pojdeme po n/2
+store 98	//pocitadlo
+
+jzero is_bad	//ochrana pred 0 a 1
+
+//        CYKLUS        //
+//======================//
+
+begin:
+	load 98		//nacitanie pocitadla
+	sub =1		//ochrana pred tym, aby sme skusali prvociselnost jednotkou
+
+	jzero end		//ak to bola jednotka, koncime
+	//add =1		//opat pridame odcitanu jednotku
+	//jzero end		//ak nahodou testujeme nulu
+
+	load 99		//nacitanie cisla N
+	div 98		//predelime cislo pocitadlom
+	mul 98		//vynasobime cislo pocitadlom - ak NIE JE prvocislo, dostaneme znova N
+
+	sub 99		//odcitame povodne N. Ak cislo NIE JE prvocislo, dostaneme vysledok NULA
+
+	jzero is_bad	//ak mame vysledok 0, cislo NIE JE prvocislo
+	jump is_ok		//vysledok nebol nulovy, vysledok MOZE BYT prvocislo
+	is_bad:n
+		reject	
+		halt
+	is_ok:
+		load 98	//nacitanie pocitadla
+		sub =1	//dekrementacia pocitadla
+		store 98	//ulozenie pocitadla
+	jump begin		//skok na zaciatok cyklu
+end:
+//        KONIEC CYKLU        //
+//============================//
+
+accept	//pocas overovania nebolo cislo oznacene ako ZLOZENE CISLO, a preto je prvocislom 
+halt

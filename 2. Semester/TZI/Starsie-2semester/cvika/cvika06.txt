@@ -1,0 +1,13 @@
+1.    2^2^n
+napíš RAM; vypočítaj jednotkovú (pamäťovú, časovú) zložitosť; logaritmickú (pamäťovú, časovú) zložitosť
+
+2.    rozpoznať postupnosť čísel 0,1,2 ; ktorá končí 0 a má rovnaký počet 1 ako 2
+napíš RAM; vypočítaj jednotkovú (pamäťovú, časovú) zložitosť; logaritmickú (pamäťovú, časovú) zložitosť
+
+ak sa stihne, tak len RAM pre príklady, ak nie na DÚ:
+3.    n!
+4.    2^n
+5.    horná časť (log2 n)
+6.    n^n
+7.    načítať 100 čísel a vypísať tie ktoré sú väčšie ako priemer
+8.  načítať číslo a zistiť či je prvočíslo

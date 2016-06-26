@@ -1,0 +1,25 @@
+2013/2014
+Cvičenie 2
+
+  1.  Ako sa dokazuje ekvivalencia dvoch množín? Aké množiny podľa mohutnosti poznáte?
+  2.  Dokážte ekvivalenciu: <math>|(0,3\rangle| = |(0,1\rangle \times \{4,5\}|</math>
+
+Cvičenie 3
+
+  1.  Definovať homomorfizmus, a spraviť ho na uvedenom príklade. <math>L =\{ ua^{3k+1}b^{k+1}u^{R} | k \in \N^+ , u \in \{c,d\}^*\}</math> <math>h(a)=a \; h(b)=b \; h(c)=a \; h(d)=a</math>
+  2.  Vybrať z možností, ktoré zo slov generuje daná gramatika. <math>G=\{N,T,P,A\} \; N=\{A,B\} \; T=\{a\} \; P=\{A \rightarrow a | aaaAb\}</math>
+    Určiť typ gramatiky (regulárna, bezkontextová, kontextová, frázová)
+
+Cvičenie 4
+
+  1.  Napíšte gramatiku, ktorá generuje jazyk <math>L =\{ wc^nw | w \in \{a,b\}*\}</math> alebo <math>L =\{ a^ibcd^{2i}e^{3j}f^kg^{k+1}h^{j} | i,j,k \in \N^+\}</math> (tie indexy sú len približné)
+  2.  Dokázať, že je gramatika viacznačná <math>A-> ( ) | (A) | AA </math>
+
+Moja verzia:
+
+  1.  Nájdite čo najjednoduchšiu gramatiku pre jazyk <math>L</math> a zaraďte do Chomského hierarchie. <math>L=\{a^nb^{3n+1}c , \; n \in \N^+\}</math>
+  2.  Dokážte, že gramatika je viacznačná. (približne takto vyzerala gramatika) <math>G=\{N,T,P,S\} \; N=\{S,D\} \; T=\{c,d\}</math>
+
+<math>P=\{S \rightarrow cdS | dcS | D | cc | dd</math>
+
+        <math>D \rightarrow ddD | \varepsilon\}</math>

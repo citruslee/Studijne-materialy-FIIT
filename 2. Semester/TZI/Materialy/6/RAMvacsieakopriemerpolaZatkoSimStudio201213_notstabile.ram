@@ -1,0 +1,65 @@
+	load =10
+	store 101
+	load =0
+	store 103
+	load =1
+	store 102
+label1:
+	load 101
+	jzero label2
+
+	read *102
+	load *102
+	add 103
+	store 103
+
+	load 102
+	add =1
+	store 102
+
+	load 101
+	sub =1
+	store 101
+	jump label1
+
+label2:
+	load 103
+	div =10
+	store 103
+
+	load =10
+	store 101
+
+	load =1
+	store 102
+	
+label3:
+	load 101	
+	jzero end
+	load *102
+	sub 103
+	gzero vypis
+label4:
+	load 102
+	add =1
+	store 102
+
+	load 101
+	sub =1
+	store 101
+	jump label3
+
+vypis:
+	write *102
+	jump label3
+
+end:
+	accept
+
+
+
+
+
+
+
+	

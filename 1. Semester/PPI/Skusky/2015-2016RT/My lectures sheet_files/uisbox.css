@@ -1,0 +1,54 @@
+#uisFloatingBox
+{
+	display:none;
+	position:absolute;
+	background-color:white;
+	padding:5px;
+	border: 1px solid black;
+	max-width:100%;
+	text-align:justify;
+	border-radius:5px;
+}
+
+#uisFixedBox
+{
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+#uisFixedBox .obsah
+{
+	position: relative;
+	display: inline-block;
+	background-color: rgb(255, 255, 255);
+	left: 50%;
+	/*top: 50%;*/
+	max-height: 100%;
+	max-width: 90%;
+	padding: 20px;
+	border-radius:5px;
+}
+
+#uisFixedBox .cross
+{
+	background-image:url("/img.pl?sysid=base-cross-grey");
+	float:right;
+	width:16px;
+	height:19px;
+	cursor:pointer;
+}
+
+#uisFloatingBox.loading
+{
+	background-image:url("/img.pl?sysid=prubeh2");
+	background-size:40px;
+	background-repeat:no-repeat;
+	background-position:center; 
+	min-height:80px;
+	min-width:80px;
+}

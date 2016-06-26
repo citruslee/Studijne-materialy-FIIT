@@ -1,0 +1,21 @@
+//2^2^n Tamajka Martin 2012
+	read 1
+	load =2
+	store 2
+begin: 
+	load 1
+	jzero end
+	load 2
+	mult 2
+	store 2
+	load 1
+	sub =1
+	store 1
+	jump begin
+end:
+	write 2
+	halt
+
+
+
+

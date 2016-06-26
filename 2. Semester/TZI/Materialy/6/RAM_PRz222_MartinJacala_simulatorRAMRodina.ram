@@ -1,0 +1,33 @@
+begin:read 1
+	load = 0
+	store 2
+	
+	load 1
+	jzero rej //check for 0
+	sub = 1
+	jzero exit //check for 1
+	
+	load = 1 //otherwise go on
+	store 3
+
+loop:	load 3
+	mul = 2
+	store 3
+
+	load 2
+	add = 1
+	store 2
+
+	load 1
+	sub 3
+	jgzero loop 
+
+exit:	write 2
+	jump begin
+
+accpt:accept
+	halt
+
+rej:	reject
+	halt
+	
