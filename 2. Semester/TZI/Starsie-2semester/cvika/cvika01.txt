@@ -1,0 +1,24 @@
+1. definícia množina, mohutnosť, konečnosť
+2. |Odd|=|N|
+3. |N+|=|N|
+4. |Q|=|N|
+5. {7k+1 | k patrí N} U {7k+5 | k patrí N} ~ N
+6. {ak+b | a,b,k patrí N ^ a<>0} ~ N
+7. {7k | k patrí N} U {5k | k patrí N} ~ N
+8. N X {2,4,6} ~ N
+9. Z X {2,4,6} ~ N
+10. (0,1) ~ (0,2)
+11. (0,1) ~ (a,b)
+12. (-pi/2,pi/2) ~ R
+13. |P(A)| = 2^|A|
+14. N X Z ~ N
+*************************************************************************
+1. Q ~ N
+2. <0,1) ~ (0,1)
+3. <0,1> ~ (a,b) alebo <a,b> ~ (a,b)
+4. (0,1) ~ (0,2> U (4,7)
+5. (0,1) ~ (0,oo)
+6. <0,1) ~ <0,1) X {0,1,2,3}
+7. <0,1) ~ <0,1) X N
+8. dokážte tvrdenie: Ir je nespočítateľná
+9. dokážte tvrdenie: R \ {2 na -k | k patrí Z} je nespočítateľná

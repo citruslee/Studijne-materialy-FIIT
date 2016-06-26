@@ -1,0 +1,13 @@
+read 1
+load =0
+store 2
+start:
+load 1
+div =2
+store 1
+load 2
+add =1
+store 2
+load 1
+jgzero start
+write 2
