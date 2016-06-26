@@ -1,0 +1,20 @@
+	//n^n, n = Prime
+	
+	read 1
+	load 1
+	store 1 //medzi
+	store 3 //pom
+	sub =1
+	store 2 //cnt
+Zac:
+	load 2
+	jzero End
+	load 1
+	mul 3
+	store 1
+	load 2
+	sub =1
+	store 2
+	jump Zac
+End:
+	write 1

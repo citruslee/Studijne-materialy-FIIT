@@ -1,0 +1,20 @@
+1. DFA: |w|=3k+1 ; w je z {a,b}^*
+2. DFA: a^i b^j c^k ; i,j,k je z N alebo i,j,k je z N+ ; zdôrazniť záchytné stavy
+3. DFA: #_c w + #_d w = 3k+1 ; w je z {a, b, c, d}^*
+4. DFA: w obsahuje podslovo ab & #_b w je nepárny ; w je z {a, b}^* - DÚ
+5. NFA: w obsahuje podslovo aaa alebo bbb ; w je z {a, b}^*
+6. NFA: w má práve jednu 0 na posledných dvoch miestach ; w je z {0, 1}^*
+7. prevod NFA -> DFA pre príklad 6
+*************************************************************************
+1. w obsahuje ab alebo #b(w) je nepárny
+2. práve jedna 0 na posledných dvoch miestach A -> G
+3. w začína aj končí tým istým písmenom, w patrí {a,b}* , G->NKA->DKA
+4. zovšeobecnenie úloh #a w = 3k+2 , #a w + #b w = 3k+1 , #a w + 3.#b w - 2.#c w = 4k+1
+5. NKA, DKA: xaaby
+6. DKA: obsahuje aaa alebo bbb
+7. DKA: rozpoznáva kladné čísla, celé čísla
+8. porozmýšlať: rozpoznáva reálne čísla, desiatkové párne čísla, záporné deliteľné 5
+9. |w|=2k+1 v #a w= 3k+1 -čo je zjednotenie jazykov L1 u L2, L1={|w|=2k+1,w patrí {a,b}* }, L2 ={#a w= 3k+1,w patrí {a,b}* }
+10. zreťazenie L1.L2
+11. cleeneho iterácia L1*
+12. kladný uzáver L1+

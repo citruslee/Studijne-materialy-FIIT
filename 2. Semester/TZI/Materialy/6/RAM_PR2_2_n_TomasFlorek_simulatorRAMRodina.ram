@@ -1,0 +1,24 @@
+read 1
+load =1
+store 2
+store 3
+load 1
+jzero konec
+cykl1:
+load 2
+mult =2
+store 2
+load 1
+sub =1
+store 1
+jgzero cykl1
+cykl2:
+load 3
+mult =2
+store 3
+load 2
+sub =1
+store 2
+jgzero cykl2
+konec:
+write 3 
