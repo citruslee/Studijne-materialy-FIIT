@@ -1,0 +1,19 @@
+1. definícia gramatiky
+2. c^(4n)
+3. a^i b^j
+4. prvé dve písmená rovnaké
+5. práve jedna 0 na posledných dvoch miestach
+6. obsahuje podslovo ab
+7. záporné čísla deliteľné 5
+8. a^n b^n
+9. a^(n+1) b^n, a^(3n+1) b^n, a^(3n+1) b^(n+3), a^(3n+2) c b^(n+3)
+10. a^x b^y a^y b^x, a^(x+3) b^(2y) a^y b^x
+11. 0^x 1^(3x) 0^y 1^(y+5)
+---------------------------------------
+1. #_0 w = #_1 w; w je z {0,1}^*
+2. wcw; w je z {a, b}^*
+3. a^n b^n c^n; n je z N
+4. a^n b^n c^n d^n; n je z N
+5. a^i b^j c^i d^j; i,j je z N
+6. Dokážte, že gramatika je viacznačná: S -> aaSaa | aS | a
+7. Pre danú gramatiku nájdite homomorfizmus h tak, aby nová gramatika bola viacznačná. Príklad 2.5.15 zo skrípt.

@@ -1,0 +1,22 @@
+//postupmost 1 a 2 konci 0 #1=#2 Zatko Jozef 2012
+	load =0
+	store 1
+	store 2
+zac:
+	read 3
+	load 3
+	jzero koniec
+	load *3
+	add =1
+	store *3
+	jump zac
+koniec:
+	load 1
+	sub 2
+	jzero vypis
+	write =0
+	reject
+vypis:
+	write =1
+	accept
+

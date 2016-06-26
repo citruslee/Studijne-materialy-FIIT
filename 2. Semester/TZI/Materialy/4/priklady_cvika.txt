@@ -1,0 +1,23 @@
+DPDA wcw^R  , w patrí {a,b}*
+DPDA 0 a^n 12 b^n 34 , n je z N
+DPDA a^n w , #_c w = n , w patrí {b,c}*
+DÚ: DPDA w=uv , #_( w = #_) w , u patrí {a,(}* , v patrí {a,)}*
+DPDA a^3n  b^2n , n je z N
+DPDA w=uv , 2|u| = 3|v| , u patrí {a,b}* , v patrí {c,d}*
+NPDA ww^R  , w patrí {a,b}*
+NPDA uav , |u| = |v| , u,v patrí {a,b}*
+DPDA wcw^R  , w patrí {a,b}*
+DPDA a^Nb^N
+DPDA 0 a^n 12 b^n 34 , n je z N
+DPDA a^3n  b^2n , n je z N
+DPDA w=uv , 2|u| = 3|v| , u patrí {a,b}* , v patrí {c,d}*
+DÚ: DPDA w=uv , #_( w = #_) w , u patrí {a,(}* , v patrí {a,)}*
+w patrí {a,b}*, #_a w = #_b w ,
+a^k b^l , k>=l, k,l je z N
+DPDA, NPDA a^n w , #_c w = n , w patrí {b,c}*
+NPDA ww^R  , w patrí {a,b}*
+NPDA uav , |u| = |v| , u,v patrí {a,b}*
+urobte prevod G -> PDA: G=(N,T,P,S) P={S->aAA|a , A->aSA|bS|b}
+urobte prevod G -> PDA: G=(N,T,P,S) P={S->aACA|a|b , A->aABAS|aBB|bB|b, B->+SC|bB|aAA|a, C->+}
+pr. uzaverove vlastnosti Lcf cez G -  dokazte ze trieda jazykov Lcf je uzavreta na operaciu  (L1.L2)*
+7. pr. uzaverove vlastnosti Lcf cez G -  dokazte ze trieda jazykov Lcf je uzavreta na operaciu  L1+ U (L1.L2)*
