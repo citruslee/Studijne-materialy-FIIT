@@ -1,11 +1,11 @@
-# grep
+#### grep
 	-c (spocita riadky)
 	-v (negacia)
-# cut
+#### cut
 	-c (znaky)
 	-d (delimiter)
 	-f (stlpce)
-# find
+#### find
 	-type
 		f (obycajny subor)
 		d (adresar)
@@ -22,37 +22,37 @@
 		%l (cielovy suboru na ktory ukazuje symbolicka linka)
 	-not (negacia)
 	-empty (prazdny)
-# tr
+#### tr
 	-s (squeeze – zlucenie)
 	-d (delete – mazanie)
-# last
+#### last
 	-f (nacitaj zo suboru)
-# uniq
+#### uniq
 	-c (pocet rovnakych)
-# sort
+#### sort
 	-n (podla cisla)
 	-r (revers)
-# tail
+#### tail
 	-n
 		+XXX (vypis az od XXX po koniec)
 		-XXX (vypis XXX poslednych)
 	-r (revers)
-# head
+#### head
 	-nXXX (iba prvych XXX)
-# rev (zrkadlove otocenie riadku)
-# wc
+#### rev (zrkadlove otocenie riadku)
+#### wc
 	-c (char)
 	-w (words)
 	-l (lines)
-# paste
+#### paste
 	-s (nahrad nove riadky \n znakom/znakmi)
 	-d (spoj riadky)
 	- (strandard input)
-# bc (binary calculator)
-# ls
+#### bc (binary calculator)
+#### ls
 	-l (long format)
 	-a (aj skryte)
-# ps
+#### ps
 	-a (other users)
 	-u
 	-x
@@ -62,8 +62,8 @@
 		time
 		command
 	-o (vypisat co chceme)
-# mkdir (vytvor adresar)
-# cp (copy)
-# rm (remove)
+#### mkdir (vytvor adresar)
+#### cp (copy)
+#### rm (remove)
 
 
