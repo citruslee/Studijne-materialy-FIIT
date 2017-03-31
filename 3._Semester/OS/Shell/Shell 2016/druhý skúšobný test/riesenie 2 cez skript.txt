@@ -1,0 +1,29 @@
+#! /bin/csh
+
+#najdi najcastejsie zenske meno ktore ma na stroji osa konto
+
+set names = "`cut -d ':' -f 5 /etc/passwd | cut -d ',' -f 1 | grep -E '^[[:alpha:]]+ova\>' | cut -d ' ' -f 2`"
+
+set lines = ""
+
+foreach name ($names:q)
+        set count = "`cut -d ':' -f 5 /etc/passwd | grep -E '^[[:alpha:]]+ \<'$name'\>' -c`"
+        set lines = ($lines:q "$name/$count")
+end
+
+#foreach line ($lines)
+#       echo "$line"
+#end
+
+set maxcount = "0"
+set max = ""
+
+foreach line($lines)
+        set count = `echo $line | cut -d "/" -f 2 `
+        if ($count > $maxcount) then
+                set maxcount = $count
+                set max = `echo $line | cut -d "/" -f 1`
+        endif
+end
+
+echo "$max"
