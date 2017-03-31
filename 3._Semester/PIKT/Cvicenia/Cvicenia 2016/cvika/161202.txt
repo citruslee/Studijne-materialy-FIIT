@@ -1,0 +1,67 @@
+﻿niečo iné...
+
+1. Nedostal pracovnú zmluvu, chce ju vidieť čo má robiť ? Vznik pracovného pomeru
+
+"
+	§42 (1)
+	Pracovný pomer sa zakladá písomnou pracovnou zmluvou medzi zamestnávateľom a zamestnancom, ak tento zákon neustanovuje inak. Jedno písomné vyhotovenie pracovnej zmluvy je zamestnávateľ povinný vydať zamestnancovi.
+"
+
+2. Michal zistil že v zmluve dĺžka skusobnej doby 120dni... 2dni pred uplynutim dostal padaka - bolo to zakonne ?
+
+	!!!!120dní - 4mesiace... Maximálne dĺžka skúšobnej doby sú 3mesiace
+	
+	skúšobná doba - §45
+	
+"
+	§ 72 Skončenie pracovného pomeru v skúšobnej dobe
+		(1)
+		V skúšobnej dobe môže zamestnávateľ a zamestnanec skončiť pracovný pomer písomne z akéhokoľvek dôvodu alebo bez uvedenia dôvodu, ak ďalej nie je ustanovené inak. Zamestnávateľ môže skončiť pracovný pomer v skúšobnej dobe s tehotnou ženou, matkou do konca deviateho mesiaca po pôrode a dojčiacou ženou len písomne, vo výnimočných prípadoch, ktoré nesúvisia s jej tehotenstvom alebo materstvom, a musí ho náležite písomne odôvodniť, inak je neplatné.
+		(2)
+		Písomné oznámenie o skončení pracovného pomeru sa má doručiť druhému účastníkovi spravidla aspoň tri dni pred dňom, keď sa má pracovný pomer skončiť.
+"
+
+3. Aké poznáme dôvody skončenia pracovného pomeru v zmysle ZP..
+	
+	Dôvody §63
+
+//a nie spôsoby ? 
+
+	a)	dohodou,
+	b)	výpoveďou,
+	c)	okamžitým skončením,
+	d)	skončením v skúšobnej dobe.
+
+4. Rozdiel medzi okamžitým skončením prac. pomeru a výpoveďou
+
+	§ 60 Dohoda o skončení pracovného pomeru
+		(1)	Ak sa zamestnávateľ a zamestnanec dohodnú na skončení pracovného pomeru, pracovný pomer sa skončí dohodnutým dňom.
+		(2)	Dohodu o skončení pracovného pomeru zamestnávateľ a zamestnanec uzatvárajú písomne. V dohode musia byť uvedené dôvody skončenia pracovného pomeru, ak to zamestnanec požaduje alebo ak sa pracovný pomer skončil dohodou z dôvodov uvedených v § 63 ods. 1 písm. a) až c).
+		(3)	Jedno vyhotovenie dohody o skončení pracovného pomeru vydá zamestnávateľ zamestnancovi.
+- 
+	§ 61 Výpoveď
+		(1)	Výpoveďou môže skončiť pracovný pomer zamestnávateľ aj zamestnanec. Výpoveď musí byť písomná a doručená, inak je neplatná.
+		(2)	Zamestnávateľ môže dať zamestnancovi výpoveď iba z dôvodov ustanovených v tomto zákone. Dôvod výpovede sa musí vo výpovedi skutkovo vymedziť tak, aby ho nebolo možné zameniť s iným dôvodom, inak je výpoveď neplatná. Dôvod výpovede nemožno dodatočne meniť.
+		(3)	Ak zamestnávateľ dal zamestnancovi výpoveď podľa § 63 ods. 1 písm. b), nesmie počas dvoch mesiacov znovu utvoriť zrušené pracovné miesto a prijať po skončení pracovného pomeru na toto pracovné miesto iného zamestnanca.
+		(4)	Výpoveď, ktorá bola doručená druhému účastníkovi, možno odvolať len s jeho súhlasom. Odvolanie výpovede, ako aj súhlas s jej odvolaním treba urobiť písomne.
+
+5. Aký je rozdiel medzi odstupným a odchodným ?
+
+	-	odchodné	- pri nadobudnutí nároku na dôchodok - len u jedného zamestnávateľa
+	-	odstupné	- pri dôvode odchodu zamestanca, za ktorý nemôže zamestnance(zdravotné problémy, reorganizácia firmy,...)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

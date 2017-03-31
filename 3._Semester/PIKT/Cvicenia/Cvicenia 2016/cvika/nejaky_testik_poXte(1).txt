@@ -1,0 +1,66 @@
+﻿1.
+	Elektronické občianstvo
+
+	nieco moze robit cez komp
+	je lenivec tak to chce
+
+	slovensko.sk
+
+	z akeho dovodu je el obc preukaz nevyhnutny na vybavovanie ? 
+		
+		---
+	
+	ako ziskam elektronicky obc preukaz ? 
+	
+		proste si ho idem vymenit... bude mi vydany na okrese.. (fízlarni)
+
+	je potrebne podat ziadost v mieste svojho trvaleho pobytu ? 
+	
+		---
+
+	je to bezplatne ? 
+	
+		ano logicky ano, je to v zaujme statu... 
+
+	co musi spravit aby mohol vyuzivat aj elektronicky podpis ? 
+	
+		
+
+	ake su podla vas vyhody / nevyhody pouzivania sluzieb elektronickej spravy ?
+	
+		vyhody - v sucastnosti ? strasne vela ich je...
+		
+		nevyhody - malo sluzieb v sucastnosti... kedze sme na slovensku zrejme nedostatocna bezpecnost ale na co ? ved najväčši zlodeji idu ruka v ruke s vladou..
+	
+2.
+
+	180 rok 1014
+
+	je mozne v nasich pravnych podmienkach realizovat elektronicke volby ? 
+		
+		diskutabilné.. určite však nie sú potrebné veľké úpravy aby to bolo  realizovateľné
+		
+	zakon -> zasady volieb...
+		
+		Voľby sa konajú na základe všeobecného, rovného a priameho volebného práva tajným hlasovaním.
+		
+	zamysliet sa ci kazdu z tychto 4 zassad vieme aplikovat aj na elektronice volby ? 
+
+		tak všeobecnosť.. nie každý človek v súčastnosti má internet a vie ho používať(aj keď sa to nezdá ale spomnte si na svojich starych rodicov...)
+	
+	ako preiehaju volby v sucastnosti ? 
+
+		no proste ta akoze demokraticka fraska sa predrazi, je hnusne neekologicka a pritom sa aj tak nic nezmeni...
+	
+	ako by bolo mozne zabezpecit identifikaciu a autentifikaciu ?
+
+		biometria... ale to chce este tiez cas.. 
+		
+	je vhodne to zaviest ako jediny sposob volieb ?
+	
+		v sucastnosti urcite nie.. stale su medzi nami isti jedincci ktori nemozu vyuzit tento sposob hlasovania.. a volby makju byt pdla ustavy vseobecne..
+
+	v com vidite pozitiva resp. negativa elektronickych volieb ?
+	
+		pozitiva / negativa  - prezentacia
+		
