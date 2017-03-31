@@ -1,0 +1,15 @@
+1. Cislo 42 ?
+2. Ktore tvrdenie o privilegovanych instrukciach je spravne?
+	- instrukcie na zakazanie preruseni patria medzi privilegovane 
+	- pri pokuse o vykonanie tejto instrukcie z pouzivatelskeho
+	  kodu je vyvolana HW vynimka
+	- je mozne ich pouzivat len v jadre OS --    
+3. Ktore z nasledovnych tvrdeni charakterizuju zakazanie preruseni?
+	- zakazanie preruseni je pouzitelne len pre jednoprocesorove/jednojadrove
+	  systemy
+	- zakazanie preruseni je dostupne len v jadre OS --
+4. Pri vzajomnom vylucovani chceme aby k spolocnemu prostriedku pristupoval(i)
+   v case :
+	- najviac jeden proces
+	- menej ako dva procesy
+	

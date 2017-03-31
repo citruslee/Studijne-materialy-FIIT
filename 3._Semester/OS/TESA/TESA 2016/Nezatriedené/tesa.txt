@@ -1,0 +1,9 @@
+ 2.V akom stave sa nemoze nachadzat proces? (beziaci, pripraveny, blokovany, stopnuty- alebo take nieco, ziadne z uvedenych)
+3. a 4. boli ze vyber spravne tvrdenie (nie jedno, nenechajte sa pomylit) a tam boli rozne odpovede :)
+krasne je ze ani cviciaci nevedel urcit niektore ci su alebo nie su spravne
+
+1.v kolkych stavoch sa môe proces nachádza? - tri 2. Rovnaka ako pondelok 1 CPU - pseudoparalelizmus a vykryvanie,
+3. Co je proces z pohladu os. - postupnost instrukcii v pamati, ktore sa vykonavaju. - zaznam v zozname procesov...
+
+Èo je proces? (Odpovede si nepamätám ale boli a 4 spravne), 2. .,..... je rezidentná èas operaèného systemu a spúša sa
+v privilegovanom rezime(jadro, kernel), 3. Taká istá otázka aká u bola na ten opakovane pouite¾nı prostriedok... 

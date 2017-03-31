@@ -1,0 +1,31 @@
+1) Kto ?
+
+> Batman
+> Spiderman
+> Superman
+> Ironman
+> Doktor
+
+
+
+2) Ktoré z nasledujúcich termínov považujeme za prostriedky?
+
+> inštrukcia
+> disk
+> zdielaná premenná 
+> pamä
+> žiadne z uvedených
+
+
+
+3) Do uvedeného tvrdenia doplò slová: 1-jadrový procesor využíva ______, èo predstavuje ______ procesorov v èase.
+
+> serializmus,vykrývanie
+> paralelizmus,prekrývanie
+> pseudoaralelizmus,vykrývanie
+> paralelizmus, vykrývanie
+> pseudoparalelizmus, vykonávanie
+
+
+
+4) Doplòte chýbajúce slovo: ______ použite¾ný prostriedok sa použije a potom uvo¾ní.
