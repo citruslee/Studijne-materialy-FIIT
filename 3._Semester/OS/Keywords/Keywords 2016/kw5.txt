@@ -1,0 +1,15 @@
+﻿procesor
+instrukcia
+atomickost instrukcie
+
+Procesor
+------------------------
+Je elektronický obvod v počítači, ktorý vykonáva inštrukcie procesu za použitia jednoduchých aritmetických operácií.
+
+Inštrukcia
+------------------------
+Je jednoducha operacia vykonana procesorom a je definovana procesorovym inštrukčným setom
+
+Atomickosť inštrukcie
+------------------------
+Znamená, že inštrukcia je najmenšia nedeliteľná jednotka. Akonáhle sa začne vykonávať v procesore

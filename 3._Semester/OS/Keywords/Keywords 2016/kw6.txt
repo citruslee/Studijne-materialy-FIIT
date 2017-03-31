@@ -1,0 +1,6 @@
+﻿specialne instrukcie
+
+SPECIALNE INSTRUKCIE
+Sú také, kde sa viacero operácii vykoná v rámci jednej špeciálnej inštrukcie bez prerušenia, pretože stále platí
+atomickosť inštrukcií. Nie sú potrebné pre bežné výpočty ale slúžia na riešenie vzájomného vylučovania. Napr.
+inštrukcia test-and-set, compare-and-swap, fetch-and-add

@@ -1,0 +1,7 @@
+﻿retazec odkazov na stranky (reference string)
+pracovna mnozina stranok
+algoritmus vyberu obete
+zasobnikovy algoritmus
+LRU algoritmus
+FIFO algoritmus
+optimalny algoritmus
