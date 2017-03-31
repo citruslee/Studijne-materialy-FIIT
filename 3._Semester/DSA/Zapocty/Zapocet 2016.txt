@@ -1,0 +1,27 @@
+﻿1.)	(1 bod) Vysvetlite čo je to asymptotický odhad zložitosti v priemernom prípade,
+	uveďte príklad nejakého štandardného algoritmu a zdôvodnite ho.
+
+2.)	(2 body) Abstraktná dátová štruktúra (ADT): dynamická množina.
+	Uveďte špecifikáciu operácií (nemusíte slovne opisovať)
+
+3.)	(1 bod) Vysvetlite hlavné rozdiely medzi procesom a programom.
+
+4.)	(3 body) Navrhnite algoritmus, ktorý usporiada čísla N občianskych preukazov
+	v čase O(N). Stručne opíšte hlavnú myšlienku a napíšte pseudokód.
+
+5.)	(2 body) Vysvetlite výhody B-stromu oproti červeno-čiernym stromom
+	a uveďte situácie, v ktorých je vhodnejšie použitie B-stromov.
+
+6.)	(3 body) Napíšte pseudokód operácie in-order nasledovník prvku (successor)
+	v binárnom vyhľadávacom strome. Stručne opíšte hlavnú myšlienku.
+
+7.)	(1 bod) Vysvetlite čo je to faktor naplnenia (alpha), aké sú vhodné
+	hodnoty (alpha) pre rôzne typy hashovania (lineárne skúšanie, dvojité rozptýlenie,
+	reťazenie) a stručne opíšte prečo.
+
+8.)	(2 body) Uvažujme rodnú matriku - register obyvateľov SR podľa rodného čísla.
+	Keď k referentovi príde nejaká požiadavka, základná operácia je vyhľadanie záznamu
+	podľa rodného čísla. Navrhnite hashovanie pre túto situáciu: navrhnite hashovaciu
+	funkciu (uveďte pseudokód), určite vhodnú veľkosť tabuľky a spôsob riešenia
+	kolízií. Stručne opíšte ako bude prebiehať vloženie prvku (narodenie)
+	a zdôvodnite výpočtovú a pamäťovú zložitosť vášho riešenia.
