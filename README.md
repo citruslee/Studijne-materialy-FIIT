@@ -31,7 +31,7 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-Thanks for contributing:
+Thanks for contributing (in no particular order):
 
 [@ok100](https://github.com/ok100) - bunch of files<br />
 [@pepies](https://github.com/pepies) - additional PPI files<br />
