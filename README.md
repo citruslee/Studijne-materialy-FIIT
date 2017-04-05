@@ -37,3 +37,8 @@ Thanks for contributing:
 [@pepies](https://github.com/pepies) - additional PPI files<br />
 [@bludivec](https://github.com/bludivec) - for great markdown material and also for pull requests<br />
 [@11th](https://github.com/11th) - additional files for Fyzika folder in 2nd semester<br />
+[@Slaaavo](https://github.com/Slaaavo) - bunch of files<br />
+[@j91321](https://github.com/j91321) - bunch of files<br />
+[@Fiitkar](https://github.com/Fiitkar) - bunch of files<br />
+[@riki137](https://github.com/riki137) - bunch of files<br />
+[@Kattyi](https://github.com/Kattyi) - bunch of files<br />
