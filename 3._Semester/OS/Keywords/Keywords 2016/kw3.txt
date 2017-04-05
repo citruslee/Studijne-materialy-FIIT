@@ -1,0 +1,36 @@
+﻿subor
+obycajny subor
+adresar
+symbolicka linka
+
+SUBOR
+----------------------------------------------
+V Unixe je vsetko reprezentovane ako subor, aj ked to subor nemusi byt - napr. HW zariadenie ako CPU je tiez prezentovane
+ako subor aby sa ludom s tym dalo lepsie pracovat. Avsak existuju tu aj takzvane specialne subory - su to subory, ktore
+sa vyuzivaje pre input / output zariadenia na UNIXovych systemoch. Podobne ako aj obycajne subory sa zobrazuju v adresaroch.
+V Unixe su dva typy specialnych suborov - character special files A block special files. Character special file robi to,
+ze data sa prenasaju po jednom znaku jeden za druhym do I/O zariadenia (a.k.a. raw device access). Block special file - data
+sa prenasaju vo
+vacsich fixed-size blokoch do I/O zariadeni. Vacsinov sa tieto specialne subory davaju do adresarov oznacenych ako /dev
+(devices) a /proc (processing) Subory v dev sluzia na pracu so zariadeniami. Subory v proc sluzia na nastavovanie
+činnosti jadra.
+
+OBYCAJNY SUBOR
+----------------------------------------------
+Obycajny subor je subor, ktory obsahuje bud obycajny text v ASCII, ktory je čitateľný pre obyčajného človeka.
+Ale tiež to sú aj spustiteľné programy, data pre program, binárne súbory.
+
+ADRESAR
+----------------------------------------------
+Je binarny subor, ktory sa pouziva na lokalizovanie dalsich suborov a adresarov. Binarny format sa pouziva preto, aby
+adresare, ktore obsahuju velke mnoztvo suborov sa dali prehladavat rychlo.
+
+SYMBOLICKA LINKA
+----------------------------------------------
+Je to nastroj pouzavany na to, aby sme mohli mat viacero nazvov(filenames) ktore referuju na jeden a ten isty subor
+na fyzickom disku. Podobne ako obycajny subor sa zobrazuju v adresaroch ako obycajny subor. Existuju dva typy liniek:
+hard links a symbolic links. Hard links neukazuju na originalny subor. Namiesto toho udrziavaju svoju vlastnu kopiu
+atributov originalneho suboru (napr. umiestnenie na disku, file access permissions,...) Ak je originalny subor zmazany,
+tak jeho data su stale pristupne za pouzitia hard linku. Symbolicke linky - su vlastne ako take ukazovatele alebo
+pathname k originalnemu suboru. Ak je originalny subor vymazany, tak cez symbolicku linku sa jeho data
+nedaju zobrazit a takato linka je povazovana za stale link (zastarana linka)

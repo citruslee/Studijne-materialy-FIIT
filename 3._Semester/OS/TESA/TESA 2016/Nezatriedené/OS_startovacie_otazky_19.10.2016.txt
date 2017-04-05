@@ -1,0 +1,25 @@
+Štartovacie otázky OS - 19.10.2016
+
+1. Kto?
+
+2. Proces, z poh¾adu OS je:
+	- postupnos príkazov zapísaná v programovacom jazyku
+	- binárny vykonate¾nı súbor
+	- vıstup kompilátora
+	- postupnos inštrukcií v pamäti, ktoré sa vykonávajú
+	- záznam v zozname procesov...
+
+3. Kritická oblas je:
+	- èas pamäte, v ktorej sú uloené zdie¾ané premenné
+	- èas programu, v ktorom sa robí prístup k zdie¾anému prostridku
+	- èas programu ošetrená synchornizaènım mechanizmom, napr. zámkom
+	- èasovı interval, kedy dva a viac procesov prustupuje do zdie¾anej pamäte súèasne
+	- èasovı interval, kedy operaènı systém zakáe prerušenia
+
+4. Doplnte správne slová do tvrdenia:
+   Atomická inštrukcia _______ by ________ na všetkıch typoch procesorov.
+	- môe, prerušená
+	- môe, uspatá
+	- nemôe, prerušená
+	- musí, dokonèená
+	- nemusí, definovaná

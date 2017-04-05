@@ -1,0 +1,57 @@
+﻿multiprograming (multiprogramovanie)
+------------------------------------
+ak proces čaká na I/O operáciu, tak sa v CPU začne vykonávať iný proces
+vzorec na využitie procesora je: 1 - p^n
+kde n je počet procesov
+kde p je pravdepodobnosť, že proces bude čakať na I/O operáciu
+
+multiprocessing
+-------------------------------
+je využitie 2 a viac CPU(alebo jadier CPU) v jednom PC. A úlohy sa môžu súčasne riešiť na viacerých procesorových jednotkách.
+
+multitasking
+-------------------------------
+je súbežné vykonávanie úloh (aspoň zdanlivé) na PC. V realite je skutočný multitasking (viac uloh každá na samostatnom jadre
+CPU) len občas a poväčšine sa využíva zdanlivý multitasking (úlohy sa rýchlo striedaju na jednom CPU)
+
+multithreading
+-------------------------------
+jeden proces má viac threadov. Problémy sa delia do viacerých threadov namiesto do viacerých procesov. Napr. GUI a výpočet
+sú v rôznych threadoch, ktorých vykonávanie sa na jednomprocesorov systéme strieda.
+Výhody vlákien:
+Vytvorenie vlákna je podstatne rýchlejšie než vytvorenie
+procesu (podobne ukončenie)
+? Prepnutie vlákien v rámci jedného procesu je podstatne
+rýchlejšie než prepnutie procesov
+? Komunikácia medzi vláknami v rámci jedného procesu je
+podstatne efektívnejšia než medzi rôznymi procesmi: medzi
+procesmi je potrebná služba jadra, prenášajú sa dáta medzi
+adresovými priestormi; medzi vláknami sa dá využiť spoločná
+pamäť, bez účasti jadra
+
+swapovanie
+--------------------------------
+je že máme časť obrazu procesu vo virtuálnej pamäti, tam sa daný súbor jeho premenné môžu modifikovať a pri odstránení
+stránky z pamäte (aby ju mohla nahradiť iné stránka) sa modifikované premenné zapíšu do súboru, ktorý je na disku.
+takáto výmena sa nazýva swapping. Ale nie je to vymena procesov ale dakych dat (stranky) s ktorymi program pracuje.
+
+
+externa fragmentacia
+-------------------------------
+vznika pri pamäťových blokoch rôznej dĺžky, keď je dostatok miesta na zavedenie ďalšieho procesu ale toto miesto nie je
+v jednom súvislom bloku
+obr: +++++---++++++--++
++ plny blok
+- volny blok
+chceme zaviest proces o velkosti 5 ale nemozeme
+
+interna fragmentacia
+-------------------------------------------------
+vznika pri pamäťových blokoch pevnej dĺžky, keď proces neefektívne využíva voľné miesto bloku a potom máme v daných blokoch
+ešte voľné miesto, ktoré by sme potencionálne chceli využiť ale nemôžeme
+obr: 1++++-1 2++---2 3+----3 4+++++4
+kde 1-4 označujú p.č. bloku
++ plna pamäť v bloku
+- voľná pamäť v bloku
+chceme zaviesť proces o veľkosti 5 ale nezmestí sa, lebo nemáme voľný blok napriek tomu, že vo vnútri blokov je
+dostatok miesta

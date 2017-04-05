@@ -1,0 +1,50 @@
+﻿semafor
+----------------
+Je abstraktny datovy typ a zaroven aj vseobecny synchronizacny prostriedok. Potrebuje podporu v jadre OS. Jeho zakladne
+operacie su init, wait, signal. Wait a Signal su zaroven v kritickej oblasti semaforu. Hodnota semaforu urcuje pocet
+operacii wait, ktore sa mozu vykonat bez cakania. Nepouziva obsadzujuce cakanie.
+
+operacie nad semaforom
+-------------------------------
+init - nastavi pociatocnu hodnotu semaforu, ktora predstavuje, že kolko funkcii wait sa može vykonať bez čakania
+wait - zavola sa pred spustenim procesu, ktory vola wait
+	semafor obsahuje cele nezaporne cislo a ak to cislo je vacsie ako 0, tak sa toto cislo dekrementuje a wait skonci
+	a dany proces može vstupiť do KO a vykonavať sa.
+	Ak je toto cislo rovne nule, tak sa proces uspi a zaradi sa do radu čakajucich procesov
+signal - zavola sa po skončeni procesu, ked vystupi z KO
+	pozrie sa na rad procesov, ak je neprazdny, tak sa vyberie jeden z uspatych procesov (ze ktory, to zalezi od implementacie)
+	a zobudi ho. Ak je rad čakajucich procesov prazdny, tak inkrementuje hodnotu semaforu
+
+sem_value: 1
+P1 wait // dekrementuje na 0
+P2 wait // da sa do queue
+P1 work
+P1 signal // vybere P2
+P2 work
+P2 signal // inkrementuje na 1
+
+invariant semaforu
+--------------------------
+oznacme nw ako pocet dokoncenych operacii wait, ns - ako pocet dokoncenych operacii signal, c ako pociatocnu hodnotu semaforu,
+potom plati nasledovny vztah:
+nw(sem) <= ns(sem) + c(sem)
+
+vseobecny semafor
+------------------------
+nadobuda hodnoty nezaporne cisla
+
+binarny semafor
+-----------------------------
+nadobuda len hodnoty 0 a 1 - znaci sa tiez mutex akoze mutual exclusion, sluzi na riesenie vzajomneho vylucovania
+
+inicialna hodnota semaforu
+-----------------------------
+predstavuje počet nejakeho prostriedku, kde ten prostriedok je KO a može ho využivať iba max. jeden proces. Že mam recepčnu
+na intrakoch a mam 200 klučov od 200 izieb. Kluč od izby je KO, može ho mať len jeden proces, ale mam 200 takych klučov a to
+je ta hodnota semaforu.
+
+monitor
+----------------------------
+Vychadza sa z konceptu triedy v zmysle OOP. Je potrebna podpora kompilatora. Monitor je udajovy typ a združuje premenne
+a operacie nad nimi. Premenne su privatne, zvonku nepristupne. Operacie su verejne. Procesy vstupuju do monitora volanim
+jeho operacii.  Operacie sa v čase vylučuju.

@@ -1,0 +1,28 @@
+﻿Unix
+shell
+skript
+
+UNIX
+----------------------
+OS ktory vznikol v roku 1970. Ale dnes sa tento pojem pouziva pre vyjadrenie celej rodiny OS ktore
+dokazu robit multitasking a multiuser, time-sharing. Najzakladnejsou myslienkov UNIXovych OSiek je modularnost dizajnu.
+Obcas sa to aj nazyva Unixova fylozofia. V podstate to hovori o tom, ze OS poskytuje sadu nastrojov
+ktore su velmi silne ale maju limitovane vlastnosti a maju zjednoteny suborovy system ako zaklad
+komunikacie a maju aj shell - prikazovy riadok, ktory dokaze kombinovat nastroje systemu aby
+vytvoril kopmlexnejsi nastroj. Povodny Unix bol zaroven prvy lahko prenosny OS, pretoze skoro
+cely bol nakodeny v Cecku a tak sa lahko dal implementovat na rozny HW.
+Najpouzivanejsi Unixacky OS v sucasnosti je macOS od Applu.
+
+SHELL
+----------------------
+Shell je vlastne prikazovy riadok, ktory poskytuje tradicny Unix-like user interface. Uzivatel
+zadava prikazy ako text alebo vytvaraju textove skripty ktore pozostavaju z tychto prikazov.
+Je to uzivatelske textove rozhranie a interpreter textoveho prikazoveho riadku.
+
+SKRIPT
+-----------------------
+Je sada prikazov, ktore OS pozna a vie vykonat sekvencne. Alebo je to tiez, sada prikazov, ktore
+nie su skompilovane a tak ten kod je vlastne interpretovany dacim inym (napr. OSkom). Telo
+skriptu si mozem vacsinou pozriet (jeho source code) a skript potrebuje interpretera, napr. iny
+program, aby ho vykonal, kdezto program je sam o sebe vykonatelny, kdezto skript nie je.
+

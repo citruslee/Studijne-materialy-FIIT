@@ -1,0 +1,65 @@
+po spusteni som automaticky v normalnom mode, pre pisanie potrebujem sa preonut do insert modu
+
+Esc - back to normal mode
+: - ak v normal mode zadam dvojbodku tak som v command mode, otvaranie a za tym pisem prikazy
+v - visual mod
+V - visual block mod
+A - insert mode
+I - insert mode
+
+INSERT MOD
+koliesko mysi - ak mam daco skopirovane ci uz z inakadial cez ctrl+c alebo inym sposobom a otvorim vim, tak koliaskom to tam vlozim
+
+NORMALNY MOD
+v eskejpovom/normalnom mode, sa pohybujem po subore ako keby sipkami ale pouzivam klavesy HJKL
+x - odstranim pismenko
+dd - vymazem cely riadok na ktorym stojim kurzorom
+u - krok spat
+ctrl+r -- krok dopredu
+p - da oznaceny text za kurzor
+P - da oznaceny text pred kurzor
+G - dam sa na koniec suboru
+
+COMMAND MOD
+w+enter - ulozenie suboru
+help - help
+q - vyskocenie z helpu/ukoncenie vim-u
+q! - neulozenie zmien v subore
+wq - ulozi subor a ukonci vim
+set wrap - taky dlhy riadok mi zalomi tak aby bol zobrazeny na obrazovku
+
+VISUAL MOD
+teraz sa pohybujem a oznacujem 
+d - je ako ctrl+x
+p - da oznaceny text za kurzor
+P - da oznaceny text pred kurzor
+yy - kopiruje cely riadok
+y - kopiruje vyznacenu oblast
+
+VISUAL BLOCK MODE
+-kopiruje po riadkoch
+
+K uzitocnym ficuram vim patri napriklad:
+
+:set numbers - zapnutie cislovania riadkov - rychlo sa tak hlada chyba, ked kompilator
+zahlasi cislo riadku
+:set nonumbers - vypne riadkovanie
+:syntax on/off - zapne/vypne zvyraznovanie syntax
+dd - mazanie celeho riadku - zaroven tento riadok skopiruje do "clipboardu" a je
+ho nasledne mozne pastnut pomocou 'p'
+yy - kopirovanie celeho riadku, pastnutie nasledne pomocou 'p'
+v, resp. shift+v - oznacovanie textu, jeho nasledne skopirovanie potom
+pomocou 'y' a nasledne pastnutie pomocou 'p'
+= - formatovanie textu. Po pastnuti textu z jednej putty do druhej, je text cely
+rozhadzany. Jednoduchym riesenim je ho cely oznacit (pomocou v - visual line +
+kombinacia prikazov na pohyb kurzoru) a nasledne stlacit klaves - '='
+...
++ kopec inych, odporucam: google -> hladat obrazky -> "vim cheatsheet"
+
++ nezabudnite mat nastavenu premennu prostredia TERM na hodnotu: xterm-color
+
+[pilarcik@osa:~$] echo $TERM
+xterm-color
+[pilarcik@osa:~$] 
+
+

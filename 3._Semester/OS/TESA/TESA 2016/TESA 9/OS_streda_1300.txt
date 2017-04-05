@@ -1,0 +1,17 @@
+(x) - dobre
+
+1.) Co je typicke pre virtualnu pamat?
+- Je zalozena na  preklade logickych adries, ktore pouzivaju procesy, na fyzicke adresy, ktore pouziva procesor, pri kazdom pristupe (x)
+- Umoznuje, aby mal kazdy proces svoj vlastny adresovy priestor, uplne izolovany od adresovych priestorov ostatnych procesov. (x)
+- Je implementovana pomocou swapovania - odkladania nevyuitych casti pamate na disk
+- Jej hlavnou vyhodou je, ze umoznuje procesu vyuzivat viac pamate nez je dostupna RAM 
+- Na urychlenie prekladu adries vyuziva asociativnu pamat TLB (Trnsition Lookaside buffer) (x)
+
+
+2.)DOPLN  Pri strankovani je virtualna pamat rozdelena na useky rovnakej dlzky- ___________
+stranky(x) 
+mnocniny 2 (x)
+
+
+3.) Useky logickeho adresoveho priestoru sa nazyvaju_______
+stranky(x)

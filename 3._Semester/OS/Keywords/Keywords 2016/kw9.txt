@@ -1,0 +1,23 @@
+﻿virtualna pamat
+-------------------------
+do hlavnej pamäti sa umiestnia len tie časti
+obrazu procesu, ktoré sú práve potrebné
+*Úsek inštrukcií, ktoré sa práve vykonávajú
+*Časť dátovej oblasti a časť zásobníka, s ktorými dané
+inštrukcie pracujú
+*Ďalšie časti sa zavedú do pamäti keď budú potrebné
+*Už nepotrebné časti sa môžu z pamäti vylúčiť
+
+strankovanie
+logicky adresovy priestor
+fyzicka pamat
+virtualny adresovy priestor
+stranka
+strankovy ram
+logicka adresa
+fyzicka adresa
+tabulka stranok
+dvojurovnova tabulka stranok
+vypadok stranky (page fault)
+asociativna pamat
+TLB
