@@ -1,0 +1,30 @@
+git init - v danom priecinku vytvori git repo
+git clone URL - vytvori mi dany repo v priecinku kde sa momentalne nachadzam
+git status - ukaze status
+git add FILE - da mi do Index-u dany subor
+git commit -m "message" - commitne zmeny (Index) v mojom lokalnom repo
+git remote add origin URL - spoji remote repo s mojim repo pod nazvom origin
+git push origin BRANCH - ulozi zmeny commitnute do remote repo do danej branche
+git push - ulozi zmeny commitnute do remote repo
+git checkout -b BRANCH - vytvori novu branchu
+git checkout -d FILE - vymaze dany subor z danej vetvy
+git checkout BRANCH - prepne sa na danu branchu
+git checkout -- - vrati zmeny od posledneho add, tie co uz boli addnute sa nezmenia a vytvorene nove subory ostanu
+git branch -d BRANCH - vymaze danu branchu
+git branch - zobrazi vsetky vetvy
+git pull --rebase - stiahne zmeny z remote repo do lokalneho repo, je potrebne byt v lokalno repo a potom executnut prikaz
+git merge BRANCH - mergne branchu do tej branche v ktorej aktualne som
+git add FILE - oznacim vetvu v ktorej sa nachadzam ako mergnuta s danym FILE
+git diff SRC_BRANCH TARGET_BRANCH - uvidim rozdiely medzi src a target branchami
+git tag VERSION COMMIT_ID - otaguje cislom verzie dany commit
+git log - zobrazi repo historiu, chodi sa z toho von q
+git log --author=AUTOR - zobrazi logi len od daneho autora
+git log --pretty=oneline - zobrazi historiu logov velmi zjednodusenu a kazdy commit je na samostatnom riadku
+git log --graph --oneline --decorate --all - zobrazi branche v ascii grafe
+git log --name-status - zobrazi iba subory ktore sa menili
+git PRIKAZ --help - zobrazi napovedu k danemu prikazu
+git fetch origi && git reset --hard origin/master - všetky lokalne zmeny sa vymažu a stiahne sa repo z remote servera
+gitk - build-in git gui
+git config color.ui true - nastavi farbicky na vystupe
+git config format.pretty oneline - zobrazi logy len jeden commit na jeden riadok
+git add -i - pouzije sa interaktivny git na pridanie
