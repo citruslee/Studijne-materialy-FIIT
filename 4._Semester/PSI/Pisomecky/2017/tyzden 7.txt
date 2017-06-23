@@ -1,0 +1,10 @@
+Modelovanie pripadov pouzitia - vyberte viac spravnych odpovedi?
+mozeme medzi pripadmi pouzitia definovat zavislost - áno
+mozeme medzi pripadmi pouzitia definovat generalizaciu - áno
+mozeme medzi pripadmi pouzitia definovat interakcie - nie
+akteri navzajom mozu mat vztah interakcie -nie, jedine generalizaciu
+a ešte jedna otázka, ale napamätám si ju a odpoveï bola - nie
+
+Ak X include Y mozeme s istotou povedat ze - vyberte jednu odpoved?
+Pripad X je zavisli od pripadu Y
+tri zvyšné boli jasné blbosti

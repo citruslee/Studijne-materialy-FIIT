@@ -1,0 +1,10 @@
+﻿požiadavky na software merateľné a zmysluplné
+nie - 100 používateľov
+nie - je jednoduché
+áno - kratší response ako 1s
+
+čo platí pre stavové diagramy platí
+áno - môžeme podľa neho skontrolovať model údajov, správanie a ďaľšie modely
+nie - modelujeme podľa nich scenáre
+nie - vidíme z nich architektúru softvéru
+nie - N/A
