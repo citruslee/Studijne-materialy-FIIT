@@ -1,0 +1,10 @@
+﻿Otázky
+ v sekvenčnom diagram synchrónne volanie:
+
+- vodorovné neprerušované plná šipka
+
+ v prípadoch použtia, kde A extend B:
+
+- prípad použitia B má nejaké body rozšírenia
+
+- prípad použitia B nevie nič o prípade A
