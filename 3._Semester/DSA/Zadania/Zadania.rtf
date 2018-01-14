@@ -1,0 +1,61 @@
+{\rtf1\ansi\ansicpg1250\deff0\nouicompat\deflang1051{\fonttbl{\f0\fnil\fcharset238 Calibri;}{\f1\fnil\fcharset0 Calibri;}{\f2\fnil Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22 Zadanie 1\par
+\b0 V \'9atandardnej kni\'9enici jazyka C s\f1\lang1033\'fa pre alok\'e1ciu a uvo\f0\'benenie pam\f1\'e4ti k dispoz\'edcii funkcie malloc, a free. V tomto zadan\'ed je \'falohou implementova\f0\'9d vlastn\f1\'fa verziu alok\'e1cie pam\'e4ti.\par
+Zadanie sa vyprac\'fava v dvoch \f0\'e8astiach:\par
+    Vlastn\f1\'fd algoritmus pride\f0\'beovania pam\f1\'e4ti (do 7.11.2017 13:59)\par
+    Dokument\'e1cia (do 7.11.2017 13:59)\par
+V prvej \f0\'e8asti (odovzdanie do 7.11.2017 13:59) je va\'9aou \f1\'falohou implementova\f0\'9d nasledovn\f1\'e9 \f0\'8aTYRI funkcie vyu\'9eit\f1\'edm met\'f3dy explicitn\'fdch zoznamov:\par
+    void *memory_alloc(unsigned int size);\par
+    int memory_free(void *valid_ptr);\par
+    int memory_check(void *ptr);\par
+    void memory_init(void *ptr, unsigned int size);\par
+Vo vlastnej implement\'e1cii m\'f4\f0\'9eete definova\'9d aj in\f1\'e9 pomocn\'e9 funkcie ako vy\f0\'9a\'9aie spomenut\f1\'e9, nesmiete v\f0\'9aak pou\'9ei\'9d existuj\f1\'face funkcie malloc a free.\par
+Funkcia memory_alloc m\'e1 poskytova\f0\'9d slu\'9eby analogick\f1\'e9 \f0\'9atandardn\f1\'e9mu malloc. Teda, vstupn\'e9 parametre s\'fa ve\f0\'bekos\'9d po\'9eadovan\f1\'e9ho s\'favisl\'e9ho bloku pam\'e4te a funkcia mu vr\'e1ti: ukazovate\f0\'be na \f1\'faspe\f0\'9ane alokovan\f1\'fd kus vo\f0\'benej pam\f1\'e4te, ktor\'fd sa vyhradil, alebo NULL, ke\f0\'ef nie je mo\'9en\f1\'e9 s\'favisl\'fa pam\'e4\f0\'9d po\'9eadovanej ve\'bekos\'9d vyhradi\'9d.\par
+Funkcia memory_free sl\f1\'fa\f0\'9ei na uvo\'benenie vyhraden\f1\'e9ho bloku pam\'e4ti, podobne ako funkcia free. Funkcia vr\'e1ti 0, ak sa podarilo (funkcia zbehla \'faspe\f0\'9ane) uvo\'beni\'9d blok pam\f1\'e4ti, inak vr\'e1ti 1. M\'f4\f0\'9eete predpoklada\'9d, \'9ee parameter bude v\'9edy platn\f1\'fd smern\'edk z predch\'e1dzaj\'facich volan\'ed vr\'e1ten\'ed funkciou memory_alloc, ktor\'fd e\f0\'9ate nebol uvo\'benen\f1\'fd.\par
+Funkcia memory_check sl\'fa\f0\'9ei na skontrolovanie, \'e8i parameter (smern\f1\'edk) je platn\'fd smern\'edk, ktor\'fd bol v nejakom z predch\'e1dzaj\'facich volan\'ed vr\'e1ten\'ed funkciou memory_alloc a zatia\f0\'be nebol uvo\'benen\f1\'fd funkciou memory_free. Funkcia vr\'e1ti 0, ak sa je smern\'edk neplatn\'fd, inak vr\'e1ti 1.\par
+Funkcia memory_init sl\'fa\f0\'9ei na inicializ\f1\'e1ciu spravovanej vo\f0\'benej pam\f1\'e4te. Predpokladajte, \f0\'9ee funkcia sa vol\f1\'e1 pr\'e1ve raz pred v\f0\'9aetk\f1\'fdmi in\'fdmi volaniami memory_alloc, memory_free a memory_check. Vi\f0\'ef testovanie ni\'9e\'9aie. Ako vstupn\f1\'fd parameter funkcie pr\'edde blok pam\'e4te, ktor\'fa m\'f4\f0\'9eete pou\'9ei\'9d pre organizovanie a aj pridelenie vo\'benej pam\f1\'e4te. Va\f0\'9ae funkcie nem\f1\'f4\f0\'9eu pou\'9e\f1\'edva\f0\'9d glob\f1\'e1lne premenn\'e9 okrem jednej glob\'e1lnej premennej na zapam\'e4tanie smern\'edku na pam\'e4\f0\'9d, ktor\f1\'e1 vstupuje do funkcie memory_init. Smern\'edky, ktor\'e9 pride\f0\'beuje va\'9aa funkcia memory_alloc musia by\'9d v\f1\'fdhradne z bloku pam\'e4te, ktor\'e1 bola pridelen\'e1 funkcii memory_init.\par
+Pred odovzdan\'edm si vlastn\'fa implement\'e1ciu d\'f4kladne otestujte. Do testova\f0\'e8a by ste mali odovzd\f1\'e1va\f0\'9d u\'9e funk\'e8n\f1\'fa verziu. M\'f4\f0\'9eete s\f1\'edce do testova\f0\'e8a odovzda\'9d aj na viac kr\f1\'e1t, ale pokia\f0\'be tam bude ma\'9d niekto 30 odovzdan\f1\'fdch pokusov, nie\f0\'e8o asi nie je v poriadku.\par
+Uk\f1\'e1\f0\'9eka testu:\par
+    #include <string.h>\par
+    int main()\par
+    \{\par
+        char region[50];\par
+        memory_init(region, 50);\par
+        char* pointer = (char*) memory_alloc(10);\par
+        if (pointer)\par
+            memset(pointer, 0, 10);\par
+        if (pointer)\par
+            memory_free(pointer);\par
+        return 0;\par
+    \}\par
+V prvej \'e8asti odovzd\f1\'e1vate len program. Program je nap\'edsan\'fd v programovacom jazyku C, zachov\'e1va ur\f0\'e8it\f1\'e9 konvencie p\'edsania preh\f0\'beadn\f1\'fdch programov (pri odovzd\'e1van\'ed povedzte cvi\f0\'e8iacemu, ak\f1\'e9 konvencie ste pri p\'edsan\'ed k\'f3du dodr\f0\'9eiavali). Sna\'9ete sa, aby to bolo na prv\f1\'fd poh\f0\'bead pochopite\'ben\f1\'e9.\par
+V druhej \f0\'e8asti (odovzdanie do 7.11.2017 13:59) odovzd\f1\'e1vate textov\'fa dokument\'e1ciu, ktor\'e1 obsahuje hlavi\f0\'e8ku (kto, ak\f1\'e9 zadanie odovzd\'e1va), stru\f0\'e8n\f1\'fd opis pou\f0\'9eit\f1\'e9ho algoritmu, s n\'e1zorn\'fdmi n\'e1kresmi/obr\'e1zkami, a kr\'e1tkymi uk\'e1\f0\'9ekami zdrojov\f1\'e9ho k\'f3du, vyberajte len k\'f3d na ktor\'fd chcete extra upozorni\f0\'9d. Pri opise sa sna\'9ete dba\'9d osobit\f1\'fd d\'f4raz na zd\'f4vodnenie spr\'e1vnosti v\'e1\f0\'9aho rie\'9aenia \f2\endash  teda, d\f1\'f4vody pre\f0\'e8o je dobr\f1\'e9/spr\'e1vne. Nakoniec mus\'ed technick\'e1 dokument\'e1cia obsahova\f0\'9d odhad v\f1\'fdpo\f0\'e8tovej (\'e8asovej) a priestorovej (pam\f1\'e4\f0\'9dovej) zlo\'9eitosti v\f1\'e1\f0\'9aho algoritmu. Celkovo mus\f1\'ed by\f0\'9d cvi\'e8iacemu jasn\f1\'e9, \f0\'9ee viete \'e8o ste spravili, \'9ee viete od\f1\'f4vodni\f0\'9d, \'9ee to je spr\f1\'e1vne rie\f0\'9aenie, a vedie\'9d ak\f1\'e9 je to efekt\'edvne.\par
+\par
+\b\f0\lang1051 Zadanie 2\par
+\b0 Zobudili ste sa do r\f1\lang1033\'e1na, v ktorom ste hrd\'fdm majite\f0\'beom najv\f1\'e4\f0\'e8\'9aej soci\f1\'e1lnej siete na svete. Konkurencia v\'e1m d\'fdcha na krk a vymysleli ste novinku, na ktor\'fa v\f0\'9aetci \'e8akali: nie, nie je to nov\f1\'fd Newsfeed, ale modul na organiz\'e1ciu s\'fa\f0\'9da\'9e\f1\'ed.\par
+Hlavn\'fd komponent nov\'e9ho modulu je schopn\'fd efekt\'edvne vybera\f0\'9d fan\f1\'fa\f0\'9aikov str\f1\'e1nky, ktor\'ed z\'edskaj\'fa ocenenie. Na soci\'e1lnych sie\f0\'9dach ale n\f1\'e1hodn\'fd nemus\'ed dopadn\'fa\f0\'9d tak ako by ste si v\'9edy predstavovali: m\f1\'f4\f0\'9ee sa predsa \'beahko sta\'9d, \'9ee aj n\f1\'e1hodne vybran\'ed ocenen\'ed bud\'fa \f0\'beudia s podobn\f1\'fdm menom... tak\'fa blam\'e1\f0\'9e si Va\'9aa soci\f1\'e1lna sie\f0\'9d predsa nem\f1\'f4\f0\'9ee dovoli\'9d! Nez\f1\'e1visl\'e9 m\'e9dia a trollovia, ktor\'ed sa nerozumej\'fa z\'e1kladn\'fdm princ\'edpom matematickej \f0\'9atatistiky, by V\f1\'e1m nikdy neuverili, \f0\'9ee ste to vy\'9erebovali n\f1\'e1hodne.\par
+Ako \f0\'9a\f1\'e9f ste sa preto rozhodli, \f0\'9ee \'9erebovanie mus\f1\'ed aj p\'f4sobi\f0\'9d d\f1\'f4veryhodne a teda chcete nejako zabezpe\f0\'e8i\'9d, aby sa nevybrali \'beudia s menami, ktor\f1\'e9 s\'fa abecedne pr\'edli\f0\'9a bl\f1\'edzko.\par
+Uva\f0\'9eujte abecedne usporiadan\f1\'fd zoznam fan\'fa\f0\'9aikov str\f1\'e1nky: fan\'fa\f0\'9aikovia m\f1\'f4\f0\'9eu priebe\'9ene prib\f1\'fada\f0\'9d (like) alebo ub\f1\'fada\f0\'9d (unlike). Pre potreby \'9erebovania, n\f1\'e1s m\'f4\f0\'9ee v nejakom okamihu zauj\f1\'edma\f0\'9d, kto je pr\f1\'e1ve k-ty fan\'fa\f0\'9aik v abecednom usporiadan\f1\'ed v\f0\'9aetk\f1\'fdch fan\'fa\f0\'9aikov danej str\f1\'e1nky.\par
+T\'fato funkcionalitu budete realizova\f0\'9d nasledovn\f1\'fdmi funkciami:\par
+void init();\par
+void like(char *page, char *user);\par
+void unlike(char *page, char *user);\par
+char *getuser(char *page, int k);\par
+Vo va\f0\'9aom rie\'9aen\f1\'ed implementujte tieto funkcie. Testova\f0\'e8 najsk\f1\'f4r zavol\'e1 funkciu init(), v ktorej si m\'f4\f0\'9eete pripravi\'9d va\'9ae d\f1\'e1tov\'e9 \f0\'9atrukt\f1\'fary v glob\'e1lnej premenn\'fdch. N\'e1sledne bude vola\f0\'9d funkcie like, unlike a getuser, s nasledovn\f1\'fdm v\'fdznamom:\par
+void like(char *page, char *user)\par
+-- Pou\f0\'9e\f1\'edvate\f0\'be s menom user lajkoval str\f1\'e1nku s n\'e1zvom page.\par
+void unlike(char *page, char *user)\par
+-- Pou\f0\'9e\f1\'edvate\f0\'be s menom user odlajkoval str\f1\'e1nku s n\'e1zvom page.\par
+char *getuser(char *page, int k)\par
+-- Zauj\'edma n\'e1s meno k-teho pou\f0\'9e\f1\'edvate\f0\'bea v abecednom porad\f1\'ed, ktor\'fd lajkuje str\'e1nku page. Ak je t\'fdchto pou\f0\'9e\f1\'edvate\f0\'beov menej ako k, tak funkcia vr\f1\'e1ti NULL.\par
+V\f0\'efaka tejto funkcii sa va\'9aej soci\f1\'e1lnej sieti za\f0\'e8alo ve\'bemi dari\'9d, a prich\f1\'e1dzaj\'fa na \f0\'f2u desiatky mili\f1\'f3nov po\f0\'9eiadaviek za sekundu. Implementujte vy\'9a\'9aie uveden\f1\'fa funkcionalitu \f0\'e8o mo\'9eno najefekt\f1\'edvnej\f0\'9aie.\par
+Zadanie sa vyprac\f1\'fava v dvoch \f0\'e8astiach:\par
+    Vlastn\f1\'fd algoritmus pre soci\'e1lnu sie\f0\'9d (do 13.11.2017 11:59)\par
+    Dokument\f1\'e1cia (do 13.11.2016 11:59)\par
+Odovzd\'e1vate program a dokument\'e1ciu. Program je nap\'edsan\'fd v programovacom jazyku C, zachov\'e1va ur\f0\'e8it\f1\'e9 konvencie p\'edsania preh\f0\'beadn\f1\'fdch programov (pri odovzd\'e1van\'ed povedzte cvi\f0\'e8iacemu, ak\f1\'e9 konvencie ste pri p\'edsan\'ed k\'f3du dodr\f0\'9eiavali). Sna\'9ete sa, aby to bolo na prv\f1\'fd poh\f0\'bead pochopite\'ben\f1\'e9.\par
+Textov\'e1 dokument\'e1cia obsahuje hlavi\f0\'e8ku (kto, ak\f1\'e9 zadanie odovzd\'e1va), stru\f0\'e8n\f1\'fd opis pou\f0\'9eit\f1\'e9ho algoritmu, s n\'e1zorn\'fdmi n\'e1kresmi/obr\'e1zkami, a kr\'e1tkymi uk\'e1\f0\'9ekami zdrojov\f1\'e9ho k\'f3du, vyberajte len k\'f3d na ktor\'fd chcete extra upozorni\f0\'9d. Pri opise sa sna\'9ete dba\'9d osobit\f1\'fd d\'f4raz na zd\'f4vodnenie spr\'e1vnosti v\'e1\f0\'9aho rie\'9aenia \f2\endash  teda, d\f1\'f4vody pre\f0\'e8o je dobr\f1\'e9/spr\'e1vne. Nakoniec mus\'ed technick\'e1 dokument\'e1cia obsahova\f0\'9d odhad v\f1\'fdpo\f0\'e8tovej (\'e8asovej) a priestorovej (pam\f1\'e4\f0\'9dovej) zlo\'9eitosti v\f1\'e1\f0\'9aho algoritmu. Celkovo mus\f1\'ed by\f0\'9d cvi\'e8iacemu jasn\f1\'e9, \f0\'9ee viete \'e8o ste spravili, \'9ee viete od\f1\'f4vodni\f0\'9d, \'9ee to je spr\f1\'e1vne rie\f0\'9aenie, a vedie\'9d ak\f1\'e9 je to efekt\'edvne.\par
+Dokument\'e1cia mus\'ed obsahova\f0\'9d podrobn\f1\'fd opis ako ste si svoje rie\f0\'9aenie testovali. Ide\f1\'e1lne, ak budete ma\f0\'9d automatizovan\f1\'fd testova\f0\'e8, podobne ako ste mali ma\'9d v prvom zadan\f1\'ed. (protokoly z testova\f0\'e8a Turing s\f1\'fa len ako podklad k hodnoteniu, nie ako \ldblquote v\'e1\f0\'9a\rdblquote  sp\f1\'f4sob testovania).\par
+Prajeme ve\f0\'bea \f1\'faspechov.\lang27\par
+}
+ 
