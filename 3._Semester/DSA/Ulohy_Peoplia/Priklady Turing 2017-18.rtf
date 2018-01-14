@@ -1,0 +1,406 @@
+{\rtf1\ansi\ansicpg1250\deff0\nouicompat\deflang1051{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset238 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang9 DSA 1-1\b0\par
+Jakubko dostal vreckov\'e9. Namiesto toho, aby ho len tak minul, v\f1\'9aak dostal geni\f0\'e1lny n\'e1pad. \f1\'c8o keby za\'e8al podnika\'9d?\par
+Na trhu pred\f0\'e1vaj\'fa papriku. Jakubko si v\f1\'9aimol, \'9ee cena papriky sa ka\'9ed\f0\'fd de\f1\'f2 men\f0\'ed. Z\'e1rove\f1\'f2 sa mu podarilo vypo\'e8\f0\'edta\f1\'9d odhad cien papriky pre nasledovn\f0\'fdch N dn\'ed. Teraz u\f1\'9e len potrebuje zisti\'9d, ktor\f0\'e9 dni m\'e1 papriku k\'fapi\f1\'9d a ktor\f0\'e9 ju pred\'e1. Ke\f1\'ef\'9ee e\'9ate nevie, \'e8i jeho odhad je spr\f0\'e1vny, povedal si, \f1\'9ee v\'9edy bude ma\'9d nak\f0\'fapen\'fa najviac jednu papriku, teda pred t\'fdm ne\f1\'9e k\f0\'fapi \f1\'efal\'9aiu papriku, mus\f0\'ed t\'fa predch\'e1daj\'facu preda\f1\'9d.\par
+Vstup: Na prvom riadku vstupu je cel\f0\'e9 \f1\'e8\f0\'edslo T, ktor\'e9 vyjadruje po\f1\'e8et scen\f0\'e1rov. Pre ka\f1\'9ed\f0\'fd scen\'e1r nasleduje samostatn\'fd riadok. Na ka\f1\'9edom z t\f0\'fdchto riadkov je najprv uveden\'e9 cel\'e9 \f1\'e8\f0\'edslo N a potom N \f1\'e8\f0\'edsel, ktor\'e9 vyjadruj\'fa odhad cien papriky na nasledovn\'fdch N dn\'ed.\par
+V\'fdstup: Pre ka\f1\'9ed\f0\'fd scen\'e1r vypo\f1\'e8\f0\'edtajte maxim\'e1lny zisk, ktor\'fd Jakubko dok\'e1\f1\'9ee dosiahnu\'9d. M\f0\'f4\f1\'9eete predpoklada\'9d, \'9ee po\'e8iato\'e8n\f0\'e9 vreckov\'e9 bude sta\f1\'e8i\'9d na n\f0\'e1kup akejko\f1\'bevek drahej papriky. Toto vreckov\f0\'e9 sa do v\'fdsledku nezapo\f1\'e8\f0\'edtava.\par
+Uk\'e1\f1\'9eka vstupu:\par
+1\par
+2 1 3\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+2\par
+\b\par
+DSA 2-1\par
+\b0 Jakubko sa r\'e1d hr\'e1 a potrebuje st\'e1le nov\'e9 hra\f1\'e8ky. V hra\'e8k\f0\'e1rstve si v\f1\'9aimol, \'9ee drah\'9aie hra\'e8ky s\f0\'fa zvy\f1\'e8ajne komplikovanej\'9aie a preto sa mu viac p\f0\'e1\f1\'e8ia. Chcel by zisti\'9d, \'e8i maj\f0\'fa rodi\f1\'e8ia dos\'9d pe\'f2az\f0\'ed na n\'e1kup K najdrah\f1\'9a\f0\'edch hra\f1\'e8iek v obchode. Pom\f0\'f4\f1\'9ete Jakubkovi zisti\'9d ko\'beko pe\'f2az\f0\'ed by potreboval.\par
+Va\f1\'9aou \f0\'falohou je nap\'edsa\f1\'9d funkciu, ktor\f0\'e1 ako vstupn\'fd argument dostane pole cien hra\f1\'e8iek v obchode, ich po\'e8et N, a \'e8\f0\'edslo K -- ko\f1\'beko hra\'e8iek si chce Jakubko z obchodu k\f0\'fapi\f1\'9d, a vypo\'e8\f0\'edta s\'fa\f1\'e8et cien K najdrah\'9a\f0\'edch hra\f1\'e8iek v obchode.\par
+Naprogramujte funkciu v nasledovnom tvare:\par
+// urci sucet k najvacsich cisel z cisel cena[0],...,cena[n-1]\par
+long sucet_k_najvacsich(int cena[], int n, int k)\par
+\{\par
+\}\par
+Pr\f0\'edklad postupnosti:\par
+N = 6, K = 4\par
+10 9 8 1 2 3\par
+V\'fdsledok (10+9+8+3):\par
+30\par
+\b\par
+DSA 2-2\b0\par
+Jakubko sa hral s kockami. Na narodeniny dostal sadu kociek, ktor\'e1 obsahuje N (N <= 100 000) kociek, ka\f1\'9ed\f0\'e1 m\'e1 na sebe nap\'edsan\'e9 nejak\'e9 \f1\'e8\f0\'edslo od 1 do N^2. \f1\'c8\f0\'edsla nap\'edsan\'e9 na kock\'e1ch s\'fa r\'f4zne.\par
+Kocky boli v balen\'ed rozh\'e1dzan\'e9 a Jakubko by sa chcel nau\f1\'e8i\'9d, ktor\f0\'e9 \f1\'e8\f0\'edslo je v\'e4\f1\'e8\'9aie od ktor\f0\'e9ho. Pom\'f4\f1\'9ete Jakubkovi a usporiadajte kocky pod\'bea \'e8\f0\'edsel vzostupne.\par
+Va\f1\'9aou \f0\'falohou je implementova\f1\'9d funkciu v nasledovnom tvare:\par
+// Utriedi n cisel v poli a\par
+void utried(int *a, int n);\par
+Pr\f0\'edklad postupnosti:\par
+N = 6\par
+10 9 8 1 2 3\par
+Utrieden\'e1 postupnos\f1\'9d:\par
+1 2 3 8 9 10\par
+\b\f0\par
+DSA 3-1\par
+\b0 Uva\f1\'9eujte bin\f0\'e1rny vyh\f1\'bead\f0\'e1vac\'ed strom. Na vstupe je dan\'fdch nieko\f1\'beko \'e8\f0\'edsel, ktor\'e9 postupne vklad\'e1te do tohto stromu. Strom nevyva\f1\'9eujte. Pre ka\'9ed\f0\'e9 \f1\'e8\f0\'edslo zistite, ako hlboko je v strome ulo\f1\'9een\f0\'e9. Ak sa \f1\'e8\f0\'edslo v strome nenach\'e1dza, tak ho najprv pridajte do stromu.\par
+\f1\'8apecifik\f0\'e1cia vstupu: Na vstupe je nieko\f1\'beko \'e8\f0\'edsel, ktor\'e9 postupne vklad\'e1te do stromu. \f1\'c8\f0\'edsla s\'fa oddelen\'e9 medzerou alebo nov\'fdm riadkom.\par
+\f1\'8apecifik\f0\'e1cia v\'fdstupu: Pre ka\f1\'9ed\f0\'e9 \f1\'e8\f0\'edslo na vstupe vyp\'ed\f1\'9ate jedno \'e8\f0\'edslo -- ako hlboko je dan\'e9 \f1\'e8\f0\'edslo ulo\f1\'9een\f0\'e9 v strome.\par
+Uk\'e1\f1\'9eka vstupu:\par
+5\par
+3\par
+2\par
+1\par
+3\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+0\par
+1\par
+2\par
+3\par
+1\par
+7\par
+\par
+\b DSA 3-2\par
+\b0 Jakubko sa nud\'ed na hodine programovania a tak si za\f1\'e8al na papier \'e8m\f0\'e1ra\f1\'9d bin\f0\'e1rne vyh\f1\'bead\f0\'e1vacie stromy. Zapa\f1\'e8\f0\'edli sa mu a chcel by zisti\f1\'9d ko\'beko r\f0\'f4znych bin\'e1rnych vyh\f1\'bead\f0\'e1vac\'edch stromov existuje pre dan\'fd po\f1\'e8et prvkov. Nap\f0\'ed\f1\'9ate program, ktor\f0\'fd pre dan\'fd po\f1\'e8et prvkov N zist\f0\'ed, ko\f1\'beko je r\f0\'f4znych bin\'e1rnych vyh\f1\'bead\f0\'e1vac\'edch stromov, ktor\'e9 mo\f1\'9eno z N r\f0\'f4znych prvkov zostroji\f1\'9d.\par
+\'8apecifik\f0\'e1cia vstupu: Na vstupe je nieko\f1\'beko \'e8\f0\'edsel ve\f1\'bekos\'9dou do 32. \'c8\f0\'edsla s\'fa oddelen\'e9 medzerou alebo nov\'fdm riadkom.\par
+\f1\'8apecifik\f0\'e1cia v\'fdstupu: Pre ka\f1\'9ed\f0\'e9 \f1\'e8\f0\'edslo i na vstupe vyp\'ed\f1\'9ate jedno \'e8\f0\'edslo -- po\f1\'e8et r\f0\'f4znych bin\'e1rnych vyh\f1\'bead\f0\'e1vac\'edch stromov, ktor\'e9 mo\f1\'9eno zostroji\'9d z i r\f0\'f4znych prvkov.\par
+Uk\'e1\f1\'9eka vstupu:\par
+1\par
+2\par
+3\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+1\par
+2\par
+5\par
+\par
+\b DSA 3-3\par
+\b0 Na za\f1\'e8iatku m\f0\'e1te pr\'e1zdnu mno\f1\'9einu cel\f0\'fdch \f1\'e8\f0\'edsel. Postupne do nej vklad\'e1te \f1\'e8\f0\'edsla. Pre ka\f1\'9ed\f0\'e9 vkladan\'e9 \f1\'e8\f0\'edslo zistite, ak\'e9 \f1\'e8\f0\'edslo v mno\f1\'9eine je k nemu najbli\'9e\'9aie. Ak sa vkladan\f0\'e9 \f1\'e8\f0\'edslo v mno\f1\'9eine u\'9e nach\f0\'e1dza, vyp\'ed\f1\'9ate k nemu najbli\'9e\'9aie \'e8\f0\'edslo (r\'f4zne od vkladan\'e9ho \f1\'e8\f0\'edsla). Ak existuj\'fa dve r\'f4zne najbli\f1\'9e\'9aie \'e8\f0\'edsla, vyp\'ed\f1\'9ate men\'9aie z nich. Ak je mno\'9eina pr\f0\'e1zdna, vyp\'ed\f1\'9ate -1.\par
+\'8apecifik\f0\'e1cia vstupu: Na vstupe je nieko\f1\'beko kladn\f0\'fdch cel\'fdch \f1\'e8\f0\'edsel, ktor\'e9 nepresahuj\'fa hodnotu 2^31.\par
+\f1\'8apecifik\f0\'e1cia v\'fdstupu: Pre ka\f1\'9ed\f0\'e9 \f1\'e8\f0\'edslo na vstupe vyp\'ed\f1\'9ate k nemu doteraz najbli\'9e\'9aie \'e8\f0\'edslo.\par
+Uk\'e1\f1\'9eka vstupu:\par
+5\par
+3\par
+2\par
+1\par
+3\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+-1\par
+5\par
+3\par
+2\par
+2\par
+\par
+\b DSA 4-1\par
+\b0 Jakubko za\f1\'e8al podnika\'9d. Priebe\'9ene mu chodia objedn\f0\'e1vky, ale nest\'edha v\f1\'9aetky vybavova\'9d, tak si mus\f0\'ed vybra\f1\'9d, ktor\f0\'fdch z\'e1kazn\'edkov obsl\'fa\f1\'9ei. Jednotliv\f0\'e9 objedn\'e1vky si ohodnot\'ed hodnotou, ak\'fa maj\'fa pre jeho podnikanie. Z \f1\'e8asu na \'e8as, ke\'ef m\f0\'e1 \f1\'e8as, vybav\f0\'ed jednu objedn\'e1vku, v tomto momente sa pozrie do svojho zoznamu a vyberie objedn\'e1vky s najvy\f1\'9a\'9aiu hodnotu a spracuje ju. Pom\f0\'f4\f1\'9ete Jakubkovi a spravte mu program, ktor\f0\'fd mu pom\'f4\f1\'9ee oper\f0\'e1cie vlo\f1\'9eenia a v\f0\'fdberu objedn\'e1vky s najvy\f1\'9a\'9aou prioritou r\f0\'fdchlo vykon\'e1va\f1\'9d.\par
+Naprogramujte funkcie v nasledovnom tvare:\par
+// vlozi meno a hodnotu do prioritnej fronty\par
+void vloz(char *meno, int hodnota)\par
+\{\par
+\tab // ...\par
+\}\par
+/// vrati meno, ktore je v prioritnej fronte s najvyssou hodnotou a odstrani ho z prioritnej fronty\par
+char *vyber_najvyssie()\par
+\{\par
+\tab // ...\par
+\}\par
+Prioritn\f0\'fa frontu implementujte bin\'e1rnou haldou. Pou\f1\'9eite glob\f0\'e1lnu premenn\'fa. M\'f4\f1\'9eete predpoklada\'9d, \'9ee Jakubko bude ma\'9d v \'beubovo\'benom okamihu najviac 100 000 \'e8akaj\f0\'facich objedn\'e1vok.\par
+\par
+\b DSA 4-2\par
+\b0 P\'edsmenkov\'fd strom je stromov\'e1 d\'e1tov\'e1 \f1\'9atrukt\f0\'fara, v ktorej ka\f1\'9ed\f0\'fd uzol m\'e1 pr\'e1ve jedn\'e9ho rodi\f1\'e8a a viacero dc\f0\'e9rskych uzlov pod\f1\'bea po\'e8tu p\f0\'edsmen v abecede.\par
+Zauj\'edmav\'e1 a u\f1\'9eito\'e8n\f0\'e1 vlastnos\f1\'9d p\f0\'edsmenkov\'e9ho stromu je, \f1\'9ee slov\f0\'e1 so spolo\f1\'e8n\f0\'fdm prefixom zdie\f1\'beaj\f0\'fa spolo\f1\'e8n\f0\'fa cestu v strome od kore\f1\'f2a po posledn\f0\'e9 spolo\f1\'e8n\f0\'e9 p\'edsmeno v spolo\f1\'e8nom prefixe.\par
+\'8apecifik\f0\'e1cia vstupu: Na vstupe je nieko\f1\'beko slov (najviac 10000), ktor\f0\'e9 maj\'fa d\f1\'e5\'9eku najviac 50. Ka\'9ed\f0\'e9 slovo obsahuje iba ve\f1\'bek\f0\'e9 p\'edsmen\'e1 anglickej abecedy.\par
+\f1\'8apecifik\f0\'e1cia v\'fdstupu: Zistite, ak\'fd najdlh\f1\'9a\f0\'ed spolo\f1\'e8n\f0\'fd prefix m\'e1 \f1\'beubovo\'ben\f0\'e1 dvojica t\'fdchto slov a toto \f1\'e8\f0\'edslo vyp\'ed\f1\'9ate na v\f0\'fdstup.\par
+Uk\'e1\f1\'9eka vstupu:\par
+SLON\par
+MASLO\par
+SILONKY\par
+MAPA\par
+MASKA\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+3\par
+\par
+\b DSA 5-1\par
+\b0 Dan\'e9 dve mno\f1\'9einy S a T prirodzen\f0\'fdch \f1\'e8\f0\'edsel, ich prvky s\'fa s1, s2, ..., sN, a t1, t2, ..., tM. Zistite, \f1\'e8i je S podmno\'9einou T, teda, \'e8i ka\'9ed\f0\'fd prvok mno\f1\'9einy S je aj prvkom mno\'9einy T. Rie\'9aenie mus\f0\'ed pracova\f1\'9d v optim\f0\'e1lnej o\f1\'e8ak\f0\'e1vanej \f1\'e8asovej zlo\'9eitosti O(N+M).\par
+Naprogramujte funkciu v nasledovnom tvare:\par
+// vrati 1 ak 's' je podmnozina 't', inak vrati 0.\par
+int is_subset(int s[], int n, int t[], int m)\par
+\{\par
+  // ...\par
+\}\par
+Napr. mno\'9eina s = \{ 30, 10 \} je podmno\'9einou mno\'9einy t = \{ 10, 20, 30 \}\par
+Pozn\f0\'e1mka: V\f1\'9aetky potrebn\f0\'e9 oper\'e1cie by ste mali implementova\f1\'9d vlastn\f0\'fdmi silami. Pomal\f1\'9aie ako optim\f0\'e1lne line\'e1rne rie\f1\'9aenie nespln\f0\'ed \f1\'e8asov\f0\'fd limit v testova\f1\'e8i.\par
+\par
+\b\f0\lang1033 DSA 5-2\par
+\b0 Ur\f1\'e8ite ste to u\'9e za\'9eili... ve\'e8er, diskot\f0\'e9ka, pri vchode sympatick\'ed vyhadzova\f1\'e8i nekompromisne odmietaj\f0\'fa vstup neplnolet\'fdm ml\'e1de\f1\'9en\f0\'edkom, ktor\'ed sa u\f1\'9e nedo\'e8kavo tla\'e8ia na parket. Mlad\f0\'ed ale vedia by\f1\'9d vynaliezav\f0\'ed, zaobstarali si ob\f1\'e8iansky preukaz so \ldblquote spr\f0\'e1vnym\rdblquote  d\'e1tumom narodenia a po prekonan\'ed poslednej prek\'e1\f1\'9eky si ho poza chrb\f0\'e1t posun\'fa spa\f1\'9d a na vstupe je op\f0\'e4\f1\'9d pou\'9eit\f0\'fd \f1\'efal\'9a\f0\'edm nedo\f1\'e8kavcom. Takto to ale nem\f0\'f4\f1\'9ee \f0\'eds\f1\'9d \'efalej!! Pom\f0\'f4\f1\'9ete ochr\f0\'e1ni\f1\'9d zdrav\f0\'fd mor\'e1lny v\'fdvin na\f1\'9aej ml\f0\'e1de\f1\'9ee a pom\f0\'f4\f1\'9ete vyhadzova\'e8om identifikova\'9d preukazy, ktor\f0\'e9 boli na vstup u\f1\'9e raz pou\'9eit\f0\'e9.\par
+Na vstupe je dan\'e1 postupnos\f1\'9d \'e8\f0\'edsel ob\f1\'e8ianskych preukazov, v porad\f0\'ed ako sa nimi n\'e1v\f1\'9atevn\f0\'edci preukazuj\'fa. Va\f1\'9aou \f0\'falohou je zisti\f1\'9d po\'e8et, ko\'beko z nich sa pok\f0\'fa\f1\'9aali pou\'9ei\'9d opakovane. \'c8\f0\'edslo OP je re\f1\'9dazec \'e8\f0\'edsel a p\'edsmen, m\'f4\f1\'9eu by\'9d r\f0\'f4zne dlh\'e9. Rie\f1\'9aenie mus\f0\'ed pracova\f1\'9d v optim\f0\'e1lnej o\f1\'e8ak\f0\'e1vanej \f1\'e8asovej zlo\'9eitosti O(N), kde N je po\'e8et \'e8\f0\'edsel ob\f1\'e8ianskych preukazov na vstupe.\par
+Naprogramujte funkciu v nasledovnom tvare:\par
+// spracuje cisla OP: vrati pocet najdenych duplikatov.\par
+int vyhadzovac(char *a[], int n)\par
+\{\par
+  // ...\par
+\}\par
+Pozn\f0\'e1mka: V\f1\'9aetky potrebn\f0\'e9 oper\'e1cie by ste mali implementova\f1\'9d vlastn\f0\'fdmi silami. Pomal\f1\'9aie ako optim\f0\'e1lne line\'e1rne rie\f1\'9aenie nespln\f0\'ed \f1\'e8asov\f0\'fd limit v testova\f1\'e8i.\par
+Napr. pre \'e8\f0\'edsla OP:\par
+AA123456\par
+BA987689\par
+AA123123\par
+AA312312\par
+BB345345\par
+AA123123\par
+je\par
+Pocet duplikatov: 1\par
+\par
+\b\f1\lang1051 DSA 6-1\f0\lang1033\par
+\b0 Jakubko s Helenkou stavali ve\f1\'9ee z dreven\f0\'fdch kociek. Kocky stavali na dlhom chodn\'edku, ktor\'fd si mo\f1\'9eno predstavi\'9d ako jednorozmern\f0\'e9 pole. V\f1\'9edy na i-tu poz\f0\'edciu Helenka dolo\f1\'9eila nieko\'beko kociek a zv\f0\'fd\f1\'9aila t\f0\'fdm ve\f1\'9eu z kociek, ktor\f0\'e1 na i-tom mieste st\'e1la. Na za\f1\'e8iatok neboli na chodn\f0\'edku in\'e9 kocky. Jakubko mal in\'fa d\'f4le\f1\'9eit\f0\'fa \'falohu: v\f1\'9edy ke\'ef pri\'9aiel nejak\f0\'fd kamar\'e1t a zauj\'edmalo ho ko\f1\'beko kociek je vo ve\'9eiach, ktor\f0\'e9 stoja medzi dvoma v\'fdzna\f1\'e8n\f0\'fdmi bodmi (resp. od i-teho miesta \f1\'efalej d\'e5\'9eky d), tak to musel r\f0\'fdchlo spo\f1\'e8\f0\'edta\f1\'9d. Ob\'e8as sa stalo, \'9ee nejak\f0\'e9 zvieratko alebo neposlu\f1\'9an\f0\'fd vetr\'edk kocky z nejak\'e9ho miesta aj zhodilo. Va\f1\'9aou \f0\'falohou je nap\'edsa\f1\'9d algoritmus, ktor\f0\'fd by Jakubkovi pomohol zvl\'e1da\f1\'9d n\f0\'e1val zvedav\'fdch det\'ed a r\'fdchlo odpoveda\f1\'9d na ich po\'9eiadavky.\par
+\'8atandardn\f0\'fd vstup obsahuje nieko\f1\'beko riadkov, na ka\'9edom z nich je uveden\f0\'e1 oper\'e1cia:\par
+    inc i k -- zv\'fd\f1\'9aenie ve\'9ee na i-tom mieste o k kociek (Helenka dolo\'9eila kocky)\par
+    dec i k -- zn\f0\'ed\f1\'9eenie ve\'9ee na i-tom mieste o k kociek (vetr\f0\'edk sf\'fakol kocky)\par
+    get i k -- ot\'e1zka zvedav\'e9ho kamar\'e1ta na po\f1\'e8et kociek od i-teho miesta \'efalej k kociek (a\'9e po miesto i+k vr\f0\'e1tane)\par
+Hodnoty poz\'edci\'ed na vstupe bud\'fa od 0 do 100 000. Po\f1\'e8et kociek je mo\'9en\f0\'e9 reprezentova\f1\'9d cel\f0\'fdm \f1\'e8\f0\'edslom int. Na \f1\'9atandardn\f0\'fd v\'fdstup pre ka\f1\'9ed\f0\'fa oper\'e1ciu get vyp\'ed\f1\'9ate jedno \'e8\f0\'edslo -- ko\f1\'beko kociek je v po\'9eadovanom intervale na chodn\f0\'edku.\par
+Pozn\'e1mka: Va\f1\'9ae rie\'9aenie mus\f0\'ed by\f1\'9d dostato\'e8ne efekt\f0\'edvne, aby zbehlo v \f1\'e8asovom limite.\par
+Uk\f0\'e1\f1\'9eka vstupu:\par
+inc 10 5\par
+inc 15 3\par
+inc 8 7\par
+get 0 20\par
+get 10 5\par
+get 11 5\par
+get 10 4\par
+dec 15 2\par
+get 6 10\par
+get 6 5\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+15\par
+8\par
+3\par
+5\par
+13\par
+12\par
+\par
+\b\f1\lang1051 DSA 8-1\par
+\b0 Jakubko sa ocitol v tmavom lese. Obzer\f0\lang1033\'e1 sa naokolo, vid\'ed sam\'e9 h\'fa\f1\'9atiny a tmav\f0\'e9 chodbi\f1\'e8ky -- lesn\f0\'e9 cesti\f1\'e8ky. Pom\f0\'f4\f1\'9ete mu n\f0\'e1js\f1\'9d cestu von. Tmav\f0\'fd les je tvaru dvojrozmernej mrie\f1\'9eky znakov, Jakubko vst\f0\'fapil do lesa v\f1\'beavo hore, a potrebuje sa dosta\'9d do v\f0\'fdchodu vpravo dole. In\'e9 v\'fdchody z lesa nie s\'fa... zazdalo sa mu, \f1\'9ee sa v tom lese nie\'e8o h\f0\'fdbe...\par
+Pom\'f4\f1\'9ete Jakubkovi n\f0\'e1js\f1\'9d cestu z lesa von.\par
+Vstup: \'8atandardn\f0\'fd vstup obsahuje mapu lesa -- dvojrozmern\'fa maticu znakov bodka (.) a mrie\f1\'9eka (#). Bodka predstavuje lesn\f0\'fa cesti\f1\'e8ku. Mrie\'9eka predstavuje h\f0\'fa\f1\'9atinu, cez ktor\f0\'fa sa Jakubko nem\'f4\f1\'9ee dosta\'9d. Mapa lesa m\f0\'f4\f1\'9ee by\'9d ve\'bek\f0\'e1 najviac 1000 riadkov a 1000 st\f1\'e5pcov.\par
+V\f0\'fdstup: Na \f1\'9atandardn\f0\'fd v\'fdstup vyp\'ed\f1\'9ate mapu lesa s vyzna\'e8enou trasou prechodu z \'beav\f0\'e9ho horn\'e9ho vchodu do prav\'e9ho doln\'e9ho v\'fdchodu. Trasu vyzna\f1\'e8te hviezdi\'e8kami (znak *).\par
+
+\pard\sa200\sl240\slmult1 Uk\f0\'e1\f1\'9eka vstupu:\par
+#.###############\par
+#...#...........#\par
+#.###.#####.#.###\par
+#...........#...#\par
+###############.#\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+#*###############\par
+#*..#*********..#\par
+#*###*#####.#*###\par
+#*****......#***#\par
+###############*#\par
+
+\pard\sa200\sl276\slmult1\par
+\b\f1\lang1051 DSA 8-2\par
+\b0 Jakubko prech\f0\lang1033\'e1dza cez les trasou, ktor\'fa ste mu vyzna\f1\'e8ili ... len\'9ee v h\f0\'fa\f1\'9atin\f0\'e1ch sa nie\f1\'e8o h\f0\'fdbe... Jakubko v\f1\'e8era vyna\'9aiel pr\f0\'edstroj na extrakciu bubliniek z hydrof\'f3bnych roztokov a m\'e1 preto d\'f4vodn\'e9 podozrenie, \f1\'9ee ho pri\'9ali nav\'9at\f0\'edvi\f1\'9d kamar\f0\'e1ti z inej galaxie, ob\'e1va sa \'fanosu. Pom\'f4\f1\'9ete mu strategicky analyzova\'9d les, a objavi\'9d v \'f2om kritick\f0\'e9 body, cez ktor\'e9 mus\'ed nutne prejs\f1\'9d bez oh\'beadu na trasu prechodu, ktor\f0\'fa si zvol\'ed. Na t\'fdchto miestach chce by\f1\'9d Jakubko obzvl\f0\'e1\f1\'9a\'9d obozretn\f0\'fd. Tmav\'fd les je tvaru dvojrozmernej mrie\f1\'9eky, Jakubko vst\f0\'fapil do lesa v\f1\'beavo hore, a potrebuje sa dosta\'9d do v\f0\'fdchodu vpravo dole. In\'e9 v\'fdchody z lesa nie s\'fa, v lese sa pohybuj\'fa mimozem\f1\'9a\'9dania, ktor\f0\'ed sa pok\'fa\f1\'9aaj\f0\'fa Jakubka kontaktova\f1\'9d, on nem\f0\'e1 z\'e1ujem o tak\'e9to soci\'e1lne kontakty.\par
+Pom\'f4\f1\'9ete Jakubkovi n\f0\'e1js\f1\'9d v\'9aetky kritick\f0\'e9 pol\'ed\f1\'e8ka (lesn\f0\'e9 cesti\f1\'e8ky) cez ktor\f0\'e9 mus\'ed nutne prejs\f1\'9d bez oh\'beadu na zvolen\f0\'fa trasu.\par
+Vstup: \f1\'8atandardn\f0\'fd vstup obsahuje mapu lesa -- dvojrozmern\'fa maticu znakov bodka (.) a mrie\f1\'9eka (#). Bodka predstavuje lesn\f0\'fa cesti\f1\'e8ku. Mrie\'9eka predstavuje h\f0\'fa\f1\'9atinu, cez ktor\f0\'fa sa Jakubko nem\'f4\f1\'9ee dosta\'9d. Mapa lesa m\f0\'f4\f1\'9ee by\'9d ve\'bek\f0\'e1 najviac 1000 riadkov a 1000 st\f1\'e5pcov.\par
+V\f0\'fdstup: Na \f1\'9atandardn\f0\'fd v\'fdstup vyp\'ed\f1\'9ate mapu lesa s vyzna\'e8en\f0\'fdmi kritick\'fdmi miestami -- pol\'ed\f1\'e8kami cez ktor\f0\'e9 mus\'ed nutne prejs\f1\'9d bez oh\'beadu na zvolen\f0\'fa trasu prechodu z \f1\'beav\f0\'e9ho horn\'e9ho vchodu do prav\'e9ho doln\'e9ho v\'fdchodu. Kritick\'e9 miesta ozna\f1\'e8te v\f0\'fdkri\f1\'e8n\f0\'edkom (znak !).\par
+Uk\'e1\f1\'9eka vstupu:\par
+
+\pard\sa200\sl240\slmult1 #.###############\par
+#...#...........#\par
+#.###.#####.#.#.#\par
+#...........#...#\par
+###############.#\par
+
+\pard\sa200\sl276\slmult1 V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+
+\pard\sa200\sl240\slmult1 #!###############\par
+#!..#......!!!..#\par
+#!###.#####.#.#.#\par
+#!!!!!......#..!#\par
+###############!#\par
+\par
+\b\f1\lang1051 DSA 9-1\par
+\b0 Jakubko st\f0\lang1033\'e1le nie\f1\'e8o vym\f0\'fd\f1\'9a\'bea... rozhodol sa, \'9ee rozbehne podnikanie, a ked\'9ee sam\f0\'e9mu sa podnik\'e1 \f1\'9da\'9eko, prehovoril svojho bra\'e8eka J\f0\'e1na Rastislava, \f1\'9ee bud\f0\'fa rozn\'e1\f1\'9aa\'9d dar\'e8eky. Podnikate\'besk\f0\'fd pl\'e1n je zalo\f1\'9een\f0\'fd na nezabudnute\f1\'benom z\f0\'e1\f1\'9eitku pri preberan\f0\'ed dar\f1\'e8eku. Dar\'e8eky sa preto starostliovo zabalia a rozn\f0\'e1\f1\'9aaj\f0\'fa po jednom. Pom\'f4\f1\'9ete teraz bratom napl\f0\'e1nova\f1\'9d rozn\f0\'e1\f1\'9aanie dar\'e8ekov tak, aby roznos bol \'e8\f0\'edm sk\'f4r dokon\f1\'e8en\f0\'fd.\par
+Mesto, v ktorom dar\f1\'e8eky rozn\f0\'e1\f1\'9aaj\f0\'fa, je s\'favisl\'fd graf, vrcholy s\'fa domy a hrany s\'fa ulice medzi domami, ka\f1\'9ed\f0\'e1 hrana m\'e1 d\f1\'e5\'9eku ko\'beko trv\f0\'e1 prechod touto hranou \f1\'beubovo\'ben\f0\'fdm smerom. Podnikatelia maj\'fa svoju centr\'e1lu vo vrchole 1 a rozn\'e1\f1\'9aaj\f0\'fa dar\f1\'e8eky do ostatn\f0\'fdch vrcholov. Najsk\'f4r v\f1\'9edy pobalia dar\'e8eky a potom ich za\'e8n\f0\'fa rozn\'e1\f1\'9aa\'9d. S\f0\'fa nato dvaja, v ka\f1\'9edom okamihu m\f0\'f4\f1\'9ee ma\'9d ka\'9ed\f0\'fd z nich v ruk\'e1ch najviac jeden dar\f1\'e8ek a je na ceste z centr\f0\'e1ly do miesta ur\f1\'e8enia alebo sa vracia na centr\f0\'e1lu (po \f1\'efal\'9a\f0\'ed dar\f1\'e8ek). Pr\f0\'e1cu si rozdelia tak, aby bola \f1\'e8o najsk\f0\'f4r hotov\'e1; pracovn\'e9 podmienky s\'fa \f1\'9da\'9ek\f0\'e9, rozn\'e1\f1\'9aaj\f0\'fa bez n\'e1roku na oddych. Pom\'f4\f1\'9ete bratom a zistite, za ak\f0\'fd najkrat\f1\'9a\f0\'ed \f1\'e8as bud\f0\'fa v\f1\'9aetky dar\'e8eky roznesen\f0\'e9 a obaja sa vr\'e1tia na centr\'e1lu k spolo\f1\'e8n\f0\'e9mu obedu.\par
+Vstup: \f1\'8atandardn\f0\'fd vstup obsahuje zadan\'fd graf -- po\f1\'e8et domov (vrcholov grafu) N < 100 a po\'e8et ul\f0\'edc (hr\'e1n grafu) M < 5000. Nasleduje M troj\'edc A B D, ktor\'e9 opisuj\'fa cestu medzi vrcholmi A a B, pri\f1\'e8om d\'e5\'9eka ko\'beko trv\f0\'e1 prechod po hrane je D < 50 \f1\'e8asov\f0\'fdch jednotiek. Nasleduje po\f1\'e8et dar\'e8ekov na roznos K < 100 a K \'e8\f0\'edsel domov do ktor\'fdch treba pojednom porozn\'e1\f1\'9aa\'9d dar\'e8eky.\par
+V\f0\'fdstup: Na \f1\'9atandardn\f0\'fd v\'fdstup vyp\'ed\f1\'9ate najkrat\'9a\f0\'ed \f1\'e8as za ktor\f0\'fd dok\'e1\f1\'9eu dar\'e8eky po jednom roznies\'9d a vr\f0\'e1ti\f1\'9d sa nasp\f0\'e4\f1\'9d do centr\f0\'e1ly.\par
+Uk\'e1\f1\'9eka vstupu:\par
+5 6\par
+2 1 5\par
+3 4 5\par
+5 3 10\par
+1 3 20\par
+3 2 5\par
+4 5 10\par
+5\par
+2\par
+3\par
+3\par
+4\par
+5\par
+V\f0\'fdstup p\f1\lang1051 r\f0\lang1033 e uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+60\par
+Vysvetlenie: jeden bude roznesie do 2, 3 a 4, druh\'fd roznesie do 3 a 5\par
+\par
+\b\f1\lang1051 DSA 9-2\par
+\b0 Jakubko si doprial dovolenku v takej zvl\f0\lang1033\'e1\f1\'9atnej krajine. Rozhliadol sa do\'beava, rozhliadol sa doprava, a \'e8o nevid\f0\'ed? Nevid\'ed ni\f1\'e8, nebol v nej \'9eiaden kopec, v\'9aetko sam\f0\'e1 rovina, ale zato ve\f1\'bea kr\f0\'e1sny miest. :) Komplikovan\'e1 politick\'e1 situ\'e1cia e\f1\'9ate neumo\'9enila dostava\'9d v krajine cestn\f0\'fa sie\f1\'9d do v\'9aetk\f0\'fdch t\'fdchto miest a preto vl\'e1da rozm\'fd\f1\'9a\'bea ako by najefekt\f0\'edvnej\f1\'9aie dostava existuj\f0\'faci cestn\'fa sie\f1\'9d tak, aby sa z ka\'9ed\f0\'e9ho mesta dalo dosta\f1\'9d do ka\'9ed\f0\'e9ho \f1\'efal\'9aieho po ceste. Ide o strategick\f0\'fd z\'e1ujem a s v\'fdkupom pozemkov nebude najmen\f1\'9a\f0\'ed probl\'e9m. Ke\f1\'ef\'9ee je krajina \f0\'faplne ploch\'e1 stava\f1\'9d bud\f0\'fa len priame cesty. Jakubko teraz h\'fata nad mapou tejto krajiny a rozm\'fd\f1\'9a\'bea ko\'beko kilometrov ciest bud\f0\'fa musie\f1\'9d v krajine postavi\'9d.\par
+Pom\f0\'f4\f1\'9ete Jakubkovi a pre mapu krajiny -- s\f0\'faradnice miest a zoznam existuj\'facich cestn\'fdch spojen\'ed -- zistite najmen\f1\'9aiu d\'e5\'9eku ciest, ktor\f0\'e9 musia dostava\f1\'9d, aby sa medzi mestami dalo pohybova\'9d po cest\f0\'e1ch.\par
+Vstup: \f1\'8atandardn\f0\'fd vstup obsahuje opis situ\'e1cie v krajine: \f1\'e8\f0\'edslo N < 1000 (po\f1\'e8et miest) a N dvoj\f0\'edc cel\'fdch \f1\'e8\f0\'edsel x-ov\'e1 a y-ov\'e1 s\'faradnica mesta, \f1\'e8\f0\'edslo M < 5000 (po\f1\'e8et existuj\f0\'facich ciest) a M dvoj\'edc \f1\'e8\f0\'edsel miest, ktor\'e9 sp\'e1ja cesta.\par
+V\'fdstup: Na \f1\'9atandardn\f0\'fd v\'fdstup vyp\'ed\f1\'9ate d\'e5\'9eku ciest, ktor\f0\'e9 musia e\f1\'9ate postavi\'9d, aby prepojili v\'9aetky mest\f0\'e1, zaokr\'fahlen\'fa na tri desatinn\'e9 miesta.\par
+Uk\'e1\f1\'9eka vstupu:\par
+9\par
+1 5\par
+0 0\par
+3 2\par
+4 5\par
+5 1\par
+0 4\par
+5 2\par
+1 2\par
+5 3\par
+3\par
+1 3\par
+9 7\par
+1 2\par
+2 3\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+8.650\par
+\par
+\b\f1\lang1051 DSA 10-1\par
+\b0 Jakubkovi sa sn\f0\lang1033\'edvalo, \f1\'9ee tancoval na plese. Na plese bolo N chlapcov a M diev\'e8at. Pre spr\f0\'e1vne zaplnenie parketu je potrebn\'e9 ich prideli\f1\'9d do presne K p\f0\'e1rov. Toto v\f1\'9aak nie je \f0\'faplne \f1\'beahk\f0\'e9, preto\f1\'9ee niektor\f0\'e9 deti nem\'f4\f1\'9eu tancova\'9d s niektor\f0\'fdmi, kv\'f4li rozdielnosti vo v\'fd\f1\'9ake, tane\'e8nej zru\'e8nosti pr\f0\'edp. znalosti programovania. Jakubkovi sa e\f1\'9ate prisnil po\'e8et mo\'9enost\f0\'ed, ko\f1\'bek\f0\'fdmi je mo\f1\'9en\f0\'e9 deti takto rozdeli\f1\'9d, nestihol si to v\'9aak zapam\f0\'e4ta\f1\'9d. Nap\f0\'ed\f1\'9ate program, ktor\f0\'fd vypo\f1\'e8\f0\'edta toto \f1\'e8\f0\'edslo.\par
+Na \f1\'9atandardnom vstupe bude viacero vstupov, \'e8\f0\'edtajte do konca vstupu, ka\f1\'9ed\f0\'fd vstup obsahuje najsk\'f4r \f1\'e8\f0\'edslo K (do 10), potom \f1\'e8\f0\'edsla N (po\f1\'e8et chlapcov do 10) a M (po\'e8et diev\'e8at do 10), a potom N riadkov ka\'9ed\f0\'fd s M znakmi Y (\'e1no) alebo N (nie), pod\f1\'bea toho \'e8i i-ty chlapec m\f0\'f4\f1\'9ee tancova\'9d s j-tym diev\'e8a\'9dom. Pre ka\'9ed\f0\'fd vstup v\'fdpi\f1\'9ate jeden riadok obsahuj\f0\'faci jedno \f1\'e8\f0\'edslo po\f1\'e8et r\f0\'f4znych priraden\'ed det\'ed tak, \f1\'9ee na parkete tancuje presne K p\f0\'e1rov, ktor\'e9 spolu m\'f4\f1\'9eu tancova\'9d.\par
+Uk\f0\'e1\f1\'9eka vstupu:\par
+3\par
+3 4\par
+YYYY\par
+YYYY\par
+YYYY\par
+3\par
+3 4\par
+YYNN\par
+NYYN\par
+NNYY\par
+3\par
+6 6\par
+YYNNNN\par
+NYYNNN\par
+NNYYNN\par
+NNNYYN\par
+NNNNYY\par
+YNNNNY\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+24\par
+4\par
+112\par
+\lang9\par
+\b\f1\lang1051 DSA 10-2\par
+\b0 Jakubko sa viezol tax\f0\lang1033\'edkom. Na celom tom sa mu najviac p\'e1\f1\'e8ilo, \'9ee ke\'ef zavolal na dispe\'e8ing taxi slu\'9eby, pridelili mu nejak\f0\'e9 vozidlo, ktor\'e9 zakr\'e1tko po\f1\'f2ho pri\'9alo. Raz sa mu ale stalo, \'9ee vozidlo u\'9e nemali a tak zostal tr\'e8a\'9d v da\'9edi bez odvozu. Rozm\f0\'fd\f1\'9a\'bea teraz, ak\f0\'e1 to mus\'ed by\f1\'9d \'9da\'9ek\f0\'e1 pr\'e1ca, naraz usmer\f1\'f2ova\'9d vozidl\f0\'e1, aby boli v\f1\'9aetci volaj\f0\'faci spokojn\'ed. Rozhodol sa, \f1\'9ee sprav\f0\'ed t\'fa najlep\f1\'9aiu taxislu\'9ebu na svete.\par
+Jakubkova taxislu\'9eba mus\f0\'ed vyrie\f1\'9ai\'9d prv\f0\'fd v\'e1\f1\'9eny probl\f0\'e9m. V jednom okamihu eviduje dispe\f1\'e8ing N volaj\f0\'facich, potenci\'e1lnych pasa\f1\'9eierov. Pre ka\'9ed\f0\'e9ho je ur\f1\'e8en\f0\'e1 poloha, kde sa nach\'e1dza, a \f1\'e8asov\f0\'fd limit od za\f1\'e8iatku v sekund\f0\'e1ch, do ktor\'e9ho mus\'ed tax\'edk stihn\'fa\f1\'9d pr\f0\'eds\f1\'9d. Za\'e8\f0\'edna sa v \f1\'e8ase 0. Po\'e8et dostupn\f0\'fdch tax\'edkov ozna\f1\'e8me M, pre ka\'9ed\f0\'fd vieme jeho polohu v meste. Mesto je tvaru mrie\f1\'9eky, kri\'9eovatky s\f0\'fa v mre\f1\'9eov\f0\'fdch bodoch s celo\f1\'e8\f0\'edseln\'fdmi s\'faradnicami ka\f1\'9ed\f0\'fdch 100m, cesty s\'fa priame, rovnobe\f1\'9en\f0\'e9 s x-ovou a y-ovou osou, a len medzi susedn\'fdmi kri\f1\'9eovatkami (na sever, juh, v\f0\'fdchod, z\'e1pad). Cestuj\'faci \f1\'e8akaj\f0\'fa na kri\f1\'9eovatk\f0\'e1ch a tax\'edky s\'fa v\f1\'9aetky pr\f0\'e1zdne a tie\f1\'9e \'e8akaj\f0\'fa na niektor\'fdch kri\f1\'9eovatk\f0\'e1ch. Pre jednoduchos\f1\'9d uva\'9eujme, \'9ee r\f0\'fdchlos\f1\'9d ka\'9ed\f0\'e9ho tax\'edka je po\f1\'e8as presunu kon\'9atantn\f0\'fdch S metrov za sekundu. Ka\f1\'9ed\f0\'fd tax\'edk m\'f4\f1\'9ee v tomto scen\f0\'e1ri vyzdvihn\'fa\f1\'9d najviac jedn\f0\'e9ho cestuj\'faceho. Volaj\'faci \f1\'e8akaj\f0\'fa na kri\f1\'9eovatk\f0\'e1ch a niektor\'fd tax\'edk ho mus\'ed stihn\'fa\f1\'9d vyzdvihn\f0\'fa\f1\'9d do \'e8asov\f0\'e9ho limitu (pre ka\f1\'9ed\f0\'e9ho volaj\'faceho m\'f4\f1\'9ee by\'9d \'e8asov\f0\'fd limit r\'f4zny). Va\f1\'9aou \f0\'falohou je pom\'f4c\f1\'9d dispe\'e8ingu zisti\'9d, ko\'beko najviac pasa\'9eierov je mo\'9en\f0\'e9 stihn\'fa\f1\'9d odvies\'9d.\par
+Na \'9atandardnom vstupe bude viacero scen\f0\'e1rov za sebou, za ka\f1\'9ed\f0\'fdm pr\'e1zdny riadok. Prv\'e9 \f1\'e8\f0\'edslo T (T <= 50) obsahuje po\f1\'e8et scen\f0\'e1rov. Ka\f1\'9ed\f0\'fd scen\'e1r obsahuje najsk\'f4r tri cel\'e9 \f1\'e8\f0\'edsla N (1 <= N <= 200) po\f1\'e8et volaj\f0\'facich, M (1 <= M <= 200) po\f1\'e8et tax\f0\'edkov, a S (1 <= S <= 50) r\'fdchlos\f1\'9d presunu ka\'9ed\f0\'e9ho tax\'edka v metroch za sekundu. Nasleduj\'facich N riadkov, ka\f1\'9ed\f0\'fd obsahuje tri cel\'e9 \f1\'e8\f0\'edsla: x-ov\'fa a y-ov\'fa s\'faradnicu volaj\'faceho a \f1\'e8asov\f0\'fd limit na vyzdvihnutie v sekund\'e1ch. Nasleduj\'facich M riadkov obsahuje ka\f1\'9ed\f0\'fd dve \f1\'e8\f0\'edsla: x-ov\'fa a y-ov\'fa s\'faradnicu tax\'edka. Pre jednoduchos\f1\'9d zanedbajme n\f0\'e1strahy dopravy ako odbo\f1\'e8ovanie, z\f0\'e1pchy, sveteln\'fa signaliz\'e1ciu, a podobne; predpokladajme, \f1\'9ee ka\'9ed\f0\'fd tax\'edk sa m\'f4\f1\'9ee pres\f0\'fava\f1\'9d po cest\f0\'e1ch r\'fdchlos\f1\'9dou S bez obmedzen\f0\'ed.\par
+Pre ka\f1\'9ed\f0\'fd scen\'e1r na \f1\'9atandardn\f0\'fd v\'fdstup vyp\'ed\f1\'9ate najv\f0\'e4\f1\'e8\'9a\f0\'ed po\f1\'e8et volaj\f0\'facich, ktor\'fdch je mo\f1\'9en\f0\'e9 dostupn\'fdmi tax\'edkmi v\f1\'e8as vyzdvihn\f0\'fa\f1\'9d.\par
+Uk\f0\'e1\f1\'9eka vstupu:\par
+1\par
+3 3 20\par
+200 100 10\par
+400 200 15\par
+500 300 15\par
+100 300\par
+200 200\par
+300 300\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+2\par
+Vysvetlenie: Tax\'edk \f1\'e8.1 (100,300) nestihne v\'e8as vyzdvihn\f0\'fa\f1\'9d \'9eiadneho volaj\f0\'faceho. Ostatn\'e9 tax\'edky vedia vyzdvihn\'fa\f1\'9d zvy\'9an\f0\'fdch dvoch volaj\'facich, napr. tax\'edk \f1\'e8.2 (200,200) volaj\f0\'faceho \f1\'e8.2 (400,200) a tax\f0\'edk \f1\'e8.3 (300,300) volaj\f0\'faceho \f1\'e8.3 (500,300)\par
+\par
+\b DSA 11-1\par
+\b0 Jakubko si v\'9aimol zauj\f0\'edmav\'fa usporiadan\'fa mno\f1\'9einu re\'9dazcov, ka\'9ed\f0\'fd re\f1\'9dazec d\'e5\'9eky pr\f0\'e1ve N (1 <= N <= 31) bitov (samozrejme, bity s\'fa 0 alebo 1). T\'e1to mno\f1\'9eina je zauj\f0\'edmav\'e1 preto, \f1\'9ee je usporiadan\f0\'e1 a obsahuje aj v\f1\'9aetky re\'9dazce d\'e5\'9eky N, ktor\f0\'e9 maj\'fa najviac L (1 <= L <= N) bitov '1'.\par
+Va\f1\'9aou \f0\'falohou je na\f1\'e8\f0\'edta\f1\'9d \'e8\f0\'edslo i (1 <= i <= |S|) zo vstupu a vyp\'edsa\f1\'9d i-ty prvok usporiadanej mno\'9einy, v ktorej s\f0\'fa N-bitov\'e9 re\f1\'9dazce, ktor\f0\'e9 maj\'fa najviac L bitov z\'e1pisu '1'. Na \f1\'9atandardnom vstupe m\f0\'f4\f1\'9eu by\'9d viacer\f0\'e9 trojice \f1\'e8\f0\'edsel N, L a i, pre ka\f1\'9ed\f0\'fa z nich vyp\'ed\f1\'9ate postupne na \'9atandardn\f0\'fd v\'fdstup jeden riadok reprezentuj\'faci i-ty prvok usporiadanej mno\f1\'9einy pop\f0\'edsanej vy\f1\'9a\'9aie.\par
+Uk\f0\'e1\f1\'9eka vstupu:\par
+5 3 19\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+10011\par
+\par
+\b\f1\lang1051 DSA 11-2\par
+\b0 Farm\f0\lang1033\'e1r sa dohodol so svojou kravou, \f1\'9ee mu zatrasie jablo\'f2ou, a on bude chyta\'9d padaj\f0\'face jablk\'e1. Ke\f1\'ef krava zatrasie jablo\'f2ou, vieme kam (s\f0\'faradnice [x,y]) bud\'fa jednotliv\'e9 jablk\'e1 pada\f1\'9d a v akom \'e8asovom okamihu dopadn\f0\'fa. Farm\'e1r chyt\'ed jablko vtedy, ke\f1\'ef sa bude nach\f0\'e1dza\f1\'9d na s\f0\'faradniciach dopadu v momente dopad, ak to nestihne, tak jablko zjedia hladn\'e9 chrob\'e1\f1\'e8iky a mrav\'e8eky. Dan\f0\'e1 je r\'fdchlos\f1\'9d akou sa farm\f0\'e1r pohybuje za jednotku \f1\'e8asu, pri\'e8om na za\'e8iatok (v \'e8ase 0) sa farm\f0\'e1r nach\'e1dza na s\'faradniciach [0,0]. Nap\'ed\f1\'9ate program, ktor\f0\'fd ur\f1\'e8\f0\'ed, ko\f1\'beko najviac jab\'e5k je schopn\f0\'fd farm\'e1r chyti\f1\'9d.\par
+\'8apecifik\f0\'e1cia vstupu: Na vstupe m\'f4\f1\'9ee by\'9d op\f0\'edsan\'fdch nieko\f1\'beko situ\f0\'e1ci\'ed, \f1\'e8\f0\'edtajte do konca vstupu. Pre ka\f1\'9ed\f0\'fa situ\'e1ciu je na vstupe prirodzen\'e9 \f1\'e8\f0\'edslo N (po\f1\'e8et jab\'e5k, najviac 10 000), a desatinn\f0\'e9 \f1\'e8\f0\'edslo R (maxim\'e1lna r\'fdchlos\f1\'9d pohybu farm\f0\'e1ra za jednotku \f1\'e8asu), nasleduje N troj\f0\'edc desatinn\'fdch \f1\'e8\f0\'edsel x_i, y_i a t_i, opisuj\'facich miesto a \f1\'e8as dopadu i-teho jablka.\par
+\'8apecifik\f0\'e1cia v\'fdstupu: Pre ka\f1\'9ed\f0\'fa situ\'e1ciu na vstupe vyp\'ed\f1\'9ate jedno \'e8\f0\'edslo -- maxim\'e1lny po\f1\'e8et jab\'e5k, ktor\f0\'e9 dok\'e1\f1\'9ee farm\f0\'e1r v op\'edsanej sit\'e1cii chyti\f1\'9d.\par
+Uk\f0\'e1\f1\'9eka vstupu:\par
+5 1.0\par
+0.0 4.0 6.0\par
+2.0 0.0 2.0\par
+-1.0 3.0 5.0\par
+3.0 0.0 3.0\par
+0.0 3.0 4.0\par
+5 1.5\par
+0.0 4.0 6.0\par
+2.0 0.0 2.0\par
+-1.0 3.0 5.0\par
+3.0 0.0 3.0\par
+0.0 3.0 4.0\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+2\par
+3\par
+\par
+\b\f1\lang1051 DSA 12-1\par
+\b0 Jakubko sa za\'e8al venova\'9d vyrez\f0\lang1033\'e1vaniu dreven\'fdch dekor\'e1ci\'ed v\f1\'9aakovak\f0\'fdch tvarov. Zatia\f1\'be len za\'e8\f0\'edna, a tvary ktor\'e9 vyrez\'e1va s\'fa ploch\'e9 dosky tvaru mnohouholn\'edka s N < 5000 vrcholmi. Po vytvoren\'ed dekor\'e1cie by ju chcel zavesi\f1\'9d na \'9an\f0\'farku tak, aby zo stropu visela vodorovne. \f1\'8an\f0\'farku upevn\'ed v \f1\'9da\'9eisku klin\'e8ekom. Pri komplikovanej\'9a\f0\'edch tvaroch sa mu st\'e1va, \f1\'9ee do \'9da\'9eiska nem\f0\'f4\f1\'9ee klin\'e8ek priklincova\'9d preto\'9ee sa \'9da\'9eisko jednoducho nenach\f0\'e1dza vo vn\'fatri tohto mnohouholn\'edka (je tam vzduch).\par
+Pom\'f4\f1\'9ete Jakubkovi a pre mnohouholn\f0\'edk na vstupe ur\f1\'e8ite s\f0\'faradnice \f1\'9da\'9eiska a rozhodnite, \'e8i sa nach\f0\'e1dza vo vn\'fatri mnohouholn\'edka.\par
+Vstup: \f1\'8atandardn\f0\'fd vstup obsahuje zasebou z\'e1pis nieko\f1\'bek\f0\'fdch vyrezan\'fdch dreven\'fdch dekor\'e1ci\'ed v tvare mnohouholn\'edka, \f1\'e8\f0\'edtajte do konca vstupu. Na prvom riadku vstupu je jednu dekor\'e1ciu je cel\'e9 \f1\'e8\f0\'edslo N (do 5000) po\f1\'e8et vrcholov, a nasleduje N dvoj\f0\'edc cel\'fdch \f1\'e8\f0\'edsel: x-ov\'e1 a y-ov\'e1 s\'faradnica i-teho vrcholu, pri\f1\'e8om vrcholy s\f0\'fa uveden\'e9 v porad\'ed ako id\'fa po obvode.\par
+V\'fdstup: Na \f1\'9atandardn\f0\'fd v\'fdstup vyp\'ed\f1\'9ate pre ka\'9ed\f0\'fa dekor\'e1ciu jeden riadok: s\'faradnice \f1\'9da\'9eiska mnohouholn\f0\'edka, zaokr\'fahlen\'e9 na tri desatinn\'e9 miesta, a IN alebo OUT pod\f1\'bea toho, \'e8i \'9da\'9eisko je vo vn\f0\'fatri alebo mimo mnohouholn\'edka.\par
+Uk\'e1\f1\'9eka vstupu:\par
+8\par
+0 0\par
+3 0\par
+3 3\par
+2 3\par
+2 1\par
+1 1\par
+1 3\par
+0 3\par
+4\par
+0 0\par
+0 1\par
+1 1\par
+1 0\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+1.500 1.357 OUT\par
+0.500 0.500 IN\par
+\lang9\par
+\b\f1\lang1051 DSA 12-2\par
+\b0 Jakubko na pracovnom vyu\'e8ovan\f0\lang1033\'ed lepil papierov\'e9 \f1\'9atvor\'e8eky r\f0\'f4znych farieb na v\'fdkres rovnobe\f1\'9ene s jeho okrajom. Pestr\f0\'e9 farby vytv\'e1rali rozli\f1\'e8n\f0\'e9 obrazce a vz\'e1jomn\'e9 prekr\'fdvanie niektor\'fdch \f1\'9atvor\'e8ekov sp\f0\'f4sobilo, \f1\'9ee z toho nakoniec vzniklo naozaj umeleck\f0\'e9 dielo! Jakubka v\f1\'9aak nakoniec zauj\f0\'edmalo \f1\'e8osi celkom in\f0\'e9 -- celkov\'e1 plocha v\'fdkresu, ktor\'fa pokryli \f1\'9atvor\'e8eky.\par
+Pom\f0\'f4\f1\'9ete Jakubkovi a pre mno\'9einu \'9atvor\'e8ekov na vstupe ur\'e8ite obsah prekrytej \'e8asti v\f0\'fdkresu.\par
+Vstup: \f1\'8atandardn\f0\'fd vstup obsahuje zasebou z\'e1pis nieko\f1\'bek\f0\'fdch pracovn\'fdch vyu\f1\'e8ovan\f0\'ed. Jedno pracovn\'e9 vyu\f1\'e8ovanie je reprezentovan\f0\'e9 mno\f1\'9einou \'9atvor\'e8ekov, ktor\f0\'fa na v\'fdkres Jakubko nalepil. Na prvom riadku je pre jedno vyu\f1\'e8ovanie cel\f0\'e9 \f1\'e8\f0\'edslo N (do 1000) po\f1\'e8et \'9atvor\'e8ekov, a nasleduje N troj\f0\'edc desatinn\'fdch \f1\'e8\f0\'edsel: x-ov\'e1 a y-ov\'e1 s\'faradnica \f1\'9da\'9eiska \'9atvor\'e8eka a tzv. polomer \'9atvor\'e8eka (polovica d\'e5\'9eky strany) -- \'9atvor\'e8ek je potom na v\f0\'fdkrese na s\'faradniciach x-r,y-r a\f1\'9e x+r,y+r.\par
+V\f0\'fdstup: Na \f1\'9atandardn\f0\'fd v\'fdstup vyp\'ed\f1\'9ate pre ka\'9ed\f0\'e9 pracovn\'e9 vyu\f1\'e8ovanie jeden riadok s jedn\f0\'fdm \f1\'e8\f0\'edslom: obsahom prekrytej oblasti, zaokr\'fahlen\'fdm na tri desatinn\'e9 miesta.\par
+Uk\'e1\f1\'9eka vstupu:\par
+3\par
+4.0 4.0 3.0\par
+5.0 6.0 3.0\par
+5.5 4.5 1.0\par
+2\par
+3.0 3.0 3.0\par
+1.5 1.5 1.0\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+52.000\par
+36.000\par
+\lang9\par
+\b\f1\lang1051 DSA 13-1\par
+\b0 Jakubkovi sa op\f0\lang1033\'e4\f1\'9d podarilo nadviaza\'9d komunik\f0\'e1ciu s mimozemskou civiliz\'e1ciou Palindromi\'e1nov. Ako u\f1\'9e isto vieme, ka\'9ed\f0\'e1 ich spr\'e1va je palindr\'f3m (re\f1\'9dazec znakov, ktor\f0\'fd sa spredu \f1\'e8\f0\'edta rovnako ako odzadu, napr. abba). Do spr\'e1v sa primie\f1\'9aalo aj vysielanie in\f0\'fdch civiliz\'e1ci\'ed a preto by potreboval v zachyten\'fdch sign\'e1loch n\'e1js\f1\'9d najdlh\'9aie \f0\'faseky spr\'e1v, ktor\'e9 s\'fa palindr\'f3mom. Pom\'f4\f1\'9ete Jakubkovi a nap\f0\'ed\f1\'9ate program, ktor\f0\'fd pre ka\f1\'9ed\f0\'fa zachyten\'fa spr\'e1vu ur\f1\'e8\f0\'ed d\f1\'e5\'9eku najdlh\'9aej s\f0\'favislej podpostupnosti, ktor\'e1 je palindr\'f3mom.\par
+\f1\'8apecifik\f0\'e1cia vstupu: Na vstupe je zadan\'fdch nieko\f1\'beko spr\f0\'e1v, \f1\'e8\f0\'edtajte do konca vstupu. Ka\f1\'9ed\f0\'e1 spr\'e1va je re\f1\'9dazec mal\f0\'fdch p\'edsmen anglickej abecedy dlh\'fd najviac 50000 znakov.\par
+\f1\'8apecifik\f0\'e1cia v\'fdstupu: Pre ka\f1\'9ed\f0\'fa spr\'e1vu na vstupe vyp\'ed\f1\'9ate jedno \'e8\f0\'edslo na samostatn\'fd riadok -- d\f1\'e5\'9eku najdlh\'9aej s\f0\'favislej podpostupnosti, ktor\'e1 je palindr\'f3mom. Konkr\'e9tne umiestnenie palindr\'f3mu nie je potrebn\'e9 ur\f1\'e8ova\'9d.\par
+Uk\f0\'e1\f1\'9eka vstupu:\par
+abecedazjedladeda\par
+povedalanamedveda\par
+abbabaabaabbaabab\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+5\par
+3\par
+10\par
+\lang9\par
+\b\f1\lang1051 DSA 13-2\par
+\b0 Jakubko na\'9aiel na povale zo\'9aity po svojom prastarom otcovi \'8atefanovi, ktor\f0\lang1033\'fd si v nich cvi\f1\'e8il p\f0\'edsanie. Zobral si komplikovan\'e9 slovo z kni\f1\'9eky a dokole\'e8ka-dokola ho p\f0\'edsal do zo\f1\'9aita posebe, v\'9aetko spolu. Jakubka teraz zauj\f0\'edma ko\f1\'beko kr\f0\'e1t to slovo nap\'edsal posebe.\par
+Uva\f1\'9eujme napr. abc, ke\'ef ho nap\f0\'ed\f1\'9aeme \'9atyrikr\f0\'e1t posebe, dostaneme re\f1\'9dazec abcabcabcabc. Pre dan\f0\'fd re\f1\'9dazec predpoklad\f0\'e1me, \f1\'9ee \'8atefan p\f0\'edsal tak\'e9 slovo (nepr\'e1zdna postupnos\f1\'9d znakov), ktor\f0\'e9 sa v re\f1\'9dazci opakuje \'e8o najviac kr\f0\'e1t posebe, in\'e9 znaky vo vstupnom re\f1\'9dazci nie s\f0\'fa.\par
+\f1\'8atandardn\f0\'fd vstup m\'f4\f1\'9ee obsahova\'9d viacer\f0\'e9 \'falohy. Ka\f1\'9ed\f0\'fd \'faloha je jeden dlh\'fd re\f1\'9dazec znakov, najviac 1000000 znakov.\par
+Pre ka\'9ed\f0\'fd re\f1\'9dazec na vstupe vyp\f0\'ed\f1\'9ate na \'9atandardn\f0\'fd v\'fdstup jeden riadok obsahuj\'faci jedno \f1\'e8\f0\'edslo -- ko\f1\'beko najviac kr\f0\'e1t sa v re\f1\'9dazci opakuje nejak\f0\'e9 slovo posebe.\par
+Uk\'e1\f1\'9eka vstupu:\par
+abcabcabcabc\par
+abcdefgh012\par
+aaaaaaaaaa\par
+V\f0\'fdstup pre uk\'e1\f1\'9ekov\f0\'fd vstup:\par
+4\par
+1\par
+10\par
+\lang9\par
+}
+ 
