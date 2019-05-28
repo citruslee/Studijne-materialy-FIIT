@@ -1,0 +1,68 @@
+* obrazky brat z prednasok tie ciernobiele primarne
+
+Štýly
+-----
+Vrstvy
+Datovody a filtre
+Klient-server
+Objektovy model
+Tabula
+Interpreter
+Kopilator
+Znovupouzitie cez generatory
+Aspektovo-orientovany vyvoj
+Aplikacne ramce a triedy ramcov
+
+Styly riadenia
+--------------
+Centralizovane riadenie
+Udalostne riadenie
+Referencne architektury (OSI, ECMA)
+
+Distribuovane systemove architektury (Styly)
+--------------------------------------------
+Klient-server
+Distribuovana objektova architektura
+OBR
+CORBA
+P2P
+SOA
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+Vzory
+-----
+MVC
+Microkernel
+Reflection
+Repository
+Blackboard
+Messaging
+Distribution Infrastructure
+Event Demultiplexing and Dispatching
+Interface Partitioning
+Component Partitioning
+Application Control
+Object interaction
+Adaptation and Extension
+Model Behaviour
+Resource Management
+
+https://en.wikipedia.org/wiki/Software_design_pattern
+https://refactoring.guru/design-patterns/catalog
+
+
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+.NET
+
+J2EE
+
+Stateless vs. statefull session
+
+Mechanizmus transakcii
+
+Multithreading
+

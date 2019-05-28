@@ -1,0 +1,365 @@
+POZNAMKY Z PREDMETU: MANAZMENT V TVORBE SOFTVERU
+------------------------------------------------
+
+Styri zakonite problemy SW podla Brooks
+- zlozitost
+- premenlivost
+- podriadenost
+- neuchopitelnost
+
+
+Pat skupin procesov podla PMI (Project Management Insitute)
+- inicializacia
+- planovanie
+- vykonavanie
+- monitorovanie a riadenie
+- ukoncenie
+
+
+Desat oblasti znalosti podla PMI (Project Management Insitute)
+- rozsah
+- rozvrh
+- rizika
+- kvalita
+- komunikacia
+- zdroje
+- zainteresovani
+- obstaravanie
+- naklady
+- integracia
+
+
+Projekt - docasne usilie s cielom vytvorenia jedinecneho vyrobku alebo sluzby.
+
+Podprojekt - cast projektu, ktora je samostatne manaozvatelna, spravidla aj lahsie manazovatelna.
+
+Program - skupina projektov riadenych koordinovane s cielom ziskat vacsie benefity nez keby boli riadene samostatne.
+
+Kvalita - je miera splnenia zakaznikovych poziadaviek v stanovenom rozsahu, rozpoctu a rozvrhu.
+
+Hlavnym vystupom inicializacie projektu je Zakladacia listina projektu.
+
+
+Ciele manazmentu (trojuholnik a v strede je kvalita)
+- cas
+- rozsah
+- naklady
+
+
+Work breakdown structure:
+	- hierarchicke zoskupenie prvkov (uloh, produktov)
+	- stromova struktura
+	- ulahcuje manazment projektu (priradenie dekomponovanych uloh jednotlivcom)
+	- pouziva sa pri planovani rozsahu
+	Zasady:
+	- integrita
+	- sudrznost
+	- jednoduchost
+	Vyhody:
+	- ulahcenie manazmentu projektu
+	- priradenie dekomponovanych uloh jednotlivcom
+	- zabranuje planovat na prilis vysokej urovni
+	- rozdelenie do etap a faz
+	- zmysluplne rozhodovacie body
+	Typy:
+	1.) objektovo-orientovane -> oznacovane aj Product Breakdown Structure (pc, cpu, mainboard, ...)
+	2.) etapovo-orientovane (desing phase, planning phase, implementation phase, ...)
+	3.) funkcne-orientovane ()
+
+
+Metody tvorby diagramov cinnosti
+1.) Arrow diagramming method
+	uzly: milniky
+	hrany: cinnosti
+2.) Precedence diagramming method
+	uzly: cinnosti
+	hrany: zavislosti
+
+
+Metody odhadu trvania cinnosti, nakladov a vlastne cohokolvek:
+- odhad na zaklade analogie
+- odhad experta
+- odhad na zaklade modelu (numericky, parametricky)
+
+
+Typy riadenia:
+1.) prediktivne riadenie
+	artefakty: use case
+	vhodne, ked: su dobre zadefinovane poziadavky, dobre pozname domenu, pouzijeme stale technologie, ide o znameho zakaznika
+	tvorba WBS je cela na zaciatku
+	definovany rozsah je viac menej fixny
+	rozsah, rozvrh a naklady sa urcia na zaciatku a akekolvek zmeny su dokladne riadene
+	zber poziadaviek: snaha mat zoznam vsetkych poziadaviek na zaciatku
+	identifikovanie milnikov
+2.) adaptivne riadenie
+	artefakty: user story
+	vhodne, ked: su horsie zadefinovane poziadavky, nova domena, nove technologie, ide o neznameho zakaznika
+	tvorba WBS sa iterativne rozpracovava
+	definovany rozsah nemusi byt fixny
+	urci sa len ramcovy obsah projektu
+	zber poziadaviek: product backlog sa priebezne aktualizuje
+	planovanie ma viacero urovni
+	  - product planning (roadmap)
+	  - release planning
+	  - iteration planning
+	  - daily plan
+
+
+Rizika
+procesy:
+- identifikacia
+- ohodnotenie
+- planovanie
+- implementacia riesenia
+delime ich na:
+1.) negativne riziko
+mozeme:
+- vyhnut sa mu
+- akceptovat riziko (ak ma nizky dopad alebo pravdepodobnost)
+- redukovat (dopad alebo pravdepodobnost)
+- transfer (presun na tretiu stranu)
+2.) pozitivne riziko
+mozeme:
+- zvysit pravdepodobnost
+- zneuzit riziko
+- odmietnut riziko
+- zdielat riziko s tretou stranou
+
+
+Stupne rizika:
+___________________________
+p |           |           |
+r |           |           |
+a |  STREDNE  |  VYSOKE   |
+v |           |           |
+d |           |           |
+e |___________|___________|
+p |           |           |
+o |           |           |
+d |   NIZKE   |  STREDNE  |
+o |           |           |
+b |           |           |
+__|___________|___________|
+           dopady
+
+
+Kontinualna integracia - Neustale spajanie vyvojarskej prace s hlavnou vetvou
+
+Kontinualne dodanie - Rychle a jednoduche dodanie kodu zakaznikom po schvaleni
+
+Kontinualne nasadenie - Nasadenie kodu do produkcie plne automaticky.
+
+Planovacie metody
+1.) prediktivne planovanie
+	- snaha mat co najpresnejsi plan na zaciatku
+2.) adaptivne planovanie
+	- snaha mat co najpesnejsi plan co najneskor
+
+Planovanie nakladov
+- rozpisat sa sedliackym rozumom, kolko mame zamestnancov, ake su vyplaty, budova, SW, HW...
+
+Planovanie rozsahu
+- pouziva sa WBS
+
+Planovanie rozvrhu:
+- metody: 1.) CPM (critical path method)
+	  2.) PERT (Program Evaluation and Review Technique)
+	  3.) Ganttove diagramy
+- aktivity sa mozu prekryvat v case
+- celkova doba trvania projektu je MAXIMALNA dlzka JEDNEJ cesty pri porovnani vsetkych ciest
+- kriticka cesta:
+    - cesta, ktorej sucet dob trvania cinoosti sa rovna dobe trvania celeho projektu
+    - oneskorenie cinnosti na kritickej cesta znamena omeskanie projektu
+- doba necinnosti:
+    - cas, o ktory sa moze dana cinnost oneskorit bez vplyvu na celkovu dobu trvania projektu
+1.) CPM
+- jeden odhad casu
+- zakladna matematicka technika
+- uvazuje najpravdepodobnejsi odhad dlzky trvania cinnosti
+implikacie:
+  - pozname celkovu dobu trvania projektu (minimalna dlzka trvania)
+  - pozname kriticku cestu projektu
+  - pozname dobu necinnosti pre jednotlive cinnosti
+  - pozname kriticke cinnosti (nemusia vzdy lezat na kritickej ceste)
+  - dokazem vytvorit rozvrh v ramci dohodnuteho rozvrhu projektu
+dva pristupy:
+  - ASAP
+  - ALAP
+postup:
+  - vypocet najskorsieho mozneho casu zacatia a ukoncenia pre vsetky cinnosti
+  - vypocet najneskorsieho mozneho casu ukoncenia a zaciatku
+  - vypocet doby necinnosti pre kazdu cinnost
+  - stanovenie kritickej cesty
+2.) PERT
+- viacero odhadov casu
+- silnejsia matematicka technika
+- uvazuje styri odhady dlzky trvania cinnosti (optimisticka, pesimisticka, najpravdepodobnejsia, ocakavana)
+- je to statisticka technika, analyza cinnosti
+- vyjadruje pravdepodobnost, ze sa projekt dokonci vcas
+3.) GANTT
+- vizualna technika
+
+
+Typy odhadov
+- zhora nadol
+- zdola nahor (podrobne WBS)
+- expertny (na zaklade vyjadreni expertov)
+- analogicky (pouzitie znamych hodnot z minulosti, byva najpresnejsi)
+- parametricky (formalny)
+
+
+Odhadovacie metody
+1.) Delphi
+- skupinova metoda odhadu
+- expertny odhad
+- strukturovana komunikacna technika
+- koordinator ziskava odhad od expertov postupnym revidovanim nazorov kym nedojde k zhode
+2.) Planning poker
+- skupinova metoda odhadu
+- vychadza z metody delphi
+- agilna metoda
+3.) COCOMO
+- odhad usilia a nakladov
+- parametricky pristup
+- vhodny pre prediktivne riadenie
+- tri urovne odhadu (zakladna, stredna, podrobna)
+
+
+Odhadovanie rozsahu
+metriky (a jednotky) rozsahu (velkosti) softveru:
+- dlzka zdrojoveho kodu
+- funkcne body
+- use case body
+- story points
+- objektove body
+- vahovane mikro funkcne body
+funkcne body
+- jednotka vyjadrujuca mnozstvo biznis funkcionality
+- postup vypoctu:
+    - stanovenie datovo-transakcnych charakteristik produktu
+    - klasifikacia zlozitosti charakteristik
+    - vypocet neupravenych funkcnych bodov
+    - uprava funkcnych bodov
+    - vypocet konecnych funkcnych bodov
+- vyhody:
+    - adresuje viacero nedostatkov metrik dlzky programu
+    - nezavisia od pouziteho programovacieho jazyka
+    - su lacne (1% zvysenie nakladov na projekt)
+    - kompatibilne s use case aj user stories
+    - daju sa priamociaro pozuit na dalsie odhadovanie
+- nevyhody:
+    - spoliehaju sa prilis na prvotne pouzivatelske specifikacie rozsahu
+    - subjektivnost urcovania charakteristik a ich vahovania
+    - znovupouzitelnost softverovych suciastok
+- function points II
+    - pocitaju sa na zaklade transakcii v aplikacii
+- feature points
+    - modifikacia pre neinteraktivne systemy
+
+
+Odhad usilia
+- jednotka cloveko-mesiac (man month)
+metriky
+1.) priamociaro
+- usilie = funkcne body / funkcne body za mesiac  [cloveko-mesiace]
+- odhad trvania: 3 * sqrt(usilie, 3)  [mesiace]
+- odhad zdrojov: usilie / trvanie  [ludia]
+2.) parametricky / modelom
+- metoda COCOMO (viz. vyssie)
+
+
+Odhad nakladov
+- jednotka €, $, £, ...
+- metoda COCOMO
+
+
+Produktivitu meriame vo funkèných bodoch za mesiac.
+
+
+User story princip INVEST
+- independent
+- negotiable
+- valuable
+- estimable
+- small
+- testable
+
+
+Kanban je v podstate Jira, vychadza z riadenia v tovarni, znizuje mieru (predcasneho) planovania
+
+
+MoSCoW analyza: Must have, Should have, Could have, Won't have this time
+
+
+Pri prikladoch treba rezervu ratat +/- od povodneho rozsahu projektu
+
+
+Bostonska matica
+b |---------------------------------|
+u |               |                 |
+d |               |                 |
+u | DIVOKA MACKA  | VYCHADZ HVIEZDA |
+c |               |                 |
+i |               |                 |
+  |               |                 |
+p |_______________|_________________|
+o |               |                 |
+t |               |                 |
+e |   MRTVY PES   |   DOJNA KRAVA   |
+n |               |                 |
+c |               |                 |
+i |               |                 |
+a |__________________________________
+           sucasny prinos
+
+
+Earned Value Technique (Analyza vytvorenej hodnoty)
+- je to kombinacia merania rozsahu, rozvrhu a nakladov
+- sleduje sa kumulovana hodnota vynalozenych nakladov
+1.) PV (planned value)
+	- planovane naklady na urcitu cinnost v danom casovom intervale
+2.) AC (actual costs)
+	- celkove naklady, ktore sa vynalozili na cinnost v danom casovom intravale (nemuseli priniest ziskanu hodnotu)
+3.) EV (earned value)
+	- cast celkoveho rozpoctu zodpovedajuca skurocne ukoncenym cinnostiam, ktore aj priniesli daku hodnotu
+- odchylka nakladov: EV - AC
+- odchylka rozvrhu: EV - PV
+- index dodrzania nakladov: EV / AP
+- index dodrzania rozvrhu: EV / PV
+
+
+Urovne kvality (audity)
+1.) ISO 9000
+- hodnotia sa len organizacie
+- len trivialne porovnavanie, ze ci splna / nesplna
+- (vseobecne) da sa aplikovat vo vsetkych typoch organizacii a odvetvi
+- definuje poziadavy na organizaciu a jej porovnatelnost s ostatnymi organizaciami
+- najma Europa
+2.) ISO 9001
+- menej formalna a skostnatena ako ISO 9000
+- interne a externe audity
+- artefakty:
+    - dotaznik o vykonani auditu
+    - plan auditu
+    - zaznam o vykonani auditu
+    - zoznam napravnych opatreni
+- vyhody:
+    - znizuje mieru plytvania a redundancii
+    - zvysuje produktivitu
+    - zvysuje mieru spokojnosti zakaznikov
+- nevyhody:
+    - casto byrokraticky a administrativny pristup
+    - definuje len co je potrebne splnit bez implementacie
+- najma Europa
+3.) CMMI
+- hodnotia sa organizacie, oddelenia, projekty
+- obsahuje celu stupnicu na porovnavanie ako dobre splna
+- specificka pre SW projekty
+- najma USA, Azia
+- obsahuje aj navody (implementacie), know how, best practicies
+- Urovne CMMI modelu:
+   - optimizing
+   - quantitative managed
+   - defined
+   - managed
+   - initial
